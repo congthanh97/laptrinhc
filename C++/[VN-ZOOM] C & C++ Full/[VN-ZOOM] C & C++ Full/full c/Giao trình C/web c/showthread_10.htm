@@ -1,0 +1,4737 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="vi">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="vBulletin 3.8.4" />
+
+	<meta name="keywords" content=" Giáo trình C của Aptech [Elementary Programming With C], Lap trinh C,lap trinh C++,lap trinh C#,Ma nguon,Thuat toan,cau truc du lieu,giai thuat,computer programming,Software Engineering,cong nghe phan mem,ANSI C,ISO C++,Visual C++,VC++,C++.NET,C++Builder,DEV-CPP,C#,C-Sharp,Thuật toán trên C/C++,Database,Linux,Unix Kernel,php,ASP.NET" />
+	<meta name="description" content=" Giáo trình C của Aptech [Elementary Programming With C] Thủ thuật, Tutorials và Mã nguồn C/C++/C++0x. Lập trình C, Lập trình C++, Lập trình C#, Thuật toán, cấu trúc dữ liệu, giải thuật, mã nguồn, đồ họa" />
+
+
+	<!-- ICON -->
+	<link rel="icon" type="image/x-icon" href="images/icons/logo.ico" />
+	<!-- SHORTCUT ICON -->
+	<link rel="shortcut icon" type="image/x-icon" href="images/icons/logo.ico" />
+	
+<!-- CSS Stylesheet -->
+<style type="text/css" id="vbulletin_css">
+/**
+* vBulletin 3.8.4 CSS
+* Style: 'Master Skin'; Style ID: 1
+*/
+body
+{
+	background: #F5F7F9;
+	color: #000000;
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	margin: 0px 0px 0px 0px;padding: 0px;
+}
+a:link, body_alink
+{
+	color: #0049AA;
+	text-decoration: none;
+}
+a:visited, body_avisited
+{
+	color: #23488C;
+	text-decoration: none;
+}
+a:hover, a:active, body_ahover
+{
+	color: #0067F0;
+	text-decoration: underline;
+}
+.page
+{
+	background: #F5F7F9;
+	color: #000000;
+}
+td, th, p, li
+{
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.tborder
+{
+	background: #A1D2F1;
+	color: #000000;
+	border: 1px solid #6D9806;
+}
+.tcat
+{
+	background: #A7C4E3 url(images/gradients/gradient_tcat.jpg) repeat-x top left;
+	color: #000000;
+	font: bold 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.tcat a:link, .tcat_alink
+{
+	color: #0049AA;
+	text-decoration: none;
+}
+.tcat a:visited, .tcat_avisited
+{
+	color: #23488C;
+	text-decoration: none;
+}
+.tcat a:hover, .tcat a:active, .tcat_ahover
+{
+	color: #0067F0;
+	text-decoration: underline;
+}
+.thead
+{
+	background: #A7C4E3 url(images/gradients/gradient_thead.jpg) repeat-x top left;
+	color: #000000;
+	font: bold 11px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.thead a:link, .thead_alink
+{
+	color: #0049AA;
+	text-decoration: none;
+}
+.thead a:visited, .thead_avisited
+{
+	color: #23488C;
+	text-decoration: none;
+}
+.thead a:hover, .thead a:active, .thead_ahover
+{
+	color: #0067F0;
+	text-decoration: underline;
+}
+.tfoot
+{
+	background: #319B02 url(images/gradients/nav_bar.jpg) repeat-x top left;
+	color: #000000;
+}
+.tfoot a:link, .tfoot_alink
+{
+	color: #000000;
+	text-decoration: none;
+}
+.tfoot a:visited, .tfoot_avisited
+{
+	color: #443f3f;
+	text-decoration: none;
+}
+.tfoot a:hover, .tfoot a:active, .tfoot_ahover
+{
+	color: #E05806;
+	text-decoration: underline;
+}
+.alt1, .alt1Active
+{
+	background: #F5F7F9;
+	color: #000000;
+}
+.alt2, .alt2Active
+{
+	background: #E3EBF2;
+	color: #000000;
+}
+.inlinemod
+{
+	background: #FFFFCC;
+	color: #000000;
+}
+.wysiwyg
+{
+	background: #F5F7F9;
+	color: #000000;
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+textarea, .bginput
+{
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.bginput option, .bginput optgroup
+{
+	font-size: 10pt;
+	font-family: verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.button
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+select
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+option, optgroup
+{
+	font-size: 11px;
+	font-family: verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.smallfont
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.time
+{
+	color: #606060;
+}
+.navbar
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.highlight
+{
+	color: #FF0000;
+	font-weight: bold;
+}
+.fjsel
+{
+	background: #3E5C92;
+	color: #E0E0F6;
+}
+.fjdpth0
+{
+	background: #F7F7F7;
+	color: #000000;
+}
+.panel
+{
+	background: #F5F7F9;
+	color: #000000;
+	padding: 10px; border: 2px outset;
+}
+.panelsurround
+{
+	background: #E3EBF2;
+	color: #000000;
+}
+legend
+{
+	color: #22229C;
+	font: 11px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.vbmenu_control
+{
+	background: #319B02 url(images/gradients/nav_bar.jpg) repeat-x top left;
+	color: #000000;
+	font: bold 11px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	padding: 3px 6px 3px 6px;white-space: nowrap;
+}
+.vbmenu_control a:link, .vbmenu_control_alink
+{
+	color: #000000;
+	text-decoration: none;
+}
+.vbmenu_control a:visited, .vbmenu_control_avisited
+{
+	color: #443F3F;
+	text-decoration: none;
+}
+.vbmenu_control a:hover, .vbmenu_control a:active, .vbmenu_control_ahover
+{
+	color: #E05806;
+	text-decoration: underline;
+}
+.vbmenu_popup
+{
+	background: #F5F7F9;
+	color: #000000;
+	border: 1px solid #0B198C;
+}
+.vbmenu_option
+{
+	background: #F5F7F9;
+	color: #000000;
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	white-space: nowrap;cursor: pointer;
+}
+.vbmenu_option a:link, .vbmenu_option_alink
+{
+	color: #0049AA;
+	text-decoration: none;
+}
+.vbmenu_option a:visited, .vbmenu_option_avisited
+{
+	color: #23488C;
+	text-decoration: none;
+}
+.vbmenu_option a:hover, .vbmenu_option a:active, .vbmenu_option_ahover
+{
+	color: #0067F0;
+	text-decoration: underline;
+}
+.vbmenu_hilite
+{
+	background: #E3EBF2;
+	color: #000000;
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	white-space: nowrap;cursor: pointer;
+}
+.vbmenu_hilite a:link, .vbmenu_hilite_alink
+{
+	color: #0049AA;
+	text-decoration: none;
+}
+.vbmenu_hilite a:visited, .vbmenu_hilite_avisited
+{
+	color: #23488C;
+	text-decoration: none;
+}
+.vbmenu_hilite a:hover, .vbmenu_hilite a:active, .vbmenu_hilite_ahover
+{
+	color: #0067F0;
+	text-decoration: underline;
+}
+/* ***** styling for 'big' usernames on postbit etc. ***** */
+.bigusername { font-size: 14pt; }
+
+/* ***** small padding on 'thead' elements ***** */
+td.thead, th.thead, div.thead { padding: 4px; }
+
+/* ***** basic styles for multi-page nav elements */
+.pagenav a { text-decoration: none; }
+.pagenav td { padding: 2px 4px 2px 4px; }
+
+/* ***** de-emphasized text */
+.shade, a.shade:link, a.shade:visited { color: #777777; text-decoration: none; }
+a.shade:active, a.shade:hover { color: #FF4400; text-decoration: underline; }
+.tcat .shade, .thead .shade, .tfoot .shade { color: #DDDDDD; }
+
+/* ***** define margin and font-size for elements inside panels ***** */
+.fieldset { margin-bottom: 6px; }
+.fieldset, .fieldset td, .fieldset p, .fieldset li { font-size: 11px; }
+/******Addition CSS******/
+#open_content_container,
+#header_wrapper,
+#page-ref {
+    min-width: 991px;
+    margin: 0 auto;
+}
+
+#header_wrapper,
+#page-ref {
+    position: relative;
+}
+
+#first_header {
+    padding: 0 25px;
+    position: inherit;
+}
+
+#second_ad_left,
+#header_left_cell {
+    width: 22%;
+    float: left;
+    text-align: left;
+}
+
+#second_ad_right,
+#header_right_cell {
+    width: 78%;
+    float: right;
+    text-align:right;
+}
+
+#second_ad_header {
+    padding: 11px 0 0;
+}
+
+.cviet_notices {
+    padding: 11px;
+}
+
+* html #open_content_container,
+* html #header_wrapper,
+* html #page-ref {
+    width: 991px;
+    margin: 0 auto;
+}
+
+#select_daysprune option,
+#sel_daysprune option {
+    text-align: right;
+}
+
+/* Search button */
+.searchgo input {
+    border: 1px solid #525B73;
+}
+
+.searchgo input:hover,
+.searchgo input:active {
+    border: 1px solid #FF6600;
+}
+
+.quote {
+    background: #FFFFC1;
+    color: #000000;
+    border:1px inset;
+}
+
+#foot_info {
+    padding: 6px;
+}
+
+.copyright_sign {
+    width: 49%;
+    float: left;
+}
+
+.tracking_code {
+    width: 49%;
+    float: right;
+    text-align: right;
+}
+
+.google_analysis {
+    height: 0;
+}
+
+/**
+ * Float clearing hacks
+ */
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    font-size: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+/**
+ * Backslash hack hides from IE mac
+ */
+.clearfix {
+    height: 1%;
+    display: block; /* Resets display for IE Win */
+}
+</style>
+<link rel="stylesheet" type="text/css" href="clientscript/vbulletin_important.css?v=384" />
+
+
+<!-- / CSS Stylesheet -->
+
+<script type="text/javascript" src="clientscript/yui/yahoo-dom-event/yahoo-dom-event.js?v=384"></script>
+<script type="text/javascript" src="clientscript/yui/connection/connection-min.js?v=384"></script>
+<script type="text/javascript">
+<!--
+var SESSIONURL = "";
+var SECURITYTOKEN = "guest";
+var IMGDIR_MISC = "images/misc";
+var vb_disable_ajax = parseInt("0", 10);
+// -->
+</script>
+<script type="text/javascript" src="clientscript/vbulletin_global.js?v=384"></script>
+<script type="text/javascript" src="clientscript/vbulletin_menu.js?v=384"></script>
+
+
+	<link rel="alternate" type="application/rss+xml" title="Cộng đồng C Việt RSS Feed" href="external.php?type=RSS2" />
+	
+		<link rel="alternate" type="application/rss+xml" title="Cộng đồng C Việt - Thủ thuật, Tutorials và Mã nguồn C/C++/C++0x - RSS Feed" href="external.php?type=RSS2&amp;forumids=21" />
+	
+
+	<title> Giáo trình C của Aptech [Elementary Programming With C] - Cộng đồng C Việt</title>
+	<script type="text/javascript" src="clientscript/vbulletin_post_loader.js?v=384"></script>
+	<style type="text/css" id="vbulletin_showthread_css">
+	<!--
+	
+	#links div { white-space: nowrap; }
+	#links img { vertical-align: middle; }
+	-->
+	</style>
+</head>
+<body onload="">
+<!-- logo -->
+<a name="top"></a>
+<div id="header_wrapper" align="center" class="clearfix">
+	<div id="first_header">
+		<div id="header_left_cell" class="logo"><a href="index.php"><img src="images/logos/Logo.gif" border="0" alt="Cộng đồng C Việt" /></a></div>
+		<div id="header_right_cell"><!-- Adcode B1-->
+<a href="http://quacau.com" title="Xây dựng phần mềm, thiết kế website, cung cấp giải pháp" target="_blank" rel="external" onclick="javascript: pageTracker._trackPageview('/outgoing/forums/quacau.com');"><img src="http://congdongcviet.com/images/quacau-christmas-2009.jpg" style="border: 1px solid black;" alt="Xây dựng phần mềm, thiết kế website, cung cấp giải pháp" title="Xây dựng phần mềm, thiết kế website, cung cấp giải pháp" /></a></div>
+	</div>
+</div>
+<!-- /logo -->
+
+<!-- content table -->
+<!-- open content container -->
+
+<div id="open_content_container">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+
+
+
+<div id="second_ad_header" class="clearfix">
+<!-- Adcode B2-->
+    <div id="second_ad_left"></div>
+<!-- Adcode B3-->
+    <div id="second_ad_right">
+        <a href="http://www.aptech-news.com/missionIT/" title="Học lập trình viên tại Aptech" target="_blank" rel="external" onclick="javascript: pageTracker._trackPageview('/outgoing/forums/Aprotrain-Aptech');"><img src="http://congdongcviet.com/images/aprotrain-aptech-december-2009.gif" style="border: 1px solid black;" alt="Học lập trình viên tại Aptech" title="Học lập trình viên tại Aptech" /></a>
+    </div>
+</div>
+<br />
+
+<!-- breadcrumb, login, pm info -->
+<table class="tborder" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+	<td class="alt1" width="100%">
+		
+			<table cellpadding="0" cellspacing="0" border="0">
+			<tr valign="bottom">
+				<td><a href="#" onclick="history.back(1); return false;"><img src="images/misc/navbits_start.gif" alt="Quay lại" border="0" /></a></td>
+				<td>&nbsp;</td>
+				<td width="100%"><span class="navbar"><a href="index.php" accesskey="1">Cộng đồng C Việt</a></span> 
+	<span class="navbar">&gt; <a href="forumdisplay.php?f=7">LẬP TRÌNH C++ | LẬP TRÌNH C | LẬP TRÌNH C++0X</a></span>
+
+
+	<span class="navbar">&gt; <a href="forumdisplay.php?f=21">Thủ thuật, Tutorials và Mã nguồn C/C++/C++0x</a></span>
+
+</td>
+			</tr>
+			<tr>
+				<td class="navbar" style="font-size:10pt; padding-top:1px" colspan="3"><a href="/showthread.php?t=1197"><img class="inlineimg" src="images/misc/navbits_finallink_ltr.gif" alt="Tải lại trang này" border="0" /></a> <strong>
+	 Giáo trình C của Aptech [Elementary Programming With C]
+
+</strong></td>
+			</tr>
+			</table>
+		
+	</td>
+
+	<td class="alt2" nowrap="nowrap" style="padding:0px">
+		<!-- login form -->
+		<form action="login.php?do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+		<script type="text/javascript" src="clientscript/vbulletin_md5.js?v=384"></script>
+		<table cellpadding="0" cellspacing="3" border="0">
+		<tr>
+			<td class="smallfont" style="white-space: nowrap;"><label for="navbar_username">Tên đăng nhập</label></td>
+			<td><input type="text" class="bginput" style="font-size: 11px" name="vb_login_username" id="navbar_username" size="10" accesskey="u" tabindex="101" value="Tên đăng nhập" onfocus="if (this.value == 'Tên đăng nhập') this.value = '';" /></td>
+			<td class="smallfont" nowrap="nowrap"><label for="cb_cookieuser_navbar"><input type="checkbox" name="cookieuser" value="1" tabindex="103" id="cb_cookieuser_navbar" accesskey="c" />Nhớ tôi vào?</label></td>
+		</tr>
+		<tr>
+			<td class="smallfont"><label for="navbar_password">Mật khẩu</label></td>
+			<td><input type="password" class="bginput" style="font-size: 11px" name="vb_login_password" id="navbar_password" size="10" tabindex="102" /></td>
+			<td><input type="submit" class="button" value="Log in" tabindex="104" title="Nhập vào Tên đăng nhập và Mật khẩu của bạn trong các hộp đã cung cấp để đăng nhập, hoặc click vào 'register' button để tạo một Hồ sơ cho bạn." accesskey="s" /></td>
+		</tr>
+		</table>
+		<input type="hidden" name="s" value="" />
+		<input type="hidden" name="securitytoken" value="guest" />
+		<input type="hidden" name="do" value="login" />
+		<input type="hidden" name="vb_login_md5password" />
+		<input type="hidden" name="vb_login_md5password_utf" />
+		</form>
+		<!-- / login form -->
+	</td>
+
+</tr>
+</table>
+<!-- / breadcrumb, login, pm info -->
+
+<!-- nav buttons bar -->
+<div class="tborder" style="padding:1px; border-top-width:0px">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+	<tr align="center">
+		
+		
+			<td class="vbmenu_control"><a href="register.php" rel="nofollow">Đăng ký</a></td>
+		
+		
+		<td class="vbmenu_control"><a rel="help" href="faq.php" accesskey="5">FAQ</a></td>
+		
+			
+			
+		
+		<td class="vbmenu_control"><a href="calendar.php">Lịch</a></td>
+		
+			
+				
+				<td class="vbmenu_control"><a href="search.php?do=getdaily" accesskey="2">Các bài viết ngày hôm nay</a></td>
+				
+				<td class="vbmenu_control"><a id="navbar_search" href="search.php" accesskey="4" rel="nofollow">Search</a> </td>
+			
+			
+		
+		
+		
+		</tr>
+	</table>
+</div>
+<!-- / nav buttons bar -->
+
+<br />
+
+
+
+
+
+
+<!-- NAVBAR POPUP MENUS -->
+
+	
+	
+	
+	<!-- header quick search form -->
+	<div class="vbmenu_popup" id="navbar_search_menu" style="display:none;margin-top:3px" align="left">
+		<table cellpadding="4" cellspacing="1" border="0">
+		<tr>
+			<td class="thead">Tìm kiếm các diễn đàn</td>
+		</tr>
+		<tr>
+			<td class="vbmenu_option" title="nohilite">
+				<form action="search.php?do=process" method="post">
+
+					<input type="hidden" name="do" value="process" />
+					<input type="hidden" name="quicksearch" value="1" />
+					<input type="hidden" name="childforums" value="1" />
+					<input type="hidden" name="exactname" value="1" />
+					<input type="hidden" name="s" value="" />
+					<input type="hidden" name="securitytoken" value="guest" />
+					<div><table><td><input type="text" class="bginput" name="query" size="25" tabindex="1001" /></td><td class="searchgo"><input type="image" src="images/buttons/search.gif" title="Search" tabindex="1004" /></td></table></div>
+					<div style="margin-top:6px">
+						<label for="rb_nb_sp0"><input type="radio" name="showposts" value="0" id="rb_nb_sp0" tabindex="1002" checked="checked" />Hiện các đề tài</label>
+						&nbsp;
+						<label for="rb_nb_sp1"><input type="radio" name="showposts" value="1" id="rb_nb_sp1" tabindex="1003" />Hiện các bài viết</label>
+					</div>
+				</form>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="vbmenu_option"><a href="tags.php" rel="nofollow">Tag Search</a></td>
+		</tr>
+		
+		<tr>
+			<td class="vbmenu_option"><a href="search.php" accesskey="4" rel="nofollow">Tìm kiếm cao cấp</a></td>
+		</tr>
+		
+		</table>
+	</div>
+	<!-- / header quick search form -->
+	
+	
+	
+<!-- / NAVBAR POPUP MENUS -->
+
+<!-- PAGENAV POPUP -->
+	<div class="vbmenu_popup" id="pagenav_menu" style="display:none">
+		<table cellpadding="4" cellspacing="1" border="0">
+		<tr>
+			<td class="thead" nowrap="nowrap">Đi tới trang...</td>
+		</tr>
+		<tr>
+			<td class="vbmenu_option" title="nohilite">
+			<form action="index.php" method="get" onsubmit="return this.gotopage()" id="pagenav_form">
+				<input type="text" class="bginput" id="pagenav_itxt" style="font-size:11px" size="4" />
+				<input type="button" class="button" id="pagenav_ibtn" value="Go" />
+			</form>
+			</td>
+		</tr>
+		</table>
+	</div>
+<!-- / PAGENAV POPUP -->
+
+
+
+
+<!-- Adcode B4-->
+<div style="width: 825px; height: 90px; padding: 8px 0">
+	<a href="http://www.gameloftjobs.kiemviec.com" title="Cộng đồng C Việt, Lập trình, tuyển lập trình, tuyển lập trình game" target="_blank" rel="external" onclick="javascript: pageTracker._trackPageview('/outgoing/forums/gameloftjobs.kiemviec.com');"><img src="http://congdongcviet.com/images/gameloft-dec-12-2009-2.gif" style="border: 1px solid black;" alt="Cộng đồng C Việt, Lập trình, tuyển lập trình, tuyển lập trình game" title="Cộng đồng C Việt, Lập trình, tuyển lập trình, tuyển lập trình game" /></a>
+</div>
+
+<div class="cviet_notices">
+	<a style="font-weight: 700; color: #f00;" href="http://forums.congdongcviet.com/showthread.php?t=23306">Danh sách thành viên ủng hộ Quỹ phát triển cộng đồng C Việt</a><br />
+	<a style="font-weight: 700; color: #f00;" href="http://forums.congdongcviet.com/member.php?u=1">Người sáng lập diễn đàn Dreaminess quyết định đổi tên đăng nhập thành Kevin Hoang</a>
+</div>
+
+
+
+
+
+<a name="poststop" id="poststop"></a>
+
+<!-- controls above postbits -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-bottom:3px">
+<tr valign="bottom">
+	
+		<td class="smallfont"><a href="newreply.php?do=newreply&amp;noquote=1&amp;p=6149" rel="nofollow"><img src="images/buttons/threadclosed.gif" alt="Đề tài đã đóng" border="0" /></a></td>
+	
+	<td align="right"><div class="pagenav" align="right">
+<table class="tborder" cellpadding="3" cellspacing="1" border="0">
+<tr>
+	<td class="vbmenu_control" style="font-weight:normal">Trang 1 trên tổng số 3</td>
+	
+	
+		<td class="alt2"><span class="smallfont" title="Đang hiện từ 1 tới 10 trên tổng 26 kết quả"><strong>1</strong></span></td>
+ <td class="alt1"><a class="smallfont" href="showthread.php?t=1197&amp;page=2" title="Hiện từ 11 tới 20 trên tổng số 26 kết quả">2</a></td><td class="alt1"><a class="smallfont" href="showthread.php?t=1197&amp;page=3" title="Hiện từ 21 tới 26 trên tổng số 26 kết quả">3</a></td>
+	<td class="alt1"><a rel="next" class="smallfont" href="showthread.php?t=1197&amp;page=2" title="Trang liền sau - Từ 11 tới 20 trên tổng số 26 kết quả">&gt;</a></td>
+	
+	<td class="vbmenu_control" title="showthread.php?t=1197"><a name="PageNav"></a></td>
+</tr>
+</table>
+</div></td>
+</tr>
+</table>
+<!-- / controls above postbits -->
+
+<!-- toolbar -->
+<table class="tborder" cellpadding="6" cellspacing="1" border="0" width="100%" align="center" style="border-bottom-width:0px">
+<tr>
+	<td class="tcat" width="100%">
+		<div class="smallfont">
+		
+		&nbsp;
+		</div>
+	</td>
+	<td class="vbmenu_control" id="threadtools" nowrap="nowrap">
+		<a href="/showthread.php?t=1197&amp;nojs=1#goto_threadtools">Các công cụ đề tài</a>
+		<script type="text/javascript"> vbmenu_register("threadtools"); </script>
+	</td>
+	
+	
+	
+	<td class="vbmenu_control" id="displaymodes" nowrap="nowrap">
+		<a href="/showthread.php?t=1197&amp;nojs=1#goto_displaymodes">Các chế độ hiển thị</a>
+		<script type="text/javascript"> vbmenu_register("displaymodes"); </script>
+	</td>
+	
+
+	
+
+</tr>
+</table>
+<!-- / toolbar -->
+
+
+
+<!-- end content table -->
+
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+<!-- / end content table -->
+
+
+
+
+
+<div id="posts"><!-- post #6149 -->
+
+	<!-- open content container -->
+
+<div id="open_content_container">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit6149" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post6149" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+	<td class="thead" >
+		<div class="normal" style="float:right">
+			&nbsp;
+			#<a href="showpost.php?p=6149&amp;postcount=1" target="new" rel="nofollow" id="postcount6149" name="1"><strong>1</strong></a> &nbsp;
+			
+			
+			
+			
+			
+		</div>
+
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post6149"><img class="inlineimg" src="images/statusicon/post_old.gif" alt="Cũ" border="0" /></a>
+			
+				03-01-2007, 09:40 PM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding:0px">
+		<!-- user info -->
+		<table cellpadding="0" cellspacing="6" border="0" width="100%">
+		<tr>
+			<td class="alt2"><a href="member.php?u=705"><img src="customavatars/avatar705_3.gif" width="100" height="100" alt="Avatar củaSolokop" border="0" /></a></td>
+			<td nowrap="nowrap">
+
+				<div id="postmenu_6149">
+					
+					<a class="bigusername" href="member.php?u=705"><span style="color: #3f02a3;">Solokop</span></a>
+					<img class="inlineimg" src="images/statusicon/user_offline.gif" alt="Solokop là offline" border="0" />
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_6149", true); </script>
+					
+				</div>
+
+				<div class="smallfont">XCoworker Member</div>
+				<div class="smallfont"><img src="images/ranks/rank_xcoworker.gif" alt="" border="" /></div>
+				
+
+			</td>
+			<td width="100%">&nbsp;</td>
+			<td valign="top" nowrap="nowrap">
+
+				<div class="smallfont">
+					<div>Ngày gia nhập: 10 2006</div>
+					
+					
+					<div>
+						Bài viết: 208
+					</div>
+					
+					
+					
+					
+					<div>    </div>
+				</div>
+
+			</td>
+		</tr>
+		</table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	
+	<td class="alt1" id="td_post_6149">
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		
+			<!-- icon and title -->
+			<div class="smallfont clearfix">
+				
+					<div style="float: left; width: 36px;"><img class="inlineimg" src="images/icons/icon1.gif" alt="Mặc định" border="0" /></div>
+				
+				<h3 style="margin:0; passing: 0;">Giáo trình C của Aptech [Elementary Programming With C]</h3>
+			</div>
+			<hr size="1" style="color:#A1D2F1; background-color:#A1D2F1" />
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_6149">
+			
+			<div align="center"><b><u>Introduction</u></b></div><ul><li>Hôm nọ thấy có bạn yêu cầu giáo trình của Aptech, tớ sẽ post lên từ từ mỗi ngày một ít. Nhưng vì quyển sách đó rất nhiều nên tớ sẽ cố gắng tóm gọm kiến thức lại có gì thiếu xót một người đóng góp để bổ sung thêm.</li>
+</ul><ul><li>Chương trình dạy sẽ bao gồm 22 tiết, cứ 1 bài lý thuyết sẽ kèm theo một bài thực hành và bài tập đi kèm để làm. Và đây là phiên bản tiếng Việt <img src="http://forums.congdongcviet.com/images/smilies/23.gif" border="0" alt="" title="big grin" class="inlineimg" />, shinichi_haha stick lên hộ tớ nha...</li>
+</ul><ul><li>Ở Aptech họ xài borland C version 5, vì chủ yếu là học thuật toán và tư duy của lập trình viên, còn mọi người thích dùng (trình biên dịch)compiler nào là tùy. <img src="http://forums.congdongcviet.com/images/smilies/23.gif" border="0" alt="" title="big grin" class="inlineimg" /></li>
+</ul><div align="center"><b><u>Session</u></b></div><ol style="list-style-type: decimal"><li><a href="http://forums.congdongcviet.com/showpost.php?p=6150&amp;postcount=2" target="_blank">Những khái niệm cơ bản về ngôn ngữ C</a></li>
+<li><a href="http://forums.congdongcviet.com/showpost.php?p=6171&amp;postcount=5" target="_blank">Biến và Kiểu dữ liệu - Lý Thuyết</a></li>
+<li><a href="http://forums.congdongcviet.com/showpost.php?p=6233&amp;postcount=6" target="_blank">Biến và kiểu dữ liệu - Thực hành</a></li>
+<li><a href="http://forums.congdongcviet.com/showpost.php?p=6276&amp;postcount=7" target="_blank">Toán tử và biểu thức - Lý thuyết</a></li>
+<li><a href="http://forums.congdongcviet.com/showpost.php?p=6333&amp;postcount=8" target="_blank">Toán tử và biểu thức - Thực hành</a></li>
+<li><a href="http://forums.congdongcviet.com/showpost.php?p=6424&amp;postcount=9" target="_blank">Nhập xuất trong C - Lý thuyết</a></li>
+<li><a href="http://forums.congdongcviet.com/showpost.php?p=6839&amp;postcount=10" target="_blank">Điều kiện - Lý thuyết</a></li>
+<li><a href="http://forums.congdongcviet.com/showpost.php?p=7010&amp;postcount=12" target="_blank">Điều kiện - Thực hành</a></li>
+<li><a href="http://forums.congdongcviet.com/showpost.php?p=7166&amp;postcount=13" target="_blank">Vòng lặp - Lý thuyết</a></li>
+<li><a href="http://forums.congdongcviet.com/showpost.php?p=7166&amp;postcount=14" target="_blank">Vòng lặp - Thực hành</a></li>
+<li><a href="http://forums.congdongcviet.com/showpost.php?p=7354&amp;postcount=16" target="_blank">Mảng - Lý thuyết</a></li>
+<li><a href="http://forums.congdongcviet.com/showpost.php?p=7586&amp;postcount=17" target="_blank">Mảng - Thực hành</a></li>
+<li><a href="http://forums.congdongcviet.com/showpost.php?p=7587&amp;postcount=18" target="_blank">Con trỏ - Lý thuyết</a></li>
+<li><a href="http://forums.congdongcviet.com/showpost.php?p=8254&amp;postcount=19" target="_blank">Con trỏ - Thực hành</a></li>
+<li><a href="http://forums.congdongcviet.com/showpost.php?p=8844&amp;postcount=22" target="_blank">Hàm - Lý thuyết</a></li>
+<li><a href="http://forums.congdongcviet.com/showpost.php?p=8847&amp;postcount=23" target="_blank">Hàm - Thực hành</a></li>
+<li><a href="http://forums.congdongcviet.com/showpost.php?p=8947&amp;postcount=24" target="_blank">Chuỗi - Lý thuyết</a></li>
+<li><a href="http://forums.congdongcviet.com/showpost.php?p=8948&amp;postcount=25" target="_blank">Chuỗi - Thực hành</a></li>
+<li><a href="http://forums.congdongcviet.com/showpost.php?p=9270&amp;postcount=26" target="_blank">Các kiểu dữ liệu Nâng cao và sắp xếp - Lý thuyết</a></li>
+<li><a href="http://forums.congdongcviet.com/showpost.php?p=9271&amp;postcount=27" target="_blank">Các kiểu dữ liệu Nâng cao và sắp xếp - Thực hành</a></li>
+<li><a href="http://forums.congdongcviet.com/showpost.php?p=9762&amp;postcount=28" target="_blank">Quản lý tệp tin - Lý thuyết</a></li>
+<li><a href="http://forums.congdongcviet.com/showpost.php?p=9955&amp;postcount=29" target="_blank">Quản lý tệp tin - Thực hành</a></li>
+</ol>
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+		<!-- sig -->
+			<div>
+				__________________<br />
+				Nói là một chuyện, làm là một chuyện. Chi bằng ta làm xong rồi hãy nói như vậy thì nói và làm sẽ là một chuyện.
+			</div>
+		<!-- / sig -->
+		
+
+		
+
+		
+		<!-- edit note -->
+			<div class="smallfont">
+				<hr size="1" style="color:#A1D2F1; background-color:#A1D2F1" />
+				<em>
+					
+						Đã được chỉnh sửa lần cuối bởi Solokop : 07-04-2007 lúc <span class="time">09:01 PM</span>.
+					
+					
+				</em>
+			</div>
+		<!-- / edit note -->
+		
+
+		<div style="margin-top: 10px" align="right">
+			<!-- controls -->
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				
+			
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</table>
+
+
+<!-- post 6149 popup menu -->
+<div class="vbmenu_popup" id="postmenu_6149_menu" style="display:none;">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">Solokop</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="member.php?u=705">Xem Hồ sơ công khai</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="private.php?do=newpm&amp;u=705" rel="nofollow">Gửi một tin nhắn tới Solokop</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="search.php?do=finduser&amp;u=705" rel="nofollow">Tìm toàn bộ bài viết bởi Solokop</a></td></tr>
+	
+	
+	
+	</table>
+</div>
+<!-- / post 6149 popup menu -->
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #6149 --><!-- post #6150 -->
+
+	<!-- open content container -->
+
+<div id="open_content_container">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit6150" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post6150" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+	<td class="thead" >
+		<div class="normal" style="float:right">
+			&nbsp;
+			#<a href="showpost.php?p=6150&amp;postcount=2" target="new" rel="nofollow" id="postcount6150" name="2"><strong>2</strong></a> &nbsp;
+			
+			
+			
+			
+			
+		</div>
+
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post6150"><img class="inlineimg" src="images/statusicon/post_old.gif" alt="Cũ" border="0" /></a>
+			
+				03-01-2007, 09:59 PM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding:0px">
+		<!-- user info -->
+		<table cellpadding="0" cellspacing="6" border="0" width="100%">
+		<tr>
+			<td class="alt2"><a href="member.php?u=705"><img src="customavatars/avatar705_3.gif" width="100" height="100" alt="Avatar củaSolokop" border="0" /></a></td>
+			<td nowrap="nowrap">
+
+				<div id="postmenu_6150">
+					
+					<a class="bigusername" href="member.php?u=705"><span style="color: #3f02a3;">Solokop</span></a>
+					<img class="inlineimg" src="images/statusicon/user_offline.gif" alt="Solokop là offline" border="0" />
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_6150", true); </script>
+					
+				</div>
+
+				<div class="smallfont">XCoworker Member</div>
+				<div class="smallfont"><img src="images/ranks/rank_xcoworker.gif" alt="" border="" /></div>
+				
+
+			</td>
+			<td width="100%">&nbsp;</td>
+			<td valign="top" nowrap="nowrap">
+
+				<div class="smallfont">
+					<div>Ngày gia nhập: 10 2006</div>
+					
+					
+					<div>
+						Bài viết: 208
+					</div>
+					
+					
+					
+					
+					<div>    </div>
+				</div>
+
+			</td>
+		</tr>
+		</table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	
+	<td class="alt1" id="td_post_6150">
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		
+			<!-- icon and title -->
+			<div class="smallfont clearfix">
+				
+					<div style="float: left; width: 36px;"><img class="inlineimg" src="images/icons/icon1.gif" alt="Mặc định" border="0" /></div>
+				
+				<h3 style="margin:0; passing: 0;">Những khái niệm cơ bản về ngôn ngữ C</h3>
+			</div>
+			<hr size="1" style="color:#A1D2F1; background-color:#A1D2F1" />
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_6150">
+			
+			<div align="left"><b>Bài 1 : Những khái niệm cơ bản về ngôn ngữ C</b></div><br />
+<i>Giới thiệu:</i><br />
+<br />
+- Ngày nay, khoa học máy tính thâm nhập vào mọi lĩnh vực. Tự động hóa hiện đang là nghành chủ chốt điều hướng sự phát triển thế giới. Bất cứ nghành nghề nào cũng cần phải hiểu biết ít nhiều về Công nghệ Thông tin và lập trình nói chung. Cụ thể, C là một ngôn ngữ lập trình cấp cao mà mọi lập trình viên cần phải biết. Vì thế, trong giáo trình này, chúng ta sẽ nghiên cứu chi tiết cấu trúc ngôn ngữ C. Đầu tiên chúng ta tìm hiểu sự khác nhau của những khái niệm: Lệnh  (Command), Chương trình (Program) và phần mềm (Software).<br />
+<br />
+<u>1 Ra lênh cho máy tính làm việc</u><br />
+<br />
+- Khi một máy tính được khởi động, nó sẽ tự động thực thi một số tiến trình và xuất kết quả ra màn hình. Điều này diễn ra như thế nào? Câu trả lời đơn giản là nhờ vào Hệ điều hành cài đặt bên trong máy tính. Hệ điều hành (operating system) được xem như phần mềm hệ thống. Phần mềm này khởi động máy tính và thiết lập các thông số ban đầu trước khi chuyển giao quyền cho người dùng. Để làm điều đó, hệ điều hành phải được cấu tạo từ một tập hợp các chương trình. Mọi chương trình đều cố gắng đưa ra lời giải cho một hay nhiều vài toán nào đó. Mọi chương trình cố gắng giải quyết một bài toán cụ thể. Một nhóm lệnh tạo thành một chương trình, một nhóm chương trình tạo thành phần mêm<br />
+- Sơ đồ mối quan hệ giữa 3 khái niệm : <font color="Red">câu lênh</font>, <font color="Red">chương trình</font> và <font color="Red">phần mềm</font><br />
+<br />
+<img src="http://i13.tinypic.com/2uetb9c.jpg" border="0" alt="" /><br />
+<br />
+<u>2 Ngôn ngữ C</u><br />
+<br />
+- Giới thiệu xuât xứ của ngôn ngữ C, cái này có lẽ không quan trọng bỏ qua, ai thích tự tìm hiểu nha <img src="http://forums.congdongcviet.com/images/smilies/23.gif" border="0" alt="" title="big grin" class="inlineimg" /><br />
+<br />
+<u>3 Cấu trúc chương trình C</u><br />
+<br />
+- C có một số từ khóa, chính xác là 32. Những từ khóa này kết hợp với cú pháp của C hình thành ngôn ngữ C. Nhưng nhiều trình biên dịch cho C đã thêm vào những từ khóa dùng cho viêc tổ chức bộ nhớ ở những giai đoạn xử lý nhất định.<br />
+- Vài quy tắc khi lập trình C như sau : <br />
+  <font color="Red">+ Tất cả các từ khóa là chữ thường.<br />
+  + Đoạn mã trong chương trình C có phân biệt chữ hoa và chữ thường.<br />
+  + Từ khóa không thể dùng cho mục đích khác như đặt tên biến (variable name) hoặc tên hàm (function).<br />
+  + Hàm main() luôn là hàm đầu tiên được gọi đến khi một chương trình bắt đầu chạy.</font><br />
+<br />
+a. Định nghĩa hàm trong C<br />
+<br />
+- Chương trình C được chia thành từng đơn vị gọi là hàm. Tên của hàm luôn được theo sau bằng cặp &quot;<font color="Red">(</font>&quot; và &quot;<font color="Red">)</font>&quot;. Trong dấu ngoặc đơn có thể có hay không có những tham số (parameters)<br />
+<br />
+b. Dấu phân cách (Delimiter)<br />
+<br />
+- Sau định nghĩa hàm sẽ là dấu mở ngoặc xoắn &quot;<font color="Red">{</font>&quot;. Nó thông báo điểm bắt đầu của hàm. Tương tự, dấu ngoặc xoắn đóng &quot;<font color="Red">}</font>&quot; sau cậu lênh cuối trong hàm sẽ chỉ ra điểm kết thúc của hàm. Khối dấu &quot;<font color="Red">{</font>&quot; và &quot;<font color="Red">}</font>&quot; còn dùng để bao quanh các đoạn mã lênh ở các câu lênh vòng lặp và rẽ nhánh.<br />
+<br />
+c. Dấu kêt thúc câu lệnh (Terminator)<br />
+<br />
+- Kết thúc mỗi câu lênh trong C luôn phải là dấu chấm phẩy &quot;<font color="Red">;</font>&quot;.<br />
+<br />
+d. Dòng chú thích (Comment)<br />
+<br />
+- Trong C cho phép bạn viết những dòng chú thích và nó được đặt trong cặp dấu &quot;<font color="Red">/*</font>&quot; và &quot;<font color="Red">*/</font>&quot;<br />
+<br />
+e. Thư viện C (Library)<br />
+<br />
+- Tất cả các trình biên dịch C đều chức một thư viện hàm chuẩn dùng cho những tác vụ chung. Khi lập trình các hàm trong thư viện sẽ được dùng cho nhiều loại tác vụ khác nhau. Một hàm có thể được viết bởi lập trình viên và đặt trong thư viện để tái xử dụng cho nhiều chương trình khác nhau.<br />
+<br />
+<u>4. Biên dịch và thực thi một chương trình (Compiling and Running)</u><br />
+<br />
+- Các bước thực hiện :<br />
+  <font color="Red">+ Soạn thảo và xử lý từ : dùng một chương trình xử lý văn bản đơn giản để làm, thường thì trình biên dịch có tích hợp sẵn luôn cho ta.<br />
+  + Mã nguồn : chính là đoạn văn bản mà lập trình viên viết ra, nó là đầu vào của trình biên dịch.<br />
+  + Bộ tiền xử lý C : bộ tiền xử lý C khai triển các chỉ thị tiền biên dịch và đưa ra kết quả. Nó gọi là mã nguồn mở rộng, sau đó nó sẽ chuyển qua cho trình biên dịch.<br />
+  + Trình biên dịch C :chương trình sẽ biên dịch mã nguồn mở rộng ở bộ tiền xử lý C.<br />
+  + Bộ liên kết : khi biên dịch một trình lớn trình biên dịch sẽ xử lý từ cái và liên kết lại với nhau để cho ra mã thực thi (chính là chương trình đã lập trình xong)<br />
+  + Bộ nạp (Loader) : mã thực thi sẽ được thi hành bới bộ nạp của hệ thống.</font><br />
+- Sơ đồ chi tiết : Biện dich và thưc thi một chương trình.<br />
+<br />
+<img src="http://i11.tinypic.com/2yljipe.jpg" border="0" alt="" /><br />
+<br />
+<u>5. Các bước lập trình giải quyết vấn đề</u><br />
+<br />
+- Chính la giải thuật đó, tìm hiểu thêm trong diễn đàn nha <img src="http://forums.congdongcviet.com/images/smilies/23.gif" border="0" alt="" title="big grin" class="inlineimg" /><br />
+<br />
+<u>6. Mã giả (pseudo code)</u><br />
+<br />
+- Tóm lược ngắn gọn thế này nha, mã giả không phải là mã thật. Nó được viết trên giấy để trình bày giải thuật của lập trình viên. Có thể nói nôm là nó là ngôn ngữ trung để trình bảy giải thuật. Nó thường được viết bằng một số từ ngữ tiếng anh thông dụng như (BEGIN, END, DISPLAY, DO, WHILE, FOR, IF, ELSE, ...)<br />
+<br />
+<u>7. Lưu đồ (Flowcharts)</u><br />
+<br />
+- Cũng tương tự như mã giả nhưng thay vì trình bày bằng văn bản, ở đây ta trình bày theo các hình vẽ được quy đinh sẵn. Cùng với các ký hiệu riếng chuyên cho việc vẽ lưu đồ giải thuật lập trình.<br />
+<br />
+- Một số hình vẽ lưu đồ : Sẽ cập nhập ảnh sau <img src="http://forums.congdongcviet.com/images/smilies/23.gif" border="0" alt="" title="big grin" class="inlineimg" /><br />
+<br />
+<img src="http://i14.tinypic.com/2zgxoqw.jpg" border="0" alt="" /><br />
+<br />
+Kết thúc bài 1<br />
+<br />
+<div align="left"><b>Bài tập tự làm</b></div><br />
+1. Viết chương trình mã giả và vẽ một lưu đồ để nhập một giá trị là độ *C (Celsius) và chuyển nó sang độ *F (Fahrenheit)<br />
+[Hướng dẫn C/5 = (F-32)/9]<br />
+2. Viết một đoạn mã giả và vẽ lưu đồ để nhập điểm của một sinh viên cho các môn : vật lý, hóa học và sinh học. Sau đó hiển thị điểm trung bình của tổng điểm này...
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+		<!-- sig -->
+			<div>
+				__________________<br />
+				Nói là một chuyện, làm là một chuyện. Chi bằng ta làm xong rồi hãy nói như vậy thì nói và làm sẽ là một chuyện.
+			</div>
+		<!-- / sig -->
+		
+
+		
+
+		
+		<!-- edit note -->
+			<div class="smallfont">
+				<hr size="1" style="color:#A1D2F1; background-color:#A1D2F1" />
+				<em>
+					
+						Đã được chỉnh sửa lần cuối bởi Solokop : 04-01-2007 lúc <span class="time">10:03 AM</span>.
+					
+					
+				</em>
+			</div>
+		<!-- / edit note -->
+		
+
+		<div style="margin-top: 10px" align="right">
+			<!-- controls -->
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				
+			
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</table>
+
+
+<!-- post 6150 popup menu -->
+<div class="vbmenu_popup" id="postmenu_6150_menu" style="display:none;">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">Solokop</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="member.php?u=705">Xem Hồ sơ công khai</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="private.php?do=newpm&amp;u=705" rel="nofollow">Gửi một tin nhắn tới Solokop</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="search.php?do=finduser&amp;u=705" rel="nofollow">Tìm toàn bộ bài viết bởi Solokop</a></td></tr>
+	
+	
+	
+	</table>
+</div>
+<!-- / post 6150 popup menu -->
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #6150 --><!-- post #6171 -->
+
+	<!-- open content container -->
+
+<div id="open_content_container">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit6171" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post6171" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+	<td class="thead" >
+		<div class="normal" style="float:right">
+			&nbsp;
+			#<a href="showpost.php?p=6171&amp;postcount=3" target="new" rel="nofollow" id="postcount6171" name="3"><strong>3</strong></a> &nbsp;
+			
+			
+			
+			
+			
+		</div>
+
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post6171"><img class="inlineimg" src="images/statusicon/post_old.gif" alt="Cũ" border="0" /></a>
+			
+				04-01-2007, 09:25 AM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding:0px">
+		<!-- user info -->
+		<table cellpadding="0" cellspacing="6" border="0" width="100%">
+		<tr>
+			<td class="alt2"><a href="member.php?u=705"><img src="customavatars/avatar705_3.gif" width="100" height="100" alt="Avatar củaSolokop" border="0" /></a></td>
+			<td nowrap="nowrap">
+
+				<div id="postmenu_6171">
+					
+					<a class="bigusername" href="member.php?u=705"><span style="color: #3f02a3;">Solokop</span></a>
+					<img class="inlineimg" src="images/statusicon/user_offline.gif" alt="Solokop là offline" border="0" />
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_6171", true); </script>
+					
+				</div>
+
+				<div class="smallfont">XCoworker Member</div>
+				<div class="smallfont"><img src="images/ranks/rank_xcoworker.gif" alt="" border="" /></div>
+				
+
+			</td>
+			<td width="100%">&nbsp;</td>
+			<td valign="top" nowrap="nowrap">
+
+				<div class="smallfont">
+					<div>Ngày gia nhập: 10 2006</div>
+					
+					
+					<div>
+						Bài viết: 208
+					</div>
+					
+					
+					
+					
+					<div>    </div>
+				</div>
+
+			</td>
+		</tr>
+		</table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	
+	<td class="alt1" id="td_post_6171">
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		
+			<!-- icon and title -->
+			<div class="smallfont clearfix">
+				
+					<div style="float: left; width: 36px;"><img class="inlineimg" src="images/icons/icon1.gif" alt="Mặc định" border="0" /></div>
+				
+				
+			</div>
+			<hr size="1" style="color:#A1D2F1; background-color:#A1D2F1" />
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_6171">
+			
+			<b>Bài 2 : Biến và Kiểu dữ liệu - Lý Thuyết</b><br />
+<br />
+<i>Giới thiệu:</i><br />
+<br />
+- Bất cứ chương trình ứng dụng nào cần xử lý dữ liệu cũng cần có nơi để lưu trữ tạm thời dữ liệu ấy. Nơi mà dữ liệu được lưu trữ gọi là bộ nhớ. Những vị trí khác nhau trong bộ nhớ có thể được xác định bởi các địa chỉ duy nhất. Những ngôn ngữ lập trình trước đây yêu cầu các lập trình viên quản lý mỗi vị trí ô nhớ thông qua địa chỉ, cũng như giá trị lưu trong nó. Các lập trình viên dùng những địa chỉ này để truy cập hoặc thay đổi nội dung của các ô nhớ. Khí ngôn ngữ lập trình phát triển, việc truy cập hay thay đổi giá trị ô nhớ đã được đơn giản hóa nhờ sự ra đời của khái niệm biến.<br />
+<br />
+<u>1. Biến (variable)</u><br />
+<br />
+- Một chương trình ứng dụng có thể quản lý nhiều loại dữ liệu. Trong trường hợp này, chương trình phải chỉ định bộ nhớ cho mỗi đơn vị dữ liệu. Khi chỉ định bộ nhớ, có hai điểm cần lưu ý như sau :<br />
+  + Bao nhiêu bộ nhớ sẽ được gán.<br />
+  + Mỗi đơn vị dữ liệu được lưu trữ ở đâu trong bộ nhớ.<br />
+- Trước đây, các lập trình viên phải viết chương trình theo ngôn ngữ máy 1 và 0. Nếu muốn lưu giữ một giá trị tạm thồi, vị trí chính xác nơi mà dữ liệu được lưu trữ trong bộ nhớ máy tính phải được chỉ định. Vị trí này là một con số cụ thể, gọi là địa chỉ bộ nhớ.<br />
+- Các ngôn ngữ lập trình hiện đại cho phép chúng ta sử dụng các tên tượng trưng gọi là biên (variable), chỉ để một vùng bộ nhớ nơi mà các giá trị cụ thể được lưu trữ.<br />
+- Kiểu dữ liệu quyết định tổng số bộ nhớ được chỉ định. Những tên được gán cho biên giúp chúng ta sử dụng lại dữ liệu khi cần đến. Không giới hạn về số vị trí bộ nhớ mà một chương trình có thể dùng.<br />
+- Trong khi một số ngôn ngữ lập trình cho phép hệ điều hành xóa nội dung trong ô nhớ và cấp phát bộ nhớ này để dùng lại thì những ngôn ngữ khác như C yêu cầu lập trình viên xóa vùng nhớ không sử dụng thông qua mã chương trình. Trong cả hai trường hợp hệ điều hành sẽ lo việc cấp phát và thu hồi ô nhớ.<br />
+<br />
+<u>2. Hằng (constant)</u><br />
+<br />
+- Trong trường hợp ta dùng biến, giá trị được lưu sẽ thay đổi. Một biến tồn tại từ lúc khai báo đến khi thoát khỏi phạm vi dùng nó. Những câu lênh trong phạm vi khối mã này có thể truy cập giá trị của biến, và thậm chí có thể thay đổi giá trị của biến. Trong thực tế, đôi khi cần sử dụng môt vài khoản mục mà giá trị của chúng không bao giờ bị thay đổi.<br />
+- Và một hằng là một giá trị không bao giờ bị thay đổi.<br />
+<br />
+<u>3. Định danh (Identifier)</u><br />
+<br />
+- Tên của các biến (variable), các hàm (functions), các nhãn (labels) và các đổi tượng khác nhau do người dùng định nghĩa gọi là đinh danh. Những định danh này có thể chứa một hay nhiều ký tự. Ký tự đầu tiên của định danh phải là một chữ cái hay một dấu gạch dưới &quot;<font color="Red">_</font>&quot;. Các ký tự tiếp theo có thể là các chữ cái, các con số hay dấu gạch chân.<br />
+- Các nguyên tắc cho việc đặt tên :<br />
+<font color="Red">  + Tên biến phải bắt đầu bằng một ký tự chữ cái.<br />
+  + Các ký tự theo sau ký tự đầu bằng một chuỗi các chữ cái hoặc con số và cũng có thể bao gồm ký tự đặc biệt như dấu gạch dưới.<br />
+  + Tránh dùng ký tự O tại những vị trí mà có thể gây nhầm lẫn với số 0 và tương tự chữ cái l (chữ thường của chữ hoa L) có thể nhầm lẫn với số 1.<br />
+  + Tên riêng tránh đặt cho biến.<br />
+  + Theo tiêu chuẩn của C các chữ cái thường và hoa thi xem như khác nhau.<br />
+  + Việc phân biệt chữ hoa chữ thường khác nhau tùy theo ngôn ngữ lập trình. Do đó, tốt nhất nên đặt tên cho biến theo cách thức chuẩn.<br />
+  + Tên một biến nên có ý nghĩa, gợi tả và mô tả rõ kiểu dữ liệu của nó.</font><br />
+<br />
+<u>4. Từ khóa (keywords)</u><br />
+<br />
+- Tất cả các ngôn ngữ dành một số từ nhất định cho mục đích riêng. Những từ này có một ý nghĩa đặc biệt trong ngữ cảnh của từng ngôn ngữ, và được xem là &quot;từ khóa&quot;. Khi đặt tên cho các biến, chúng ta cầm bảo đảm rằng không dùng bất cứ từ khóa nào làm tên biến.<br />
+- Tên kiểu dữ liệu tất cả được coi là từ khóa.<br />
+<br />
+<u>5. Các kiểu dữ liệu (Data types)</u><br />
+<br />
+- Có các loại kiểu dữ sau được lưu trữ trong biến ở trong C là :<br />
+  <font color="Red">+ <b>int</b> là một số nguyên, về cơ bản nó biểu thị kich cỡ tự nhiên của các số nguyên (integers).<br />
+  + <b>float</b> và <b>double</b> được dùng cho các số có dấu chấm động. Kiểu <b>float</b> (số thực) chiếm 4 bytes và có thể có tới 6 con số phần sau dấu thập phân, trong khi double chiếm 8 bytes và có thể có tới 10 con số phần thập phân.<br />
+  + <b>char</b> chiếm 1 byte và có khả năng lưu một ký tự đơn (<b>character</b>).<br />
+  + <b>void</b> được dùng điển hình để khai báo biến một hàm không trả về giá trị. Điều này sẽ được nói rõ hơn trong phần hàm.</font><br />
+- Dung lượng nhớ và phạm vi giá trị của những kiểu này thay đổi theo mỗi loại bộ xử lý và việc cài đặt các trình biên dịch C khác nhau.<br />
+- Những kiểu dữ liệu cơ bản và dẫn xuất. Đó là những bổ từ (modifier) được sử dụng để thay đổi kiểu dữ liệu cơ bản nhằm phù hợp với các tình huống đa dạng. Ngoại trừ kiểu void, tất cả các kiểu dữ liệu khác có thể cho phép những bổ tự đứng trước chúng. Bổ từ được sử dụng với C là:<br />
+  + signed, unsigned, long và short, long, double.<br />
+  + signed : có dấu, unsigned : không dấu<br />
+  + long : tăng chiều *** của miền giá trị, double : gấp đôi miền giá trị.<br />
+- Các kiểu dữ liệu và pham vi.<br />
+<br />
+<img src="http://i10.tinypic.com/2vj4ep1.jpg" border="0" alt="" /><br />
+<br />
+<u>6. Các toán tử số học (Arithmetic Operators)</u><br />
+<br />
+- Những toán tử số học được sử dụng để thức hiện những thao tác mang tính số học. Chúng được chia thành hai lớp : Toán tử số học một ngôi (unary) và toán tử số học hai ngôi (binary).<br />
+- Các toán tử số học và chức năng của chúng.<br />
+<br />
+<img src="http://i11.tinypic.com/2z7lobp.jpg" border="0" alt="" /><br />
+<br />
+Hết bài thứ 2<br />
+<br />
+<b>Bài tập tự làm</b><br />
+- Tính giá trị của các biến sau mỗi câu lệnh dưới đây.<br />
+a. int a = 4^4<br />
+b. int a = 23.34<br />
+c. a = 10<br />
+    b = a + a++ <br />
+d. a = -5<br />
+   b = -a
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+		<!-- sig -->
+			<div>
+				__________________<br />
+				Nói là một chuyện, làm là một chuyện. Chi bằng ta làm xong rồi hãy nói như vậy thì nói và làm sẽ là một chuyện.
+			</div>
+		<!-- / sig -->
+		
+
+		
+
+		
+		<!-- edit note -->
+			<div class="smallfont">
+				<hr size="1" style="color:#A1D2F1; background-color:#A1D2F1" />
+				<em>
+					
+						Đã được chỉnh sửa lần cuối bởi Solokop : 05-01-2007 lúc <span class="time">06:32 PM</span>.
+					
+					
+				</em>
+			</div>
+		<!-- / edit note -->
+		
+
+		<div style="margin-top: 10px" align="right">
+			<!-- controls -->
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				
+			
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</table>
+
+
+<!-- post 6171 popup menu -->
+<div class="vbmenu_popup" id="postmenu_6171_menu" style="display:none;">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">Solokop</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="member.php?u=705">Xem Hồ sơ công khai</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="private.php?do=newpm&amp;u=705" rel="nofollow">Gửi một tin nhắn tới Solokop</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="search.php?do=finduser&amp;u=705" rel="nofollow">Tìm toàn bộ bài viết bởi Solokop</a></td></tr>
+	
+	
+	
+	</table>
+</div>
+<!-- / post 6171 popup menu -->
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #6171 --><!-- post #6233 -->
+
+	<!-- open content container -->
+
+<div id="open_content_container">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit6233" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post6233" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+	<td class="thead" >
+		<div class="normal" style="float:right">
+			&nbsp;
+			#<a href="showpost.php?p=6233&amp;postcount=4" target="new" rel="nofollow" id="postcount6233" name="4"><strong>4</strong></a> &nbsp;
+			
+			
+			
+			
+			
+		</div>
+
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post6233"><img class="inlineimg" src="images/statusicon/post_old.gif" alt="Cũ" border="0" /></a>
+			
+				05-01-2007, 05:59 PM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding:0px">
+		<!-- user info -->
+		<table cellpadding="0" cellspacing="6" border="0" width="100%">
+		<tr>
+			<td class="alt2"><a href="member.php?u=705"><img src="customavatars/avatar705_3.gif" width="100" height="100" alt="Avatar củaSolokop" border="0" /></a></td>
+			<td nowrap="nowrap">
+
+				<div id="postmenu_6233">
+					
+					<a class="bigusername" href="member.php?u=705"><span style="color: #3f02a3;">Solokop</span></a>
+					<img class="inlineimg" src="images/statusicon/user_offline.gif" alt="Solokop là offline" border="0" />
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_6233", true); </script>
+					
+				</div>
+
+				<div class="smallfont">XCoworker Member</div>
+				<div class="smallfont"><img src="images/ranks/rank_xcoworker.gif" alt="" border="" /></div>
+				
+
+			</td>
+			<td width="100%">&nbsp;</td>
+			<td valign="top" nowrap="nowrap">
+
+				<div class="smallfont">
+					<div>Ngày gia nhập: 10 2006</div>
+					
+					
+					<div>
+						Bài viết: 208
+					</div>
+					
+					
+					
+					
+					<div>    </div>
+				</div>
+
+			</td>
+		</tr>
+		</table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	
+	<td class="alt1" id="td_post_6233">
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		
+			<!-- icon and title -->
+			<div class="smallfont clearfix">
+				
+					<div style="float: left; width: 36px;"><img class="inlineimg" src="images/icons/icon1.gif" alt="Mặc định" border="0" /></div>
+				
+				
+			</div>
+			<hr size="1" style="color:#A1D2F1; background-color:#A1D2F1" />
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_6233">
+			
+			<b>Bài 3 : Biến và kiểu dữ liệu - Thực hành</b><br />
+<i><br />
+Ví dụ 1:</i><br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 258px;
+		text-align: left;
+		overflow: auto">#include &lt;stdio.h&gt;
+
+void main()
+{
+   int principal, period;
+   float rate, si;
+   
+   principal = 1000;
+   period = 3;
+   rate = 8.5;
+
+   si = principal * period * rate / 100;
+   
+   printf(&quot;%f&quot;, si);
+}</pre>
+</div><i><br />
+Ví dụ 2:</i><br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 226px;
+		text-align: left;
+		overflow: auto">#include &lt;stdio.h&gt;
+
+void main()
+{
+   int a, b, c, sum;
+
+   printf(&quot;\nEnter any three numbers: &quot;);
+   scanf(&quot;%d %d %d&quot;, &amp;a, &amp;b, &amp;c);
+
+   sum = a + b + c;
+  
+   printf(&quot;\n Sum = %d&quot;, sum);
+}</pre>
+</div><b>Bắt buộc</b><br />
+<br />
+- Viết một chương trình nhập vào một số và tính bình phương của số đó.<br />
+- Hướng dẫn:<br />
+  + Nhập vào một số.<br />
+  + Nhân số đố với chính nó và hiển thị kết quả đó.<br />
+<br />
+Kết thúc bài 3<br />
+<br />
+<b>Bài tập tự làm</b><br />
+<br />
+1. Viết chương trình tính diện tích và chu vi của một vòng tròn.<br />
+2. Viết chương trình nhập lương và tuổi của mỗi ngừoi và hiển thị các số vừa nhập đó ra màn hình.
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+		<!-- sig -->
+			<div>
+				__________________<br />
+				Nói là một chuyện, làm là một chuyện. Chi bằng ta làm xong rồi hãy nói như vậy thì nói và làm sẽ là một chuyện.
+			</div>
+		<!-- / sig -->
+		
+
+		
+
+		
+		<!-- edit note -->
+			<div class="smallfont">
+				<hr size="1" style="color:#A1D2F1; background-color:#A1D2F1" />
+				<em>
+					
+						Đã được chỉnh sửa lần cuối bởi Solokop : 17-01-2007 lúc <span class="time">02:49 PM</span>.
+					
+					
+				</em>
+			</div>
+		<!-- / edit note -->
+		
+
+		<div style="margin-top: 10px" align="right">
+			<!-- controls -->
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				
+			
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</table>
+
+
+<!-- post 6233 popup menu -->
+<div class="vbmenu_popup" id="postmenu_6233_menu" style="display:none;">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">Solokop</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="member.php?u=705">Xem Hồ sơ công khai</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="private.php?do=newpm&amp;u=705" rel="nofollow">Gửi một tin nhắn tới Solokop</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="search.php?do=finduser&amp;u=705" rel="nofollow">Tìm toàn bộ bài viết bởi Solokop</a></td></tr>
+	
+	
+	
+	</table>
+</div>
+<!-- / post 6233 popup menu -->
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #6233 --><!-- post #6276 -->
+
+	<!-- open content container -->
+
+<div id="open_content_container">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit6276" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post6276" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+	<td class="thead" >
+		<div class="normal" style="float:right">
+			&nbsp;
+			#<a href="showpost.php?p=6276&amp;postcount=5" target="new" rel="nofollow" id="postcount6276" name="5"><strong>5</strong></a> &nbsp;
+			
+			
+			
+			
+			
+		</div>
+
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post6276"><img class="inlineimg" src="images/statusicon/post_old.gif" alt="Cũ" border="0" /></a>
+			
+				06-01-2007, 07:50 PM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding:0px">
+		<!-- user info -->
+		<table cellpadding="0" cellspacing="6" border="0" width="100%">
+		<tr>
+			<td class="alt2"><a href="member.php?u=705"><img src="customavatars/avatar705_3.gif" width="100" height="100" alt="Avatar củaSolokop" border="0" /></a></td>
+			<td nowrap="nowrap">
+
+				<div id="postmenu_6276">
+					
+					<a class="bigusername" href="member.php?u=705"><span style="color: #3f02a3;">Solokop</span></a>
+					<img class="inlineimg" src="images/statusicon/user_offline.gif" alt="Solokop là offline" border="0" />
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_6276", true); </script>
+					
+				</div>
+
+				<div class="smallfont">XCoworker Member</div>
+				<div class="smallfont"><img src="images/ranks/rank_xcoworker.gif" alt="" border="" /></div>
+				
+
+			</td>
+			<td width="100%">&nbsp;</td>
+			<td valign="top" nowrap="nowrap">
+
+				<div class="smallfont">
+					<div>Ngày gia nhập: 10 2006</div>
+					
+					
+					<div>
+						Bài viết: 208
+					</div>
+					
+					
+					
+					
+					<div>    </div>
+				</div>
+
+			</td>
+		</tr>
+		</table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	
+	<td class="alt1" id="td_post_6276">
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		
+			<!-- icon and title -->
+			<div class="smallfont clearfix">
+				
+					<div style="float: left; width: 36px;"><img class="inlineimg" src="images/icons/icon1.gif" alt="Mặc định" border="0" /></div>
+				
+				
+			</div>
+			<hr size="1" style="color:#A1D2F1; background-color:#A1D2F1" />
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_6276">
+			
+			<b>Bài 4 : Toán tử và biểu thức - Lý thuyết</b><br />
+<br />
+<i>Giới thiệu</i><br />
+<br />
+- C có một tập các toán tử phong phú. Toán tử là công cụ để thao tác dữ liệu. Một toán tử là một ký hiệu dùng để đại diện cho một thao tác cụ thể nào đó được thực hiện trên dữ liệu. C định nghĩa bốn loại toán tử:<br />
+ <font color="Red"> + Toán tử số học (<b>arithmetec</b>).<br />
+  + Toán tử quan hệ (<b>relational</b>).<br />
+  + Toán tử luận lý (<b>logical</b>).<br />
+  + Toán tử luận lý nhị phân (<b>bitwise</b>).</font><br />
+- Toán tử thao tác trên hằng hoặc biến. Hằng hoặc biến này được gọi là toán hạng (operands). Toán tử được phân loại theo toán tử một ngôi, hai ngôi và ba ngôi. Toán tử một ngôi chỉ thao tác trên một phần tử dữ liệu, toán tử hai ngôi trên hai phần tử dữ liệu và ba ngôi trên ba phần tử dữ liệu.<br />
+<br />
+<u>1. Biểu thức (Expressions)</u><br />
+<br />
+- Một biểu thức là tổ hợp các toán tử và toán hạng. Toán tử thực hiện các thao tác như cộng, trừ, so sánh ... Toán hạng là những biến hay những giá trị mà các phép toán được thực hiện trên nó.<br />
+<br />
+<i>Ví dụ : </i><br />
+<br />
+c = a + b;<br />
+<br />
+- Trong ví dụ a + b, &quot;a&quot; và &quot;b&quot; là toán hạng và &quot;+' là toán tử. Tất cả kêt hợp lại là một biểu thức.<br />
+- Trong quá trình thực thi chương trình, giá trị thực sự của biến (nếu có) sẽ được sử dụng cùng với các hằng có mặt trong biểu thức. Vì vậy, mọi biểu thức trong C đều có một giá trị.<br />
+<br />
+<u>2. Toán tử gán (Assignment Operator)</u><br />
+<br />
+- Trước khi nghiên cứu các toán tử khác, ta hãy xét toán tử gán (=). Đây là toán tử thông dụng nhất cho mọi ngôn ngữ và mọi người đều biết. Trong C, toán tử gán có thể được dùng cho bất kỳ biểu thức C hợp lệ. Dạng thức chung cho toán tử gán là:<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">Tên biến = biểu thức;</pre>
+</div><u>3. Biểu thức số học (Arithmetic Expressions)</u><br />
+<br />
+- Các phép toán thường được thực hiện theo một thứ tự cụ thể (hoặc riêng biệt) để cho ra giá trị cuối cùng. Thứ tự này gọi là độ ưu tiên (sẽ nói đến sau).<br />
+- Các biểu thức toán học trong C được biểu diễn bằng cách sử dụng toán tử số học cùng với các toán hạng dạng số và ký tự. Những biểu thức này gọi là biểu thức số học.<br />
+<br />
+<i>Ví dụ</i><br />
+<br />
+a * (b+c/d) / 22;<br />
+++i % 7;<br />
+5 + (c = 3+8);<br />
+<br />
+<u>4. Toán tử quan hệ (Ralational Operators)</u><br />
+<br />
+- Toán tử quan hệ được dùng để kiểm tra mối quan hệ giữa hai biến, hay giữa một biến và một hằng. Ví dụ, việc xét số lớn hơn của hai số, a và b, được thực hiện thông qua dấu lớn hơn (&gt;) giữa hai toán hạng a và b (a &gt; b).<br />
+- Trong C, true (đúng) là bất cứ giá trị nào khác không (0), và false (sai) là bất cứ giá trị nào bằng không (0). Biểu thức dùng toán tử quan hệ trả về 0 cho false và 1 cho true.<br />
+<br />
+<i>Ví dụ</i><br />
+<br />
+a == 14;<br />
+<br />
+- Biểu thức này sẽ kiểm tra xem giá trị của a có bằng 14 hay không. Giá trị của biểu thức sẽ là 0 (false) nếu a có giá trị khác 14 và 1 (true) nếu nó là 14.<br />
+- Bảng sau mô tả ý nghĩa của các toán tử quan hệ.<br />
+<br />
+<img src="http://i18.tinypic.com/2qnxerl.jpg" border="0" alt="" /><br />
+<br />
+<u>5. Toán tử luận lý (Logical Operator)</u><br />
+<br />
+- Toán tử luận lý là các ký hiệu dùng để kết hợp hay phủ định biểu thức có chứa các toán tử quan hệ. Những biểu thức dùng toán tử luận lý trả về 0 cho false và 1 cho true.<br />
+- Bảng sau mô tả ý nghĩa của các toán tử luận lý.<br />
+<img src="http://img215.imageshack.us/img215/8263/tablelogicaloperatorsan9ok.jpg" border="0" alt="" /><br />
+<br />
+<u>6. Toán tử luận lý nhị phân (Bitwise Logical Operator)</u><br />
+<br />
+- Ví dụ xét toán hạng có giá trị là 12, toán tử luận lý nhị phân sẽ coi số 12 này như 1100. Toán tử luân lý nhị phân xem xét các toán hạng dưới dạng chuỗi bit chứ không phải là giá trị số thông thường. Giá trị số có thể thuộc các cơ số: thập phân (decimal), bát phân (octal) hay thập lục phân (hexadecimal). Riêng toán tử luận lý nhị phân sẽ chuyển đổi toán hạng mà nó thao tác thành biểu diễn nhị phần tương ứng, đó là dãy số 1 hoặc 0.<br />
+- Được tổng kết qua bàng sau.<br />
+<img src="http://img222.imageshack.us/img222/3128/tablebitwiselogicaloper2hq.jpg" border="0" alt="" /><br />
+<br />
+<u>7. Biểu thức dạng hỗn hợp &amp; Chuyển đổi kiểu</u><br />
+<br />
+- Một biểu thức dạng hỗn hợp là một biểu thức mà trong đó các toán hạng của một toán tử thuộc về nhiều kiểu dữ liệu khác nhau. Những toán hạng này thông thường được chuyển về cùng kiểu với toán hạng có kiểu dữ liệu lớn nhất. Điều này được gọi là tăng cấp kiểu. Sự phát triển về kiểu dữ liệu theo thứ tự sau :<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">char &lt; int &lt;long &lt; float &lt; double</pre>
+</div>- Chuyển đổi kiểu tự động được trình bày dưới đây nhằm xác định giá trị biểu thức:<br />
+  + <b>char</b> và <b>short</b> được chuyển thành <b>int</b> và <b>float</b> được chuyển thành <b>double</b>.<br />
+  + Nếu có một toán hạng là <b>double</b>, toán hạng còn lại sẽ được chuyển thành <b>double</b>, và kết quả là <b>double</b>.<br />
+  + Nếu có một toán hạng là <b>long</b>, toán hạng còn lại sẽ được chuyển thành <b>unsigned</b> và kết quả cũng là <b>unsigned</b>.<br />
+  + Nếu tất cả toán hạng kiểu <b>int</b>, kết quả là <b>int</b>.<br />
+- Ngoài ra nếu một toán hạng là <b>long</b>, và toán hạng khác là <b>unsigned</b> và giá trị của kiểu <b>unsigned</b> không thể biểu diễn bằng kiểu <b>long</b>. Do vậy, cả hai toán hạng được chuyển thành <b>unsigned long</b>.<br />
+<br />
+<u>8. Ép kiểu (Casts)</u><br />
+<br />
+- Thông thường, ta nên đổi tất cả hằng số nguyên sang kiểu float nếu biểu thức bao gồm những phép tính số học dựa trên số thực, nếu không thi vài biểu thức có thể mất đi giá trị thật của nó.<br />
+<br />
+<i>Ví dụ</i><br />
+<br />
+ int x, y, x;<br />
+ x = 10;<br />
+ y = 100;<br />
+ z = x/y;<br />
+<br />
+- Lúc này z sẽ bằng 0 khi phép chia diễn ra và phần thập phân (0.10) sẽ bị cắt bỏ.<br />
+- Cú pháp của việc ép kiểu.<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">(kiểu dữ liệu) biểu thức;</pre>
+</div><u>9. Độ ưu tiên của toán tử (Precedence)</u><br />
+<br />
+- Độ ưu tiên của toán tử thiết lập thứ tự ưu tiên tính toán khi một biểu thức số học cần được ước lượng. Tóm lại, độ ưu tiên đề cập đến thứ tự mà C thực thi các toán tử. Thứ tự ưu tiên của toán tử số học được thể hiện như bảng dưới đây.<br />
+<br />
+<img src="http://img221.imageshack.us/img221/4396/tableprecedencearithmet9nw.jpg" border="0" alt="" /><br />
+<br />
+- Những toán tử nằm cùng một hàng ở bảng trên có cùng quyền ưu tiên. Việc tính toán của một biểu thức số học sẽ được thực hiện từ trái sang phải cho các toán tử cùng độ ưu tiên. Toán tử *, / , và % có cùng độ ưu tiên và cao hơn + và - (hai ngôi).<br />
+- Độ ưu tiên của những toán tử này có thể được thay đổi bằng cách sử dụng dấu ngoặc đơn. Một biểu thức trong ngoặc luôn luôn được tính toán trước. Các cặp dấu ngoặc đơn có thể được bao *****g nhau, và việc tính toán được thực hiện ở những cặp trong cùng trước, từ trái qua phải.<br />
+- Độ ưu tiên của toán tử so sánh : không có thứ tự ưu tiên giữa các toán tử và chúng đựoc ước lượng từ trái qua phải.<br />
+- Thứ tự ưu tiên của các toán tử luận lý<br />
+<ol style="list-style-type: decimal"><li>NOT</li>
+<li>AND</li>
+<li>OR</li>
+</ol><br />
+- Thứ tự ưu tiên giữu các kiểu toán tử khác nhau<br />
+<ol style="list-style-type: decimal"><li>Số học</li>
+<li>So sánh (quan hệ)</li>
+<li>Luận lý</li>
+</ol><br />
+Kết thúc bài 4<br />
+<br />
+<b>Bài tập tự làm</b><br />
+<br />
+1. Viết một chương trình nhập và cộng ba số.<br />
+2. Viết một chương trình tính giá trị của biểu thức với các giá trị sau:<br />
+<br />
+ z = a*b+(c/d)-c*f;<br />
+<br />
+ a = 10<br />
+ b = 7<br />
+ c = 15.75<br />
+ d = 4<br />
+ e = 2<br />
+ f = 5.6<br />
+<br />
+3. Viết một chương trình tính diện tích và chu vi của hình chữ nhật.<br />
+4. Viết một chương trình tính thể tích hình trụ.<br />
+5. Viết một chương trình tính lương thực lãnh của một nhân viên theo công thức dưới đây.<br />
+<br />
+ Lương cơ bản : $ 12000<br />
+ DA : 12% lương cơ bản<br />
+ HRA : $150<br />
+ TA : $120<br />
+ Các mục khác : $450<br />
+ Thuế : PF: 14% lương cơ bản và IT: 15% lương cơ bản<br />
+ Lương thực lãnh = Lương cơ bản + DA + HRA + TA + Các mục khác - (PF + IT)
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+		<!-- sig -->
+			<div>
+				__________________<br />
+				Nói là một chuyện, làm là một chuyện. Chi bằng ta làm xong rồi hãy nói như vậy thì nói và làm sẽ là một chuyện.
+			</div>
+		<!-- / sig -->
+		
+
+		
+
+		
+		<!-- edit note -->
+			<div class="smallfont">
+				<hr size="1" style="color:#A1D2F1; background-color:#A1D2F1" />
+				<em>
+					
+						Đã được chỉnh sửa lần cuối bởi Solokop : 26-01-2007 lúc <span class="time">02:36 PM</span>.
+					
+					
+				</em>
+			</div>
+		<!-- / edit note -->
+		
+
+		<div style="margin-top: 10px" align="right">
+			<!-- controls -->
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				
+			
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</table>
+
+
+<!-- post 6276 popup menu -->
+<div class="vbmenu_popup" id="postmenu_6276_menu" style="display:none;">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">Solokop</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="member.php?u=705">Xem Hồ sơ công khai</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="private.php?do=newpm&amp;u=705" rel="nofollow">Gửi một tin nhắn tới Solokop</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="search.php?do=finduser&amp;u=705" rel="nofollow">Tìm toàn bộ bài viết bởi Solokop</a></td></tr>
+	
+	
+	
+	</table>
+</div>
+<!-- / post 6276 popup menu -->
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #6276 --><!-- post #6333 -->
+
+	<!-- open content container -->
+
+<div id="open_content_container">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit6333" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post6333" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+	<td class="thead" >
+		<div class="normal" style="float:right">
+			&nbsp;
+			#<a href="showpost.php?p=6333&amp;postcount=6" target="new" rel="nofollow" id="postcount6333" name="6"><strong>6</strong></a> &nbsp;
+			
+			
+			
+			
+			
+		</div>
+
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post6333"><img class="inlineimg" src="images/statusicon/post_old.gif" alt="Cũ" border="0" /></a>
+			
+				08-01-2007, 05:38 PM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding:0px">
+		<!-- user info -->
+		<table cellpadding="0" cellspacing="6" border="0" width="100%">
+		<tr>
+			<td class="alt2"><a href="member.php?u=705"><img src="customavatars/avatar705_3.gif" width="100" height="100" alt="Avatar củaSolokop" border="0" /></a></td>
+			<td nowrap="nowrap">
+
+				<div id="postmenu_6333">
+					
+					<a class="bigusername" href="member.php?u=705"><span style="color: #3f02a3;">Solokop</span></a>
+					<img class="inlineimg" src="images/statusicon/user_offline.gif" alt="Solokop là offline" border="0" />
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_6333", true); </script>
+					
+				</div>
+
+				<div class="smallfont">XCoworker Member</div>
+				<div class="smallfont"><img src="images/ranks/rank_xcoworker.gif" alt="" border="" /></div>
+				
+
+			</td>
+			<td width="100%">&nbsp;</td>
+			<td valign="top" nowrap="nowrap">
+
+				<div class="smallfont">
+					<div>Ngày gia nhập: 10 2006</div>
+					
+					
+					<div>
+						Bài viết: 208
+					</div>
+					
+					
+					
+					
+					<div>    </div>
+				</div>
+
+			</td>
+		</tr>
+		</table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	
+	<td class="alt1" id="td_post_6333">
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		
+			<!-- icon and title -->
+			<div class="smallfont clearfix">
+				
+					<div style="float: left; width: 36px;"><img class="inlineimg" src="images/icons/icon14.gif" alt="Thumbs up" border="0" /></div>
+				
+				
+			</div>
+			<hr size="1" style="color:#A1D2F1; background-color:#A1D2F1" />
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_6333">
+			
+			<b>Bài 5 : Toán tử và biểu thức - Thực hành</b><br />
+<br />
+<i>Ví dụ 1 : Tính lãi đơn</i><br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 226px;
+		text-align: left;
+		overflow: auto">#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+   float p, n, r;
+   clrscr();
+   p = 1000;
+   n = 2.5;
+   r = 10.5;
+
+   printf(&quot;\n Amount is : %f&quot;, p*n*r/100);
+}</pre>
+</div><i>Ví dụ 2 : Dùng toán tử số học</i><br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 434px;
+		text-align: left;
+		overflow: auto">#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+   int a, b, c, d;
+   clrscr();
+   a = 50;
+   b = 24;
+   c = 68;
+
+   d = a*b*c/2;
+   printf(&quot;\n The value after a*b+c/2 is : %d&quot;, d);
+   d = a%b;
+   printf(&quot;\n The value after a mod b is : %d&quot;, d);
+   d = a*b-c;
+   printf(&quot;\n The value after a*b-c is : %d&quot;, d);
+   d = a/b+c;
+   printf(&quot;\n The value after a/b+c is : %d&quot;, d);
+   d = a+b*c;
+   printf(&quot;\n The value after a+b*c is : %d&quot;, d);
+   d = (a+b)*c;
+   printf(&quot;\n The value after (a+b)*c is : %d&quot;, d);
+   d = a*(b+c+(a-c)*b);
+   printf(&quot;\n The value after a*(b+c+(a-c)*b) is : %d&quot;, d);
+}</pre>
+</div><i>Ví dụ 3 : Dùng toán tử so sách và luận lý</i><br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 274px;
+		text-align: left;
+		overflow: auto">#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+   int a = 5, b = 6, c =7;
+   printf(&quot;int a = 5, b = 6, c = 7;\n&quot;);
+   printf(&quot;The value of a &gt; b is \t %i\n\n&quot;, a &gt; b);
+   printf(&quot;The value of b &gt; c is \t %i\n\n&quot;, b &gt; c);
+   printf(&quot;The value of a + b &gt;= c is \t %i\n\n&quot;, a + b &gt;= c);
+   printf(&quot;The value of a - b &lt;= b - c is \t %i\n\n&quot;, a - b &lt;= b - c);
+   printf(&quot;The value of b - a == b - c is \t %i\n\n&quot;, b - a == b - c);
+   printf(&quot;The value of a*b != c*c is \t %i\n\n&quot;, a*b &lt; c*c);
+   printf(&quot;Result of a&gt;10 &amp;&amp; b&lt;5 = %d\n\n&quot;, a&gt;10 &amp;&amp; b&lt;5);
+   printf(&quot;Result of a&gt;100 || b&lt;50 = %d\n\n&quot;, a&gt;100 || b&lt;50);
+}</pre>
+</div><i>Ví dụ 4 : Chuyển đổi kiểu dữ liệu</i><br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 194px;
+		text-align: left;
+		overflow: auto">#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+   clrscr();
+   printf(&quot;40/17*13/3 = %d&quot;, 40/17*13/3);
+   printf(&quot;\n\n40/17*13/3.0 = %lf&quot;, 40/17*13/3.0);
+   printf(&quot;\n\n40/17*13.0/3 = %lf&quot;, 40/17*13.0/3);
+   printf(&quot;\n\n40/17.0*13/3 = %lf&quot;, 40/17.0*13/3);
+}</pre>
+</div><i>Ví dụ 5 : Thứ tự ưu tiên của các toán tử</i><br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 146px;
+		text-align: left;
+		overflow: auto">#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+   clrscr();
+   printf(&quot;Result = %d&quot;,(4-2*9/6&lt;=3 &amp;&amp; (10*2/4-3 &gt; 3 || (1 &lt; 5 &amp;&amp; 8 &gt; 10) )));
+}</pre>
+</div><b>Bắt buộc</b><br />
+<br />
+1. Tính giá trị biểu thức sau:<br />
+<br />
+10*3^6*6+5-2 AND (2*2+6/3&gt;1 OR 2&gt;8)<br />
+<br />
+- Thực hiện như sau: gõ vào biểu thức trên sử dụng câu lênh printf(). AND được thay thế bởi &amp;&amp; và OR được thay thế bởi ||<br />
+<br />
+2. Giả sử tất cả biến có kiểu là <b>int</b>. Tìm giá trị cho mỗi biến sau:<br />
+<br />
+x = (2+3)*6;<br />
+x = (12+6)/2*3;<br />
+y = x = (2+3)/4;<br />
+y = 3+2*(x = 7/2);<br />
+x = (int) 3.8 + 3.3;<br />
+x = (2+3)*10.5;<br />
+x = 3/5*22.0;<br />
+x = 22.0*3/5;<br />
+<br />
+<i>Hết bài 5</i><br />
+<br />
+<b>Bài tập tự làm</b><br />
+<br />
+1. Tính giá trị được gán (nằm phía bên trái) cho mỗi trường hợp sau:<br />
+<br />
+int s, m = 3, n =5, r, t;<br />
+float x = 3.0, y;<br />
+t = n/m;<br />
+r = n%m;<br />
+y = n/m;<br />
+t = x*y-m/2;<br />
+x = x*2.0;<br />
+s = (m+n)/r;<br />
+y = --n;<br />
+<br />
+2. Viết một chuơng trình nhập vào một số thực. Đơn vị tính cho số này là centimet (cm). Hãy in ra số tương đương tính bằng foot (số thực, có 1 số lẻ thập phân) và inch (số thực, có 1 số lẻ thập phân). Độ chính xác của foot và inch là một số lẻ thập phân.<br />
+<br />
+- Hướng dẫn: 2.45 centimeters = 1 inch, và 12 inches = 1 foot.<br />
+- Nếu giá trị nhập vào là 333.3, kết quả là:<br />
+333.3 centimeters tương đương 10.9 feet.<br />
+333.3 centimeters tương đương 131.2 inches.<br />
+<br />
+3. Tìm giá trị của iResult cho những câu lênh sau:<br />
+<br />
+int iResult, a = 10, b = 8, c = 6, d = 5, e = 2;<br />
+iResult = a - b - c - d;<br />
+iResult = a - b + c - d;<br />
+iResult = a + b / c / d;<br />
+iResult = a + b / c * d;<br />
+iResult = a / b * c * d;<br />
+iResult = a % b % c % d;<br />
+iResult = a - (b - c) - d;<br />
+iResult = (a - (b - c)) - d;<br />
+iResult = a - ((b - c) - d);<br />
+iResult = a % (b % c) * d * e;<br />
+iResult = a + (b - c) * d - e;<br />
+iResult = (a + b) * c + d * e;<br />
+iResult = (a + b) * (c / d) % e;
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+		<!-- sig -->
+			<div>
+				__________________<br />
+				Nói là một chuyện, làm là một chuyện. Chi bằng ta làm xong rồi hãy nói như vậy thì nói và làm sẽ là một chuyện.
+			</div>
+		<!-- / sig -->
+		
+
+		
+
+		
+		<!-- edit note -->
+			<div class="smallfont">
+				<hr size="1" style="color:#A1D2F1; background-color:#A1D2F1" />
+				<em>
+					
+						Đã được chỉnh sửa lần cuối bởi Solokop : 21-01-2007 lúc <span class="time">04:11 PM</span>.
+					
+					
+				</em>
+			</div>
+		<!-- / edit note -->
+		
+
+		<div style="margin-top: 10px" align="right">
+			<!-- controls -->
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				
+			
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</table>
+
+
+<!-- post 6333 popup menu -->
+<div class="vbmenu_popup" id="postmenu_6333_menu" style="display:none;">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">Solokop</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="member.php?u=705">Xem Hồ sơ công khai</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="private.php?do=newpm&amp;u=705" rel="nofollow">Gửi một tin nhắn tới Solokop</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="search.php?do=finduser&amp;u=705" rel="nofollow">Tìm toàn bộ bài viết bởi Solokop</a></td></tr>
+	
+	
+	
+	</table>
+</div>
+<!-- / post 6333 popup menu -->
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #6333 --><!-- post #6424 -->
+
+	<!-- open content container -->
+
+<div id="open_content_container">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit6424" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post6424" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+	<td class="thead" >
+		<div class="normal" style="float:right">
+			&nbsp;
+			#<a href="showpost.php?p=6424&amp;postcount=7" target="new" rel="nofollow" id="postcount6424" name="7"><strong>7</strong></a> &nbsp;
+			
+			
+			
+			
+			
+		</div>
+
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post6424"><img class="inlineimg" src="images/statusicon/post_old.gif" alt="Cũ" border="0" /></a>
+			
+				10-01-2007, 05:23 PM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding:0px">
+		<!-- user info -->
+		<table cellpadding="0" cellspacing="6" border="0" width="100%">
+		<tr>
+			<td class="alt2"><a href="member.php?u=705"><img src="customavatars/avatar705_3.gif" width="100" height="100" alt="Avatar củaSolokop" border="0" /></a></td>
+			<td nowrap="nowrap">
+
+				<div id="postmenu_6424">
+					
+					<a class="bigusername" href="member.php?u=705"><span style="color: #3f02a3;">Solokop</span></a>
+					<img class="inlineimg" src="images/statusicon/user_offline.gif" alt="Solokop là offline" border="0" />
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_6424", true); </script>
+					
+				</div>
+
+				<div class="smallfont">XCoworker Member</div>
+				<div class="smallfont"><img src="images/ranks/rank_xcoworker.gif" alt="" border="" /></div>
+				
+
+			</td>
+			<td width="100%">&nbsp;</td>
+			<td valign="top" nowrap="nowrap">
+
+				<div class="smallfont">
+					<div>Ngày gia nhập: 10 2006</div>
+					
+					
+					<div>
+						Bài viết: 208
+					</div>
+					
+					
+					
+					
+					<div>    </div>
+				</div>
+
+			</td>
+		</tr>
+		</table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	
+	<td class="alt1" id="td_post_6424">
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		
+			<!-- icon and title -->
+			<div class="smallfont clearfix">
+				
+					<div style="float: left; width: 36px;"><img class="inlineimg" src="images/icons/icon1.gif" alt="Mặc định" border="0" /></div>
+				
+				
+			</div>
+			<hr size="1" style="color:#A1D2F1; background-color:#A1D2F1" />
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_6424">
+			
+			<b>Bài 6 : Nhập và xuất trong C</b><br />
+<br />
+<i>Giới thiệu : </i><br />
+<br />
+- Trong bất kỳ ngôn ngữ lập trình nào, việc nhập giá trị cho các biến và in chúng ra sau khi xử lý có thể được làm theo hai cách:<br />
+<font color="Red">   + Thông qua phương tiện nhập xuất chuẩn (I/O)<br />
+   + Thông qua những tập tin.</font><br />
+- Trong phần này ta sẽ nói về chức năng nhập và xuất cơ bản. Nhập và xuất (I/O) luôn là các thành phần quan trọng của bất kỳ chương trình nào. Để tạo tính hữu ích, chương trình của bạn cần có khả năng nhập dữ liệu vào và hiển thị lại những kết quả của nó. <br />
+- Trong C, thư viện chuẩn cung cấp những thủ tục cho viêc nhập xuất. Thư viện chuẩn có những hàm quản lý các thao tác nhập/ xuất cũng như các thao tác trên ký tự và chuỗi. Trong bài học này, tất cả những hàm dùng để đọc dữ liệu vào từ thiết bị nhập chuẩn và tất cả những hàm xuất dùng để viết kết quả ra thiết bị xuất chuẩn. Thiết bị nhập chuẩn thông thường là bàn phím. Thiết bị xuất chuẩn thông thường là màn hình (console). Nhập và xuất ra có thể được định hướng đến tập tin hay từ tập tin thay vì thiết bị chuẩn. Những tập tin có thể được lưu trên đĩa hay trên bất cứ thiết bị lưu trữ nào khác. Dữ liệu đầu ra cũng có thể được gửi đến máy in.<br />
+<br />
+<u>1.Tập tin tiêu đề &lt;stdio.h&gt;</u><br />
+<br />
+- Trong các ví dụ trước, ta từng viết dòng mã sau:<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">#include &lt;stdio.h&gt;</pre>
+</div>- Đây là lệnh tiền xử lý (<b>preprocessor command</b>). Trong C chuẩn, ký hiệu # nên đặt tại cột đầu tiên. stdio.h là một tập tin và được gọi là tập tin tiêu đề (<b>header</b>). Nó chứa các macro cho nhiều hàm nhập và xuất được dùng trong C. Hàm <b>printf(), scanf(), putchar()</b> và <b>getchar()</b> được thiết kế theo cách gọi các <b>macro</b> trong tập tin <b>stdio.h</b> để thực thi các công việc tương ứng.<br />
+<br />
+<u>2.Nhập xuất trong C (input anh output)</u><br />
+<br />
+- Thư viện chuẩn trong C cung cấp hai hàm để thực hiện các yêu cầu nhập và xuất có đinh dạng. Chúng là:<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 50px;
+		text-align: left;
+		overflow: auto">printf() - Hàm xuất có định dạng.
+scanf() – Hàm nhập có định dạng.</pre>
+</div>- Những hàm này gọi là những hàm được định dạng vì chúng có thể đọc và in dữ liệu ra theo các định dạng khác nhau được điều khiển bởi người dùng. Bộ định dạng qui định dạng thức mà theo đó giá trị của biến sẽ được nhập vào và in ra.<br />
+<br />
+<u>3.printf()</u><br />
+<br />
+- Cấu trúc câu lệnh:<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">printf(“control string”, argument list);</pre>
+</div>- Trong đó control string bao gồm những ký tự văn bản và các lệnh định dạng. Các ký tự dấu trắng, phím tab và dấu xuống dòng không in được. Dưới đây bảng mã định dạng của <b>printf()</b>, quy ước in và các ký tự đặc biệt trong chuỗi điều khiển.<br />
+<br />
+&lt;picture&gt;<br />
+<br />
+- Bổ từ (modifier) cho các lệnh định dạng trong printf()<br />
+   + Bổ từ &quot;<font color="Red">-</font>&quot; : dữ liệu sẽ được canh trái bên trong không gian dành cho nó, chúng sẽ được in bắt đầu từ vị trí ngoài cùng bên trái.<br />
+   + Bổ từ xác định độ rộng : chúng có thể được dùng với kiểu: float, double hay char array (chuỗi-string). Bổ từ xác định độ rộng là một số nguyên xác định độ rộng nhỏ nhất của trường dữ liệu. Các trường dữ liệu có độ rộng nhỏ hơn sẽ cho canh phải trong kết quả của trường dữ liệu. Các dữ liệu có kích thước lớn hơn sẽ được in bằng cách thêm những vị trí cho đủ yêu cầu.<br />
+   + Bổ từ xác định độ chính xác : chúng có thể được dùng với kiểu float, double hay char array, string. Bổ từ xác định độ rộng chính xác được viết dưới dạng .m với m là một số nguyên. Nếu xử dụng với kiểu float và double, chuỗi số chỉ ra số con số tối đa có thể được in ra phía bên phải dấu chấm thập phân. Nếu phần phân số của các mục dữ liệu kiểu float hay double vượt quá độ rộng con số chỉ trong bổ từ, thì số đó sẽ được làm tròn. Nếu chiều dài chuỗi vượt quá chiều dài chỉ định thì chuỗi sẽ được cắt bỏ phần dư ra ở phía dưới. Một vài số &quot;<b>0</b>&quot; sẽ được thêm vào nếu số con số thực sự trong một mục dữ liệu ít hơn được chỉ định trong bổ từ. Tương tự, các khoảng trắng sẽ được thêm vào cho chuỗi ký tự.<br />
+        -&gt; Bổ từ &quot;<font color="Red">0</font>&quot; : Theo mặc định, việc thêm vào một trường được thực hiện với các khoảng trắng. Nếu người dùng muốn thêm vào trường với số không &quot;<b>0</b>&quot;, bổ từ này phải được dùng.<br />
+        -&gt; Bổ từ &quot;<font color="Red">1</font>&quot; : Bổ từ này có thể được dùng để hiển thị số nguyên như: long int hay một tham số kiểu double. Mã định dạng tương ứng cho nó là %ld<br />
+        -&gt; Bổ từ &quot;<font color="Red">h</font>&quot; : Bổ từ này được dùng để hiển thị kiểu short integer. Mã định dạng tương ứng cho nó là %hd.<br />
+        -&gt; Bổ từ &quot;<font color="Red">*</font>&quot; : Bổ từ này được dùng khi người dùng không muốn chỉ trước độ rộng của trường mà muốn chường trình xác định nó. Nhưng khi đi với bổ từ này, một tham số đựoc yêu cầu phải chỉ ra rộng trường cụ thể. Dưới đây là một vài ví dụ về bổ từ...<br />
+<br />
+<i>Ví dụ 1 :</i><br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 322px;
+		text-align: left;
+		overflow: auto">/*Chuong trinh nay trinh bay cach dung bo tu trong printf()*/
+#include &lt;stdio.h&gt;
+
+void main()
+{
+   printf(&quot;The number 555 is various forms: \n&quot;);
+   printf(&quot;Without any modifier: \n&quot;);
+   printf(&quot;[%d] \n&quot;, 555);
+   printf(&quot;With - modifier: \n&quot;);
+   printf(&quot;[%-d] \n&quot;, 555);
+   printf(&quot;With digit string 10 as modifier: \n&quot;);
+   printf(&quot;[%10d] \n&quot;, 555);
+   printf(&quot;With 0 as modifier: \n&quot;);
+   printf(&quot;[%0d] \n&quot;, 555);
+   printf(&quot;With 0 and digit string 10 as modifiers: \n&quot;);
+   printf(&quot;[%010d] \n&quot;, 555);
+   printf(&quot;With -, 0 and digit string 10 as modifiers: \n&quot;);
+   printf(&quot;[%-010d] \n&quot;, 555);
+}</pre>
+</div><i>Ví dụ 2 :</i><br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 466px;
+		text-align: left;
+		overflow: auto">/*Chuong trinh nay trinh bay cach dung bo tu trong printf()*/
+#include &lt;stdio.h&gt;
+void main()
+{
+   printf(&quot;The number 555.55 in various forms: \n&quot;);
+   printf(&quot;In float form without modifiers: \n&quot;);
+   printf(&quot;[%f] \n&quot;, 555.55);
+   printf(&quot;In exponential form without any modifier: \n&quot;);
+   printf(&quot;[%e] \n&quot;, 555.55);
+   printf(&quot;In float form with - modifier: \n&quot;);
+   printf(&quot;[%-f] \n&quot;, 555.55);
+   printf(&quot;In float form with digit string 10.3 as modifier \n&quot;);
+   printf(&quot;[%10.3f] \n&quot;, 555.55);
+   printf(&quot;In float form with 0 as modifier: \n&quot;);
+   printf(&quot;[%0f] \n&quot;, 555.55);
+   printf(&quot;In float form with 0 and digit string 10.3&quot;);
+   printf(&quot;as modifier: \n&quot;);
+   printf(&quot;[%010.3f] \n&quot;, 555.55);
+   printf(&quot;In float form with -, 0&quot;);
+   printf(&quot;and digit string 10.3 as modifiers: \n&quot;);
+   printf(&quot;[%-010.3f] \n&quot;, 555.55);
+   printf(&quot;In exponential form with 0&quot;);
+   printf(&quot;and digit string 10.3 as modifier: \n&quot;);
+   printf(&quot;[%010.3e] \n&quot;, 555.55);
+   printf(&quot;In exponential form with -, 0&quot;);
+   printf(&quot; and digit string 10.3 as modifiers: \n&quot;);
+   printf(&quot;[%-010.3e]  \n\n&quot;, 555.55);
+}</pre>
+</div><u>4. scanf()</u><br />
+<br />
+- Hàm scanf() được sử dụng để nhập dữ liệu. Khuôn dạng chung của hàm scanf() như sau:<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">scanf(&quot;Chuỗi các định dạng&quot;,&quot;Danh sách các tham số&quot;);</pre>
+</div>- Định dạng được sử dụng bên trong câu lệnh printf() cũng được sử dụng cùng cú pháp trong các câu lệnh scanf(). Những lệnh định dạng, bao gồm bổ từ và danh sách tham số được bàn luận cho printf() thì cũng hợp lệ cho scanf(), chúng tuân theo một số đặc điểm sau:<br />
+   + Sự khác nhau trong danh sách tham số giữa printf() và scanf(): Hàm printf() dùng các tên biến, hằng số, hằng chuỗi và các biểu thức, nhưng scanf() sử dụng những con trỏ tới các biến. Một con trỏ tới một biến là một mục dữ liệu chức đựng địa chỉ của nơi mà biến được cất giữ trong bộ nhớ. Những con trỏ sẽ được bàn luận chi tiết ở chương sau. Khi sử dụng scanf() cần tuân theo những quy tắc cho danh sách tham số:<br />
+   -&gt; Nếu ta muốn nhập giá trị cho một biến có kiểu dữ liệu cơ bản, gõ và tên biến cùng với ký hiệu &amp; trước nó.<br />
+   -&gt; Khi nhập giá trị cho một biến thuộc kiểu dữ liệu dẫn xuất (không phải thuộc bốn kiểu dữ liệu cơ bản char, int, float, double), không sử dụng &amp; trước tên biến.<br />
+   + Sự khác nhau trong lệnh định dạng giữa printf() và scanf(): Không có tùy chọn %g. Mã định dạng %f và %e có cũng hiệu quả tác động. Cả hai nhận một ký hiệu tùy chọn, một chuỗi các con số có hay không có dấu chấm thập phân và một trường số mũ tùy chọn.<br />
+- Cách thức hoạt động của scanf(): nó sử dụng những ký tự không được in như ký tự khoảng trắng, ký tự phân cách (tab), ký tự xuống dòng để quyết định khi nào một trường nhập kết thúc và bắt đầu. Có sự tương ứng giữa lệnh định dạng với những trường trong danh sách tham số theo một thứ tự xác định, bỏ qua những ký tự khoảng trắng bên trong. Do đó, đầu vào có thể được trải ra hơn một dòng, miễn là chúng ta có it nhất một ký tự phân cách, khoảng trắng hay hàng mới giữa các trường nhập vào. Nó bỏ qua những khoảng trắng và ranh giới hàng để thu được dữ liệu.<br />
+<br />
+<i>Ví dụ 1:</i><br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 210px;
+		text-align: left;
+		overflow: auto">/*Chuong trinh mo ta viec dung ham scanf()*/
+
+#include &lt;stdio.h&gt;
+void main()
+{
+   int a;
+   float d;
+   char ch, name[40];
+   printf(&quot;Please enter the date \n&quot;);
+   scanf(&quot;%d %f %c %s&quot;, &amp;a, &amp;d, &amp;ch, name);
+   printf(&quot;\nThe values accepted are: %d, %f, %c, %s&quot;, a, d, ch, name);
+}</pre>
+</div><i>Ví dụ 2:</i><br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 162px;
+		text-align: left;
+		overflow: auto">/*Chuong trinh mo ta viec dung ham scanf()*/
+
+#include &lt;stdio.h&gt;
+
+void main()
+{
+   char line[80]; /*line[80] la mot mang luu 80 ky tu, mang chung ta se noi toi sau*/
+   scanf(&quot;% [ABCDEFGHIJMNOPQRSTUVWXYZ]&quot;, line);
+}</pre>
+</div><u>5. Bộ nhớ đệm nhập và xuất (Buffered I/O)</u><br />
+<br />
+- Ngôn ngữ C bản thân nó không định nghĩa các thao tác nhập và xuất. Tất cả thao tác nhập và xuất được thực hiện bởi các hàm có sẵn trong thư viện hàm của C. Thư viện hàm C chứa một hệ thống hàm riếng mà nó điều khiển các thao tác này. Đó là:<br />
+   + Bộ nhớ đệm Nhập và Xuất - được dùng để đọc và viết các ký tự ASCII<br />
+- Một vùng đệm là nơi lưu trữ tạm thời, nằm trên bộ nhớ máy tính hoặc trên thẻ nhớ của bộ điều khiển thiết bị (controller card). Các ký tự nhập vào từ bàn phím được đưa vào bộ nhớ và đợi đến khi người dùng nhấn phím <i>return</i> hay <i>enter</i> thì chúng sẽ được thu nhận như một khối và cung cấp cho chương trình. Bộ nhớ đệm nhập và xuất có thể được phân thành:<br />
+   + Thiết bị nhập/ xuất chuẩn (Console I/O<br />
+   + Tập tin đệm nhập/ xuất (Buffered File I/O)<br />
+- Các hàm đơn giản nhất của Thiết bị nhập/ xuất chuẩn là:<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 50px;
+		text-align: left;
+		overflow: auto">getchar() - Đọc một và chỉ một ký tự từ bàn phím.
+putchar() - Xuất một ký từ đơn ra màn hình.</pre>
+</div><u>6. getchar()</u><br />
+<br />
+- Hàm này được dùng để đọc dữ liệu nhập vào, chỉ một ký tự tại một thời điểm từ bàn phím. Trong hầu hết việc thực thi C, khi dùng <i>getchar()</i>, các ký tự nằm trong vùng đệm cho đến khi người dùng nhấn phím xuống dòng. Vì vậy nó sẽ đợi cho đến khi phím Enter được gõ. Hàm <i>getchar()</i> không có tham số, nhưng vấn phải có cặp dấu ngoặc đơn. Nó đơn giản lấy về ký tự tiếp theo và sẵn sàng đưa ra cho chương trình. Chúng ta nói rằng hàm này trả về một giá trị có kiểu ký tự.<br />
+<br />
+<i>Ví dụ</i><br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 178px;
+		text-align: left;
+		overflow: auto">/*Chuong trinh trinh bay cach dùng getchar()*/
+
+#include &lt;stdio.h&gt;
+void main()
+{
+   char letter;
+   printf(&quot;\nPlease enter my character: &quot;);
+   letter = getchar();
+   printf(&quot;\nThe character entered by you is %c. &quot;, letter);
+}</pre>
+</div><u>7. putchar()</u><br />
+<br />
+- <i>putchar()</i> là hàm xuất ký tự trong C, nó sẽ xuất một ký tự lên màn hình tại vị trí con trỏ màn hình. Hàm này yêu cầu một tham số. Tham số của hàm <i>putchar()</i> đựoc thể hiện ở bảng dứoi đây:<br />
+<br />
+&lt;picture&gt;<br />
+<br />
+<i>Ví dụ</i><br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 274px;
+		text-align: left;
+		overflow: auto">/* Chuong trinh nay trinh bay viec su dung hang và dinh dang trong ham putchar() */
+
+#include &lt;stdio.h&gt;
+void main()
+{
+   putchar(&quot;H&quot;); putchar(&quot;\n&quot;);
+   putchar(&quot;\t&quot;);
+   putchar(&quot;E&quot;); putchar(&quot;\n&quot;);
+   putchar(&quot;\t&quot;); putchar(&quot;\t&quot;);
+   putchar(&quot;L&quot;); putchar(&quot;\n&quot;);
+   putchar(&quot;\t&quot;); putchar(&quot;\t&quot;); putchar(&quot;\t&quot;);
+   putchar(&quot;L&quot;); putchar(&quot;\n&quot;);
+   putchar(&quot;\t&quot;); putchar(&quot;\t&quot;); putchar(&quot;\t&quot;);
+   putchar(&quot;\t&quot;);
+   putchar(&quot;O&quot;);
+}</pre>
+</div>Kết thúc bài 6<br />
+<br />
+<b>Bài tập tự làm</b><br />
+<br />
+1. A. Hãy dùng câu lệnh printf() để:<br />
+.  a) Xuất ra giá trị của biến số nguyen sum.<br />
+.  b) Xuất ra chuỗi văn bản &quot;Welcome&quot;, tiếp theo là một dòng mới.<br />
+.  c) Xuất ra biến ký tự letter.<br />
+.  d) Xuất ra biến số thực discount.<br />
+.  e) Xuất ra biến số thực dump có 2 vị trí phần thập phân.<br />
+<br />
+1. B. Dùng câu lênh scanf() và thực hiện:<br />
+.  a) Đọc giá trị thập phân từ bàn phím vào biến số nguyên sum.<br />
+.  b) Đọc một giá trị số thực vào biến discount_rate.<br />
+<br />
+2. Viết một chương trình xuất ra giá trị ASCII của các ký tự 'A' và 'b'<br />
+<br />
+3. Xét chương trình sau:<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 146px;
+		text-align: left;
+		overflow: auto">#include &lt;stdio.h&gt;
+void main()
+{
+   int breadth;
+   float length, height;
+   scanf(&quot;%d %f %6.2f&quot;, breadth, &amp;length, height);
+   printf(&quot;%d %f %e&quot;, &amp;breadth, length, height);
+}</pre>
+</div>- Sửa lỗi chương trình trên.<br />
+<br />
+4. Viết một chương trình nhạp vào name, basic, daper (phần trăm của D.A), bonper (phần trăm lợi tức) và loandet (tiền vay bị khấu trừ) cho một nhân viên. Tính lương như sau:<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">salary = basic + basic + daper/100 + bonper * bassic/100 - loandet</pre>
+</div>- Bảng dữ liệu:<br />
+<b>Name   -   Bassic   -   Daper   -   Bonper   -   Loandet</b><br />
+Mark        2500          55            33.33          250.00<br />
+- Tính salary và xuất ra kết quả dưới các đầu đề sau (Lương được in ra gần dấu đôla($)):<br />
+<b>Name   -   Basic   -   Salary</b><br />
+- Viết một chương trình yêu cầu nhập tên, họ của bạn và sau đó xuất ra tên, họ theo dạng là họ, tên.
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+		<!-- sig -->
+			<div>
+				__________________<br />
+				Nói là một chuyện, làm là một chuyện. Chi bằng ta làm xong rồi hãy nói như vậy thì nói và làm sẽ là một chuyện.
+			</div>
+		<!-- / sig -->
+		
+
+		
+
+		
+		<!-- edit note -->
+			<div class="smallfont">
+				<hr size="1" style="color:#A1D2F1; background-color:#A1D2F1" />
+				<em>
+					
+						Đã được chỉnh sửa lần cuối bởi Solokop : 26-01-2007 lúc <span class="time">02:19 PM</span>.
+					
+					
+				</em>
+			</div>
+		<!-- / edit note -->
+		
+
+		<div style="margin-top: 10px" align="right">
+			<!-- controls -->
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				
+			
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</table>
+
+
+<!-- post 6424 popup menu -->
+<div class="vbmenu_popup" id="postmenu_6424_menu" style="display:none;">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">Solokop</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="member.php?u=705">Xem Hồ sơ công khai</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="private.php?do=newpm&amp;u=705" rel="nofollow">Gửi một tin nhắn tới Solokop</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="search.php?do=finduser&amp;u=705" rel="nofollow">Tìm toàn bộ bài viết bởi Solokop</a></td></tr>
+	
+	
+	
+	</table>
+</div>
+<!-- / post 6424 popup menu -->
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #6424 --><!-- post #6839 -->
+
+	<!-- open content container -->
+
+<div id="open_content_container">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit6839" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post6839" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+	<td class="thead" >
+		<div class="normal" style="float:right">
+			&nbsp;
+			#<a href="showpost.php?p=6839&amp;postcount=8" target="new" rel="nofollow" id="postcount6839" name="8"><strong>8</strong></a> &nbsp;
+			
+			
+			
+			
+			
+		</div>
+
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post6839"><img class="inlineimg" src="images/statusicon/post_old.gif" alt="Cũ" border="0" /></a>
+			
+				19-01-2007, 06:52 PM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding:0px">
+		<!-- user info -->
+		<table cellpadding="0" cellspacing="6" border="0" width="100%">
+		<tr>
+			<td class="alt2"><a href="member.php?u=705"><img src="customavatars/avatar705_3.gif" width="100" height="100" alt="Avatar củaSolokop" border="0" /></a></td>
+			<td nowrap="nowrap">
+
+				<div id="postmenu_6839">
+					
+					<a class="bigusername" href="member.php?u=705"><span style="color: #3f02a3;">Solokop</span></a>
+					<img class="inlineimg" src="images/statusicon/user_offline.gif" alt="Solokop là offline" border="0" />
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_6839", true); </script>
+					
+				</div>
+
+				<div class="smallfont">XCoworker Member</div>
+				<div class="smallfont"><img src="images/ranks/rank_xcoworker.gif" alt="" border="" /></div>
+				
+
+			</td>
+			<td width="100%">&nbsp;</td>
+			<td valign="top" nowrap="nowrap">
+
+				<div class="smallfont">
+					<div>Ngày gia nhập: 10 2006</div>
+					
+					
+					<div>
+						Bài viết: 208
+					</div>
+					
+					
+					
+					
+					<div>    </div>
+				</div>
+
+			</td>
+		</tr>
+		</table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	
+	<td class="alt1" id="td_post_6839">
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		
+			<!-- icon and title -->
+			<div class="smallfont clearfix">
+				
+					<div style="float: left; width: 36px;"><img class="inlineimg" src="images/icons/icon1.gif" alt="Mặc định" border="0" /></div>
+				
+				
+			</div>
+			<hr size="1" style="color:#A1D2F1; background-color:#A1D2F1" />
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_6839">
+			
+			<b>Bài 7 : Điều kiện - Lý thuyết</b><br />
+<br />
+<i>Giới thiệu</i><br />
+<br />
+- Các vấn đề được đề cập từ đầu đến nay cho phép chúng ta viết nhiều chương trình. Tuy nhiên các chương trình đó có nhược điểm là bất cứ khi nào được chạy, chúng luôn thực hiện một chuỗi các thao tác giống nhau, theo cách thức giông nhau. Trong khi đó, chúng ta thường xuyên chỉ cho phép thực hiện các thao tác nhất định nếu nó thỏa mãn điều kiện đặt ra.<br />
+<br />
+<u>1. Cậu lênh điều kiện là gì?</u><br />
+<br />
+- Các câu lện điều kiện cho phép chúng ta thay đổi luồng chương trình. Dựa trên một điều kiện đó, một cậu lệnh hay một chuỗi các câu lệnh có thể được thực hiện hoặc không. Hầu hết các ngôn ngữ lập trình đều sử dụng lênh if để đưa ra điều kiện. Nguyên tắc thực hiện như sau nếu điều kiện đưa ra là <b>đúng (true)</b>, chương trình sẽ thực hiện một công việc nào đó, nếu điều kiện đưa ra là <b>sai (false)</b>, chương trình sẽ thực hiện một công việc khác.<br />
+<br />
+<u>2. Các câu lệnh lựa chọn:</u><br />
+<br />
+- Câu lệnh <b>if</b>.<br />
+- Câu lệnh <b>switch</b>.<br />
+<br />
+<u>3. Câu lệnh &quot;if&quot;</u><br />
+<br />
+- Cho phép ta đưa ra các quyết định dụa trên việc kiểm tra một điều kiện nào đó là <u>đúng(true)</u> hay <u>sai(false)</u>. Cấu trúc câu lệnh<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 50px;
+		text-align: left;
+		overflow: auto">if (biểu thức)
+   Các câu lệnh;</pre>
+</div>- Biểu thức phải luôn đặt trong dấu ngoặc (). Mệnh đề theo sau từ khóa <b>if</b> là một điều kiện (hoặc một biểu thức điều kiện) cần được kiểm tra. Tiếp đến là một lệnh hay một tập các lệnh sẽ được thực thi khi điều kiện (hoặc biểu thức điều kiện) có kết quả true.<br />
+<br />
+<u>4. Câu lệnh &quot;if...else&quot;</u><br />
+<br />
+- Ở trên chúng ta biết dạng đơn giải nhất của câu lệnh if, cho phép chúng ta lựa chọn để thực hiện hay không một câu lệnh hoặc một chuỗi các lệnh. C cũng cho phép ta lựa chọn trong hai khối lệnh để thực hiện bằng cách dùng cấu trúc <b>if...else</b>. Cú pháp như sau:<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 146px;
+		text-align: left;
+		overflow: auto">if (biểu thức)
+{
+   câu lệnh 1;
+}
+else
+{
+   câu lệnh 2;
+}</pre>
+</div>- Nếu biểu thức điều kiện trên <b>đúng (khác 0)</b>, câu lệnh 1 được thực hiện. Nếu nó <b>sai (khác 0)</b> câu lệnh 2 được thực hiện. Câu lệnh sau <b>if</b> và <b>else</b> có thể là lệnh đơn hoặc lệnh phức. Các câu lệnh đó nên được lùi vào trong dòng mặc dù không bắt buộc. Cách viết đó giúp ta nhìn thấy ngay những lệnh nào sẽ được thực hiện tùy theo kết quả của biểu thức điều kiện. Các lệnh <b>if</b> *****g nhau là lệnh <b>if</b> bên trong một lệnh <b>if</b> khác.<br />
+<br />
+<u>5. Câu lệnh &quot;switch&quot;</u><br />
+<br />
+- Câu lệnh <b>switch</b> cho phép ta đưa ra quyết định co nhiều cách lựa chọn, nó kiểm tra giá trị của một biểu thức trên một danh sách các hằng số nguyên hoặc ký tự. Khi nó tìm thấy một giá trị trong danh sách trùng với giá trị của biểu thức điều kiện, các câu lệnh gắn với giá trị đó sẽ được thực hiện. Cú pháp tổng quát của lệnh <b>switch</b> như sau:<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 242px;
+		text-align: left;
+		overflow: auto">switch (biểu thức)
+{
+   case hằng 1:
+      chuỗi câu lệnh;
+      break;
+   case hằng 2:
+      chuỗi câu lệnh;
+      break;
+   case hằng 2:
+      chuỗi câu lệnh;
+      break;
+   default:
+      chuỗi câu lệnh;
+}</pre>
+</div>- Ở đó, <b>switch, case</b> và <b>default</b> là các từ khóa, &quot;chuỗi câu lệnh&quot; có thể là lệnh đơn hoặc lện ghép và không cần đặt trong cặp dấu ngoặc. &quot;biểu thức&quot; theo sau từ khóa <b>switch</b> phải được đặt trong dấu ngoặc (), và toàn bộ phần thân của lệnh switch phải được đặt trong cặp ngoặc nhọn {}. Kiểu dữ liệu kết quả của &quot;biểu thức&quot; và kiểu dữ liệu của các hằng theo sau từ khóa <b>case</b> phải đồng nhất. Chú ý, hằng số sau <b>case</b> chỉ có thể là một <b>hằng</b> số nguyên hoặc <b>hằng</b> ký tự. Nó cũng có thể là các hằng biểu thức - những biểu thức không chứa bất kỳ một biến nào. Tất cả các giá trị của case phải khác nhau.<br />
+- Trong câu lệnh <b>switch</b>, biểu thức được xác định giá trị, giá trị của nó được so sánh với từng giá trị gắn với từng case theo thứ tự đã chỉ ra. Nếu một giá trị trong một <b>case</b> trùng với giá trị của biểu thức, các lệnh gắn với <b>case</b> đó sẽ được thực hiện. Lệnh <b>break</b> (sẽ nói ở phần sau) cho phép thoát ra khỏi <b>switch</b>. Nếu không dùng lệnh <b>break</b>, các câu lệnh gắn với case bên dưới sẽ được thực hiện không kể giá trị của nó có trùng với giá trị của biểu thức điều kiện hay không. Chương trình cứ tiếp tục hiện như vậy cho đến khi gặp một lệnh <b>break</b>. Chính vì thế, lệnh <b>break</b> được coi là lệnh quan trọng nhất khi dùng <b>switch</b>.<br />
+- Các câu lệnh gắn với <b>default</b> sẽ được thực hiện nếu không có <b>case</b> nào thỏa mãn. Lệnh <b>default</b> là tùy chọn. Nếu không có lệnh <b>default</b> và không có <b>case</b> nào thỏa mãn, không có hành động nào được thực hiện. Có thể thay đổi thứ tự của <b>case</b> và <b>default</b>.<br />
+<br />
+Hết bài 7<br />
+<br />
+<b>Bài tập tự làm</b><br />
+<br />
+1. Viết chương trình nhập vào hai số a và b, và kiểm tra xem a có chia hết cho b hay không.<br />
+<br />
+2. Viêt chương trình nhập vào hai số và kiểm tra xem tích của hai số này bằng hay lớn hơn 1000.<br />
+<br />
+3. Viêt chương trình nhập vào hai số. Tính hiệu của hai số này. Nếu hiệu số này bằng với một trong hai số đã nhập thì hiển thị thông tin:<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 66px;
+		text-align: left;
+		overflow: auto">Hiệu bằng giá trị &lt;giá trị của sô đã nhập vào&gt;
+Nếu hiệu không bằng với một trong hai giá trị đã nhập, hiển thị thông tin:
+Hiệu không bằng bất kỳ giá trị nào đã được nhập</pre>
+</div>4. Công ty Montek đưa ra mực trợ cấp cho nhân viên ứng với từng loại nhân viên như sau:<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 82px;
+		text-align: left;
+		overflow: auto">Loại nhân viên - Mức trợ cấp
+A                          300
+B                          250
+Những loại khác       100</pre>
+</div>- Tính lương cuối tháng của nhân viên (Mưc lương và loại nhân viên được nhập từ người dùng).<br />
+<br />
+5. Viết chương trình xếp loại sinh viên theo các qui luật dưới đây:<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 98px;
+		text-align: left;
+		overflow: auto">Nếu điểm =&gt; 75              - Loại A
+Nếu 60 &lt;= điểm &lt; 75       - Loại B
+Nếu 45 &lt;= điểm &lt; 60       - Loại C
+Nếu 35 &lt;= điểm &lt; 45       - Loại D
+Nếu điểm &gt; 35                - Loại E</pre>
+</div>
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+		<!-- sig -->
+			<div>
+				__________________<br />
+				Nói là một chuyện, làm là một chuyện. Chi bằng ta làm xong rồi hãy nói như vậy thì nói và làm sẽ là một chuyện.
+			</div>
+		<!-- / sig -->
+		
+
+		
+
+		
+		<!-- edit note -->
+			<div class="smallfont">
+				<hr size="1" style="color:#A1D2F1; background-color:#A1D2F1" />
+				<em>
+					
+						Đã được chỉnh sửa lần cuối bởi Solokop : 26-01-2007 lúc <span class="time">03:25 PM</span>.
+					
+					
+				</em>
+			</div>
+		<!-- / edit note -->
+		
+
+		<div style="margin-top: 10px" align="right">
+			<!-- controls -->
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				
+			
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</table>
+
+
+<!-- post 6839 popup menu -->
+<div class="vbmenu_popup" id="postmenu_6839_menu" style="display:none;">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">Solokop</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="member.php?u=705">Xem Hồ sơ công khai</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="private.php?do=newpm&amp;u=705" rel="nofollow">Gửi một tin nhắn tới Solokop</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="search.php?do=finduser&amp;u=705" rel="nofollow">Tìm toàn bộ bài viết bởi Solokop</a></td></tr>
+	
+	
+	
+	</table>
+</div>
+<!-- / post 6839 popup menu -->
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #6839 --><!-- post #7010 -->
+
+	<!-- open content container -->
+
+<div id="open_content_container">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit7010" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post7010" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+	<td class="thead" >
+		<div class="normal" style="float:right">
+			&nbsp;
+			#<a href="showpost.php?p=7010&amp;postcount=9" target="new" rel="nofollow" id="postcount7010" name="9"><strong>9</strong></a> &nbsp;
+			
+			
+			
+			
+			
+		</div>
+
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post7010"><img class="inlineimg" src="images/statusicon/post_old.gif" alt="Cũ" border="0" /></a>
+			
+				22-01-2007, 09:07 PM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding:0px">
+		<!-- user info -->
+		<table cellpadding="0" cellspacing="6" border="0" width="100%">
+		<tr>
+			<td class="alt2"><a href="member.php?u=705"><img src="customavatars/avatar705_3.gif" width="100" height="100" alt="Avatar củaSolokop" border="0" /></a></td>
+			<td nowrap="nowrap">
+
+				<div id="postmenu_7010">
+					
+					<a class="bigusername" href="member.php?u=705"><span style="color: #3f02a3;">Solokop</span></a>
+					<img class="inlineimg" src="images/statusicon/user_offline.gif" alt="Solokop là offline" border="0" />
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_7010", true); </script>
+					
+				</div>
+
+				<div class="smallfont">XCoworker Member</div>
+				<div class="smallfont"><img src="images/ranks/rank_xcoworker.gif" alt="" border="" /></div>
+				
+
+			</td>
+			<td width="100%">&nbsp;</td>
+			<td valign="top" nowrap="nowrap">
+
+				<div class="smallfont">
+					<div>Ngày gia nhập: 10 2006</div>
+					
+					
+					<div>
+						Bài viết: 208
+					</div>
+					
+					
+					
+					
+					<div>    </div>
+				</div>
+
+			</td>
+		</tr>
+		</table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	
+	<td class="alt1" id="td_post_7010">
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		
+			<!-- icon and title -->
+			<div class="smallfont clearfix">
+				
+					<div style="float: left; width: 36px;"><img class="inlineimg" src="images/icons/icon1.gif" alt="Mặc định" border="0" /></div>
+				
+				
+			</div>
+			<hr size="1" style="color:#A1D2F1; background-color:#A1D2F1" />
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_7010">
+			
+			<b>Bài 8 : Điều kiện - Thực hành</b><br />
+<br />
+<u>1. Lệnh &quot;if&quot;</u><br />
+<br />
+- Chương trình để tính tiền hoa hồng phải trả cho người bán hàng dựa vào số lượng hàng họ bán được.<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 258px;
+		text-align: left;
+		overflow: auto">#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+   float com = 0, sales_amt;
+   clrscr();
+   printf(&quot;Enter the Sales Amount: &quot;);
+   scanf(&quot;%f&quot;, &amp;sales_amt);
+   if (sales_amt &gt;= 10000)
+   {
+      com = sales_amt * 0.1;
+   }
+   printf(&quot;\n Commission = %f&quot;, com);
+}</pre>
+</div><u>2. Lệnh &quot;if-else&quot;</u><br />
+<br />
+- Chương trình hiển thị số lớn hơn trong hai số.<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 306px;
+		text-align: left;
+		overflow: auto">#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+   int Num1, Num2;
+   clrscr();
+   Num1 = 540;
+   Num2 = 243;
+   if (Num1 &gt; Num2)
+   {
+      printf(&quot;\n The Greater Number is : %d&quot;, Num1);
+   }
+   else
+   {
+      printf(&quot;\n The Greater Number is : %d&quot;, Num2);
+   }
+}</pre>
+</div><u>3. Lệnh &quot;if-else-if&quot;</u><br />
+<br />
+- Chương trình hiển thị số lớn hơn trong hai số, hoặc sẽ hiển thị các số bằng nhau.<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 354px;
+		text-align: left;
+		overflow: auto">#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+   int num1, num2;
+   num1 = 77;
+   num2 = 90;
+   if (num1 == num2)
+   {
+      printf(&quot;\n The Numbers are equal&quot;);
+   }
+   else if (num1 &lt; num2)
+   {
+      printf(&quot;\n The Larger Number is: %d&quot;, num2);
+   }
+   else
+   {
+      printf(&quot;\n The Larger Number is: %d&quot;, num1);
+   }
+}</pre>
+</div><u>4. Lệnh &quot;if&quot; *****g nhau</u><br />
+<br />
+- Bài toán : Công ty MONTEK đã ra quyết định chi tiền hoa hồng cho bộ phận bán hàng tuy thuộc vào doanh thu bán sản phẩm. Tỷ lệ hoa hồng được tính như sau:<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 82px;
+		text-align: left;
+		overflow: auto">Doanh thu bán     -     Loại sản phẩm     -     Hoa hồng
+&gt; 10,000$                          A                       10%
+                                       --                       8%
+&lt;= 10,000$                        --                       5%</pre>
+</div>- Tính tiền hoa hồng cuối mỗi tháng. Trong chương trình này chúng ta sẽ tính tiền hoa hồng dựa vào loại sản phẩm và lượng sản phẩm bán được.<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 482px;
+		text-align: left;
+		overflow: auto">#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+   float com = 0, sales_amt;
+   char grade;
+   clrscr();
+   printf(&quot;\n Enter the sales Amount: &quot;);
+   scanf(&quot;%f&quot;, &amp;sales_amt);
+   printf(&quot;\n Enter the Grade: &quot;);
+   scanf(&quot;%c&quot;, &amp;grade);
+   if (sales_amt &gt; 10000)
+   {
+      if (grade == 'A')
+      {
+         com = sales_amt * 0.1;
+      }
+      else
+      {
+         com = sales_amt * 0.08;
+      }
+   }
+   else
+   {
+       com = sales_amt * 0.05;
+   }
+   printf(&quot;\n Comission = %f&quot;, com);
+}</pre>
+</div><u>5. Lệnh &quot;switch&quot;</u><br />
+<br />
+- Chương trình hiển thị kết quả tùy vào toán tử toán học được sử dụng.<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 562px;
+		text-align: left;
+		overflow: auto">#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+   int num1, num2, res;
+   char op;
+   num1 = 90;
+   num2 = 33;
+   op = '-';
+   clrscr();
+   switch (op)
+   {
+       case '+':
+          res = num1 + num2;
+          printf(&quot;\n The Sum is: %d&quot;, res);
+          break;
+       case '-':
+          res = num1 - num2;
+          printf(&quot;\n The Number after Subtraction: %d&quot;, res);
+          break;
+       case '/':
+          res = num1 / num2;
+          printf(&quot;\n The Number after Division: %d&quot;, res);
+          break;
+       case '*':
+          res = num1 * num2;
+          printf(&quot;\n The Number after multiplication: %d&quot;, res);
+          break;
+       default :
+          printf(&quot;\n Invalid&quot;);
+          break;
+   }
+}</pre>
+</div><b>Bắt buộc</b><br />
+<br />
+- Một học viên được kiểm tra 3 môn học. Mỗi bài kiểm tra tối đa là 100 điểm. Điểm trung bình của học viên được tính, và học viên được xếp loại tùy thuộc vào kết quả của điểm trung bình theo qui luật sau:<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 130px;
+		text-align: left;
+		overflow: auto">Điểm trung bình      -     Loại
+&gt;=90                           E+
+80-&gt;90                        E
+70-&gt;80                        A+
+60-&gt;70                        A
+50-&gt;60                        B+
+&lt; 50                            Rớt</pre>
+</div>- Hướng dẫn thực hiện :<br />
+   + Nhập vào điểm cho 3 môn học và lưu trong 3 biến khác nhau là M1, M2 và M3.<br />
+   + Tính điểm trung bình (avg = (M1 + M2 + M3)).<br />
+   + Xác định loại của học viên dựa trên điểm trung bình đã tính.<br />
+   + Hiển thị loại.<br />
+<br />
+Kết thúc bài 8.<br />
+<br />
+<b>Bài tập tự làm</b><br />
+<br />
+1. Khai báo hai biến x và y. Gán trị cho các biến này. Số x được in ra màn hình chỉ khi x nhỏ hơn 2000 và lớn hơn 3000, và số y chỉ được in ra màn hình khi y nằm giữa 100 và 500.<br />
+<br />
+2. Viêt chương trình trình bày khả năng máy tính của bạn. Người dùng nhập vào một ký tự trong bảng chữ cái và chương trình hiển thị ngôn ngữ lập trình tương ứng. Một vài ví dụ nhập và xuất như sau:<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 146px;
+		text-align: left;
+		overflow: auto">Nhập          -         Xuất
+A hoặc a               Ada
+B hoặc b               Basic
+C hoặc c               COBOL
+D hoặc d               dBASE III
+F hoặc f                Fortran
+P hoặc p               Pascal
+V hoặc v               Visual C++</pre>
+</div>3. Nhập giá trị vào ba biến và in ra màn hình giá trị lớn nhất.
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+		<!-- sig -->
+			<div>
+				__________________<br />
+				Nói là một chuyện, làm là một chuyện. Chi bằng ta làm xong rồi hãy nói như vậy thì nói và làm sẽ là một chuyện.
+			</div>
+		<!-- / sig -->
+		
+
+		
+
+		
+		<!-- edit note -->
+			<div class="smallfont">
+				<hr size="1" style="color:#A1D2F1; background-color:#A1D2F1" />
+				<em>
+					
+						Đã được chỉnh sửa lần cuối bởi Solokop : 27-01-2007 lúc <span class="time">02:01 PM</span>.
+					
+					
+				</em>
+			</div>
+		<!-- / edit note -->
+		
+
+		<div style="margin-top: 10px" align="right">
+			<!-- controls -->
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				
+			
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</table>
+
+
+<!-- post 7010 popup menu -->
+<div class="vbmenu_popup" id="postmenu_7010_menu" style="display:none;">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">Solokop</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="member.php?u=705">Xem Hồ sơ công khai</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="private.php?do=newpm&amp;u=705" rel="nofollow">Gửi một tin nhắn tới Solokop</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="search.php?do=finduser&amp;u=705" rel="nofollow">Tìm toàn bộ bài viết bởi Solokop</a></td></tr>
+	
+	
+	
+	</table>
+</div>
+<!-- / post 7010 popup menu -->
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #7010 --><!-- post #7166 -->
+
+	<!-- open content container -->
+
+<div id="open_content_container">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit7166" style="padding:0px 0px 6px 0px">
+	
+
+
+
+<table class="tborder" id="post7166" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+	<td class="thead" >
+		<div class="normal" style="float:right">
+			&nbsp;
+			#<a href="showpost.php?p=7166&amp;postcount=10" target="new" rel="nofollow" id="postcount7166" name="10"><strong>10</strong></a> &nbsp;
+			
+			
+			
+			
+			
+		</div>
+
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post7166"><img class="inlineimg" src="images/statusicon/post_old.gif" alt="Cũ" border="0" /></a>
+			
+				26-01-2007, 03:19 PM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding:0px">
+		<!-- user info -->
+		<table cellpadding="0" cellspacing="6" border="0" width="100%">
+		<tr>
+			<td class="alt2"><a href="member.php?u=705"><img src="customavatars/avatar705_3.gif" width="100" height="100" alt="Avatar củaSolokop" border="0" /></a></td>
+			<td nowrap="nowrap">
+
+				<div id="postmenu_7166">
+					
+					<a class="bigusername" href="member.php?u=705"><span style="color: #3f02a3;">Solokop</span></a>
+					<img class="inlineimg" src="images/statusicon/user_offline.gif" alt="Solokop là offline" border="0" />
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_7166", true); </script>
+					
+				</div>
+
+				<div class="smallfont">XCoworker Member</div>
+				<div class="smallfont"><img src="images/ranks/rank_xcoworker.gif" alt="" border="" /></div>
+				
+
+			</td>
+			<td width="100%">&nbsp;</td>
+			<td valign="top" nowrap="nowrap">
+
+				<div class="smallfont">
+					<div>Ngày gia nhập: 10 2006</div>
+					
+					
+					<div>
+						Bài viết: 208
+					</div>
+					
+					
+					
+					
+					<div>    </div>
+				</div>
+
+			</td>
+		</tr>
+		</table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	
+	<td class="alt1" id="td_post_7166">
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		
+			<!-- icon and title -->
+			<div class="smallfont clearfix">
+				
+					<div style="float: left; width: 36px;"><img class="inlineimg" src="images/icons/icon1.gif" alt="Mặc định" border="0" /></div>
+				
+				
+			</div>
+			<hr size="1" style="color:#A1D2F1; background-color:#A1D2F1" />
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_7166">
+			
+			<b>Bài 9:  Vòng lặp - Lý thuyết</b><br />
+<br />
+<i>Giới thiệu</i><br />
+<br />
+- Một trong những điểm mạnh lớn nhất của máy tính là khả năng thực hiện một chuỗi các lệnh lặp đi lặp lại. Điều đó có được là do sử dụng các cấu trúc lặp trong ngôn ngữ lập trình. Trong bài này bạn sẽ tìm hiểu các loại vòng lặp khác nhau C.<br />
+<br />
+<u>1. Vòng lặp</u><br />
+<br />
+- Vòng lặp là một đoạn mã lệnh trong chương trình được thực hiện lặp đi lặp lại cho đến khi thỏa mãn một điều kiện nào đó. Vòng lặp là một khái niệm cơ bản trong lập trình cấu trúc. Trong C có các loại vòng lặp sau (<b>for, while, do...while</b>)<br />
+- Ta sử dụng các toán tử quan hệ và toán tử logic trong các biểu thức điều kiện để điều khiển sự thực hiện của vòng lặp.<br />
+<br />
+<u>2. Vòng lặp &quot;for&quot;</u><br />
+<br />
+- Cú pháp tổng quát của vòng lặp &quot;for&quot; như sau:<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 82px;
+		text-align: left;
+		overflow: auto">  for (khởi tạo giá trị cho biến điều khiển; biểu thức điều kiện; biểu thức thay đổi giá trị của biến điều khiển)
+  {
+     Cậu lệnh (các câu lệnh);
+  }</pre>
+</div>- <i>Khởi tạo giá trị cho biến điều khiển</i> là một câu lệnh gán giá trị ban đầu cho biến điều khiển trước khi thực hiện vòng lặp. Lênh này chỉ được thực hiện duy nhất một lần. <i>Biểu thức điều kiện</i> là một biểu thức quan hệ, xác định điều kiện thoát cho vòng lặp. <i>Biểu thức thay đổi giá trị của biến điều khiển</i> xác định biến điều khiển sẽ bị thaddooior thế nào sau mỗi lần vòng lặp được lặp lại (thường là tăng hoặc giảm giá trị của biến điều khiển). Ba phần trên được phân cách bởi dấu chấm phẩy. Câu lệnh trong than vòng lặp có thể là một lệnh duy nhất (lệnh đơn) hoặc lệnh phức (nhiều lệnh).<br />
+- Vòng lặp for sẽ tiếp tục được thực hiện chừng nào mà biểu thức điều kiện còn [b]đúng (true)[b]. Khi biểu thức điều kiện là <b>sai (false)</b>, chương trình sẽ thoát ra khỏi vòng lặp <b>for</b><br />
+- Toán tử &quot;phẩy (comma)&quot;: phần biểu thức trong toán tử for có thể được mở rộng để thêm vào các lệnh khởi tạo hay các lệnh thay đổi giá trị của biến. Cú pháp như sau:<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">Biểu_thức_1, Biểu_thức_2</pre>
+</div>- Các biểu thức trên được phân tách bởi toán tử <b>phẩy</b> &quot;<font color="red">,</font>&quot;, và được thực hiên từ trái sang phải. Thứ tự của các biểu thức là quan trọng trong trường hợp giá trị của biểu thức thứ hai phục thuộc vào giá trị của <b>biểu thức thứ nhất</b>. Toán tử này có độ ưu tiên thấp nhất trong các toán tử của C.<br />
+<br />
+<u>3. Vòng lặp &quot;for&quot; lông nhau</u><br />
+<br />
+- Một vòng lặp <b>for</b> được gọi là lông nhau khi nó nằm bên trong một vòng lặp <b>for</b> khác. Nó sẽ có dạng tương tự như sau:<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 194px;
+		text-align: left;
+		overflow: auto">for (i = 1; i &lt; max1; i++)
+{
+   ...
+   ...
+   for (j = 1; j &lt; max1; j++)
+   {
+       ...
+       ...
+   }
+   ...
+}</pre>
+</div>- Vòng lặp <b>for</b> khi không có bất kỳ thành phần nào sẽ là một vòng lặp vô tận. Tùy nhiên, lệnh <b>break</b> bên trong vòng lặp sẽ cho phép thoát khỏi vòng lặp.<br />
+<br />
+<u>4. Vòng lặp &quot;while&quot;</u><br />
+<br />
+- Cấu trúc lặp thứ hai trong C là vòng lặp <b>while</b>. Cú pháp tổng quát như sau:<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 50px;
+		text-align: left;
+		overflow: auto">while (điều_kiện_là_đùng)
+   câu_lênh;</pre>
+</div>- Trong đó, <i>câu_lệnh</i> có thể là rỗng, hay một lệnh đơn, hay một khối lệnh. Nếu vòng lặp <b>while</b> chứa một tập lệnh thì chúng phải được đặt trong cặp ngoặc xoắn {}. <i>điều_kiện</i> có thể là biểu thức bất kỳ. Vòng lặp sẽ được thực hiện lặp đi lặp lại khi điều kiện trên là <b> đúng (true)</b>. Chương trình sẽ chuyển đến thực hiện lệnh tiếp theo sau vòng lặp khi điều kiện trên là <b>sai (false)</b>.<br />
+- Vòng lặp <b>for</b> có thể được sử dụng khi số lần thực hiện vòng lặp đã được xác định trước. Khi số lần lặp không biết trước, vòng lăp <b>while</b> có thể được sử dụng.<br />
+<br />
+<u>5. Vòng lặp &quot;do...while&quot;</u><br />
+<br />
+- Vòng lặp <b>do ... while</b> còn được gọi là vòng lặp <b>do</b> trong C. Không giống như vòng lặp <b>for</b> và <b>while</b>, vòng lặp này kiểm tra điều kiện tại cuối vòng lặp. Điều này có nghĩa là vòng lặp <b>do...while</b> sẽ được thực hiện ít nhất một lần, ngay cả khi điều kiện la sai <b>(false)</b> ở lần chạy đầu tiên. Cú pháp tổng quát của vòng lặp <b>do...while</b> viết như sau:<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 82px;
+		text-align: left;
+		overflow: auto">do
+{
+   câu_lệnh;
+} while (điều_kiện);</pre>
+</div>- Cặp dấu ngoặc &quot;<font color="Red">{}</font>&quot; là không cần thiết khi chỉ có một câu lệnh hiện diện trong vòng lặp, nhưng việc sử dụng dấu ngoặc &quot;<font color="Red">{}</font>&quot; là một thói quen tốt. Vòng lặp <b>do...while</b> lặp đến khi <i>điều_kiện</i> mang giá trị <b>false</b>. Trong vòng lặp <b>do...while</b>, <i>câu_lệnh</i> (khối các câu lệnh) sẽ được thực thi trước, và sau đó <i>điều_kiện</i> được kiểm tra. Nếu <i>điều_kiện</i> là <b>true</b>, chương trình sẽ quay lại thực hiện lệnh <b>do</b>. Nếu điều kiện là false, chương trình chuyển đến thực hiện lệnh nằm sau vòng lặp. Tương tự như vòng lặp <b>for</b>, các vòng lặp <b>while</b> và <b>do...while</b> cũng có thể *****g vào nhau.<br />
+<br />
+<u>6. Các lệnh nhẩy</u><br />
+<br />
+<b>a. Lệnh &quot;return&quot;</b><br />
+<br />
+- Lệnh <b>return</b> dùng để quay lại vị trí gọi hàm sau khi các lệnh trong hàm đó được thực thi xong. Trong lệnh <b>return</b> có thể có một giá trị gắn với nó, giá trị đó sẽ được trả về cho chương trình. Cú pháp tổng quát của cậu lệnh <b>return</b> như sau:<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">return biểu_thức</pre>
+</div>- Biểu thức là một tùy chọn (không bắt buộc). Có thể có hơn một lệnh <b>return</b> được sử dụng trong một hàm. Tuy nhiên, hàm sẽ quay trở về vị trí gọi hàm khi gặp lệnh <b>return</b> đầu tiên.<br />
+<br />
+<b>b. Lệnh &quot;goto&quot;</b><br />
+<br />
+- C là một ngôn ngữ lệnh trình có cấu trúc, tuy vậy nó vẫn chưa một số câu lệnh làm phá vỡ cấu trúc chương trình. Đó là 2 lệnh <i>goto</i>, <i>label</i>. Lệnh <b>goto</b> cho phép chuyển điều khiển tới một câu lện bất kỳ nằm trong cùng khối lệnh hay khác khối lệnh bên trong hàm đó. Vì vậy nó vi phạm các qui tắc của một ngôn ngữ lập trình có cấu trúc. Cú pháp tổng quát là:<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">goto label;</pre>
+</div>- Trong đó <b>label</b> là một định danh phải xuất hiện như tiền tố (prefix) của một câu lệnh khác trong cùng một hàm. Dấu chấm phẩy <br />
+&quot;<font color="Red">;</font>&quot; sau <b>label</b> đánh dấu sự kết thúc của lệnh <b>goto</b><br />
+<br />
+<b>c. Lệnh &quot;break&quot;</b><br />
+<br />
+- Câu lệnh <b>break</b> có hai cách dùng. Nó có thể được sử dụng để kết thúc một <b>case</b> trong một câu lệnh <b>switch</b> hoặc để kết thúc ngay một vòng lặp, mà không cần kiểm tra điều kiện vòng lặp.<br />
+- Khi chương trình gặp lệnh <b>break</b> trong một vòng lặp, ngay lập tức vòng lặp được kết thúc và quyền điều khiển chương trình được chuyển đến câu lệnh theo sau vòng lặp.<br />
+<br />
+<b>d. Lệnh &quot;continue&quot;</b><br />
+<br />
+- Lệnh <b>continue</b> kết thúc lần lặp hiện hành và bắt đầu lần lặp kết tiếp. Khi gặp lệnh này trong chương trình, các câu lệnh còn lại trong thân của vòng lặp được bỏ qua và quyền điều khiển được chuyển đến bước đầu của vòng lặp trong lần lặp kế tiếp. Trong trường hợp <b>for, continue</b> thực hiện biểu thức thay đổi của biến điều khiển và sau đó kiểm tra biểu thức điều kiện. Trong trường hợp của lệnh <b>while</b> và <b>do...while</b>, quyền điều khiển chương trình được chuyển đến biểu thức kiểm tra điều kiện<br />
+<br />
+<u>7. Hàm &quot;exit()&quot;</u><br />
+<br />
+- Hàm <i>exit()</i> là một hàm trong thư viện chuẩn của C. Nó làm việc tương tự như một lệnh chuyển quyền điều khiển, điểm khác nhau chính là các lệnh chuyển quyền điều khiển thường được sử dụng để thoát khỏi một vòng lặp, trong khi <i>exit()</i> được sử dụng để thoát khỏi chương trình. Hàm này sẽ ngay lập tức kết thúc chương trình và quyền điều khiển được trả về cho hệ điều hành. Hàm <i>exit()</i> thường được dùng để kiểm tra một điều kiện bắt buộc cho việc thực thi của một chương trình có được thỏa mãn hay không. Cú pháp tổng quát của hàm <i>exit()</i> như sau:<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">exit (int mã_trả_về);</pre>
+</div>- Ở đó <b>mã_trả_về</b> là một tùy chọn. Số 0 thường được dùng như một <b>mã_trả_về</b> để xác định sự kết thúc chương trình một cách bình thường. Những giá trị khác xác định một vài loại lỗi.<br />
+<br />
+Kết thúc bài 9<br />
+<br />
+<b>Bài tập tự làm</b><br />
+<br />
+1. Viết chương trình in ra dãy số 100, 95, 90, ..., 5<br />
+<br />
+2. Nhập vào 2 số num1 và num2. Tìm tổng của tất cả các số lẻ nằm giữa hai số đã được nhập.<br />
+<br />
+3. Viết chương trình in ra chuỗi Fibonaci (1, 1, 2, 3, 5, 8, 13, ...)<br />
+<br />
+4. Viêt chương trình để hiển thị theo mẫu sau đây.<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 98px;
+		text-align: left;
+		overflow: auto">1
+12
+123
+1234
+12345</pre>
+</div><div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 98px;
+		text-align: left;
+		overflow: auto">12345
+1234
+123
+12
+1</pre>
+</div>5. Viêt chương trình in lên màn hình như sau:<br />
+<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 130px;
+		text-align: left;
+		overflow: auto">*******
+******
+*****
+****
+***
+**
+*</pre>
+</div>
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+		<!-- sig -->
+			<div>
+				__________________<br />
+				Nói là một chuyện, làm là một chuyện. Chi bằng ta làm xong rồi hãy nói như vậy thì nói và làm sẽ là một chuyện.
+			</div>
+		<!-- / sig -->
+		
+
+		
+
+		
+		<!-- edit note -->
+			<div class="smallfont">
+				<hr size="1" style="color:#A1D2F1; background-color:#A1D2F1" />
+				<em>
+					
+						Đã được chỉnh sửa lần cuối bởi Solokop : 01-02-2007 lúc <span class="time">09:42 AM</span>.
+					
+					
+				</em>
+			</div>
+		<!-- / edit note -->
+		
+
+		<div style="margin-top: 10px" align="right">
+			<!-- controls -->
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				
+			
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</table>
+
+
+<!-- post 7166 popup menu -->
+<div class="vbmenu_popup" id="postmenu_7166_menu" style="display:none;">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">Solokop</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="member.php?u=705">Xem Hồ sơ công khai</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="private.php?do=newpm&amp;u=705" rel="nofollow">Gửi một tin nhắn tới Solokop</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="search.php?do=finduser&amp;u=705" rel="nofollow">Tìm toàn bộ bài viết bởi Solokop</a></td></tr>
+	
+	
+	
+	</table>
+</div>
+<!-- / post 7166 popup menu -->
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #7166 --><div id="lastpost"></div></div>
+
+<!-- start content table -->
+<!-- open content container -->
+
+<div id="open_content_container">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+<!-- / start content table -->
+
+<!-- controls below postbits -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-top:-3px">
+<tr valign="top">
+	
+		<td class="smallfont"><a href="newreply.php?do=newreply&amp;noquote=1&amp;p=7166" rel="nofollow"><img src="images/buttons/threadclosed.gif" alt="Đề tài đã đóng" border="0" /></a></td>
+	
+		
+		<td style="margin-bottom:2px; margin-right:20px" valign="top">
+			<!-- Search Google -->
+			<center>
+			<form method="get" action="http://www.google.com/custom" target="google_window">
+			<table bgcolor="#ffffff">
+			<tr><td nowrap="nowrap" valign="top" align="left" height="32">
+			<a href="http://www.google.com/">
+			<img src="http://www.google.com/logos/Logo_25wht.gif" border="0" alt="Google" align="middle"></img></a>
+			<label for="sbi" style="display: none">Enter your search terms</label>
+			<input type="text" name="q" size="31" maxlength="255" value="" id="sbi"></input>
+			<label for="sbb" style="display: none">Submit search form</label>
+			<input type="submit" name="sa" value="Search" id="sbb"></input>
+			<input type="hidden" name="client" value="pub-2525409910423371"></input>
+			<input type="hidden" name="forid" value="1"></input>
+			<input type="hidden" name="channel" value="6718270609"></input>
+			<input type="hidden" name="ie" value="UTF-8"></input>
+			<input type="hidden" name="oe" value="UTF-8"></input>
+			<input type="hidden" name="safe" value="active"></input>
+			<input type="hidden" name="cof" value="GALT:#008000;GL:1;DIV:#336699;VLC:663399;AH:center;BGC:F6F8FA;LBGC:F6F8FA;ALC:0000FF;LC:0000FF;T:000000;GFNT:0000FF;GIMP:0000FF;LH:50;LW:108;L:http://congdongcviet.com/logos/Logo.gif;S:http://congdongcviet.com/logos;FORID:1"></input>
+			<input type="hidden" name="hl" value="en"></input>
+			</td></tr></table>
+			</form>
+			</center>
+			<!-- Search Google -->
+		</td>
+		<td class="smallfont" width="300" align="right">&nbsp;</td>
+	
+	
+		<td align="right"><div class="pagenav" align="right">
+<table class="tborder" cellpadding="3" cellspacing="1" border="0">
+<tr>
+	<td class="vbmenu_control" style="font-weight:normal">Trang 1 trên tổng số 3</td>
+	
+	
+		<td class="alt2"><span class="smallfont" title="Đang hiện từ 1 tới 10 trên tổng 26 kết quả"><strong>1</strong></span></td>
+ <td class="alt1"><a class="smallfont" href="showthread.php?t=1197&amp;page=2" title="Hiện từ 11 tới 20 trên tổng số 26 kết quả">2</a></td><td class="alt1"><a class="smallfont" href="showthread.php?t=1197&amp;page=3" title="Hiện từ 21 tới 26 trên tổng số 26 kết quả">3</a></td>
+	<td class="alt1"><a rel="next" class="smallfont" href="showthread.php?t=1197&amp;page=2" title="Trang liền sau - Từ 11 tới 20 trên tổng số 26 kết quả">&gt;</a></td>
+	
+	<td class="vbmenu_control" title="showthread.php?t=1197"><a name="PageNav"></a></td>
+</tr>
+</table>
+</div>
+		
+		</td>
+	
+</tr>
+</table>
+<!-- / controls below postbits -->
+
+
+
+
+<!-- social bookmarking links -->
+	<br />
+	<table cellpadding="6" cellspacing="1" border="0" width="100%" class="tborder" align="center">
+	<tr>
+		<td class="thead">Bookmarks</td>
+	</tr>
+	<tr>
+		<td class="alt2" style="padding-top:0px"><div style="clear:both"></div><ul style="list-style-type:none; margin:0px; padding:0px"><li class="smallfont" style="width:25%; min-width:160px; float:left; margin-top:6px">
+	
+		<a href="http://digg.com/submit?phrase=2&amp;url=http%3A%2F%2Fforums.congdongcviet.com%2Fshowthread.php%3Ft%3D1197&amp;title=Gi%C3%A1o+tr%C3%ACnh+C+c%E1%BB%A7a+Aptech+%5BElementary+Programming+With+C%5D" target="socialbookmark"><img src="images/misc/bookmarksite_digg.gif" border="0" alt="Gửi đề tài tới Digg" class="inlineimg" /></a>
+	
+	<a href="http://digg.com/submit?phrase=2&amp;url=http%3A%2F%2Fforums.congdongcviet.com%2Fshowthread.php%3Ft%3D1197&amp;title=Gi%C3%A1o+tr%C3%ACnh+C+c%E1%BB%A7a+Aptech+%5BElementary+Programming+With+C%5D" target="socialbookmark" style="text-decoration:none">Digg</a>
+</li><li class="smallfont" style="width:25%; min-width:160px; float:left; margin-top:6px">
+	
+		<a href="http://del.icio.us/post?url=http%3A%2F%2Fforums.congdongcviet.com%2Fshowthread.php%3Ft%3D1197&amp;title=Gi%C3%A1o+tr%C3%ACnh+C+c%E1%BB%A7a+Aptech+%5BElementary+Programming+With+C%5D" target="socialbookmark"><img src="images/misc/bookmarksite_delicious.gif" border="0" alt="Gửi đề tài tới del.icio.us" class="inlineimg" /></a>
+	
+	<a href="http://del.icio.us/post?url=http%3A%2F%2Fforums.congdongcviet.com%2Fshowthread.php%3Ft%3D1197&amp;title=Gi%C3%A1o+tr%C3%ACnh+C+c%E1%BB%A7a+Aptech+%5BElementary+Programming+With+C%5D" target="socialbookmark" style="text-decoration:none">del.icio.us</a>
+</li><li class="smallfont" style="width:25%; min-width:160px; float:left; margin-top:6px">
+	
+		<a href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Fforums.congdongcviet.com%2Fshowthread.php%3Ft%3D1197&amp;title=Gi%C3%A1o+tr%C3%ACnh+C+c%E1%BB%A7a+Aptech+%5BElementary+Programming+With+C%5D" target="socialbookmark"><img src="images/misc/bookmarksite_stumbleupon.gif" border="0" alt="Gửi đề tài tới StumbleUpon" class="inlineimg" /></a>
+	
+	<a href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Fforums.congdongcviet.com%2Fshowthread.php%3Ft%3D1197&amp;title=Gi%C3%A1o+tr%C3%ACnh+C+c%E1%BB%A7a+Aptech+%5BElementary+Programming+With+C%5D" target="socialbookmark" style="text-decoration:none">StumbleUpon</a>
+</li><li class="smallfont" style="width:25%; min-width:160px; float:left; margin-top:6px">
+	
+		<a href="http://www.google.com/bookmarks/mark?op=edit&amp;output=popup&amp;bkmk=http%3A%2F%2Fforums.congdongcviet.com%2Fshowthread.php%3Ft%3D1197&amp;title=Gi%C3%A1o+tr%C3%ACnh+C+c%E1%BB%A7a+Aptech+%5BElementary+Programming+With+C%5D" target="socialbookmark"><img src="images/misc/bookmarksite_google.gif" border="0" alt="Gửi đề tài tới Google" class="inlineimg" /></a>
+	
+	<a href="http://www.google.com/bookmarks/mark?op=edit&amp;output=popup&amp;bkmk=http%3A%2F%2Fforums.congdongcviet.com%2Fshowthread.php%3Ft%3D1197&amp;title=Gi%C3%A1o+tr%C3%ACnh+C+c%E1%BB%A7a+Aptech+%5BElementary+Programming+With+C%5D" target="socialbookmark" style="text-decoration:none">Google</a>
+</li></ul><div style="clear:both"></div></td>
+	</tr>
+	</table>
+<!-- / social bookmarking links -->
+
+
+
+
+
+
+
+<!-- lightbox scripts -->
+	<script type="text/javascript" src="clientscript/vbulletin_lightbox.js?v=384"></script>
+	<script type="text/javascript">
+	<!--
+	vBulletin.register_control("vB_Lightbox_Container", "posts", 1);
+	//-->
+	</script>
+<!-- / lightbox scripts -->
+
+
+
+
+
+
+
+
+
+
+<!-- next / previous links -->
+	<br />
+	<div class="smallfont" align="center">
+		<strong>&laquo;</strong>
+			<a href="showthread.php?t=1197&amp;goto=nextoldest" rel="nofollow">Đề tài liền trước</a>
+			|
+			<a href="showthread.php?t=1197&amp;goto=nextnewest" rel="nofollow">Đề tài liền sau</a>
+		<strong>&raquo;</strong>
+	</div>
+<!-- / next / previous links -->
+
+
+
+
+
+
+
+<!-- popup menu contents -->
+<br />
+
+<!-- thread tools menu -->
+<div class="vbmenu_popup" id="threadtools_menu" style="display:none">
+<form action="postings.php?t=1197&amp;pollid=" method="post" name="threadadminform">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">Các công cụ đề tài<a name="goto_threadtools"></a></td>
+	</tr>
+	<tr>
+		<td class="vbmenu_option"><img class="inlineimg" src="images/buttons/printer.gif" alt="Show Printable Version" /> <a href="printthread.php?t=1197" accesskey="3" rel="nofollow">Show Printable Version</a></td>
+	</tr>
+	
+	<tr>
+		<td class="vbmenu_option"><img class="inlineimg" src="images/buttons/sendtofriend.gif" alt="Email trang này" /> <a href="sendmessage.php?do=sendtofriend&amp;t=1197" rel="nofollow">Email trang này</a></td>
+	</tr>
+	
+	
+	
+	
+	</table>
+</form>
+</div>
+<!-- / thread tools menu -->
+
+<!-- **************************************************** -->
+
+<!-- thread display mode menu -->
+<div class="vbmenu_popup" id="displaymodes_menu" style="display:none">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">Các chế độ hiển thị<a name="goto_displaymodes"></a></td>
+	</tr>
+	<tr>
+	
+		<td class="vbmenu_option" title="nohilite"><img class="inlineimg" src="images/buttons/mode_linear.gif" alt="Chế độ tuyến tính" /> <strong>Chế độ tuyến tính</strong></td>
+	
+	</tr>
+	<tr>
+	
+		<td class="vbmenu_option"><img class="inlineimg" src="images/buttons/mode_hybrid.gif" alt="Chế độ kết hợp" /> <a href="showthread.php?mode=hybrid&amp;t=1197">Chuyển sang chế độ kết hợp</a></td>
+	
+	</tr>
+	<tr>
+	
+		<td class="vbmenu_option"><img class="inlineimg" src="images/buttons/mode_threaded.gif" alt="Chế độ tuyến tính" /> <a href="showthread.php?p=6149&amp;mode=threaded#post6149">Chuyển sang chế độ phân luồng</a></td>
+	
+	</tr>
+	</table>
+</div>
+<!-- / thread display mode menu -->
+
+<!-- **************************************************** -->
+
+
+
+<!-- **************************************************** -->
+
+
+
+<!-- / popup menu contents -->
+
+
+<!-- forum rules and admin links -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+<tr valign="bottom">
+	<td width="100%" valign="top">
+		<table class="tborder" cellpadding="6" cellspacing="1" border="0" width="210">
+<thead>
+<tr>
+	<td class="thead">
+		<a style="float:right" href="#top" onclick="return toggle_collapse('forumrules')"><img id="collapseimg_forumrules" src="images/buttons/collapse_thead.gif" alt="" border="0" /></a>
+		Các nguyên tắc gửi bài
+	</td>
+</tr>
+</thead>
+<tbody id="collapseobj_forumrules" style="">
+<tr>
+	<td class="alt1" nowrap="nowrap"><div class="smallfont">
+		
+		<div>Bạn <strong>không thể</strong> gửi đề tài mới</div>
+		<div>Bạn <strong>không thể</strong> gửi bài trả lời</div>
+		<div>Bạn <strong>không thể</strong> gửi các đính kèm</div>
+		<div>Bạn <strong>không thể</strong> chỉnh sửa bài viết của bạn</div>
+		<hr />
+		
+		<div><a href="misc.php?do=bbcode" target="_blank">BB code</a>: <strong>On</strong></div>
+		<div><a href="misc.php?do=showsmilies" target="_blank">Mặt cười</a>: <strong>On</strong></div>
+		<div><a href="misc.php?do=bbcode#imgcode" target="_blank">[IMG]</a> code: <strong>On</strong></div>
+		<div>HTML code: <strong>Off</strong></div>
+		<hr />
+		<div><a href="misc.php?do=showrules" target="_blank">Nội quy diễn đàn</a></div>
+	</div></td>
+</tr>
+</tbody>
+</table>
+	</td>
+	<td class="smallfont" align="right">
+		<table cellpadding="0" cellspacing="0" border="0">
+		
+		<tr>
+			<td>
+			<div class="smallfont" style="text-align:left; white-space:nowrap">
+	<form action="forumdisplay.php" method="get">
+	<input type="hidden" name="s" value="" />
+	<input type="hidden" name="daysprune" value="" />
+	<strong>Nhảy tới diễn đàn</strong><br />
+	<select name="f" onchange="this.form.submit();">
+		<optgroup label="Các khu vực của site">
+			<option value="cp" >User Control Panel</option>
+			<option value="pm" >Tin nhắn</option>
+			<option value="subs" >Các thuê bao</option>
+			<option value="wol" >Ai online</option>
+			<option value="search" >Tìm kiếm các diễn đàn</option>
+			<option value="home" >Forums Home</option>
+		</optgroup>
+		
+		<optgroup label="Forums">
+		<option value="1" class="fjdpth0" > CỘNG ĐỒNG C VIỆT</option>
+<option value="2" class="fjdpth1" >&nbsp; &nbsp;  Thông báo chung</option>
+<option value="3" class="fjdpth1" >&nbsp; &nbsp;  Ý kiến, đề xuất và khiếu nại</option>
+<option value="15" class="fjdpth0" > SOFTWARE ENGINEERING</option>
+<option value="53" class="fjdpth1" >&nbsp; &nbsp;  Rắc rối với Software Engineering</option>
+<option value="65" class="fjdpth1" >&nbsp; &nbsp;  Tutorials và Thủ thuật</option>
+<option value="27" class="fjdpth1" >&nbsp; &nbsp;  Tài liệu và công cụ cho Software Engineering</option>
+<option value="32" class="fjdpth0" > ĐỊNH HƯỚNG &amp; ĐÀO TẠO</option>
+<option value="55" class="fjdpth1" >&nbsp; &nbsp;  Đào tạo</option>
+<option value="19" class="fjdpth1" >&nbsp; &nbsp;  Kinh nghiệm ngành IT</option>
+<option value="49" class="fjdpth1" >&nbsp; &nbsp;  Công việc ngành IT</option>
+<option value="9" class="fjdpth0" > LẬP TRÌNH VISUAL C#</option>
+<option value="17" class="fjdpth1" >&nbsp; &nbsp;  Thắc mắc về lập trình C#</option>
+<option value="31" class="fjdpth1" >&nbsp; &nbsp;  Tutorials và Thủ thuật lập trình C#</option>
+<option value="57" class="fjdpth1" >&nbsp; &nbsp;  Dự án &amp; Source code về C#</option>
+<option value="58" class="fjdpth1" >&nbsp; &nbsp;  Công cụ, ebooks C#</option>
+<option value="5" class="fjdpth0" > LẬP TRÌNH VISUAL C++ | LẬP TRÌNH VISUAL C++.NET</option>
+<option value="14" class="fjdpth1" >&nbsp; &nbsp;  Thắc mắc về lập trình Visual C++</option>
+<option value="61" class="fjdpth1" >&nbsp; &nbsp;  Windows API, Hooking, xử lý Windows Message</option>
+<option value="30" class="fjdpth1" >&nbsp; &nbsp;  Tutorials và Thủ thuật Visual C++</option>
+<option value="64" class="fjdpth1" >&nbsp; &nbsp;  Dự án &amp; Source code về VC++</option>
+<option value="66" class="fjdpth1" >&nbsp; &nbsp;  Công cụ, ebooks VC++</option>
+<option value="7" class="fjdpth0" > LẬP TRÌNH C++ | LẬP TRÌNH C | LẬP TRÌNH C++0X</option>
+<option value="10" class="fjdpth1" >&nbsp; &nbsp;  Sinh viên thắc mắc về lập trình C/C++</option>
+<option value="59" class="fjdpth1" >&nbsp; &nbsp;  Thắc mắc về Lập trình C/C++/C++0x</option>
+<option value="54" class="fjdpth1" >&nbsp; &nbsp;  Hướng đối tượng với C++/C++0x</option>
+<option value="21" class="fjsel" selected="selected">&nbsp; &nbsp;  Thủ thuật, Tutorials và Mã nguồn C/C++/C++0x</option>
+<option value="63" class="fjdpth1" >&nbsp; &nbsp;  Công cụ, ebooks C/C++/C++0x</option>
+<option value="11" class="fjdpth0" > CẤU TRÚC DỮ LIỆU VÀ GIẢI THUẬT</option>
+<option value="36" class="fjdpth1" >&nbsp; &nbsp;  Thắc mắc về cấu trúc dữ liệu và giải thuật</option>
+<option value="56" class="fjdpth1" >&nbsp; &nbsp;  Thủ thuật, Tutorials và Mã nguồn</option>
+<option value="38" class="fjdpth1" >&nbsp; &nbsp;  Tài liệu, ebooks</option>
+<option value="12" class="fjdpth0" > DATABASE &amp; REPORTING | CÁC HỆ QUẢN TRỊ DATABASE</option>
+<option value="6" class="fjdpth1" >&nbsp; &nbsp;  Thắc mắc về đại cương của Database &amp; Reporting</option>
+<option value="35" class="fjdpth1" >&nbsp; &nbsp;  Thắc mắc về Oracle</option>
+<option value="60" class="fjdpth1" >&nbsp; &nbsp;  Thắc mắc về Microsoft SQL Server &amp; Microsoft Access</option>
+<option value="34" class="fjdpth1" >&nbsp; &nbsp;  Thắc mắc về MySQL và SQL Lite</option>
+<option value="67" class="fjdpth1" >&nbsp; &nbsp;  Thủ thuật Tutorials về Database</option>
+<option value="39" class="fjdpth1" >&nbsp; &nbsp;  Tài liệu, ebooks DB</option>
+<option value="8" class="fjdpth0" > THẢO LUẬN CHUNG</option>
+<option value="41" class="fjdpth1" >&nbsp; &nbsp;  Hệ điều hành</option>
+<option value="50" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Tài liệu về HĐH</option>
+<option value="25" class="fjdpth1" >&nbsp; &nbsp;  English</option>
+<option value="13" class="fjdpth1" >&nbsp; &nbsp;  Các Hỏi/Đáp khác</option>
+<option value="22" class="fjdpth0" > THÀNH VIÊN CỘNG ĐỒNG C VIỆT</option>
+<option value="51" class="fjdpth1" >&nbsp; &nbsp;  Hình tượng thành viên</option>
+<option value="28" class="fjdpth1" >&nbsp; &nbsp;  Ý tưởng của bạn là gì?</option>
+<option value="29" class="fjdpth1" >&nbsp; &nbsp;  Sản phẩm của bạn là gì?</option>
+<option value="42" class="fjdpth0" > KHU GIẢI TRÍ</option>
+<option value="33" class="fjdpth1" >&nbsp; &nbsp;  Giải trí - Thư giãn</option>
+<option value="43" class="fjdpth1" >&nbsp; &nbsp;  Giao lưu</option>
+<option value="45" class="fjdpth1" >&nbsp; &nbsp;  Giới thiệu website của bạn.</option>
+
+		</optgroup>
+		
+	</select><input type="submit" class="button" value="Go" />
+	</form>
+</div>
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+<!-- /forum rules and admin links -->
+
+<br />
+
+<table class="tborder" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<thead>
+	<tr>
+		<td class="tcat" width="100%" colspan="5">
+			<a style="float:right" href="#top" onclick="return toggle_collapse('similarthreads')"><img id="collapseimg_similarthreads" src="images/buttons/collapse_tcat.gif" alt="" border="0" /></a>
+			Các đề tài tương tự<a name="similarthreads"></a>
+		</td>
+	</tr>
+</thead>
+<tbody id="collapseobj_similarthreads" style="">
+<tr class="thead" align="center">
+	<td class="thead" width="40%">Đề tài</td>
+	<td class="thead" width="15%" nowrap="nowrap">Người bắt đầu đề tài</td>
+	<td class="thead" width="20%">Diễn đàn</td>
+	<td class="thead" width="5%">Các trả lời</td>
+	<td class="thead" width="20%">Bài viết cuối</td>
+</tr>
+<tr>
+	<td class="alt1" align="left">
+		
+		<span class="smallfont"> <a href="showthread.php?t=1430" title="Bài viết này do bạn trannam136 (hổng biết có phải bro ntnam không nữa) trích ra từ tạp chí &quot;học lập trình&quot;, đây có lẽ là bài viết khá hay trên mạng, mình xin mạn phép...">Về việc học lập trình...</a></span>
+	</td>
+	<td class="alt2" nowrap="nowrap"><span class="smallfont">neverland87</span></td>
+	<td class="alt1" nowrap="nowrap"><span class="smallfont">Kinh nghiệm ngành IT</span></td>
+	<td class="alt2" align="center"><span class="smallfont">20</span></td>
+	<td class="alt1" align="right"><span class="smallfont">06-10-2009 <span class="time">01:20 AM</span></span></td>
+</tr>
+<tr>
+	<td class="alt1" align="left">
+		
+		<span class="smallfont"> <a href="showthread.php?t=1824" title="I. Thảo luận 
+ Lập trình là một lĩnh vực quan trọng trong thế giới Công nghệ thông tin. Mặc dù lĩnh vực này chỉ thuộc về một số ít người trên thế giới - theo nghĩa nào...">Công cụ lập trình | Các bộ công cụ lập trình thời đại</a></span>
+	</td>
+	<td class="alt2" nowrap="nowrap"><span class="smallfont">neverland87</span></td>
+	<td class="alt1" nowrap="nowrap"><span class="smallfont">Các Hỏi/Đáp khác</span></td>
+	<td class="alt2" align="center"><span class="smallfont">9</span></td>
+	<td class="alt1" align="right"><span class="smallfont">01-10-2009 <span class="time">10:11 AM</span></span></td>
+</tr>
+<tr>
+	<td class="alt1" align="left">
+		
+		<span class="smallfont"> <a href="showthread.php?t=10168" title="Lập trình viên (người lập trình hay thảo chương viên điện toán), là người viết ra các chương trình máy tính. Thảo chương viên điện toán là một từ cũ, được dùng trước...">Lập Trình Viên là ai?</a></span>
+	</td>
+	<td class="alt2" nowrap="nowrap"><span class="smallfont">chucphuc</span></td>
+	<td class="alt1" nowrap="nowrap"><span class="smallfont">Đào tạo</span></td>
+	<td class="alt2" align="center"><span class="smallfont">3</span></td>
+	<td class="alt1" align="right"><span class="smallfont">20-05-2009 <span class="time">09:08 PM</span></span></td>
+</tr>
+<tr>
+	<td class="alt1" align="left">
+		
+		<span class="smallfont"> <a href="showthread.php?t=185" title="Sau đây là một phong cách lập trình tuy chưa hẳn là tối ưu nhưng cũng là một bài viết đáng chú ý. 
+I.                  Mục tiêu của tài liệu này:  
+ 
+Bạn đang học lập...">Phong cách lập trình C --&gt; Tham khảo</a></span>
+	</td>
+	<td class="alt2" nowrap="nowrap"><span class="smallfont">n04dethuong</span></td>
+	<td class="alt1" nowrap="nowrap"><span class="smallfont">Thủ thuật, Tutorials và Mã nguồn C/C++/C++0x</span></td>
+	<td class="alt2" align="center"><span class="smallfont">10</span></td>
+	<td class="alt1" align="right"><span class="smallfont">11-08-2008 <span class="time">06:50 AM</span></span></td>
+</tr>
+<tr>
+	<td class="alt1" align="left">
+		
+		<span class="smallfont"> <a href="showthread.php?t=2707" title="Nguồn: GameDev.vn 
+  
+Chương 1: Kiểu, Biến, Chuẩn I/O và viết thử game căn bản: Lost Fortune 
+Bài 1.1     Giới thiệu C++: 
+C++ là một ngôn ngữ lập trình tiến tiến,...">Beginning C++ Game Programming, Dành cho những ai chưa học C++</a></span>
+	</td>
+	<td class="alt2" nowrap="nowrap"><span class="smallfont">huynguyen</span></td>
+	<td class="alt1" nowrap="nowrap"><span class="smallfont">Thủ thuật, Tutorials và Mã nguồn C/C++/C++0x</span></td>
+	<td class="alt2" align="center"><span class="smallfont">14</span></td>
+	<td class="alt1" align="right"><span class="smallfont">29-06-2007 <span class="time">08:44 AM</span></span></td>
+</tr>
+
+</tbody>
+</table>
+
+<br />
+
+
+
+<br />
+<div class="smallfont" align="center">Toàn bộ thời gian tính theo múi GMT +7. Bây giờ là <span class="time">11:09 PM</span>.</div>
+<br />
+
+
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+<!-- /content area table -->
+
+<div id="page-ref">
+<form action="index.php" method="get" style="clear:left">
+
+<table cellpadding="6" cellspacing="0" border="0" width="100%" class="page" align="center">
+<tr>
+	
+	
+	<td class="tfoot" align="right" width="100%">
+		<div class="smallfont">
+			<strong>
+				<a href="sendmessage.php" rel="nofollow" accesskey="9">Liên hệ chúng tôi</a> -
+				<a href="http://congdongcviet.com">Cộng đồng C Việt</a> -
+				
+				
+				<a href="archive/index.php">Archive</a> -
+				
+				
+				
+				<a href="#top" onclick="self.scrollTo(0, 0); return false;">Top</a>
+			</strong>
+		</div>
+	</td>
+</tr>
+</table>
+
+<!-- Add by Kevin -->
+<div id="script_extent">
+	<script language="javascript" type="text/javascript" src="clientscript/js/avim.js"></script>
+	<script language="javascript" type="text/javascript" src="clientscript/js/adv_code_tools.js"></script>
+</div>
+<div id="foot_info" class="clearfix">
+	<div class="copyright_sign smallfont"">
+		<div class="src_coyright">
+			<!-- Do not remove this copyright notice -->
+			- Nguồn đã được cung cấp bởi vBulletin&reg; version 3.8.4<br />- Bản quyền nguồn &copy;2000 - 2010, Jelsoft Enterprises Ltd.
+			<!-- Do not remove this copyright notice -->
+		</div>
+
+		<div class="usage_copyright">
+			<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+			<div>- Sử dụng và phát triển bởi <a href="http://www.congdongcviet.com" alt="Cộng đồng C Việt">Cộng đồng C Việt&reg;</a>: 2006 - 2009</div>
+			
+			<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+			
+		</div>
+	</div>
+	<div class="tracking_code">
+		<!-- Google Analysis, Google tracking code -->
+		<div class="google_analysis">
+			<script type="text/javascript">
+				var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+				document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+			</script>
+			<script type="text/javascript">
+				try {
+					var pageTracker = _gat._getTracker("UA-6069265-2");
+					pageTracker._setDomainName(".congdongcviet.com");
+					pageTracker._trackPageview();
+				} 
+				catch (err) {
+				}
+			</script>
+		</div>
+		<!-- End of Google Analysis, Google tracking code -->
+		
+		<!-- Alexa button -->
+		<div style="margin-right: 18px">
+			<script type='text/javascript' language='JavaScript' src='http://xslt.alexa.com/site_stats/js/t/c?url=congdongcviet.com'></script>
+		</div>
+	</div>
+</div>
+
+</form>
+
+
+
+</div>
+
+
+<script type="text/javascript">
+<!--
+	// Main vBulletin Javascript Initialization
+	vBulletin_init();
+//-->
+</script>
+
+<!-- temp -->
+<div style="display:none">
+	<!-- thread rate -->
+	
+		
+	
+	<!-- / thread rate -->
+</div>
+
+</body>
+</html>

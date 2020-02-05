@@ -1,0 +1,4731 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="vi">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="vBulletin 3.8.4" />
+
+	<meta name="keywords" content=" Lập trình C++ | Tài liệu lập trình C++ của Phạm Văn Ất, Lap trinh C,lap trinh C++,lap trinh C#,Ma nguon,Thuat toan,cau truc du lieu,giai thuat,computer programming,Software Engineering,cong nghe phan mem,ANSI C,ISO C++,Visual C++,VC++,C++.NET,C++Builder,DEV-CPP,C#,C-Sharp,Thuật toán trên C/C++,Database,Linux,Unix Kernel,php,ASP.NET" />
+	<meta name="description" content="Trang 2- Lập trình C++ | Tài liệu lập trình C++ của Phạm Văn Ất Thủ thuật, Tutorials và Mã nguồn C/C++/C++0x. Lập trình C, Lập trình C++, Lập trình C#, Thuật toán, cấu trúc dữ liệu, giải thuật, mã nguồn, đồ họa" />
+
+
+	<!-- ICON -->
+	<link rel="icon" type="image/x-icon" href="images/icons/logo.ico" />
+	<!-- SHORTCUT ICON -->
+	<link rel="shortcut icon" type="image/x-icon" href="images/icons/logo.ico" />
+	
+<!-- CSS Stylesheet -->
+<style type="text/css" id="vbulletin_css">
+/**
+* vBulletin 3.8.4 CSS
+* Style: 'Master Skin'; Style ID: 1
+*/
+body
+{
+	background: #F5F7F9;
+	color: #000000;
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	margin: 0px 0px 0px 0px;padding: 0px;
+}
+a:link, body_alink
+{
+	color: #0049AA;
+	text-decoration: none;
+}
+a:visited, body_avisited
+{
+	color: #23488C;
+	text-decoration: none;
+}
+a:hover, a:active, body_ahover
+{
+	color: #0067F0;
+	text-decoration: underline;
+}
+.page
+{
+	background: #F5F7F9;
+	color: #000000;
+}
+td, th, p, li
+{
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.tborder
+{
+	background: #A1D2F1;
+	color: #000000;
+	border: 1px solid #6D9806;
+}
+.tcat
+{
+	background: #A7C4E3 url(images/gradients/gradient_tcat.jpg) repeat-x top left;
+	color: #000000;
+	font: bold 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.tcat a:link, .tcat_alink
+{
+	color: #0049AA;
+	text-decoration: none;
+}
+.tcat a:visited, .tcat_avisited
+{
+	color: #23488C;
+	text-decoration: none;
+}
+.tcat a:hover, .tcat a:active, .tcat_ahover
+{
+	color: #0067F0;
+	text-decoration: underline;
+}
+.thead
+{
+	background: #A7C4E3 url(images/gradients/gradient_thead.jpg) repeat-x top left;
+	color: #000000;
+	font: bold 11px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.thead a:link, .thead_alink
+{
+	color: #0049AA;
+	text-decoration: none;
+}
+.thead a:visited, .thead_avisited
+{
+	color: #23488C;
+	text-decoration: none;
+}
+.thead a:hover, .thead a:active, .thead_ahover
+{
+	color: #0067F0;
+	text-decoration: underline;
+}
+.tfoot
+{
+	background: #319B02 url(images/gradients/nav_bar.jpg) repeat-x top left;
+	color: #000000;
+}
+.tfoot a:link, .tfoot_alink
+{
+	color: #000000;
+	text-decoration: none;
+}
+.tfoot a:visited, .tfoot_avisited
+{
+	color: #443f3f;
+	text-decoration: none;
+}
+.tfoot a:hover, .tfoot a:active, .tfoot_ahover
+{
+	color: #E05806;
+	text-decoration: underline;
+}
+.alt1, .alt1Active
+{
+	background: #F5F7F9;
+	color: #000000;
+}
+.alt2, .alt2Active
+{
+	background: #E3EBF2;
+	color: #000000;
+}
+.inlinemod
+{
+	background: #FFFFCC;
+	color: #000000;
+}
+.wysiwyg
+{
+	background: #F5F7F9;
+	color: #000000;
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+textarea, .bginput
+{
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.bginput option, .bginput optgroup
+{
+	font-size: 10pt;
+	font-family: verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.button
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+select
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+option, optgroup
+{
+	font-size: 11px;
+	font-family: verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.smallfont
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.time
+{
+	color: #606060;
+}
+.navbar
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.highlight
+{
+	color: #FF0000;
+	font-weight: bold;
+}
+.fjsel
+{
+	background: #3E5C92;
+	color: #E0E0F6;
+}
+.fjdpth0
+{
+	background: #F7F7F7;
+	color: #000000;
+}
+.panel
+{
+	background: #F5F7F9;
+	color: #000000;
+	padding: 10px; border: 2px outset;
+}
+.panelsurround
+{
+	background: #E3EBF2;
+	color: #000000;
+}
+legend
+{
+	color: #22229C;
+	font: 11px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.vbmenu_control
+{
+	background: #319B02 url(images/gradients/nav_bar.jpg) repeat-x top left;
+	color: #000000;
+	font: bold 11px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	padding: 3px 6px 3px 6px;white-space: nowrap;
+}
+.vbmenu_control a:link, .vbmenu_control_alink
+{
+	color: #000000;
+	text-decoration: none;
+}
+.vbmenu_control a:visited, .vbmenu_control_avisited
+{
+	color: #443F3F;
+	text-decoration: none;
+}
+.vbmenu_control a:hover, .vbmenu_control a:active, .vbmenu_control_ahover
+{
+	color: #E05806;
+	text-decoration: underline;
+}
+.vbmenu_popup
+{
+	background: #F5F7F9;
+	color: #000000;
+	border: 1px solid #0B198C;
+}
+.vbmenu_option
+{
+	background: #F5F7F9;
+	color: #000000;
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	white-space: nowrap;cursor: pointer;
+}
+.vbmenu_option a:link, .vbmenu_option_alink
+{
+	color: #0049AA;
+	text-decoration: none;
+}
+.vbmenu_option a:visited, .vbmenu_option_avisited
+{
+	color: #23488C;
+	text-decoration: none;
+}
+.vbmenu_option a:hover, .vbmenu_option a:active, .vbmenu_option_ahover
+{
+	color: #0067F0;
+	text-decoration: underline;
+}
+.vbmenu_hilite
+{
+	background: #E3EBF2;
+	color: #000000;
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	white-space: nowrap;cursor: pointer;
+}
+.vbmenu_hilite a:link, .vbmenu_hilite_alink
+{
+	color: #0049AA;
+	text-decoration: none;
+}
+.vbmenu_hilite a:visited, .vbmenu_hilite_avisited
+{
+	color: #23488C;
+	text-decoration: none;
+}
+.vbmenu_hilite a:hover, .vbmenu_hilite a:active, .vbmenu_hilite_ahover
+{
+	color: #0067F0;
+	text-decoration: underline;
+}
+/* ***** styling for 'big' usernames on postbit etc. ***** */
+.bigusername { font-size: 14pt; }
+
+/* ***** small padding on 'thead' elements ***** */
+td.thead, th.thead, div.thead { padding: 4px; }
+
+/* ***** basic styles for multi-page nav elements */
+.pagenav a { text-decoration: none; }
+.pagenav td { padding: 2px 4px 2px 4px; }
+
+/* ***** de-emphasized text */
+.shade, a.shade:link, a.shade:visited { color: #777777; text-decoration: none; }
+a.shade:active, a.shade:hover { color: #FF4400; text-decoration: underline; }
+.tcat .shade, .thead .shade, .tfoot .shade { color: #DDDDDD; }
+
+/* ***** define margin and font-size for elements inside panels ***** */
+.fieldset { margin-bottom: 6px; }
+.fieldset, .fieldset td, .fieldset p, .fieldset li { font-size: 11px; }
+/******Addition CSS******/
+#open_content_container,
+#header_wrapper,
+#page-ref {
+    min-width: 991px;
+    margin: 0 auto;
+}
+
+#header_wrapper,
+#page-ref {
+    position: relative;
+}
+
+#first_header {
+    padding: 0 25px;
+    position: inherit;
+}
+
+#second_ad_left,
+#header_left_cell {
+    width: 22%;
+    float: left;
+    text-align: left;
+}
+
+#second_ad_right,
+#header_right_cell {
+    width: 78%;
+    float: right;
+    text-align:right;
+}
+
+#second_ad_header {
+    padding: 11px 0 0;
+}
+
+.cviet_notices {
+    padding: 11px;
+}
+
+* html #open_content_container,
+* html #header_wrapper,
+* html #page-ref {
+    width: 991px;
+    margin: 0 auto;
+}
+
+#select_daysprune option,
+#sel_daysprune option {
+    text-align: right;
+}
+
+/* Search button */
+.searchgo input {
+    border: 1px solid #525B73;
+}
+
+.searchgo input:hover,
+.searchgo input:active {
+    border: 1px solid #FF6600;
+}
+
+.quote {
+    background: #FFFFC1;
+    color: #000000;
+    border:1px inset;
+}
+
+#foot_info {
+    padding: 6px;
+}
+
+.copyright_sign {
+    width: 49%;
+    float: left;
+}
+
+.tracking_code {
+    width: 49%;
+    float: right;
+    text-align: right;
+}
+
+.google_analysis {
+    height: 0;
+}
+
+/**
+ * Float clearing hacks
+ */
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    font-size: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+/**
+ * Backslash hack hides from IE mac
+ */
+.clearfix {
+    height: 1%;
+    display: block; /* Resets display for IE Win */
+}
+</style>
+<link rel="stylesheet" type="text/css" href="clientscript/vbulletin_important.css?v=384" />
+
+
+<!-- / CSS Stylesheet -->
+
+<script type="text/javascript" src="clientscript/yui/yahoo-dom-event/yahoo-dom-event.js?v=384"></script>
+<script type="text/javascript" src="clientscript/yui/connection/connection-min.js?v=384"></script>
+<script type="text/javascript">
+<!--
+var SESSIONURL = "";
+var SECURITYTOKEN = "guest";
+var IMGDIR_MISC = "images/misc";
+var vb_disable_ajax = parseInt("0", 10);
+// -->
+</script>
+<script type="text/javascript" src="clientscript/vbulletin_global.js?v=384"></script>
+<script type="text/javascript" src="clientscript/vbulletin_menu.js?v=384"></script>
+
+
+	<link rel="alternate" type="application/rss+xml" title="Cộng đồng C Việt RSS Feed" href="external.php?type=RSS2" />
+	
+		<link rel="alternate" type="application/rss+xml" title="Cộng đồng C Việt - Thủ thuật, Tutorials và Mã nguồn C/C++/C++0x - RSS Feed" href="external.php?type=RSS2&amp;forumids=21" />
+	
+
+	<title> Lập trình C++ | Tài liệu lập trình C++ của Phạm Văn Ất - Trang 2 - Cộng đồng C Việt</title>
+	<script type="text/javascript" src="clientscript/vbulletin_post_loader.js?v=384"></script>
+	<style type="text/css" id="vbulletin_showthread_css">
+	<!--
+	
+	#links div { white-space: nowrap; }
+	#links img { vertical-align: middle; }
+	-->
+	</style>
+</head>
+<body onload="">
+<!-- logo -->
+<a name="top"></a>
+<div id="header_wrapper" align="center" class="clearfix">
+	<div id="first_header">
+		<div id="header_left_cell" class="logo"><a href="index.php"><img src="images/logos/Logo.gif" border="0" alt="Cộng đồng C Việt" /></a></div>
+		<div id="header_right_cell"><!-- Adcode B1-->
+<a href="http://quacau.com" title="Xây dựng phần mềm, thiết kế website, cung cấp giải pháp" target="_blank" rel="external" onclick="javascript: pageTracker._trackPageview('/outgoing/forums/quacau.com');"><img src="http://congdongcviet.com/images/quacau-christmas-2009.jpg" style="border: 1px solid black;" alt="Xây dựng phần mềm, thiết kế website, cung cấp giải pháp" title="Xây dựng phần mềm, thiết kế website, cung cấp giải pháp" /></a></div>
+	</div>
+</div>
+<!-- /logo -->
+
+<!-- content table -->
+<!-- open content container -->
+
+<div id="open_content_container">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+
+
+
+<div id="second_ad_header" class="clearfix">
+<!-- Adcode B2-->
+    <div id="second_ad_left"></div>
+<!-- Adcode B3-->
+    <div id="second_ad_right">
+        <a href="http://www.aptech-news.com/missionIT/" title="Học lập trình viên tại Aptech" target="_blank" rel="external" onclick="javascript: pageTracker._trackPageview('/outgoing/forums/Aprotrain-Aptech');"><img src="http://congdongcviet.com/images/aprotrain-aptech-december-2009.gif" style="border: 1px solid black;" alt="Học lập trình viên tại Aptech" title="Học lập trình viên tại Aptech" /></a>
+    </div>
+</div>
+<br />
+
+<!-- breadcrumb, login, pm info -->
+<table class="tborder" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+	<td class="alt1" width="100%">
+		
+			<table cellpadding="0" cellspacing="0" border="0">
+			<tr valign="bottom">
+				<td><a href="#" onclick="history.back(1); return false;"><img src="images/misc/navbits_start.gif" alt="Quay lại" border="0" /></a></td>
+				<td>&nbsp;</td>
+				<td width="100%"><span class="navbar"><a href="index.php" accesskey="1">Cộng đồng C Việt</a></span> 
+	<span class="navbar">&gt; <a href="forumdisplay.php?f=7">LẬP TRÌNH C++ | LẬP TRÌNH C | LẬP TRÌNH C++0X</a></span>
+
+
+	<span class="navbar">&gt; <a href="forumdisplay.php?f=21">Thủ thuật, Tutorials và Mã nguồn C/C++/C++0x</a></span>
+
+</td>
+			</tr>
+			<tr>
+				<td class="navbar" style="font-size:10pt; padding-top:1px" colspan="3"><a href="/showthread.php?t=1093&amp;page=2"><img class="inlineimg" src="images/misc/navbits_finallink_ltr.gif" alt="Tải lại trang này" border="0" /></a> <strong>
+	 Lập trình C++ | Tài liệu lập trình C++ của Phạm Văn Ất
+
+</strong></td>
+			</tr>
+			</table>
+		
+	</td>
+
+	<td class="alt2" nowrap="nowrap" style="padding:0px">
+		<!-- login form -->
+		<form action="login.php?do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+		<script type="text/javascript" src="clientscript/vbulletin_md5.js?v=384"></script>
+		<table cellpadding="0" cellspacing="3" border="0">
+		<tr>
+			<td class="smallfont" style="white-space: nowrap;"><label for="navbar_username">Tên đăng nhập</label></td>
+			<td><input type="text" class="bginput" style="font-size: 11px" name="vb_login_username" id="navbar_username" size="10" accesskey="u" tabindex="101" value="Tên đăng nhập" onfocus="if (this.value == 'Tên đăng nhập') this.value = '';" /></td>
+			<td class="smallfont" nowrap="nowrap"><label for="cb_cookieuser_navbar"><input type="checkbox" name="cookieuser" value="1" tabindex="103" id="cb_cookieuser_navbar" accesskey="c" />Nhớ tôi vào?</label></td>
+		</tr>
+		<tr>
+			<td class="smallfont"><label for="navbar_password">Mật khẩu</label></td>
+			<td><input type="password" class="bginput" style="font-size: 11px" name="vb_login_password" id="navbar_password" size="10" tabindex="102" /></td>
+			<td><input type="submit" class="button" value="Log in" tabindex="104" title="Nhập vào Tên đăng nhập và Mật khẩu của bạn trong các hộp đã cung cấp để đăng nhập, hoặc click vào 'register' button để tạo một Hồ sơ cho bạn." accesskey="s" /></td>
+		</tr>
+		</table>
+		<input type="hidden" name="s" value="" />
+		<input type="hidden" name="securitytoken" value="guest" />
+		<input type="hidden" name="do" value="login" />
+		<input type="hidden" name="vb_login_md5password" />
+		<input type="hidden" name="vb_login_md5password_utf" />
+		</form>
+		<!-- / login form -->
+	</td>
+
+</tr>
+</table>
+<!-- / breadcrumb, login, pm info -->
+
+<!-- nav buttons bar -->
+<div class="tborder" style="padding:1px; border-top-width:0px">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+	<tr align="center">
+		
+		
+			<td class="vbmenu_control"><a href="register.php" rel="nofollow">Đăng ký</a></td>
+		
+		
+		<td class="vbmenu_control"><a rel="help" href="faq.php" accesskey="5">FAQ</a></td>
+		
+			
+			
+		
+		<td class="vbmenu_control"><a href="calendar.php">Lịch</a></td>
+		
+			
+				
+				<td class="vbmenu_control"><a href="search.php?do=getdaily" accesskey="2">Các bài viết ngày hôm nay</a></td>
+				
+				<td class="vbmenu_control"><a id="navbar_search" href="search.php" accesskey="4" rel="nofollow">Search</a> </td>
+			
+			
+		
+		
+		
+		</tr>
+	</table>
+</div>
+<!-- / nav buttons bar -->
+
+<br />
+
+
+
+
+
+
+<!-- NAVBAR POPUP MENUS -->
+
+	
+	
+	
+	<!-- header quick search form -->
+	<div class="vbmenu_popup" id="navbar_search_menu" style="display:none;margin-top:3px" align="left">
+		<table cellpadding="4" cellspacing="1" border="0">
+		<tr>
+			<td class="thead">Tìm kiếm các diễn đàn</td>
+		</tr>
+		<tr>
+			<td class="vbmenu_option" title="nohilite">
+				<form action="search.php?do=process" method="post">
+
+					<input type="hidden" name="do" value="process" />
+					<input type="hidden" name="quicksearch" value="1" />
+					<input type="hidden" name="childforums" value="1" />
+					<input type="hidden" name="exactname" value="1" />
+					<input type="hidden" name="s" value="" />
+					<input type="hidden" name="securitytoken" value="guest" />
+					<div><table><td><input type="text" class="bginput" name="query" size="25" tabindex="1001" /></td><td class="searchgo"><input type="image" src="images/buttons/search.gif" title="Search" tabindex="1004" /></td></table></div>
+					<div style="margin-top:6px">
+						<label for="rb_nb_sp0"><input type="radio" name="showposts" value="0" id="rb_nb_sp0" tabindex="1002" checked="checked" />Hiện các đề tài</label>
+						&nbsp;
+						<label for="rb_nb_sp1"><input type="radio" name="showposts" value="1" id="rb_nb_sp1" tabindex="1003" />Hiện các bài viết</label>
+					</div>
+				</form>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="vbmenu_option"><a href="tags.php" rel="nofollow">Tag Search</a></td>
+		</tr>
+		
+		<tr>
+			<td class="vbmenu_option"><a href="search.php" accesskey="4" rel="nofollow">Tìm kiếm cao cấp</a></td>
+		</tr>
+		
+		</table>
+	</div>
+	<!-- / header quick search form -->
+	
+	
+	
+<!-- / NAVBAR POPUP MENUS -->
+
+<!-- PAGENAV POPUP -->
+	<div class="vbmenu_popup" id="pagenav_menu" style="display:none">
+		<table cellpadding="4" cellspacing="1" border="0">
+		<tr>
+			<td class="thead" nowrap="nowrap">Đi tới trang...</td>
+		</tr>
+		<tr>
+			<td class="vbmenu_option" title="nohilite">
+			<form action="index.php" method="get" onsubmit="return this.gotopage()" id="pagenav_form">
+				<input type="text" class="bginput" id="pagenav_itxt" style="font-size:11px" size="4" />
+				<input type="button" class="button" id="pagenav_ibtn" value="Go" />
+			</form>
+			</td>
+		</tr>
+		</table>
+	</div>
+<!-- / PAGENAV POPUP -->
+
+
+
+
+<!-- Adcode B4-->
+<div style="width: 825px; height: 90px; padding: 8px 0">
+	<a href="http://www.gameloftjobs.kiemviec.com" title="Cộng đồng C Việt, Lập trình, tuyển lập trình, tuyển lập trình game" target="_blank" rel="external" onclick="javascript: pageTracker._trackPageview('/outgoing/forums/gameloftjobs.kiemviec.com');"><img src="http://congdongcviet.com/images/gameloft-dec-12-2009-2.gif" style="border: 1px solid black;" alt="Cộng đồng C Việt, Lập trình, tuyển lập trình, tuyển lập trình game" title="Cộng đồng C Việt, Lập trình, tuyển lập trình, tuyển lập trình game" /></a>
+</div>
+
+<div class="cviet_notices">
+	<a style="font-weight: 700; color: #f00;" href="http://forums.congdongcviet.com/showthread.php?t=23306">Danh sách thành viên ủng hộ Quỹ phát triển cộng đồng C Việt</a><br />
+	<a style="font-weight: 700; color: #f00;" href="http://forums.congdongcviet.com/member.php?u=1">Người sáng lập diễn đàn Dreaminess quyết định đổi tên đăng nhập thành Kevin Hoang</a>
+</div>
+
+
+
+
+
+<a name="poststop" id="poststop"></a>
+
+<!-- controls above postbits -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-bottom:3px">
+<tr valign="bottom">
+	
+		<td class="smallfont"><a href="newreply.php?do=newreply&amp;noquote=1&amp;p=6060" rel="nofollow"><img src="images/buttons/threadclosed.gif" alt="Đề tài đã đóng" border="0" /></a></td>
+	
+	<td align="right"><div class="pagenav" align="right">
+<table class="tborder" cellpadding="3" cellspacing="1" border="0">
+<tr>
+	<td class="vbmenu_control" style="font-weight:normal">Trang 2 trên tổng số 3</td>
+	
+	<td class="alt1"><a rel="prev" class="smallfont" href="showthread.php?t=1093" title="Trang liền trước - Từ 1 tới 10 trên tổng số 30 kết quả">&lt;</a></td>
+	<td class="alt1"><a class="smallfont" href="showthread.php?t=1093" title="Hiện từ 1 tới 10 trên tổng số 30 kết quả">1</a></td>	<td class="alt2"><span class="smallfont" title="Đang hiện từ 11 tới 20 trên tổng 30 kết quả"><strong>2</strong></span></td>
+ <td class="alt1"><a class="smallfont" href="showthread.php?t=1093&amp;page=3" title="Hiện từ 21 tới 30 trên tổng số 30 kết quả">3</a></td>
+	<td class="alt1"><a rel="next" class="smallfont" href="showthread.php?t=1093&amp;page=3" title="Trang liền sau - Từ 21 tới 30 trên tổng số 30 kết quả">&gt;</a></td>
+	
+	<td class="vbmenu_control" title="showthread.php?t=1093"><a name="PageNav"></a></td>
+</tr>
+</table>
+</div></td>
+</tr>
+</table>
+<!-- / controls above postbits -->
+
+<!-- toolbar -->
+<table class="tborder" cellpadding="6" cellspacing="1" border="0" width="100%" align="center" style="border-bottom-width:0px">
+<tr>
+	<td class="tcat" width="100%">
+		<div class="smallfont">
+		
+		&nbsp;
+		</div>
+	</td>
+	<td class="vbmenu_control" id="threadtools" nowrap="nowrap">
+		<a href="/showthread.php?t=1093&amp;page=2&amp;nojs=1#goto_threadtools">Các công cụ đề tài</a>
+		<script type="text/javascript"> vbmenu_register("threadtools"); </script>
+	</td>
+	
+	
+	
+	<td class="vbmenu_control" id="displaymodes" nowrap="nowrap">
+		<a href="/showthread.php?t=1093&amp;page=2&amp;nojs=1#goto_displaymodes">Các chế độ hiển thị</a>
+		<script type="text/javascript"> vbmenu_register("displaymodes"); </script>
+	</td>
+	
+
+	
+
+</tr>
+</table>
+<!-- / toolbar -->
+
+
+
+<!-- end content table -->
+
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+<!-- / end content table -->
+
+
+
+
+
+<div id="posts"><!-- post #6060 -->
+
+	<!-- open content container -->
+
+<div id="open_content_container">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit6060" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post6060" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+	<td class="thead" >
+		<div class="normal" style="float:right">
+			&nbsp;
+			#<a href="showpost.php?p=6060&amp;postcount=11" target="new" rel="nofollow" id="postcount6060" name="11"><strong>11</strong></a> &nbsp;
+			
+			
+			
+			
+			
+		</div>
+
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post6060"><img class="inlineimg" src="images/statusicon/post_old.gif" alt="Cũ" border="0" /></a>
+			
+				01-01-2007, 02:14 PM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding:0px">
+		<!-- user info -->
+		<table cellpadding="0" cellspacing="6" border="0" width="100%">
+		<tr>
+			<td class="alt2"><a href="member.php?u=12430"><img src="customavatars/avatar12430_3.gif" width="100" height="100" alt="Avatar củathangtran" border="0" /></a></td>
+			<td nowrap="nowrap">
+
+				<div id="postmenu_6060">
+					
+					<a class="bigusername" href="member.php?u=12430">thangtran</a>
+					<img class="inlineimg" src="images/statusicon/user_offline.gif" alt="thangtran là offline" border="0" />
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_6060", true); </script>
+					
+				</div>
+
+				<div class="smallfont">Thành viên nhiệt tình</div>
+				<div class="smallfont"><img src="images/ranks/rank_3.gif" alt="" border="" /></div>
+				
+
+			</td>
+			<td width="100%">&nbsp;</td>
+			<td valign="top" nowrap="nowrap">
+
+				<div class="smallfont">
+					<div>Ngày gia nhập: 12 2006</div>
+					
+					
+					<div>
+						Bài viết: 156
+					</div>
+					
+					
+					
+					
+					<div>    </div>
+				</div>
+
+			</td>
+		</tr>
+		</table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	
+	<td class="alt1" id="td_post_6060">
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		
+			<!-- icon and title -->
+			<div class="smallfont clearfix">
+				
+					<div style="float: left; width: 36px;"><img class="inlineimg" src="images/icons/icon1.gif" alt="Mặc định" border="0" /></div>
+				
+				
+			</div>
+			<hr size="1" style="color:#A1D2F1; background-color:#A1D2F1" />
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_6060">
+			
+			§5. CÁC HÀM TRỰC TUYẾN (INLINE)<br />
+5.1. Các ưu nhược điểm của hàm<br />
+    Viêc tổ chức chương trình thành các hàm có 2 ưu điểm :<br />
+thứ nhất:chia chương trình thành các đơn vị độc lập, làm cho chương trình được tổ chức một cách khoa học, dễ kiểm soát, dễ phát hiện lỗi,dễ phát triển, mở rộng.<br />
+thứ hai: giảm được kích thước chương trình,vì mỗi đoạn chương trình thực hiện một nhiệm vụ của hàm được thay bằng lời gọi hàm.<br />
+     Tuy vậy hàm cũng có nhược điểm là làm cho tốc độ chương trình chậm hơn do phải thực hiện một số thao tác có tính thủ tục mỗi khi gọi hàm như: Cấp phát vùng nhớ cho các đối và các biến cục bộ, truyền dữ liệu của các tham số cho các đối, giải phóng vùng nhớ trước khi thoát khỏi hàm.<br />
+    Các hàm trực tuyến inline có khả năng khắc phục được nhược điểm trên.<br />
+5.2. Các hàm trực tuyến<br />
+      Để biến một hàm thành trực tuyến ta viết them từ khoá<br />
+                                      inline                               <br />
+vào trước khai báo nguyên mẫu của hàm. Nếu không dung nguyên mẫu thì viết từ khoá này trước dòng đầu tiên của định nghĩa hàm. Ví dụ:<br />
+       inline float f(int n,float x);<br />
+       float f(int n,float x)<br />
+         {<br />
+           //Các câu lẹnh trong than hàm <br />
+        }<br />
+hoặc <br />
+       inline float f(int i,float x)<br />
+         {<br />
+            //các câu lệnh trong than hàm<br />
+        }<br />
+ Chú ý: Trong mọi trường hợp,từ khoá inline phải xuất hiện trước lời gọi hàm thì trình biên dịch mới biết cần xử lí hàm theo kiểu inline.<br />
+   Ví dụ: hàm f trong chương trình sau sẽ không phải là hàm trực tuyến vì từ khoá inline được viết sau lời gọi hàm:<br />
+<b>#include&lt;iostream.h&gt;<br />
+#include&lt;conio.h&gt;<br />
+void main()<br />
+  {<br />
+    int s;<br />
+    s= f(5,6);<br />
+    cout&lt;&lt;s;           <br />
+    getch();<br />
+ }<br />
+Inline int f(int a,int b)<br />
+  {<br />
+    return a*b;<br />
+  }</b><br />
+Chú ý: Trong C++,nếu hàm được xây dựng sau lời gọi hàm thì bắt buộc phải khai báo nguyên mẫu hàm trước lời gọi hàm. Trong ví dụ trên trình biên dịch C++ sẽ bắt lỗi do thiếu khai báo nguyên mẫu hàm f.<br />
+5.3. Cách biên dịch hàm trực tuyến<br />
+    Chương trình dịch sẽ xử lí các hàm inline như các macro(được định nghĩa trong lệnh #define), nghĩa là nó sẽ thay đổi mỗi lời gọi hàm bằng một đoạn chương trình thực hiện nhiệm vụ của hàm. Cách này làm cho chương trình dài ra nhưng tốc độ chương trình tăng lên do không phải thực hiện các thao tác mang tính thủ tục gọi hàm.<br />
+5.4. So sánh macro với hàm trực tuyến<br />
+    Dung macro và hàm trực tuyến đều dẫn đến các kết quả tương tự, tuy nhiên người ta thích dung hàm trực tuyến hơn,vì cách này bảo đảm tính cấu trúc của chương trình,dễ sử dụng và tránh được các sai sót lặt vặt thường gặp khi dung #define ( như thiếu các dấu ngoặc,dấu chấm phẩy)<br />
+5.5. Khi nào thì nên dung các hàm trực tuyến<br />
+     Phương án dung hàm trực tuyến rút ngắn được thời gian chạy máy nhưng lại làm tăng khối lượng bộ nhớ chương trình (nhất là đối với các hàm trực tuyến có nhiều câu lệnh). Vì vậy chỉ nên dung phương án hàm trực đối với các hàm nhỏ.<br />
+5.6. Sự hạn chế của trình biên dịch<br />
+    Không phải khi gặp từ khoa inline là trình biên dịch nhất thiết phải xử lí hàm theo kiểu trực tuyến<br />
+    Chú ý : từ khoá inline chỉ là một sự gợi ý đối với trình biên dịch chứ không phải là một mệnh lệnh bắt buộc<br />
+   Có một số hàm trình biên dịch thường không xử lí theo kiểu inline như các hàm chứa biến static, hàm chứa các lệnh chu trình hoặc lệnh goto, lệnh swich, hàm đệ quy. Trong các trườn hợp này hàm inline lẽ dĩ nhiên bị bỏ qua <br />
+   Thậm chí các hàm inline còn bị bỏ qua đối với các hàm không có những hạn chế kể trên nếu như trình biên dịch cảm thấy không cần thiết (ví dụ như quá nhiều hàm inline làm cho bộ nhớ chương trình trở nên quá lớn)<br />
+Ví dụ: Chương trình sau sử dụng hàm inline tính chu vi,diện tích của hình chữ nhật<br />
+   Phương án 1: Không khai báo nguyên mẫu. Khi đó hàm dtcvhcn phải đặt trong hàm main.<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 466px;
+		text-align: left;
+		overflow: auto">#include&lt;conio.h&gt;
+#include&lt;iostream.h&gt;
+inline void dtcvhcn(int a,int b,int cv,int &amp;dt,int &amp;cv)
+  {
+    dt=a*b;
+    cv=2*(a+b);
+ }
+void main()
+   {
+     int a[20],b[20],cv[20],dt[20],n;
+     cout&lt;&lt;\n so hinh chu nhat: ;
+     cin&gt;&gt;n;
+     for(int i=1;i&lt;=n;i++)
+       {
+         cout&lt;&lt;\n\n nhap hai canh cua hinh chu nhat thu &lt;&lt;i&lt;&lt; :;
+         cin&gt;&gt;a[i]&gt;&gt;b[i];
+         dtcvhcn(a[i],b[i],dt[i],cv[i]);
+      }
+    clrscr();
+    for(i=1;i&lt;=n;i++)
+      {
+        cout&lt;&lt;\n\n hinh chu nhat thu &lt;&lt;i&lt;&lt;:;
+        cout&lt;&lt;\n\n do dai 2 canh = &lt;&lt;a[i]&lt;&lt; va &lt;&lt;b[i];
+        cout&lt;&lt;\n\n dien tich : &lt;&lt;dt[i];
+        cout&lt;&lt;\n\n chu vi: &lt;&lt;cv[i];
+     }
+  getch();
+}</pre>
+</div>Phương án 2: Sử dụng khai báo nguyên mẫu. Khi đó từ khoá inline đặt trước nguyên mẫu.<br />
+ Chú ý: không được đặt inline trước định nghĩa hàm. Trong chương trình dưới đây nếu đặt inline trước định nghĩa hàm thì hậu quả như sau:<br />
+Chương trình vẫn dịch bình thường, nhưng khi chạy thì chương trình bị quẩn , không thoát ra được.<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 482px;
+		text-align: left;
+		overflow: auto">#include&lt;conio.h&gt;
+#include&lt;iostream.h&gt;
+inline void dtcvhcn(int a,int b,int cv,int &amp;dt,int &amp;cv);
+void main()
+   {
+     int a[20],b[20],cv[20],dt[20],n;
+     cout&lt;&lt;\n so hinh chu nhat: ;
+     cin&gt;&gt;n;
+     for(int i=1;i&lt;=n;i++)
+       {
+         cout&lt;&lt;\n\n nhap hai canh cua hinh chu nhat thu &lt;&lt;i&lt;&lt; :;
+         cin&gt;&gt;a[i]&gt;&gt;b[i];
+         dtcvhcn(a[i],b[i],dt[i],cv[i]);
+      }
+    clrscr();
+    for(i=1;i&lt;=n;i++)
+      {
+        cout&lt;&lt;\n\n hinh chu nhat thu &lt;&lt;i&lt;&lt;:;
+        cout&lt;&lt;\n\n do dai 2 canh = &lt;&lt;a[i]&lt;&lt; va &lt;&lt;b[i];
+        cout&lt;&lt;\n\n dien tich : &lt;&lt;dt[i];
+        cout&lt;&lt;\n\n chu vi: &lt;&lt;cv[i];
+     }
+  getch();
+ }
+void dtcvhcn(int a,int b,int cv,int &amp;dt,int &amp;cv) 
+{
+    dt=a*b;
+    cv=2*(a+b);
+ }</pre>
+</div>
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+		<!-- sig -->
+			<div>
+				__________________<br />
+				<img src="http://forums.congdongcviet.com/images/smilies/applause.gif" border="0" alt="" title="Applause" class="inlineimg" />  gogo! hoan hô nào, vỗ tay nào<br />
+    Nào thì chúng ta cùng hoan hô nào vỗ tay nào<img src="http://forums.congdongcviet.com/images/smilies/applause.gif" border="0" alt="" title="Applause" class="inlineimg" />
+			</div>
+		<!-- / sig -->
+		
+
+		
+
+		
+
+		<div style="margin-top: 10px" align="right">
+			<!-- controls -->
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				
+			
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</table>
+
+
+<!-- post 6060 popup menu -->
+<div class="vbmenu_popup" id="postmenu_6060_menu" style="display:none;">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">thangtran</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="member.php?u=12430">Xem Hồ sơ công khai</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="private.php?do=newpm&amp;u=12430" rel="nofollow">Gửi một tin nhắn tới thangtran</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="search.php?do=finduser&amp;u=12430" rel="nofollow">Tìm toàn bộ bài viết bởi thangtran</a></td></tr>
+	
+	
+	
+	</table>
+</div>
+<!-- / post 6060 popup menu -->
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #6060 --><!-- post #6095 -->
+
+	<!-- open content container -->
+
+<div id="open_content_container">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit6095" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post6095" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+	<td class="thead" >
+		<div class="normal" style="float:right">
+			&nbsp;
+			#<a href="showpost.php?p=6095&amp;postcount=12" target="new" rel="nofollow" id="postcount6095" name="12"><strong>12</strong></a> &nbsp;
+			
+			
+			
+			
+			
+		</div>
+
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post6095"><img class="inlineimg" src="images/statusicon/post_old.gif" alt="Cũ" border="0" /></a>
+			
+				02-01-2007, 09:52 AM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding:0px">
+		<!-- user info -->
+		<table cellpadding="0" cellspacing="6" border="0" width="100%">
+		<tr>
+			<td class="alt2"><a href="member.php?u=12430"><img src="customavatars/avatar12430_3.gif" width="100" height="100" alt="Avatar củathangtran" border="0" /></a></td>
+			<td nowrap="nowrap">
+
+				<div id="postmenu_6095">
+					
+					<a class="bigusername" href="member.php?u=12430">thangtran</a>
+					<img class="inlineimg" src="images/statusicon/user_offline.gif" alt="thangtran là offline" border="0" />
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_6095", true); </script>
+					
+				</div>
+
+				<div class="smallfont">Thành viên nhiệt tình</div>
+				<div class="smallfont"><img src="images/ranks/rank_3.gif" alt="" border="" /></div>
+				
+
+			</td>
+			<td width="100%">&nbsp;</td>
+			<td valign="top" nowrap="nowrap">
+
+				<div class="smallfont">
+					<div>Ngày gia nhập: 12 2006</div>
+					
+					
+					<div>
+						Bài viết: 156
+					</div>
+					
+					
+					
+					
+					<div>    </div>
+				</div>
+
+			</td>
+		</tr>
+		</table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	
+	<td class="alt1" id="td_post_6095">
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		
+			<!-- icon and title -->
+			<div class="smallfont clearfix">
+				
+					<div style="float: left; width: 36px;"><img class="inlineimg" src="images/icons/icon1.gif" alt="Mặc định" border="0" /></div>
+				
+				
+			</div>
+			<hr size="1" style="color:#A1D2F1; background-color:#A1D2F1" />
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_6095">
+			
+			§6. ĐỊNG NGHĨA CHỒNG CÁC HÀM (OVERLOADING)<br />
+6.1. Khái niệm về định nghĩa chồng <br />
+      Định nghĩa chồng (hay còn gọi là sự tải bội) các hàm là dung cùng một tên để định nghĩa các hàm khác nhau. Đây là mở rộng rất có ý nghĩa của C++.<br />
+     Như đã biết, trong C và các ngôn ngữ khác (như PASCAL, FOXPRO..) mỗi hàm đều phải có một tên phân biệt. Đôi khi đây là sự hạn chế lớn, vì phải dung nhiều hàm khác nhau để giải quyết cùng một công việc. Ví dụ để lấy giá trị tuyệt đối trong C cần dung tới 3 hàm khác nhau<br />
+    int abs(int i);// lấy giả trị tuyệt đối giá trị kiểu int<br />
+    long labslong l);// lấy giá trị tuyệt đối giá trị kiểu long<br />
+ double fabs(double d)// lấy giá trị tuyệt đối giá trị kiểu double<br />
+     Nhờ khả năng định nghĩa chồng, trong C++ có thể dung chung một tên cho cả 3 hàm như sau:<br />
+     int abs(int i);//lấy giá trị tuyệt đối giá trị kiểu int<br />
+     long abs(long l);//lấy giá trị tuyệt đối giá trị kiểu long<br />
+   double abs(double d);//lấy giá trị tuyệt đối gtrị kiểu double<br />
+6.2. Yêu cầu về các hàm định nghĩa chồng <br />
+     Khi dung cùng một tên để định nghĩa nhiều hàm, trình biên dịch C++ sẽ dựa vào sự khác nhau về tập đối của các hàm này để đổi tên các hàm. Như vậy sau khi biên dịch mỗi hàm sẽ có một tên khác nhau<br />
+      Từ đó cho thấy: các hàm được định nghĩa trùng tên phải có tập đối khác nhau( về số lượng hoặc kiểu). Nếu 2 hàm hoàn toàn trùng tên và trùng đối thì trình biên dịch sẽ không có cách nào phân biệt được. Ngay cả khi 2 hàm này có kiểu khác nhau thì trình biên dịch vẫn báo lỗi. Ví dụ khi xây dựng 2 hàm có cùng tên là f và có cùng một đối nguyên a, nhưng kiểu hàm khác nhau. Hàm thứ nhất kiểu nguyên (trả về a*a), hàm thứ 2 kiểu void (in giá trị a). Chương trình sẽ bị thông báo lỗi khi biên dịch<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 306px;
+		text-align: left;
+		overflow: auto">#include&lt;conio.h&gt;
+#include&lt;iostream.h&gt;
+int f(int a);
+void f(int a);
+int f(int a)
+   {
+     return a*a;
+  }
+void f(int a)
+  {
+    cout&lt;&lt;\n\n&lt;&lt;a;
+  }
+void main()
+   {
+     int b=f(5);
+     f(b);
+     getch();
+  }</pre>
+</div>6.3. Sử dụng các hàm định nghĩa chồng<br />
+       Khi gặp một lời gọi, trình biên dịch sẽ căn cứ và số lượng và kiểu của các tham số để gọi hàm có đúng tên và đúng bộ đối số tương ứng<br />
+Ví dụ:<br />
+   abs(123);// tham số kiểu int, gọi hàm int abs(int i)<br />
+   abs(123L);//tham số kiểu long,gọi hàm long abs(long i)<br />
+   abs(3.14);//tham số kiểu double,gọi hàm double abs(double i);<br />
+   Khi không có hàm nào có bộ đối cùng kiểu với bộ tham số( trong lời gọi), thì trình biên dịch sẽ chọn hàm nào có bộ đối gần kiểu nhất( phép chuyển kiểu dễ dàng nhất)<br />
+Ví dụ:<br />
+   abs(A);// tham số kiểu char,gọi hàm int abs(int i);<br />
+   abs(3.14F);// tham số kiểu float,gọi hàm double abs(double d);<br />
+6.4. Nên sử dụng phép định nghĩa chồng các hàm như thế nào?<br />
+    Như đã nói ở trên, khi xây dựng cũng như sử dụng các hàm trùng tên, trình biên dịch C++ đã phải suy đoán và giải quyết nhiều trường hợp khá nhập nhằng. Vì thế không nên lạm dụng quá đang khả năng định nghĩa chồng, vì điều đó làm cho chương trình khó kiểm soát, dễ dẫn đến sai sót. Việc sử dụng định nghĩa chồng hàm sẽ có hiệu quả nếu sử dụng theo các lời khuyên sau:<br />
+   + Chỉ nên định nghĩa chồng các hàm để thực hiện các công việc như nhau nhưng trên các đối tượng dữ liệu khác nhau. Ví dụ trong chương trình xây dựng các hàm: cộng 2 ma trận chữ nhật kiểu double, cộng hai ma trận chữ nhật kiểu int,cộng hai ma trận vuông kiểu double,cộng hai ma trận vuông kiểu int, thì 4 hàm trên nên định nghĩa chồng (đặt cùng tên).<br />
+   + Nên dung các phép chuyển kiểu (nếu cần) để bộ tham số trong lời gọi hàm hoàn toàn trùng kiểu với bộ đối số của một hàm được định nghĩa chồng. Vì như thế tránh được sựnhập nhằng cho trình biên dịch và trình biên dịch sẽ gọi đúng hàm cần gọi.<br />
+6.5. Lấy địa chỉ các hàm trùng tên<br />
+    Giả sử có 4 hàm đều có tên là tinh_max được khai báo như sau:<br />
+      int tinh_max(int a,int b,int c);//max của 3 số nguyên<br />
+      double tinh_max(double a, double b,double c);//max <br />
+                                         // của 3 số thực<br />
+      int tinh_max(int *a,int n);//max của dãy số nguyên<br />
+      int tinh_max(double *a, int n)// max của dãy số thục<br />
+   Vấn đề đặt ra là làm thế nào để lấy được địa chỉ của mỗi hàm. Câu trả lời như sau:<br />
+    Để lấy địa chỉ của một hàm, ta khai báo một con trỏ hàm có kiểu và bộ đối như hàm cần lấy địa chỉ. Sau đó gán tên hàm cho con trỏ hàm. Ví dụ:<br />
+     int (*f1)(int,int,int);<br />
+     f1=tinh_max;//lấy địa chỉ hàm thứ nhất<br />
+     double (*f2)(double,double,double);<br />
+     f2=tinh_max;//lấy địa chỉ hàm thứ hai<br />
+     int (*f3)(int *,int);<br />
+     f3=tinh_max;//lấy địa chỉ hàm thứ ba<br />
+     double(*f4)(double*,double);<br />
+     f4=tinh_max;//lấy địa chỉ hàm thứ tư<br />
+6.6.Các ví dụ<br />
+      Ví dụ 1: Chương trình giải bài toán tìm max của một dãy số nguyên và max của một dãy số thực. Trong chương trình có 6 hàm. Hai hàm dung để nhập dẫy số nguyên và dãy số thực có tên chung là nhapds. Bốn hàm: tính max 2 số nguyên, tính max 2 số thực, tính max của dẫy số nguyên, tính max của dẫy số thực được đặt chung một tên là max<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 1074px;
+		text-align: left;
+		overflow: auto">#include&lt;conio.h&gt;
+#include&lt;iostream.h&gt;
+#include&lt;iomanip.h&gt;
+void nhapds(int *x,int n);
+void nhapds(double *x,int n);
+int max(int x,int y);
+double max(double x,double y);
+int max(int *x,int n);
+double max(double *x,int n);
+void nhapds(int *x,int n)
+   {
+     for(int i=1;i&lt;=n;i++)
+       {
+         cout&lt;&lt;\n\n phan tu thu &lt;&lt;i&lt;&lt;:;
+         cin&gt;&gt;x[i];
+       }
+   }
+void nhapds(double *x,int n)
+   {
+     for(int i=1;i&lt;=n;i++)
+       {
+         cout&lt;&lt;\n\n phan tu thu &lt;&lt;i&lt;&lt;:;
+         cin&gt;&gt;x[i];
+       }
+   }
+int max(int x,int y)
+   {
+     return x&gt;y?x:y;
+   }
+double max(double x,double y)
+   {
+     return x&gt;y?x:y;
+   }
+int max(int *x,int n)
+  {
+    int s=x[1]; 
+    for(int i=2;i&lt;=n;i++)
+      s=max(s,x[i]);
+    return s;
+  }
+double max(double *x,int n)
+  {
+   double s=x[1]; 
+    for(int i=2;i&lt;=n;i++)
+      s=max(s,x[i]);
+    return s;
+  }
+void main()
+   {
+     int a[20],n,ni,nd,maxi;
+     double x[20],maxd;
+     clrscr();
+     cout&lt;&lt;\n\n so phan tu nguyen ni= ;
+     cin&gt;&gt;ni;
+     cout&lt;&lt;\n\n nhap day so nguyen\n;
+     nhapds(a,ni);
+     cout&lt;&lt;\n\n so phan tu thuc nd= ;
+     cin&gt;&gt;nd;
+     cout&lt;&lt;\n\n nhap day so thuc\n;
+     nhapds(x,nd);
+     maxi=max(a,ni);
+     maxd=max(x,nd);
+     cout&lt;&lt;\n\n max cua day so nguyen= &lt;&lt;maxi;
+     cout&lt;&lt;\n\n max cua day so thuc= &lt;&lt;maxd;
+     getch();
+   }</pre>
+</div>Ví dụ 2:<br />
+      Chương trình thực hiện phép nhân 2 ma trận:<br />
+         D=A*B*C<br />
+Trong đó A,B là các ma trận vuông,C là ma trận chữ nhật. Trong chương trình có 3 cặp hàm trùng tên để thực hiện 3 nhiệm vụ (nhưng trên 2 đối tượng khác nhau là ma trận vuông và ma trận chữ nhật): nhập ma trận,nhân 2 ma trận và in ma trận<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 1122px;
+		text-align: left;
+		overflow: auto">#include&lt;conio.h&gt;
+#include&lt;iostream.h&gt;
+#include&lt;iomanip.h&gt;
+typedef int MT[20][20];
+void nhapmt(MT a,char *ten,int m,int n);
+void inmt(MT a,char *ten,int m,int n);
+void nhanmt(MT a,MT b,MT c,int m,int n,int p);
+void nhapmt(MT a,char *ten,int n);
+void intmt(MT a,char *ten,int n);
+void nhanmt(MT a,MT b,MT c,int n);
+void nhapmt(MT a,char *ten,int m,int n)
+     {
+       for(int i=1;i&lt;=n;i++)
+        for(int j=1;j&lt;=m;j++)
+          {
+            cout&lt;&lt;\n&lt;&lt;ten&lt;&lt;[&lt;&lt;i&lt;&lt;,&lt;&lt;j&lt;&lt;] = ;
+            cin&gt;&gt;a[i][j];
+         }
+    }
+
+ void nhapmt(MT a,char *ten,int n)
+                 {
+                   nhapmt(a,ten,n,n);
+                }
+           void inmt(MT a,char *ten,int m,int n)
+                {
+                  cout&lt;&lt;\n\n Ma tran: &lt;&lt;ten;
+                  for(int i=1;i&lt;=m;i++)
+                     { 
+                          
+                          for (int j=1;j&lt;=n;j++)
+                          cout&lt;&lt;setw(6)&lt;&lt;a[i][j];
+                     }
+               }
+void inmt(MT a,char *ten,int n)
+       {
+         inmt(a,ten,n,n);
+       }
+void nhanmt(MT a,MT b,MT c,int m,int n,int p)
+    {
+      for(int i=1;i&lt;=m;i++)
+        for(int j=1;j&lt;=p;j++)
+          {
+            c[i][j]=0;
+            for(int k=1;k&lt;=n;k++)
+               c[i][j]+=a[i][k]*b[k][j];
+         }
+    }
+void nhanmt(MT a,MT b,MT c,int n)
+    {
+       nhanmt(a,b,c,n,n,n);
+   }
+void main()
+    {
+      MT a,b,c,d; //d=abc
+      MT u;
+      clrscr();
+      nhapmt(a,A,2);
+      nhapmt(b,B,2);
+      nhapmt(c,C,2,3);
+      nhanmt(a,b,u,2);
+      nhanmt(u,c,d,2,2,3);
+      inmt(a,A,2);
+      inmt(a,B,2);
+      inmt(u,U=A*B,2);
+      inmt(c,C,2,3);
+      inmt(d,D=U*C,2,3);
+      getch();
+}</pre>
+</div>
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+		<!-- sig -->
+			<div>
+				__________________<br />
+				<img src="http://forums.congdongcviet.com/images/smilies/applause.gif" border="0" alt="" title="Applause" class="inlineimg" />  gogo! hoan hô nào, vỗ tay nào<br />
+    Nào thì chúng ta cùng hoan hô nào vỗ tay nào<img src="http://forums.congdongcviet.com/images/smilies/applause.gif" border="0" alt="" title="Applause" class="inlineimg" />
+			</div>
+		<!-- / sig -->
+		
+
+		
+
+		
+
+		<div style="margin-top: 10px" align="right">
+			<!-- controls -->
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				
+			
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</table>
+
+
+<!-- post 6095 popup menu -->
+<div class="vbmenu_popup" id="postmenu_6095_menu" style="display:none;">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">thangtran</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="member.php?u=12430">Xem Hồ sơ công khai</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="private.php?do=newpm&amp;u=12430" rel="nofollow">Gửi một tin nhắn tới thangtran</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="search.php?do=finduser&amp;u=12430" rel="nofollow">Tìm toàn bộ bài viết bởi thangtran</a></td></tr>
+	
+	
+	
+	</table>
+</div>
+<!-- / post 6095 popup menu -->
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #6095 --><!-- post #6289 -->
+
+	<!-- open content container -->
+
+<div id="open_content_container">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit6289" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post6289" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+	<td class="thead" >
+		<div class="normal" style="float:right">
+			&nbsp;
+			#<a href="showpost.php?p=6289&amp;postcount=13" target="new" rel="nofollow" id="postcount6289" name="13"><strong>13</strong></a> &nbsp;
+			
+			
+			
+			
+			
+		</div>
+
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post6289"><img class="inlineimg" src="images/statusicon/post_old.gif" alt="Cũ" border="0" /></a>
+			
+				06-01-2007, 10:59 PM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding:0px">
+		<!-- user info -->
+		<table cellpadding="0" cellspacing="6" border="0" width="100%">
+		<tr>
+			<td class="alt2"><a href="member.php?u=12430"><img src="customavatars/avatar12430_3.gif" width="100" height="100" alt="Avatar củathangtran" border="0" /></a></td>
+			<td nowrap="nowrap">
+
+				<div id="postmenu_6289">
+					
+					<a class="bigusername" href="member.php?u=12430">thangtran</a>
+					<img class="inlineimg" src="images/statusicon/user_offline.gif" alt="thangtran là offline" border="0" />
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_6289", true); </script>
+					
+				</div>
+
+				<div class="smallfont">Thành viên nhiệt tình</div>
+				<div class="smallfont"><img src="images/ranks/rank_3.gif" alt="" border="" /></div>
+				
+
+			</td>
+			<td width="100%">&nbsp;</td>
+			<td valign="top" nowrap="nowrap">
+
+				<div class="smallfont">
+					<div>Ngày gia nhập: 12 2006</div>
+					
+					
+					<div>
+						Bài viết: 156
+					</div>
+					
+					
+					
+					
+					<div>    </div>
+				</div>
+
+			</td>
+		</tr>
+		</table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	
+	<td class="alt1" id="td_post_6289">
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		
+			<!-- icon and title -->
+			<div class="smallfont clearfix">
+				
+					<div style="float: left; width: 36px;"><img class="inlineimg" src="images/icons/icon1.gif" alt="Mặc định" border="0" /></div>
+				
+				
+			</div>
+			<hr size="1" style="color:#A1D2F1; background-color:#A1D2F1" />
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_6289">
+			
+			§7. ĐỊNH NGHĨA CHỒNG CÁC TOÁN TỬ<br />
+7.1.Các phép toán trong C và C++<br />
+     Trong C và C++ có khá nhiều phép toán để thực hiện các thao tác trên các kiểu dữ liệu chuẩn.Ví dụ các phép toán số học: + - * / áp dụng cho các kiểu dữ liệu nguyên,thực. Phép lấy phần dư % áp dụng đối với kiểu nguyên.<br />
+7.2.Thực hiện các phép toán trên các kiểu dữ liệu chuẩn trong C<br />
+      Việc thực hiên các phép toán trên các đối tượng tự định nghĩa (như mảng,cấu trúc) là nhu cầu bắt buộc trên thực tế. Chẳng hạn cần thực hiện các phép toán số học trên số phức,trên phân số, trên đa thức,trên véctơ,trên ma trận. Để đáp ứng nhu cầu này ta dung các hàm trong C. Ví dụ sau đây là một chương trình C gồm các hàm nhập phân số,in phân số và thực hiên các phép toán cộng trừ nhân chia phân số. Chương trình sẽ nhập 5 phân số: p,q,z,u,v và tính các phân số s theo công thức:<br />
+                         s=(p-q*z)/(u+v)<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 1426px;
+		text-align: left;
+		overflow: auto">#include&lt;conio.h&gt;
+#include&lt;stdio.h&gt;
+#include&lt;math.h&gt;
+typedef struct
+   {
+     int a,b;
+   } PS;
+void nhap(PS *p);
+void in(PS p);
+int uscln(int x,int y);
+PS rutgon(PS p);
+PS cong(PS p1,PS p2);
+PS tru(PS p1,PS p2);
+PS nhan(PS p1,PS p2);
+PS chia(PS p1,PS p2);
+void nhap(PS *p)
+   {
+     int t,m;
+     printf(\n Tu va mau: );
+     scanf(%d%d,&amp;t,&amp;m);
+     p-&gt;a=t;p-&gt;b=m;
+  }
+void in(PS p)
+   {
+     printf(%d/%d,p.a,p.b);
+   }
+int uscln(int x,int y)
+    {
+      x=abs(x);y=abs(y);
+      if(x*y==0) return 1;
+      while(x!=y)
+          if(x&gt;y) x-=y;
+          else y-=x;
+       return x;
+     }
+PS rutgon(PS p)
+     {
+       PS q;
+       int x;
+       x=uscln(p.a,p.b);
+       q.a=p.a/x;
+       q.b=p.b/x;
+        return q;
+     }
+PS cong(PS p1,PS p2)
+     {
+       PS q;
+        q.a=p1.a*p2.b+p1.b*p2.a;
+        q.b=p1.b*p2.b;
+        return rutgon(q);
+     }
+PS tru(PS p1,PS p2)
+     {
+       PS q;
+        q.a=p1.a*p2.b-p1.b*p2.a;
+        q.b=p1.b*p2.b;
+        return rutgon(q);
+     }
+PS nhan(PS p1,PS p2)
+      {
+        PS q;
+        q.a=p1.a*p2.a;
+        q.b=p1.b*p2.b;
+        return rutgon(q);
+      }
+PS chia(PS p1,PS p2)
+      {
+        PS q;
+        q.a=p1.a*p2.b;
+        q.b=p1.b*p2.a;
+        return rutgon(q);
+      }
+void main()
+      {
+        PS p,q,z,u,v;
+        PS tu,mau,s;
+        printf(\n\n mhap phan so p: );nhap(&amp;p);
+        printf(\n\n mhap phan so q: );nhap(&amp;q);
+        printf(\n\n mhap phan so z: );nhap(&amp;z);
+        printf(\n\n mhap phan so u: );nhap(&amp;u);
+        printf(\n\n mhap phan so v: );nhap(&amp;v);
+        tu=nhan(q,z);
+        tu=tru(p,tu);
+        mau=cong(u,v);
+        s=chia(tu,mau);
+        printf(\n\n phan so s= );in(s);
+        getch();
+       }</pre>
+</div>Nhận xét: Việc sử dụng các hàm để thực hiện các phép tính toán tỏ ra không được tự nhiên và dài dòng. Ví dụ để thực hiện một công thức<br />
+               s=(p-q*z)/(u+v)<br />
+phải dung 2 biến trung gian và 4 lời gọi hàm. Câu hỏi đặt ra là có cách nào để chỉ cần viết đúng 1 công thức toán học mà vẫn nhận được kết quả như ý muốn hay không?<br />
+     Trong C++ có thể đáp ứng được mong muốn này bằng cách sử dụng các phép toán chuẩn của nó cho các kiểu dữ liệu tự định nghĩa(mảng ,cấu trúc). Nói cách khác C++ cho phép dung các phép toán để định nghĩa các hàm mà ta thường gọi là định nghĩa chồng toán tử( hay còn gọi là sự tải bội các toán tử).<br />
+7.3. Cách định nghĩa chồng các toán tử<br />
+      7.3.1. Tên hàm toán tử: gồm từ khoá operator và tên phép toán,ví dụ:   (định nghĩa chồng phép cộng)<br />
+           operator-            (định nghĩa chồng phép trừ)<br />
+     7.3.2. Các đối của hàm toán tử<br />
+       a. Với các phép toán có 2 toán hạng, thì hàm toán tử chỉ cần có 2 đối, đối thứ nhất ứng với toán hạng thứ nhất, đối thứ hai ứng với toán hạng thứ hai. Do vậy,với các phép toán không giao hoán (như phép trừ) thì thứ tự đối là rất quan trọng<br />
+         ví dụ: các hàm toán tử cộng,trừ phân số được khai báo như sau:<br />
+         struct PS<br />
+             {<br />
+               int a;     //Tử số<br />
+               int b;     // Mẫu số<br />
+             }<br />
+         PS operator+(PS s1,PS s2); //p1+p2<br />
+         PS operator-(PS s1,PS s2);  //p1-p2<br />
+         PS operator*(PS s1,PS s2); // p1*p2<br />
+         PS operator/(PS s1,PS s2);// p1/p2<br />
+b.	Với các phép toán có một toán hạng, thì hàm toán tử có một đối. Ví dụ hàm toán tử đổi dấu ma trận (đổi dấu tất cả các phần tử của ma trận) được khai báo như sau:<br />
+                        struct MT<br />
+                            {<br />
+                        double a[20][20]; //mảng chứa các phần tử ma trận<br />
+                        int m; //số hàng ma trận<br />
+                        int n; số cột ma trận<br />
+                      };<br />
+                  MT operator-(MT x);<br />
+      7.3.3. Thân của hàm toán tử: Viết như thân của hàm bình thường. Ví dụ hàm đổi dấu ma trận có thể được định nghĩa như sau:<br />
+            struct MT<br />
+                 {<br />
+                   double a[20][20];// mảng chứa các ptử ma trận<br />
+                   int a; // số hang của ma trận<br />
+                   int b;  // số cột của ma trận<br />
+                 };<br />
+             MT operator-(MT x)<br />
+                  {<br />
+                     MT y;<br />
+                     for(int i=1;i&lt;=m;i++)<br />
+                       for(int j=1;j&lt;=n;j++)<br />
+                          y[i] [j]=-x[i][j];<br />
+                      return y;<br />
+                   }<br />
+       7.4. Cách dung hàm toán tử<br />
+               Có 2 cách dung:<br />
+               Cách 1: dung như một hàm thong thường bằng cách viết lời gọi<br />
+                 Ví dụ:<br />
+                         PS p,u,v,q;<br />
+                         u=operator+(p,q);  //u=p+q<br />
+                         v=operator-(p,q);    //v=p-q<br />
+                cách 2: dung như phép toán trong C++<br />
+                 ví dụ: <br />
+                          PS p,q,u,v;<br />
+                          u=p+q;<br />
+                          v=p-q;<br />
+               Chú ý: Khi dùng các hàm toán tử như phép toán của C++ ta có thể kết hợp nhiều phép toán để viết các công thức phức tạp. Cũng cho phép dung dấu ngoặc tròn để quy định thứ tự thực hiện các phép tính. Thứ tự ưu tiên của các phép tính vẫn tuân theo qui tắc ban đầu của C++. Chẳng hạn các phép toán * và/ có thứ tự ưu tiên cao hơn so với phép + và <br />
+             Ví dụ:<br />
+                       PS p,q,u,v,s1,s2;<br />
+                       s1=p*q-u/v;<br />
+                       s2=(p-q)/u+v);
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+		<!-- sig -->
+			<div>
+				__________________<br />
+				<img src="http://forums.congdongcviet.com/images/smilies/applause.gif" border="0" alt="" title="Applause" class="inlineimg" />  gogo! hoan hô nào, vỗ tay nào<br />
+    Nào thì chúng ta cùng hoan hô nào vỗ tay nào<img src="http://forums.congdongcviet.com/images/smilies/applause.gif" border="0" alt="" title="Applause" class="inlineimg" />
+			</div>
+		<!-- / sig -->
+		
+
+		
+
+		
+
+		<div style="margin-top: 10px" align="right">
+			<!-- controls -->
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				
+			
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</table>
+
+
+<!-- post 6289 popup menu -->
+<div class="vbmenu_popup" id="postmenu_6289_menu" style="display:none;">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">thangtran</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="member.php?u=12430">Xem Hồ sơ công khai</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="private.php?do=newpm&amp;u=12430" rel="nofollow">Gửi một tin nhắn tới thangtran</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="search.php?do=finduser&amp;u=12430" rel="nofollow">Tìm toàn bộ bài viết bởi thangtran</a></td></tr>
+	
+	
+	
+	</table>
+</div>
+<!-- / post 6289 popup menu -->
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #6289 --><!-- post #6564 -->
+
+	<!-- open content container -->
+
+<div id="open_content_container">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit6564" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post6564" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+	<td class="thead" >
+		<div class="normal" style="float:right">
+			&nbsp;
+			#<a href="showpost.php?p=6564&amp;postcount=14" target="new" rel="nofollow" id="postcount6564" name="14"><strong>14</strong></a> &nbsp;
+			
+			
+			
+			
+			
+		</div>
+
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post6564"><img class="inlineimg" src="images/statusicon/post_old.gif" alt="Cũ" border="0" /></a>
+			
+				13-01-2007, 11:27 AM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding:0px">
+		<!-- user info -->
+		<table cellpadding="0" cellspacing="6" border="0" width="100%">
+		<tr>
+			<td class="alt2"><a href="member.php?u=12430"><img src="customavatars/avatar12430_3.gif" width="100" height="100" alt="Avatar củathangtran" border="0" /></a></td>
+			<td nowrap="nowrap">
+
+				<div id="postmenu_6564">
+					
+					<a class="bigusername" href="member.php?u=12430">thangtran</a>
+					<img class="inlineimg" src="images/statusicon/user_offline.gif" alt="thangtran là offline" border="0" />
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_6564", true); </script>
+					
+				</div>
+
+				<div class="smallfont">Thành viên nhiệt tình</div>
+				<div class="smallfont"><img src="images/ranks/rank_3.gif" alt="" border="" /></div>
+				
+
+			</td>
+			<td width="100%">&nbsp;</td>
+			<td valign="top" nowrap="nowrap">
+
+				<div class="smallfont">
+					<div>Ngày gia nhập: 12 2006</div>
+					
+					
+					<div>
+						Bài viết: 156
+					</div>
+					
+					
+					
+					
+					<div>    </div>
+				</div>
+
+			</td>
+		</tr>
+		</table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	
+	<td class="alt1" id="td_post_6564">
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		
+			<!-- icon and title -->
+			<div class="smallfont clearfix">
+				
+					<div style="float: left; width: 36px;"><img class="inlineimg" src="images/icons/icon1.gif" alt="Mặc định" border="0" /></div>
+				
+				
+			</div>
+			<hr size="1" style="color:#A1D2F1; background-color:#A1D2F1" />
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_6564">
+			
+			§8. CÁC VÍ DỤ VỀ ĐỊNH NGHĨA CHỒNG TOÁN TỬ<br />
+Ví dụ 1: trong ví dụ này ngoài việc sử dụng các hàm toán tử để thực hiện 4 phép tính trên phân số,còn định nghĩa chồng các phép toán &lt;&lt; và &gt;&gt; để xuất nhập phân số (xem chi tiết trong chương 7).<br />
+     Hàm operator&lt;&lt; có 2 đối kiểu ostream&amp; và PS (phân số). Hàm trả về giá trị kiểu ostream&amp;. Hàm được khai báo như sau:<br />
+              ostream&amp; operator&lt;&lt;(ostream&amp; os, PS p);<br />
+       tương tự hàm operator&gt;&gt; được khai báo như sau:<br />
+              istream&amp; operator&gt;&gt;(istream&amp; is,PS &amp;p);<br />
+   dưới đây sẽ chỉ ra cách xây dựng và sử dụnh các hàm toán tử. Chúng ta cũng sẽ thấy việc sử dụng các hàm toán tử rất tự nhiên , ngắn gọn và tiện lợi<br />
+   chương trình dưới đây có nội dung như trong chương trình §6.2, nhưng thay các hàm bằng các toán tử:<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 1330px;
+		text-align: left;
+		overflow: auto">#include&lt;conio.h&gt;
+#include&lt;iostram.h&gt;
+#include&lt;math.h&gt;
+typedef struct
+      {
+         int a,b;
+      } PS;
+ostream&amp; operator&lt;&lt;(ostream&amp; os,PS p);
+istream&amp; operator&gt;&gt;(iostream&amp; is,PS p);
+int uscln(int x,int y);
+PS rutgon(PS p);
+PS operator+(PS p1,PS p2);
+PS operator-(PS p1,PS p2);
+PS operator/(PS p1,PS p2);
+PS operator*(PS p1,PS p2);
+ostream&amp; operator&lt;&lt;(ostream&amp; os,PS p)
+   {
+     os&lt;&lt;p.a&lt;&lt;/&lt;&lt;p.b;
+     return os;
+   }
+istream&amp; operator&gt;&gt;(istream&amp; is,PS p)
+    {
+      cout&gt;&gt;\n nhap tu va mau;
+      is&gt;&gt;p.a&gt;&gt;p.b;
+      return is;
+    }
+  int uscln(int x,int y)
+    {
+      x=abs(x);y=abs(y);
+      if(x*y==0) return 1;
+      while(x!=y)
+          if(x&gt;y) x-=y;
+          else y-=x;
+       return x;
+     }
+PS rutgon(PS p)
+     {
+       PS q;
+       int x;
+       x=uscln(p.a,p.b);
+       q.a=p.a/x;
+       q.b=p.b/x;
+        return q;
+     }
+PS operator+(PS p1,PS p2)
+     {
+       PS q;
+        q.a=p1.a*p2.b+p1.b*p2.a;
+        q.b=p1.b*p2.b;
+        return rutgon(q);
+     }
+PS operator-(PS p1,PS p2)
+     {
+       PS q;
+        q.a=p1.a*p2.b-p1.b*p2.a;
+        q.b=p1.b*p2.b;
+        return rutgon(q);
+     }
+PS operator*(PS p1,PS p2)
+      {
+        PS q;
+        q.a=p1.a*p2.a;
+        q.b=p1.b*p2.b;
+        return rutgon(q);
+      }
+PS operator/(PS p1,PS p2)
+      {
+        PS q;
+        q.a=p1.a*p2.b;
+        q.b=p1.b*p2.a;
+        return rutgon(q);
+      }
+void main()
+      {
+        PS p,q,z,u,v;
+        PS s;
+        cout&lt;&lt;\n nhap cac phan so p,q,z,u,v: \n;
+        cin&gt;&gt;p&gt;&gt;q&gt;&gt;z&gt;&gt;u&gt;&gt;v;
+        s=(p-q*z)/(u+v);
+        cout&lt;&lt;\n phan so s= &lt;&lt;s;
+        getch();
+      }</pre>
+</div>Ví dụ 2: Chương trình đưa vào các hàm toán tử<br />
+      operator-       có một đối dung để đảo dấu một đa thức<br />
+      operator+      có 2 đối dùng để cộng 2 đa thức<br />
+      operator-       có 2 đối dùng để trừ 2 đa thức<br />
+      operator*       có 2 đối dùng để nhân 2 đa thức<br />
+      operator^       có 2 đối dùng để tính giá đa thức tại x<br />
+      operator&lt;&lt;     có 2 đối dùng để in đa thức<br />
+      operator&gt;&gt;     có 2 đối dùng để nhập đa thức<br />
+  chương trình sẽ nhập 4 đa thức: p,q,r,s,sau đó tính đa thức: f= -(p+q)*(r-s)<br />
+cuối cùng tính giá trị f(x), với x là một số thực được nhập từ bàn phím<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 1634px;
+		text-align: left;
+		overflow: auto">#include&lt;conio.h&gt;
+#include&lt;iostream.h&gt;
+#include&lt;math.h&gt;
+struct DT
+   {
+     double a[20]; //mang chua cac he so cua da thuc
+     int n; // bac cua da thuc
+  };
+ostream&amp; operator&lt;&lt;(ostream&amp; os, DT d);
+istream&amp; operator&gt;&gt;(istream&amp; is, DT &amp;d);
+DT operator-(const DT&amp; d);
+DT operator+(DT d1, DT d2);
+DT operator-(DT d1, DT d2);
+DT operator*(DT d1, DT d2);
+double operator^(DT d,double x); //tinh gia tri da thuc
+ostream&amp; operator&lt;&lt;(ostream&amp; os, DT d)
+   {
+     os&lt;&lt; CAC HE SO (tu Ao): ;
+     for(int i=0;i&lt;=d.n;i++)
+        os&lt;&lt;d.a[i]&lt;&lt; ;
+     return os;
+   }
+istream&amp; operator&gt;&gt;(istream&amp; is,DT &amp;d)
+    {
+      cout&lt;&lt; bac cua da thuc: ;
+      cin&gt;&gt;d.n;
+      cout&lt;&lt; Nhap cac he so cua da thuc: \n;
+      for(int i=0;i&lt;=d.n;i++)
+        {
+          is&gt;&gt;d.a[i];
+        }
+      return is;
+   }
+DT operator-(const DT&amp; d)
+   {
+     DT p;
+     p.n=d.n;
+     for(int i=0;i&lt;=d.n;i++)
+       p.a[i]=-d.a[i];
+     return p;
+   }
+DT operator+(DT d1,DT d2)
+    {
+       DT d;
+       int k,i;
+       k=d1.n&gt;d2.n?d1.n:d2.n;
+       for(i=0;i&lt;=k;i++)
+          if(i&lt;=d1.n&amp;&amp;i&lt;=d2.n)
+            d.a[i]=d1.a[i]+d2.a[i];
+          else if(i&lt;=d1.n)
+            d.a[i]=d1.a[i];
+          else
+            d.a[i]=d2.a[i];
+       i=k;
+       while(i&gt;0&amp;&amp;d.a[i]==0.0) I;
+        d.n=i;
+        return d;
+     }
+DT operator-(DT d1, DT d2)
+     {
+       return(d1+(-d2));
+     }
+DT operator*(DT d1,DT d2)
+     {
+        DT d;
+        int k,i,j;
+        k=d.n=d1.n+d2.n;
+        for(i=0;i&lt;=k;i++)
+           d.a[i]=0;
+        for(i=0;i&lt;=d1.n;i++)
+        for(j=0;j&lt;=d2.n;j++)
+            d.a[i+j]+=d1.a[i]*d2.a[j];
+         return d;
+     }
+double operator^(DT d,double x)
+      {
+        double s=0.0, t=1.0;
+        for(int i=0;i&lt;=d;i++)
+          {
+            s+=d.a[i]*t;
+            t*=x;
+         }
+        return s;
+      }
+void main()
+      {
+         DT p,q,r,s,f;
+         double x,g;  
+         clrscr();
+         cout&lt;&lt;\n\n nhap da thuc P: ;cin&gt;&gt;p;
+         cout&lt;&lt;\n\n nhap da thuc Q: ;cin&gt;&gt;q;
+         cout&lt;&lt;\n\n nhap da thuc R: ;cin&gt;&gt;r;
+         cout&lt;&lt;\n\n nhap da thuc S: ;cin&gt;&gt;s;
+         cout&lt;&lt;\n\n nhap so thuc x: ;cin&gt;&gt;x;
+         f=-(p+q)*(r-s);
+         g=f^x;
+         cout&lt;&lt;\n\n da thuc f&lt;&lt;f;
+         cout&lt;&lt;\n\n x= &lt;&lt;x;
+         cout&lt;&lt;\n\n f(x)= ;&lt;&lt;g;
+         getch();
+      }</pre>
+</div>
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+		<!-- sig -->
+			<div>
+				__________________<br />
+				<img src="http://forums.congdongcviet.com/images/smilies/applause.gif" border="0" alt="" title="Applause" class="inlineimg" />  gogo! hoan hô nào, vỗ tay nào<br />
+    Nào thì chúng ta cùng hoan hô nào vỗ tay nào<img src="http://forums.congdongcviet.com/images/smilies/applause.gif" border="0" alt="" title="Applause" class="inlineimg" />
+			</div>
+		<!-- / sig -->
+		
+
+		
+
+		
+
+		<div style="margin-top: 10px" align="right">
+			<!-- controls -->
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				
+			
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</table>
+
+
+<!-- post 6564 popup menu -->
+<div class="vbmenu_popup" id="postmenu_6564_menu" style="display:none;">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">thangtran</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="member.php?u=12430">Xem Hồ sơ công khai</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="private.php?do=newpm&amp;u=12430" rel="nofollow">Gửi một tin nhắn tới thangtran</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="search.php?do=finduser&amp;u=12430" rel="nofollow">Tìm toàn bộ bài viết bởi thangtran</a></td></tr>
+	
+	
+	
+	</table>
+</div>
+<!-- / post 6564 popup menu -->
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #6564 --><!-- post #7120 -->
+
+	<!-- open content container -->
+
+<div id="open_content_container">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit7120" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post7120" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+	<td class="thead" >
+		<div class="normal" style="float:right">
+			&nbsp;
+			#<a href="showpost.php?p=7120&amp;postcount=15" target="new" rel="nofollow" id="postcount7120" name="15"><strong>15</strong></a> &nbsp;
+			
+			
+			
+			
+			
+		</div>
+
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post7120"><img class="inlineimg" src="images/statusicon/post_old.gif" alt="Cũ" border="0" /></a>
+			
+				25-01-2007, 01:38 PM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding:0px">
+		<!-- user info -->
+		<table cellpadding="0" cellspacing="6" border="0" width="100%">
+		<tr>
+			<td class="alt2"><a href="member.php?u=12430"><img src="customavatars/avatar12430_3.gif" width="100" height="100" alt="Avatar củathangtran" border="0" /></a></td>
+			<td nowrap="nowrap">
+
+				<div id="postmenu_7120">
+					
+					<a class="bigusername" href="member.php?u=12430">thangtran</a>
+					<img class="inlineimg" src="images/statusicon/user_offline.gif" alt="thangtran là offline" border="0" />
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_7120", true); </script>
+					
+				</div>
+
+				<div class="smallfont">Thành viên nhiệt tình</div>
+				<div class="smallfont"><img src="images/ranks/rank_3.gif" alt="" border="" /></div>
+				
+
+			</td>
+			<td width="100%">&nbsp;</td>
+			<td valign="top" nowrap="nowrap">
+
+				<div class="smallfont">
+					<div>Ngày gia nhập: 12 2006</div>
+					
+					
+					<div>
+						Bài viết: 156
+					</div>
+					
+					
+					
+					
+					<div>    </div>
+				</div>
+
+			</td>
+		</tr>
+		</table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	
+	<td class="alt1" id="td_post_7120">
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		
+			<!-- icon and title -->
+			<div class="smallfont clearfix">
+				
+					<div style="float: left; width: 36px;"><img class="inlineimg" src="images/icons/icon1.gif" alt="Mặc định" border="0" /></div>
+				
+				
+			</div>
+			<hr size="1" style="color:#A1D2F1; background-color:#A1D2F1" />
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_7120">
+			
+			§9.CÁC BÀI TOÁN VỀ MA TRẬN VÀ VECTƠ<br />
+       trong mục này sẽ xét các ma trận thực vuông cấp n và các vectơ thực cấp n. Chúng được biểu diễn thông qua các kiểu cấu trúc MT và VT:<br />
+       struct MT<br />
+          {<br />
+            double a[20][20];//mang a chua cac phtu ma tran<br />
+            int n; // cap ma tran<br />
+          };<br />
+       struct VT<br />
+          {<br />
+            double b[20]; //mang chua cac phan tu cua vecto<br />
+            int n; //cap vecto<br />
+          };<br />
+      để xử lí ma trận và vectơ chúng ta xây dựng 9 hàm toán tử:<br />
+      ostream&amp; operator&lt;&lt;(ostream&amp; os,const MT&amp; x);//in ma tran<br />
+      ostream&amp; operator&lt;&lt;(ostream&amp; os,const VT&amp; v);//in vecto<br />
+       istream&amp; operator&gt;&gt;(istream&amp; is,MT&amp; x);//nhap ma tran<br />
+       istream&amp; operator&gt;&gt;(istream&amp; is,VT&amp; v);//nhap vecto<br />
+       MT operator+(const MT&amp; x1,const MT&amp; x2);//cong 2 ma tran<br />
+       MT operator-(const MT&amp; x1,const MT&amp; x2);//tru 2 ma tran<br />
+       MT operator*(const MT&amp; x1,const MT&amp; x2);//nhan 2 ma tran<br />
+       MT operator*(const MT&amp; x1,const VT&amp; v);//nhan ma tran vecto<br />
+       MT operator!(MT x);<br />
+       thuật toán cho 8 hàm toán tử đầu tương đối quen thuộc không có gì phải bàn. Để nghịch đảo ma trận có nhiều cách, ở đây chúng ta dùng phương pháp Jordance như sau. Giả sử cần nghịch đảo ma trận x cấp n. Ta dùng thêm ma trận đơn vị y. Sau đó thực hiện đồng thời các phép tính trên cả x và y sao cho x trở thành đơn vị. Kết quả là y chính là nghịch đảo của x. Thuật toán được tiến hành trên n bước. Nội dung của bước k (k=1,...,n) như sau:<br />
+          Tìm chỉ số r (k&lt;=r&lt;=n) sao cho<br />
+                     abs(x[r,k])=max{abs(x[i,k]) với i=k,...,n}<br />
+          Nếu abs(x[r,k])=0 thì ma trận không có nghịch đảo và thuật toán kết thúc giữa chừng.<br />
+      Hoán vị hàng k với hàng r trong cả 2 ma trận x và y.<br />
+      Chia hàng k của cả x và y cho tg=x[k,k]  (mục đích làm cho x[k,k]=1) <br />
+      biến đổi để cột k của hàng x trở thành vectơ đơn vị bằng cách làm cho các phần tử x[i,k]=0 (với i khác k). Muốn vậy ta thực hiện các phép tính sau trên cả x và y:<br />
+       (hàng i)= (hàng i)-x[i,k]*(hàng k), với mọi i khác k<br />
+      nội dung chương trình là nhập 4 ma trận X,Y,R,S và vectơ u. Sau đó tính vectơ v theo công thức:<br />
+         v=((X+Y)*(R-S)^-1u<br />
+       Như sẽ thấy trong hàm main() dưới đây, nhờ các hàm toán tử mà câu lệnh tính v được viết gần giống như công thức toán học nêu trên.<br />
+    /* chương trình */<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 1874px;
+		text-align: left;
+		overflow: auto">#include&lt;conio.h&gt;
+#include&lt;iostream.h&gt;
+#include&lt;iomanip.h&gt;
+#include&lt;math.h&gt;
+struct MT
+          {
+            double a[20][20];//mang a chua cac phtu ma tran
+            int n; // cap ma tran
+          };
+       struct VT
+          {
+            double b[20]; //mang chua cac phan tu cua vecto
+            int n; //cap vecto
+          };
+ostream&amp; operator&lt;&lt;(ostream&amp; os,const MT&amp; x);      ostream&amp; operator&lt;&lt;(ostream&amp; os,const VT&amp; v);
+istream&amp; operator&gt;&gt;(istream&amp; is,MT&amp; x);       
+istream&amp; operator&gt;&gt;(istream&amp; is,VT&amp; v);
+      MT operator+(const MT&amp; x1,const MT&amp; x2);
+      MT operator-(const MT&amp; x1,const MT&amp; x2);
+      MT operator*(const MT&amp; x1,const MT&amp; x2);       
+MT operator*(const MT&amp; x1,const VT&amp; v);
+MT operator!(MT x);// tinh ma tran nghich dao
+ostream&amp; operator&lt;&lt;(ostream&amp; os,const MT&amp; x)
+    {
+      os&lt;&lt;setprecision(2)&lt;&lt;setiosflags(ios::showpoint);
+      for(int i=1;i&lt;=x.n;i++)
+        {
+          os&lt;&lt;”\n\n”;
+          for(int j=1;j&lt;=x.n;j++)
+          os&lt;&lt;setw(6)&lt;&lt;x.a[i][j];
+        }
+      os&lt;&lt;”\n”;
+    }
+ostream&amp; operator&lt;&lt;(ostream&amp; os,const VT&amp; v)
+     {
+       os&lt;&lt;setprecision(2)&lt;&lt;setiosflags(ios::showpoint);
+       for(int i=1;i&lt;=v.n;i++)
+         os&lt;&lt;setw(6)&lt;&lt;v.b[i];
+       os&lt;&lt;”\n”;
+       return os;
+     }
+istream&amp; operator&gt;&gt;(istream&amp; is,MT&amp; x)
+     {
+       cout&lt;&lt;” Cap ma tran:”;
+       is&gt;&gt;x.n;
+       cout&lt;&lt;” \n nhap cac phan tu: \n”;
+       for(int i=1;i&lt;=x.n;i++)
+         for(int j=1;j&lt;=x.n;j++)
+          {
+            cout&lt;&lt;” PT hang”&lt;&lt;i&lt;&lt; “ cot ”&lt;&lt;j&lt;&lt;”=”;
+            is&gt;&gt;x.a[i][j];
+         }
+       return is;
+    }
+istream&amp; operator&gt;&gt;(istream&amp; is,VT&amp; v)
+     {
+       cout&lt;&lt;” cap vecto: “;
+       is&gt;&gt;v.n;
+       cout&lt;&lt;”\n nhap cac phan tu: \n”;
+       for(int i=1;i&lt;=v.n;i++)
+         {
+           cout&lt;&lt;”\n phan tu thu “&lt;&lt;i&lt;&lt;”=”;
+           is&gt;&gt;v.b[i];
+         }
+       return is;
+    }
+MT operator+(const MT&amp; x1,const MT&amp; x2)
+      {
+        if(x1.n!x2.n)
+            {
+              cout&lt;&lt;”\n Khong thuc hien duoc phep cong vi hai ma tran khong cung cap”;
+              getch();
+              return x1;
+           }
+        else
+            {
+              MT x;
+              int i,j,n;
+              n=x.n=x1.n;
+              for(i=1;i&lt;=n;i++)
+                for(j=1;j&lt;=n;j++)
+                   x.a[i][j]=x1.a[i][j]+x2.a[i][j];
+              return x;
+            }
+         }
+MT operator-(const MT&amp; x1,const MT&amp; x2)
+      {
+        if(x1.n!x2.n)
+            {
+              cout&lt;&lt;”\n Khong thuc hien duoc phep cong vi hai ma tran khong cung cap”;
+              getch();
+              return x1;
+           }
+        else
+            {
+              MT x;
+              int i,j,n;
+              n=x.n=x1.n;
+              for(i=1;i&lt;=n;i++)
+                for(j=1;j&lt;=n;j++)
+                   x.a[i][j]=x1.a[i][j]-2.a[i][j];
+              return x;
+            }
+         }
+MT operator*(const MT&amp; x1,const MT&amp; x2)
+      {
+        if(x1.n!x2.n)
+            {
+              cout&lt;&lt;”\n Khong thuc hien duoc phep cong vi hai ma tran khong cung cap”;
+              getch();
+              return x1;
+           }
+        else
+            {
+              MT x;
+              int i,j,n,k;
+              n=x.n=x1.n;
+              for(i=1;i&lt;=n;i++)
+                for(j=1;j&lt;=n;j++)
+                   {
+                    x.a[i][j]=0.0;
+                    for(k=1;k&lt;=n;k++)
+                      x.a[i][j]+=x1.a[i][k]*x2.a[i][k];
+                   }
+              return x;
+            }
+         }
+    VT operator*(const MT&amp; x,const VT&amp; v)
+          {
+            if(x.n!v.n)
+               {
+                  cout&lt;&lt;”\n cap ma tran khac cap vecto,phep nhan vo nghia”;
+                  getch();
+                  return v;
+               }
+            else
+               {
+                 VT u;int n;
+                 n=u.n=v.n;
+                 for(int i=1;i&lt;=n;i++)
+                     {
+                       u.b[i]=0;
+                       for(int j=1;j&lt;=n;j++)
+                         u.b[i]+=x.a[i][j]*v.b[j];
+                     }
+                   return u;
+               }
+            }
+    MT operator!(MT x)
+        {
+          MT y;
+          int i,j,k,r,n;
+          double tg;
+          n=y.n=x.n;
+          for(i=1;i&lt;=n;i++)
+           for(j=1;j&lt;=n;j++)
+             if(i==j) y.a[i][j]=0;
+          for(k=1;k&lt;=n;k++)
+            {
+              r=k; 
+              for(i=k+1;i&lt;=n;i++)
+                if(abs(x.a[i][k])&gt;abs(x.a[r][k])) r=i;
+               if(abs(x.a[r][k])&lt;1.0E-8)
+                  {
+                    cout&lt;&lt;”\n ma tra suy bien,khong co nghich dao”;
+                    getch(); return x;
+                  }
+               //hoan vi hang r va hang k
+              for(j=1;j&lt;=n;j++)
+                {
+                  tg=x.a[k][j];
+                  x.a[k][j]=x.a[r][j];
+                  x.a[r][j]=tg;
+                  tg=y.a[k][j];
+                  y.a[k][j]=y.a[r][j];
+                  y.a[r][j]=tg;
+                }
+              //chia hang k cho a[k,k]
+              tg=x.a[k][k];
+              for(j=1;j&lt;=n;j++)
+                {
+                  x.a[k][j]/=tg;
+                  y.a[k][j]/=tg;
+               }
+              /* khu cot k: lam cho a[i,k]=0 voi i!=k */
+              for(int i=1;i&lt;=n;i++)
+                if(i!=k)
+                  {
+                    tg=x.a[i][k];
+                    for(j=1;j&lt;=n;j++)
+                      { 
+                        x.a[i][j]-=tg*x.a[k][j];
+                        y.a[i][j]-=tg*y.a[k][j];
+                      }
+                   }
+             }
+           return y;
+         }
+    void main()
+         {
+           MT x,y,r,s; 
+           VT u,v;
+           clrscr();
+           cout&lt;&lt;”\n Nhap ma tran X: “;cin&gt;&gt;x;
+           cout&lt;&lt;”\n Nhap ma tran Y: “;cin&gt;&gt;y;
+           cout&lt;&lt;”\n Nhap ma tran R: “;cin&gt;&gt;r;
+           cout&lt;&lt;”\n Nhap ma tran S: “;cin&gt;&gt;s;
+           cout&lt;&lt;”\n Nhap vecto u”;cin&gt;&gt;u;
+           v=!((x+y)*(r-s))*u;
+           cout&lt;&lt;”\n Vecto v=xu”&lt;&lt;v;
+           getch();
+        }</pre>
+</div>
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+		<!-- sig -->
+			<div>
+				__________________<br />
+				<img src="http://forums.congdongcviet.com/images/smilies/applause.gif" border="0" alt="" title="Applause" class="inlineimg" />  gogo! hoan hô nào, vỗ tay nào<br />
+    Nào thì chúng ta cùng hoan hô nào vỗ tay nào<img src="http://forums.congdongcviet.com/images/smilies/applause.gif" border="0" alt="" title="Applause" class="inlineimg" />
+			</div>
+		<!-- / sig -->
+		
+
+		
+
+		
+
+		<div style="margin-top: 10px" align="right">
+			<!-- controls -->
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				
+			
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</table>
+
+
+<!-- post 7120 popup menu -->
+<div class="vbmenu_popup" id="postmenu_7120_menu" style="display:none;">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">thangtran</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="member.php?u=12430">Xem Hồ sơ công khai</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="private.php?do=newpm&amp;u=12430" rel="nofollow">Gửi một tin nhắn tới thangtran</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="search.php?do=finduser&amp;u=12430" rel="nofollow">Tìm toàn bộ bài viết bởi thangtran</a></td></tr>
+	
+	
+	
+	</table>
+</div>
+<!-- / post 7120 popup menu -->
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #7120 --><!-- post #7295 -->
+
+	<!-- open content container -->
+
+<div id="open_content_container">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit7295" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post7295" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+	<td class="thead" >
+		<div class="normal" style="float:right">
+			&nbsp;
+			#<a href="showpost.php?p=7295&amp;postcount=16" target="new" rel="nofollow" id="postcount7295" name="16"><strong>16</strong></a> &nbsp;
+			
+			
+			
+			
+			
+		</div>
+
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post7295"><img class="inlineimg" src="images/statusicon/post_old.gif" alt="Cũ" border="0" /></a>
+			
+				29-01-2007, 10:24 PM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding:0px">
+		<!-- user info -->
+		<table cellpadding="0" cellspacing="6" border="0" width="100%">
+		<tr>
+			<td class="alt2"><a href="member.php?u=12430"><img src="customavatars/avatar12430_3.gif" width="100" height="100" alt="Avatar củathangtran" border="0" /></a></td>
+			<td nowrap="nowrap">
+
+				<div id="postmenu_7295">
+					
+					<a class="bigusername" href="member.php?u=12430">thangtran</a>
+					<img class="inlineimg" src="images/statusicon/user_offline.gif" alt="thangtran là offline" border="0" />
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_7295", true); </script>
+					
+				</div>
+
+				<div class="smallfont">Thành viên nhiệt tình</div>
+				<div class="smallfont"><img src="images/ranks/rank_3.gif" alt="" border="" /></div>
+				
+
+			</td>
+			<td width="100%">&nbsp;</td>
+			<td valign="top" nowrap="nowrap">
+
+				<div class="smallfont">
+					<div>Ngày gia nhập: 12 2006</div>
+					
+					
+					<div>
+						Bài viết: 156
+					</div>
+					
+					
+					
+					
+					<div>    </div>
+				</div>
+
+			</td>
+		</tr>
+		</table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	
+	<td class="alt1" id="td_post_7295">
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		
+			<!-- icon and title -->
+			<div class="smallfont clearfix">
+				
+					<div style="float: left; width: 36px;"><img class="inlineimg" src="images/icons/icon1.gif" alt="Mặc định" border="0" /></div>
+				
+				
+			</div>
+			<hr size="1" style="color:#A1D2F1; background-color:#A1D2F1" />
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_7295">
+			
+			Vậy là mình đã post xong những bài cơ bản trước khi bước vào phần quan trọng nhất của cuốn giáo trình nói về lập trình hướng đối tượng. Và hôm nay mình xin bắt đầu bài đầu tiên về lập trình hướng đối tượng.<br />
+ Chương 3: KHÁI NIỆM VỀ LỚP<br />
+     §1. Định nghĩa lớp<br />
+1.	Lớp được khai báo theo mẫu:<br />
+Class Tên_lớp<br />
+    {<br />
+      //Khai báo các thành phần dữ liệu(thuộc tính)<br />
+      //Khai báo các phương thức<br />
+   }<br />
+  //Định nghĩa xây dựng các phương thức<br />
+Chú ý:<br />
+ Thuộc tính của lớp có thể là các biến,mảng,con trỏ có kiểu chuẩn(int,float,char,char*,long…) hoặc kiểu ngoài chuẩn đã định nghĩa trước(cấu trúc,hợp,lớp,…). Thuộc tính của lớp không thể có kiểu của chính lớp đó, nhưng có thể có kiểu của con trỏ lớp này,ví dụ:<br />
+   class A<br />
+     {<br />
+       A x;// không cho phép,vì x có kiểu lớp A<br />
+       A *p;// cho phép vì p là con trỏ kiểu lớp A<br />
+     };<br />
+2.khi khai báo các thành phần của lớp(thuộc tính và phương thức) có thể dung các từ khóa private và public để qui định phạm vi sử dụng của các thành phần.Nếu không qui định cụ thể(không dung các từ khóa private và public) thì C++ hiểu đó là private.<br />
+  Các thành phần của private chỉ được sử dụng bên trong lớp(trong thân các phương thức của lớp).Các hàm không phải là phương thức của lớp không được phép sử dụng các thành phần này.<br />
+   Các thành phần của private được phép sử dụng cả bên trong và bên ngoài lớp<br />
+3.Các thành phần dữ liệu thường(nhưng không bắt buộc) khai báo là private để đảm bảo tính dấu kín, bảo vệ sự an toàn dữ liệu của lớp, không cho phép các hàm bên ngoài thâm nhập vào dữ liệu của lớp.<br />
+4.Các phương thức thường khai báo là public để chúng có thể được gọi tới(sử dụng) từ các hàm khác trong chương trình.<br />
+5.Các phương thức có thể được xây dựng từ bên ngoài hay bên trong định nghĩa lớp. Thông thường các phương thức ngắn thường được viết bên trong lớp còn các phương thức dài thường được viết bên ngoài định nghĩa lớp.<br />
+6.Trong thân phương thức của một lớp giả sử lớp A có thể sử dụng :<br />
+ +) Các thuộc tính của lớp A<br />
+ +) Các phương thức của lớp A<br />
+ +) Các  hàm tự lập trong chương trình. Vì phạm vi sử dụng của hàm là toàn bộ chương trình<br />
+7.Giá trị trả về của phương thức có thể có kiểu bất kì(chuẩn hoặc ngoài chuẩn)<br />
+Ví dụ sau sẽ minh họa các điều đã nói ở trên. Chúng ta sẽ xây dựng một lớp để mô tả và sử lí các điểm trên màn hình đồ họa.Lớp được đặt tên là DIEM<br />
+ +)Các thuộc tính của lớp bao gồm:<br />
+     int x,y;// hoành độ và tung độ<br />
+     int m; mầu<br />
++)Các phương thức:<br />
+    Nhập dữ liệu một điểm<br />
+    Hiển thị một điểm<br />
+    Ẩn một điểm<br />
+Lớp DIEM được xây dựng như sau:<br />
+class DIEM<br />
+  {<br />
+   private:<br />
+     int x,y,m;<br />
+  public:<br />
+     void nhap();<br />
+     void hien();<br />
+     void an()<br />
+       {<br />
+         putpixel(x,y,getbkcolor());<br />
+       }<br />
+    };<br />
+void DIEM::nhap()<br />
+  {<br />
+    cout&lt;&lt;”\n Nhap hoanh do va tung do: “;cin&gt;&gt;x&gt;&gt;y;<br />
+    cout&lt;&lt;”\n nhap ma mau cua diem: “;cin&gt;&gt;m;<br />
+ }<br />
+void DIEM::hien()<br />
+   {<br />
+     int mau_ht;<br />
+     mau_ht=getcolor();<br />
+     putpixel(x,y,m);<br />
+     setcolor(mau_ht);<br />
+  }<br />
+Qua ví dụ trên ta rút ra một số điểu cần nhớ sau:<br />
++) Trong cả 3 phương thức dù viết trong hay viết ngoài định nghĩa lớp đều được phép truy nhập đến các thuộc tính x,y và m của lớp<br />
++) Các phương thức viết bên trong định nghĩa lớp được viết như một hàm thông thường<br />
+ +) Khi xây dựng các phương thức bên ngoài lớp, cần dùng them tên lớp vầ toán tử phạm vi:: đặt ngay trước tên phương thức để quy định rõ đây là phương thức của lớp nào.<br />
+ Vì  đây là phần kiến thức khá trừu tượng đối với các bạn mới bước vào lập trình hướng đối tượng nên mình sẽ post mỗi lần một ít để các bạn có thể làm quen một cách dễ dàng hơn, có gì xin các bạn chỉ giáo.
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+		<!-- sig -->
+			<div>
+				__________________<br />
+				<img src="http://forums.congdongcviet.com/images/smilies/applause.gif" border="0" alt="" title="Applause" class="inlineimg" />  gogo! hoan hô nào, vỗ tay nào<br />
+    Nào thì chúng ta cùng hoan hô nào vỗ tay nào<img src="http://forums.congdongcviet.com/images/smilies/applause.gif" border="0" alt="" title="Applause" class="inlineimg" />
+			</div>
+		<!-- / sig -->
+		
+
+		
+
+		
+
+		<div style="margin-top: 10px" align="right">
+			<!-- controls -->
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				
+			
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</table>
+
+
+<!-- post 7295 popup menu -->
+<div class="vbmenu_popup" id="postmenu_7295_menu" style="display:none;">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">thangtran</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="member.php?u=12430">Xem Hồ sơ công khai</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="private.php?do=newpm&amp;u=12430" rel="nofollow">Gửi một tin nhắn tới thangtran</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="search.php?do=finduser&amp;u=12430" rel="nofollow">Tìm toàn bộ bài viết bởi thangtran</a></td></tr>
+	
+	
+	
+	</table>
+</div>
+<!-- / post 7295 popup menu -->
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #7295 --><!-- post #7350 -->
+
+	<!-- open content container -->
+
+<div id="open_content_container">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit7350" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post7350" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+	<td class="thead" >
+		<div class="normal" style="float:right">
+			&nbsp;
+			#<a href="showpost.php?p=7350&amp;postcount=17" target="new" rel="nofollow" id="postcount7350" name="17"><strong>17</strong></a> &nbsp;
+			
+			
+			
+			
+			
+		</div>
+
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post7350"><img class="inlineimg" src="images/statusicon/post_old.gif" alt="Cũ" border="0" /></a>
+			
+				31-01-2007, 08:28 PM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding:0px">
+		<!-- user info -->
+		<table cellpadding="0" cellspacing="6" border="0" width="100%">
+		<tr>
+			<td class="alt2"><a href="member.php?u=12430"><img src="customavatars/avatar12430_3.gif" width="100" height="100" alt="Avatar củathangtran" border="0" /></a></td>
+			<td nowrap="nowrap">
+
+				<div id="postmenu_7350">
+					
+					<a class="bigusername" href="member.php?u=12430">thangtran</a>
+					<img class="inlineimg" src="images/statusicon/user_offline.gif" alt="thangtran là offline" border="0" />
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_7350", true); </script>
+					
+				</div>
+
+				<div class="smallfont">Thành viên nhiệt tình</div>
+				<div class="smallfont"><img src="images/ranks/rank_3.gif" alt="" border="" /></div>
+				
+
+			</td>
+			<td width="100%">&nbsp;</td>
+			<td valign="top" nowrap="nowrap">
+
+				<div class="smallfont">
+					<div>Ngày gia nhập: 12 2006</div>
+					
+					
+					<div>
+						Bài viết: 156
+					</div>
+					
+					
+					
+					
+					<div>    </div>
+				</div>
+
+			</td>
+		</tr>
+		</table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	
+	<td class="alt1" id="td_post_7350">
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		
+			<!-- icon and title -->
+			<div class="smallfont clearfix">
+				
+					<div style="float: left; width: 36px;"><img class="inlineimg" src="images/icons/icon1.gif" alt="Mặc định" border="0" /></div>
+				
+				
+			</div>
+			<hr size="1" style="color:#A1D2F1; background-color:#A1D2F1" />
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_7350">
+			
+			§2 Biến và mảng đối tượng<br />
+  Như đã nói ở trên một lớp sau khi định nghĩa có thể xem như một kiểu đối tượng và có thể dùng để khai báo các biến, mảng đối tượng. Cách khai báo biến, mảng đối tượng cũng giống như khai báo biến, mảng khác( int,float,double…), theo mẫu sau:<br />
+    Tên_lớp danh sách đối;<br />
+     Tên_lớp danh sách mảng;<br />
+Ví dụ về lớp điểm ở bài 1 có thể dùng để khai báo các biến, mảng DIEM như sau:<br />
+    DIEM d1,d2,d3;// Khai báo 3 biến đối tượng d1,d2,d3<br />
+    DIEM d[20]; //Khai báo mảng đối tượng d có 20 phần tử<br />
+ Mỗi đối tượng sau khi khai báo sẽ được cấp phát một vùng nhớ riêng để chứa các thuộc tính của chúng. Chú ý sẽ không có vùng nhớ riêng để chứa các phương thức cho mỗi đối tượng. Các phương thức sẽ được sử dụng chung cho tất cả các đối tượng cùng lớp. Như vậy về  bộ nhớ được cung cấp thì đối tượng giống cấu trúc. Trong trường hợp này:<br />
+   sizeof(d1)=sizeof(d2)=sizeof(d3)=3*sizeof(int)==6<br />
+   sizeof(d)=20*6=120<br />
+chú thích: mỗi biến đối tượng có 3 thuộc tính kiểu int nên bộ nhớ cung cấp cho mỗi biến đối tượng==bộ nhớ cung cấp cho 3 biến đó.<br />
+Thuộc tính của đối tượng<br />
+ Trong ví dụ trên mỗi đối tượng d1,d2,d3 và mỗi phần tử d[i] đều có 3 thuộc tính x,y,m. Chú ý là mỗi thuộc tính đều thuộc về một đối tượng vì vậy không thể viết tên thuộc tính một cách riêng rẽ mà bao giờ cũng phải có tên đối tượng đi kèm giống như trong cách viết cấu trúc của C hay bản ghi của Pascal. Nói chung cách viết thuộc tính của đối tượng như sau:<br />
+   Tên_đối_tượng.Tên_thuộc_tính<br />
+   Với các đối tượng d1,d2,d3 và mảng d,có thể viết như sau:<br />
+     d1.x  // thuộc tính x của đối tượng d1<br />
+     d2.x  //thuộc tính x của đối tượng d2<br />
+     d[2].y //thuộc tính y của phần tử d[2]<br />
+    ….<br />
+Sử dụng các phương thức<br />
+   Cũng giống như hàm, mỗi phương thức được sử dụng thông qua lời gọi. Tuy nhiên trong lời gọi phương thức bao giờ cũng phải có tên đối tượng để chỉ rõ phương trức thực hiện trên thuộc  tính của đối tượng nào. Ví dụ lời gọi:<br />
+    d1.nhap();<br />
+sẽ thực hiện  lệnh nhập số liệu vào các thành phần d1.x,d1.y,d1.m;<br />
+  Now ! chúng ta xây dựng một chương trình để minh họa các điều đã nói ở 2 bài trên. Sử dụng lớp điểm để nhập 3 điểm rồi cho ẩn các điểm vừa nhập. Trong chương trình <br />
+đưa vào hàm kd_do_hoa() dùng để khởi động hệ đồ họa<br />
+ <div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 738px;
+		text-align: left;
+		overflow: auto">#include&lt;conio.h&gt;
+#include&lt;iostream.h&gt;
+#include&lt;graphics.h&gt;
+class DIEM
+  {
+   private:
+     int x,y,m;
+  public:
+     void nhap();
+     void hien();
+     void an()
+       {
+         putpixel(x,y,getbkcolor());
+       }
+    };
+void DIEM::nhap()
+  {
+    cout&lt;&lt;”\n Nhap hoanh do va tung do: “;cin&gt;&gt;x&gt;&gt;y;
+    cout&lt;&lt;”\n nhap ma mau cua diem: “;cin&gt;&gt;m;
+ }
+void DIEM::hien()
+   {
+     int mau_ht;
+     mau_ht=getcolor();
+     putpixel(x,y,m);
+     setcolor(mau_ht);
+  }
+  void kd_do_hoa()
+   {
+     int mh,mode;
+     mh=mode=0;
+     initgraph(&amp;mh,&amp;mode,””);
+   }
+ void main()
+  {
+    DIEM d1,d2,d3;
+    d1.nhap();d2.nhap();d3.nhap();
+    kd_do_hoa();
+    setbkcolor(BLACK);d1.hien();d2.hien();d3.hien();
+    getch();
+    d1.an();
+    d2.an() ;d3.an();
+    getch();
+    closegraph();
+}</pre>
+</div>
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+		<!-- sig -->
+			<div>
+				__________________<br />
+				<img src="http://forums.congdongcviet.com/images/smilies/applause.gif" border="0" alt="" title="Applause" class="inlineimg" />  gogo! hoan hô nào, vỗ tay nào<br />
+    Nào thì chúng ta cùng hoan hô nào vỗ tay nào<img src="http://forums.congdongcviet.com/images/smilies/applause.gif" border="0" alt="" title="Applause" class="inlineimg" />
+			</div>
+		<!-- / sig -->
+		
+
+		
+
+		
+
+		<div style="margin-top: 10px" align="right">
+			<!-- controls -->
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				
+			
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</table>
+
+
+<!-- post 7350 popup menu -->
+<div class="vbmenu_popup" id="postmenu_7350_menu" style="display:none;">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">thangtran</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="member.php?u=12430">Xem Hồ sơ công khai</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="private.php?do=newpm&amp;u=12430" rel="nofollow">Gửi một tin nhắn tới thangtran</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="search.php?do=finduser&amp;u=12430" rel="nofollow">Tìm toàn bộ bài viết bởi thangtran</a></td></tr>
+	
+	
+	
+	</table>
+</div>
+<!-- / post 7350 popup menu -->
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #7350 --><!-- post #7428 -->
+
+	<!-- open content container -->
+
+<div id="open_content_container">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit7428" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post7428" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+	<td class="thead" >
+		<div class="normal" style="float:right">
+			&nbsp;
+			#<a href="showpost.php?p=7428&amp;postcount=18" target="new" rel="nofollow" id="postcount7428" name="18"><strong>18</strong></a> &nbsp;
+			
+			
+			
+			
+			
+		</div>
+
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post7428"><img class="inlineimg" src="images/statusicon/post_old.gif" alt="Cũ" border="0" /></a>
+			
+				02-02-2007, 09:25 PM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding:0px">
+		<!-- user info -->
+		<table cellpadding="0" cellspacing="6" border="0" width="100%">
+		<tr>
+			<td class="alt2"><a href="member.php?u=12430"><img src="customavatars/avatar12430_3.gif" width="100" height="100" alt="Avatar củathangtran" border="0" /></a></td>
+			<td nowrap="nowrap">
+
+				<div id="postmenu_7428">
+					
+					<a class="bigusername" href="member.php?u=12430">thangtran</a>
+					<img class="inlineimg" src="images/statusicon/user_offline.gif" alt="thangtran là offline" border="0" />
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_7428", true); </script>
+					
+				</div>
+
+				<div class="smallfont">Thành viên nhiệt tình</div>
+				<div class="smallfont"><img src="images/ranks/rank_3.gif" alt="" border="" /></div>
+				
+
+			</td>
+			<td width="100%">&nbsp;</td>
+			<td valign="top" nowrap="nowrap">
+
+				<div class="smallfont">
+					<div>Ngày gia nhập: 12 2006</div>
+					
+					
+					<div>
+						Bài viết: 156
+					</div>
+					
+					
+					
+					
+					<div>    </div>
+				</div>
+
+			</td>
+		</tr>
+		</table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	
+	<td class="alt1" id="td_post_7428">
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		
+			<!-- icon and title -->
+			<div class="smallfont clearfix">
+				
+					<div style="float: left; width: 36px;"><img class="inlineimg" src="images/icons/icon1.gif" alt="Mặc định" border="0" /></div>
+				
+				
+			</div>
+			<hr size="1" style="color:#A1D2F1; background-color:#A1D2F1" />
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_7428">
+			
+			§3. Con trỏ đối tượng<br />
+  Con trỏ đối tượng dùng để chứa địa chỉ của biến, mảng đối tượng. Nó được khai báo như sau:<br />
+    Tên_lớp *con trỏ;<br />
+  Ví dụ: dùng lớp DIEM để khai báo:<br />
+      DIEM *p1,*p2,*p3;// khai báo 3 con trỏ p1,p2,p3<br />
+      DIEM d1,d2;// khai báo 2 đối tượng d1,d2<br />
+      DIEM d[20];//khai báo mảng đối tượng<br />
+Và có thể thực hiện các câu lệnh:<br />
+     p1=&amp;d2; //p1 chứa địa chỉ của d2, hay p1 trỏ tới d2<br />
+     p2=d; //p2 trỏ tới đầu mảng d<br />
+    p3=new DIEM; //Tạo một đối tượng và chứa địa chỉ của nó<br />
+                            // vào p3<br />
+ Để sử dụng thuộc tính của một đối tượng thông qua con trỏ, ta viết như sau:<br />
+       Tên_con_trỏ-&gt;Tên thuộc tính<br />
+Chú ý: nếu con trỏ chứa địa chỉ đầu của mảng có thể dùng con trỏ như tên mảng.<br />
+     Như vậy sau khi thực hiện các câu lệnh trên thì:<br />
+        p1-&gt;x và d2.x là như nhau<br />
+        p2[i].y và d[i].y là như nhau<br />
+Tóm lại ta có qui tắc sau gọi là qui tắc sử dụng thuộc tính<br />
+  Để sử dụng 1 thuộc tính của 1 đối tượng ta phải dùng phép “.” Hoặc phép “-&gt;” .Trong chương trình không cho phép sử dụng thuộc tính 1 cách đơn độc mà phải đi kèm theo tên đối tượng hoặc tên con trỏ theo mẫu sau:<br />
+     Tên đối tượng.tên thuộc tính<br />
+      Tên con trỏ-&gt;tên thuộc tính<br />
+     Tên mảng đối tượng[chỉ số].tên thuộc tính<br />
+     Tên con trỏ[chỉ số].tên thuộc tính<br />
+Chương trình sau sử dụng một lớp DIEM để nhập 1 dãy điểm, hiển thị và ẩn các điểm vừa nhập.Chương trình dùng con trỏ kiểu DIEM và dùng toán tử new để tạo dãy đối tượng.<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 834px;
+		text-align: left;
+		overflow: auto">#include&lt;conio.h&gt;
+#include&lt;iostream.h&gt;
+#include&lt;graphics.h&gt;
+class DIEM
+  {
+    private:
+     int x,y,m;
+    public:
+     void nhapsl()
+       {
+         cout&lt;&lt;”\n nhap chi so cho diem: “;
+         cin&gt;&gt;x&gt;&gt;y;
+         cout&lt;&lt;”\n nhap ma mau cua diem: “;
+         cin&gt;&gt;m;
+       }
+    void an()
+       {
+         putpixel(x,y,getbkcolor());
+       }
+    void hien()
+       {
+         int mau_ht;
+         mau_ht=getcolor();
+         putpixel(x,y,m);
+         setcolor(mau_ht);
+       }
+    };
+void khoidongdohoa()
+   {
+     int gr=0,mode=0;
+     initgraph(&amp;mh,&amp;mode,”..\\BGI”);
+     
+  }
+void main()
+  {
+    DIEM *p;
+    int i,n; 
+    cout&lt;&lt;”\n nhap so diem: “;
+    cin&gt;&gt;n;
+    p=new DIEM[n+1];
+    for(i=1;i&lt;=n;i++)
+      p[i].nhapsl();
+    khoidongdohoa();
+   for(i=1;i&lt;=n;i++)
+      p[i].hien();
+   getch();
+   for(i=1;i&lt;=n;i++)
+      p[i].an();
+   getch();
+   closegraph();
+}</pre>
+</div>
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+		<!-- sig -->
+			<div>
+				__________________<br />
+				<img src="http://forums.congdongcviet.com/images/smilies/applause.gif" border="0" alt="" title="Applause" class="inlineimg" />  gogo! hoan hô nào, vỗ tay nào<br />
+    Nào thì chúng ta cùng hoan hô nào vỗ tay nào<img src="http://forums.congdongcviet.com/images/smilies/applause.gif" border="0" alt="" title="Applause" class="inlineimg" />
+			</div>
+		<!-- / sig -->
+		
+
+		
+
+		
+
+		<div style="margin-top: 10px" align="right">
+			<!-- controls -->
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				
+			
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</table>
+
+
+<!-- post 7428 popup menu -->
+<div class="vbmenu_popup" id="postmenu_7428_menu" style="display:none;">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">thangtran</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="member.php?u=12430">Xem Hồ sơ công khai</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="private.php?do=newpm&amp;u=12430" rel="nofollow">Gửi một tin nhắn tới thangtran</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="search.php?do=finduser&amp;u=12430" rel="nofollow">Tìm toàn bộ bài viết bởi thangtran</a></td></tr>
+	
+	
+	
+	</table>
+</div>
+<!-- / post 7428 popup menu -->
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #7428 --><!-- post #7690 -->
+
+	<!-- open content container -->
+
+<div id="open_content_container">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit7690" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post7690" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+	<td class="thead" >
+		<div class="normal" style="float:right">
+			&nbsp;
+			#<a href="showpost.php?p=7690&amp;postcount=19" target="new" rel="nofollow" id="postcount7690" name="19"><strong>19</strong></a> &nbsp;
+			
+			
+			
+			
+			
+		</div>
+
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post7690"><img class="inlineimg" src="images/statusicon/post_old.gif" alt="Cũ" border="0" /></a>
+			
+				05-02-2007, 10:14 PM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding:0px">
+		<!-- user info -->
+		<table cellpadding="0" cellspacing="6" border="0" width="100%">
+		<tr>
+			<td class="alt2"><a href="member.php?u=12430"><img src="customavatars/avatar12430_3.gif" width="100" height="100" alt="Avatar củathangtran" border="0" /></a></td>
+			<td nowrap="nowrap">
+
+				<div id="postmenu_7690">
+					
+					<a class="bigusername" href="member.php?u=12430">thangtran</a>
+					<img class="inlineimg" src="images/statusicon/user_offline.gif" alt="thangtran là offline" border="0" />
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_7690", true); </script>
+					
+				</div>
+
+				<div class="smallfont">Thành viên nhiệt tình</div>
+				<div class="smallfont"><img src="images/ranks/rank_3.gif" alt="" border="" /></div>
+				
+
+			</td>
+			<td width="100%">&nbsp;</td>
+			<td valign="top" nowrap="nowrap">
+
+				<div class="smallfont">
+					<div>Ngày gia nhập: 12 2006</div>
+					
+					
+					<div>
+						Bài viết: 156
+					</div>
+					
+					
+					
+					
+					<div>    </div>
+				</div>
+
+			</td>
+		</tr>
+		</table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	
+	<td class="alt1" id="td_post_7690">
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		
+			<!-- icon and title -->
+			<div class="smallfont clearfix">
+				
+					<div style="float: left; width: 36px;"><img class="inlineimg" src="images/icons/icon1.gif" alt="Mặc định" border="0" /></div>
+				
+				
+			</div>
+			<hr size="1" style="color:#A1D2F1; background-color:#A1D2F1" />
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_7690">
+			
+			§4. Đối của phương thức, con trỏ this<br />
+4.1. Con trỏ this là đối thứ nhất của phương thức<br />
+   Chúng ta hãy xem phương thức nhapsl của lớp DIEM<br />
+      void nhapsl()<br />
+       {<br />
+         cout&lt;&lt;”\n nhap chi so cho diem: “;<br />
+         cin&gt;&gt;x&gt;&gt;y;<br />
+         cout&lt;&lt;”\n nhap ma mau cua diem: “;<br />
+         cin&gt;&gt;m;<br />
+       }<br />
+   Rõ rang trong phương thức này ta sử dụng tên các thuộc tính x,y,m một cách đơn độc. Điều này có vẻ mâu thuẫn với quy tắc sử dụng thuộc tính trong mục trước. Song cụ thể như sau:<br />
+      C++ sử dụng con trỏ đặc biệt this trong các phương thức.Các thuộc tính trong các phương thức được hiểu là thuộc một đối tượng do con trỏ this trỏ tới. Như vậy phương thức nhapsl có thể viết một cách tường ming như sau:<br />
+    void DIEM::nhapsl()<br />
+      {<br />
+        cout&lt;&lt;”\n nhap hoanh do va tung do cua diem: “;<br />
+        cin&gt;&gt;this-&gt;x&gt;&gt;this-&gt;y;<br />
+        cout&lt;&lt;”\n nhap ma mau cua dien: “;<br />
+        cin&gt;&gt;this-&gt;m;<br />
+     }<br />
+Từ góc độ hàm số có thể kết luận rằng: Phương thức bao giờ cũng có ít nhất một đối là con trỏ this và nó luôn luôn là đối đầu tiên của phương thức.<br />
+4.2. Tham số ứng với con trỏ this<br />
+    Xét một lời gọi hàm tới phương thức nhapsl();<br />
+        DIEM dl;<br />
+        dl.nhapsl();<br />
+    trong trường hợp này tham số truyền cho con trỏ this chính là địa chỉ của dl:<br />
+        this=&amp;dl;<br />
+    do đó this-&gt;x chính là dl.x;<br />
+              this-&gt;y chính là dl.y;<br />
+              this-&gt;m chính là dl.m;<br />
+   như vậy câu lệnh dl.nhapsl(); sẽ nhập số liệu cho các thuộc tính của đối tượng dl. Từ đó có thể rút ra  kết luận sau:<br />
+   Tham số truyền cho đối con trỏ this chính là địa chỉ của đối tượng đi kèm với phương thức trong lời gọi phương thức.<br />
+4.3.Các đối khác của phương thức<br />
+    Ngoài đối đặc biệt this(đối này không xuất hiện một cách tường minh), phương thức còn có các đối khác được khai báo như các hàm. Đối của phương thức có thể có kiểu bất kì(chuẩn hoặc ngoài chuẩn)<br />
+    Ví dụ: để xây dựng phương thức vẽ đường thẳng đi qua 2 điểm ta cần đưa vào 3 đối. Hai đối là 2 biến kiểu DIEM, đối thứ 3 là kiểu nguyên xác định mã màu. Vì đã có đối ngầm là this là đối thứ nhất, nên chỉ cần khai báo them 2 đối. Phương thức có thể viết như sau: <br />
+       void DIEM::doanthang(DIEM d2,int mau)<br />
+           {<br />
+             int mau_ht;<br />
+             mau_ht=getcolor();<br />
+             setcolor(mau);<br />
+             line(this-&gt;x,this-&gt;y,d2.x,d2.y);<br />
+             setcolor(mau_ht);<br />
+          }<br />
+   Chương trình sau minh họa các phương thức có nhiều đối. Ta vẫn dùng lớp DIEM nhưng có 1 số thay đổi:<br />
+     + Bỏ thuộc tính m(mầu)<br />
+     + Bỏ các phương thức hien và an<br />
+     + Đưa vào các phương thức mới:<br />
+         ve_doan_thang (Vẽ đoạn thẳng đi qua 2 điểm)<br />
+         ve_tam_giac (Vẽ tam giác đi qua 3 điểm)<br />
+         do_dai (Tính độ dài của đoạn thẳng đi qua 2 điểm)<br />
+         chu_vi( Tính chu vi tam giác qua 3 điểm)<br />
+Chương trình còn minh họa:<br />
+    +. Việc phương thức này sử dụng phương thức khác (phương thức ve_tam_giac sử dụng phương thức ve_doan_thang, phương thức chu_vi sử dụng phương thức do_dai)<br />
+    +. Sử dụng con trỏ this trong thân các phương thức ve_tam_giac và chu_vi<br />
+  Nội dung của chương trình là nhập 3 điểm, vẽ tam giác có đỉnh là 3 điểm vừa nhập sau đó tính chu vi tam giác.<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 1026px;
+		text-align: left;
+		overflow: auto">#include&lt;conio.h&gt;
+#include&lt;iostream.h&gt;
+#include&lt;graphics.h&gt;
+#include&lt;math.h&gt;
+#include&lt;stdio.h&gt;
+class DIEM
+ {
+   private:
+     int x,y;
+  public:
+    void nhapsl();
+    void ve_doan_thang(DIEM d2,int mau);
+    void ve_tam_giac(DIEM d2,DIEM,d3,int mau);
+    double do_dai(DIEM d2)
+     {
+       DIEM d1=*this;
+       return sqrt( pow(d1.x-d2.x,2)+pow(d1.y-d2.y,2));
+     }
+   double chu_vi(DIEM d2,DIEM d3);
+ };
+void DIEM::nhapsl()
+  {
+    cout&lt;&lt;”\n nhap hoanh do va tung do: “;
+    cin&gt;&gt;x&gt;&gt;y;
+  }
+void khoidongdohoa()
+   {
+     int gr=0,mode=0;
+     initgraph(&amp;mh,&amp;mode,”..\\BGI”);
+     
+  }
+        void DIEM::ve_doan_thang(DIEM d2,int mau)
+           {
+             setcolor(mau);
+             line(this-&gt;x,this-&gt;y,d2.x,d2.y);
+           }
+       void DIEM::ve_tam_giac(DIEM d2,DIEM d3,int mau)
+           {
+             (*this).doanthang(d2,mau);
+             d2.doanthang(d3,mau);
+             d3.doanthang(*this,mau);
+          }
+       double DIEM::chu_vi(DIEM d2,DIEM d3)
+          {
+            double s;
+            s=(*this).do_dai(d2)+d2.do_dai(d3)+d3.do_dai(*this);
+            return s;
+         }
+      void main()
+         {
+           DIEM d1,d2,d3;
+           char tb_cv[20];
+           d1.nhapsl();
+           d2.nhapsl();
+           d3.nhapsl();
+           khoidongdohoa();
+           d1.ve_tam_giac(d2,d3,15);
+           double s=d1.chu_vi(d2,d3);
+           sprintf(tb_cv,”chu vi = %0.2”,s);
+           outtextxy(10,10,tb_cv);
+           getch();
+           closegraph();
+        }</pre>
+</div>Một số nhận xét về đối của phương thức và lời gọi phương thức<br />
++) quan sát nguyên mẫu của phương thức:<br />
+     void ve_doan_thang(DIEM d2,int mau);<br />
+sẽ thấy phương thức có 3 đối:<br />
+   Đối thứ nhất là một đối tượng DIEM do this trỏ tới<br />
+   Đối thứ 2 là đối tượng DIEM d2<br />
+   Đối thứ 3 là biến mau<br />
+  Nội dung của phương thức là vẽ đoạn thẳng đi qua các DIEM *this và d2 theo mã mầu mau.Xem thân của phương thức sẽ thấy được nội dung này:<br />
+  void DIEM::ve_doan_thang(DIEM d2,int mau)<br />
+           {<br />
+             setcolor(mau);<br />
+             line(this-&gt;x,this-&gt;y,d2.x,d2.y);<br />
+           }<br />
+   Tuy nhiên trong trường hợp này vai trò của con trỏ this không cao lắm vì nó chỉ cốt làm rõ đối thứ nhất.Trong thân của phương thức có thể bỏ từ khóa this vẫn được.<br />
++) Vai trò của con trỏ this trở nên quan trọng trong phương thức ve_tam_giac:<br />
+   ve_tam_giac(DIEM d2,DIEM d3,int mau);<br />
+  phương thức có 4 đối là: <br />
+  this trỏ tới một đối tượng kiểu DIEM<br />
+  d2 một đối tượng kiểu DIEM<br />
+  d3 một đối tượng kiểu DIEM<br />
+  mau là một biến nguyên<br />
+nội dung của phương thức là vẽ 3 cạnh:<br />
+   cạnh 1 đi qua *this và d2<br />
+   cạnh 2 đi qua d2 và d3<br />
+   cạnh 3 đi qua d3 và *this<br />
+các cạnh trên được vẽ nhờ sử dụng phương thức vẽ đoạn thẳng<br />
+    Vẽ cạnh 1 dùng lệnh: (*this).ve_doan_thang(d2,mau);<br />
+    Vẽ cạnh 2 dùng lệnh: d2.ve_doan_thang(d3,mau);<br />
+    Vẽ cạnh 3 dùng lệnh: d3.ve_doan_thang(*this,mau);<br />
+  Trong trường hợp này vai trò của this là khá quan trong do nếu không có nó thì công việc trở nên khá khó khăn,dài dòng và khó hiểu hơn. Chúng ta so sánh 2 phương án:<br />
+   Phương án dùng this trong phương thức ve_tam_giac:<br />
+     void DIEM::ve_tam_giac(DIEM d2,DIEM d3,int mau)<br />
+           {<br />
+             (*this).doanthang(d2,mau);<br />
+             d2.doanthang(d3,mau);<br />
+             d3.doanthang(*this,mau);<br />
+          }<br />
+Phương án không dùng this trong phương thức ve_tam_giac:<br />
+     void DIEM::ve_tam_giac(DIEM d2,DIEM d3,int mau)<br />
+        {<br />
+          DIEM d1;<br />
+          d1.x=x;<br />
+          d1.y=y;<br />
+          d1.ve_doan_thang(d2,mau);<br />
+          d2.ve_doan_thang(d3,mau);<br />
+          d3.ve_doan_thang(d1,mau);
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+		<!-- sig -->
+			<div>
+				__________________<br />
+				<img src="http://forums.congdongcviet.com/images/smilies/applause.gif" border="0" alt="" title="Applause" class="inlineimg" />  gogo! hoan hô nào, vỗ tay nào<br />
+    Nào thì chúng ta cùng hoan hô nào vỗ tay nào<img src="http://forums.congdongcviet.com/images/smilies/applause.gif" border="0" alt="" title="Applause" class="inlineimg" />
+			</div>
+		<!-- / sig -->
+		
+
+		
+
+		
+
+		<div style="margin-top: 10px" align="right">
+			<!-- controls -->
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				
+			
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</table>
+
+
+<!-- post 7690 popup menu -->
+<div class="vbmenu_popup" id="postmenu_7690_menu" style="display:none;">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">thangtran</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="member.php?u=12430">Xem Hồ sơ công khai</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="private.php?do=newpm&amp;u=12430" rel="nofollow">Gửi một tin nhắn tới thangtran</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="search.php?do=finduser&amp;u=12430" rel="nofollow">Tìm toàn bộ bài viết bởi thangtran</a></td></tr>
+	
+	
+	
+	</table>
+</div>
+<!-- / post 7690 popup menu -->
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #7690 --><!-- post #7945 -->
+
+	<!-- open content container -->
+
+<div id="open_content_container">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit7945" style="padding:0px 0px 6px 0px">
+	
+
+
+
+<table class="tborder" id="post7945" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+	<td class="thead" >
+		<div class="normal" style="float:right">
+			&nbsp;
+			#<a href="showpost.php?p=7945&amp;postcount=20" target="new" rel="nofollow" id="postcount7945" name="20"><strong>20</strong></a> &nbsp;
+			
+			
+			
+			
+			
+		</div>
+
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post7945"><img class="inlineimg" src="images/statusicon/post_old.gif" alt="Cũ" border="0" /></a>
+			
+				10-02-2007, 11:16 PM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding:0px">
+		<!-- user info -->
+		<table cellpadding="0" cellspacing="6" border="0" width="100%">
+		<tr>
+			<td class="alt2"><a href="member.php?u=12430"><img src="customavatars/avatar12430_3.gif" width="100" height="100" alt="Avatar củathangtran" border="0" /></a></td>
+			<td nowrap="nowrap">
+
+				<div id="postmenu_7945">
+					
+					<a class="bigusername" href="member.php?u=12430">thangtran</a>
+					<img class="inlineimg" src="images/statusicon/user_offline.gif" alt="thangtran là offline" border="0" />
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_7945", true); </script>
+					
+				</div>
+
+				<div class="smallfont">Thành viên nhiệt tình</div>
+				<div class="smallfont"><img src="images/ranks/rank_3.gif" alt="" border="" /></div>
+				
+
+			</td>
+			<td width="100%">&nbsp;</td>
+			<td valign="top" nowrap="nowrap">
+
+				<div class="smallfont">
+					<div>Ngày gia nhập: 12 2006</div>
+					
+					
+					<div>
+						Bài viết: 156
+					</div>
+					
+					
+					
+					
+					<div>    </div>
+				</div>
+
+			</td>
+		</tr>
+		</table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	
+	<td class="alt1" id="td_post_7945">
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		
+			<!-- icon and title -->
+			<div class="smallfont clearfix">
+				
+					<div style="float: left; width: 36px;"><img class="inlineimg" src="images/icons/icon1.gif" alt="Mặc định" border="0" /></div>
+				
+				
+			</div>
+			<hr size="1" style="color:#A1D2F1; background-color:#A1D2F1" />
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_7945">
+			
+			<b>§5. Nói thêm về kiểu phương thức và kiểu đối của <br />
+                                        phương thức</b><br />
+5.1.Kiểu phương thức<br />
+      Phương thức có thể không có giá trị trả về (kiểu void) hoặc có thể trả về một giá trị có kiểu bất kì, kể cả giá trị kiểu đối tượng,con trỏ đối tượng, tham chiếu đối tượng.<br />
+5.2. Đối của phương thức<br />
+     Đối của phương thức cũng giống như đối của hàm có thể có kiểu bất kì:<br />
+    +. Dữ liệu kiểu chuẩn như int,float,char,…Con trỏ hoặc tham chiếu đến kiểu dữ liệu chuẩn như int*,float*,int&amp;,float&amp;,char&amp;…<br />
+    +. Dữ liệu kiểu ngoài chuẩn đã được định nghĩa trước như đối tượng,cấu trúc,hợp, kiểu liệt kê enum…Con trỏ hoặc tham chiếu đến kiểu ngoài chuẩn này.<br />
+   +. Kiểu đối tượng của chính phương thức,con trỏ hoặc tham chiếu đến chính đối tượng này.<br />
+5.3. Các ví dụ:<br />
+  Ví dụ 1:<br />
+   Nội dung:<br />
+           +) thuộc tính (thành phần dữ liệu) của lớp có thể là đối tượng của lớp khác đã định nghĩa bên trên.<br />
+          +) phương thức có giá trị trả về kiểu đối tượng và con trỏ đối tượng.<br />
+ Nội dung chính là nhập một dãy hình chữ nhật, sau đó tìm hình chữ nhật có max diện tích và hình chữ nhật có max chu vi<br />
+ Chương trình được tổ chức thành 2 lớp:<br />
+   +) lớp HINH_CN gồm:<br />
+          +)các phương thức tính: d và r(chiều dài và chiều rộng)<br />
+          +)các phương thức <br />
+                void nhapsl(); //nhập chiều dài, chiều rộng<br />
+                int dien_tich(); //tính diện tích<br />
+                int chu_vi(); //tính chu vi<br />
++) Lớp DAY_HINH_CN gồm:<br />
+  -Các thuộc tính:<br />
+      int n;  // số hình chữ nhật của dãy<br />
+      HINH_CN *h;  //con trỏ tới dãy đối tượng của lớp HINH_CN<br />
+ -Các phương thức:<br />
+      void nhapsl();    //Nhập một dẫy hình chữ nhật<br />
+      HINH_CN hinh_dt_max(); //Trả về hình chữ nhật có diện <br />
+                                                //  tích max<br />
+      HINH_CN *hinh_cv_max(); // Trả về con trỏ tới HCN có<br />
+                                                 // chu vi max<br />
+ <div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 1170px;
+		text-align: left;
+		overflow: auto">#include&lt;conio.h&gt;
+ #include&lt;iostream.h&gt;
+class HINH_CN 
+    {
+      private:
+          int d,r; // chieu dai va chieu rong
+      public:
+          void nhapsl()
+             {
+               cout&lt;&lt;”\n Nhap chieu dai va chieu rong: “;
+               cin&gt;&gt;d&gt;&gt;r;
+             }
+       void in()
+          {
+            cout&lt;&lt;”\n chieu dai= “&lt;&lt;d;
+            cout&lt;&lt;”\n chieu rong = “&lt;&lt;r;
+          }
+        int dien_tich()
+          {
+            return d*r;
+          }
+        int chu_vi()
+          {
+            return 2*(d+r);
+          }
+     };
+class DAY_HINH_CN
+      {
+        private:
+          int n; // So hinh chu nhat
+          HINH_CN *h;
+        public:
+          void nhapsl();
+          HINH_CN hinh_dt_max();
+          HINH_CN *hinh_cv_max();
+      };
+void DAY_HINH_CN::nhapsl()
+      {
+        cout&lt;&lt;”\n so hinh chu nhat la: “;
+        cin&gt;&gt;n;
+        h=new HINH_CN[n+1];
+          for(int i=1;i&lt;=n;i++)
+             h[i].nhapsl();
+     }
+HINH_CN DAY_HINH_CN::hinh_dt_max()
+     {
+       HINH_CN hdtmax;
+       hdtmax=h[1];
+       for(int i=2;i&lt;=n;i++)
+         if(h[i].dien_tich()&gt;hdtmax.dien_tich())
+            hdtmax=h[i];
+       return hdtmax;
+     }
+HINH_CN *DAY_HINH_CN::hinh_cv_max()
+     {
+       int imax=1;
+       for(int i=2;i&lt;=n;i++)
+         if(h[i].chu_vi()&gt;h[imax].chu_vi())
+            imax=i;
+       return(h+imax);
+     }
+void main()
+    {
+      DAY_HINH_CN d;
+      HINH_CN hdtmax;
+      d.nhapsl();
+      hdtmax=d.hinh_dt_max();
+      hdtmax.in();
+      HINH_CN *hcvmax=d.hinh_cv_max();
+      hcvmax-&gt;in();
+      getch();
+    }</pre>
+</div>Ví dụ 2 :<br />
+   + Thuộc tính (thành phần dữ liệu) có thể là đối tượng của lớp khác đã định nghĩa bên trên.<br />
+   + Phương thức có giá trị trả về kiểu đối tượng<br />
+   + Vai trò của con trỏ this (xem phương thức maxdt của lớp TAM_GIAC)<br />
+   + Phương thức tĩnh (xem phương thức tao_tg của lớp TAM_GIAC)<br />
+    Nội dung của chương trình là nhập một dãy các điểm sau đó tìm tam giác có diện tích lớn nhất tạo thành từ các điểm vừa nhập<br />
+   Chương trình được tổ chức thành 2 lớp:<br />
+ + Lớp DIEM gồm: <br />
+    . Các thuộc tính: x và y là tọa độ của các điểm<br />
+    . Các phương thức<br />
+           void nhapsl(); Nhập tọa độ cho các điểm<br />
+           void in(); In ra tọa độ các điểm <br />
+           double do_dai(DIEM d2); // tính độ dài của đoạn thẳng<br />
+                                                   //đi qua 2 điểm,điểm ẩn xác <br />
+                                              //định bởi this và điểm (d2)<br />
++ Lớp TAM_GIAC gồm:<br />
+-	Các thuộc tính:<br />
+DIEM d1,d2,d3; // 3 đỉnh của tam giác<br />
+  -Các phương thức:<br />
+      void nhapsl(); // Nhập tọa độ 3 đỉnh<br />
+      void in(); // In tọa độ 3 đỉnh<br />
+// Tạo một đối tượng TAM_GIAC từ 3 đối tượng DIEM<br />
+  static TAM_GIAC tao_tg(DIEM e1,DIEM e2,DIEM e3)<br />
+  double dien_tich(); //Tính diện tích<br />
+// Tìm tam giác có diện tích max trong 2 tam giác *this và t2<br />
+   TAM_GIAC maxdt(TAM_GIAC t2);<br />
++ Các vấn đề cần chú ý trong chương trình là:<br />
+-	Phương thức tĩnh tao_tg( sẽ giải thích bên dưới)<br />
+-	 Phương thức maxdt<br />
++ Thuật toán là:<br />
+  -Duyệt qua các tổ hợp 3 điểm.<br />
+  - Dùng phương thức tao_tg để lập tam giác từ 3 điểm<br />
+  -Dùng phương thức maxdt để chọn tam giác có diện tích lớn hơn trong 2 tam giác: tam giác vừa tạo và tam giác có diện tích max(trong số các tam giác đã tạo)<br />
+ Chúng ta bắt đầu vào chương trình:<br />
+ <div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 1554px;
+		text-align: left;
+		overflow: auto">#include&lt;conio.h&gt;
+#include&lt;iostream.h&gt;
+#include&lt;math.h&gt;
+class DIEM
+  {
+    private:
+        double x,y; // Toa do cua diem
+    public:
+        void nhapsl()
+          {
+            cout&lt;&lt;” Toa do x,y cua diem: “;
+            cin&gt;&gt;x&gt;&gt;y;
+         }
+        void in()
+         {
+           cout&lt;&lt;” x= “&lt;&lt;x&lt;&lt;” y= “&lt;&lt;y;
+         }
+        double do_dai(DIEM d2)
+          {
+            return sqrt(pow(x-d2.x,2)+pow(y-d2.y,2));
+          }
+  };
+class TAM_GIAC
+    {
+      private:
+          DIEM d1,d2,d3; //3 dinh cua tam giac
+      public:
+          void nhapsl();
+          void in();
+     static TAM_GIAC tao_tg(DIEM e1,DIEM e2,DIEM e3)
+          {
+            TAM_GIAC t;
+             t.d1=e1;t.d2=e2;t.d3=e3;
+             return t;
+          }
+      double  dien_tich();
+      TAM_GIAC maxdt(TAM_GIAC t2);
+   };
+void TAM_GIAC::nhapsl()
+   {
+     cout&lt;&lt;”\n Dinh 1: “;
+     d1.nhapsl();
+     cout&lt;&lt;”\n Dinh 2: “;
+     d2.nhapsl();
+     cout&lt;&lt;”\n Dinh 3: “;
+     d3.nhapsl();
+   }
+void TAM_GIAC::in()
+   {
+     cout&lt;&lt;”\n Dinh 1: “;d1.in();
+     cout&lt;&lt;”\n Dinh 2: “;d2.in();
+     cout&lt;&lt;”\n Dinh 3: “;d3.in();
+   }
+double  TAM_GIAC::dien_tich()
+    {
+      double a,b,c,p,s;
+      a=d1.do_dai(d2);
+      b=d2.do_dai(d3);
+      c=d3.do_dai(d1);
+      p=(a+b+c)/2;
+      return sqrt(p*(p-a)*(p-b)*(p-c));
+    }
+TAM_GIAC TAM_GIAC::maxdt(TAM_GIAC t2)
+    {
+      if(this-&gt;dien_tich()&gt;t2.dien_tich())
+        return *this;
+     else
+        return t2;
+    }
+void main()
+     {
+       DIEM d[50];
+       int n,i;
+       clrscr();
+       cout&lt;&lt;”\n So diem= “;
+       cin&gt;&gt;n;
+       for(i=1;i&lt;=n;i++)
+         {
+          cout&lt;&lt;”\n Nhap diem: “&lt;&lt;i&lt;&lt;” : “;
+          d[i].nhapsl();
+         }
+       int j,k;
+      TAM_GIAC tmax,t;
+      tmax=TAM_GIAC::tao_tg(d[1],d[2],d[3]);
+      for(i=1;i&lt;=n-2;i++)
+         for(j=i+1;j&lt;=n-1;j++)
+           for(k=j+1;k&lt;=n;k++)
+              {
+                t=TAM_GIAC::tao_tg(d[i],d[j],d[k]);
+                tmax=tmax.maxdt(t);
+              }
+      cout&lt;&lt;”\n\n Tam giac co dien tich lon nhat: “;
+      tmax.in();
+      cout&lt;&lt;”\n Dien tich = “&lt;&lt;tmax.dien_tich();
+      getch();
+  }</pre>
+</div> Vì bài này khá dài nên em chia thành 2 phần cho mọi người dễ theo dõi,trên đây là phần 1,hôm sau sẽ có phần 2.<br />
+<font color="DarkRed"> HAPPY NEW YEAR!</font>
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+		<!-- sig -->
+			<div>
+				__________________<br />
+				<img src="http://forums.congdongcviet.com/images/smilies/applause.gif" border="0" alt="" title="Applause" class="inlineimg" />  gogo! hoan hô nào, vỗ tay nào<br />
+    Nào thì chúng ta cùng hoan hô nào vỗ tay nào<img src="http://forums.congdongcviet.com/images/smilies/applause.gif" border="0" alt="" title="Applause" class="inlineimg" />
+			</div>
+		<!-- / sig -->
+		
+
+		
+
+		
+
+		<div style="margin-top: 10px" align="right">
+			<!-- controls -->
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				
+			
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</table>
+
+
+<!-- post 7945 popup menu -->
+<div class="vbmenu_popup" id="postmenu_7945_menu" style="display:none;">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">thangtran</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="member.php?u=12430">Xem Hồ sơ công khai</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="private.php?do=newpm&amp;u=12430" rel="nofollow">Gửi một tin nhắn tới thangtran</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="search.php?do=finduser&amp;u=12430" rel="nofollow">Tìm toàn bộ bài viết bởi thangtran</a></td></tr>
+	
+	
+	
+	</table>
+</div>
+<!-- / post 7945 popup menu -->
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #7945 --><div id="lastpost"></div></div>
+
+<!-- start content table -->
+<!-- open content container -->
+
+<div id="open_content_container">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+<!-- / start content table -->
+
+<!-- controls below postbits -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-top:-3px">
+<tr valign="top">
+	
+		<td class="smallfont"><a href="newreply.php?do=newreply&amp;noquote=1&amp;p=7945" rel="nofollow"><img src="images/buttons/threadclosed.gif" alt="Đề tài đã đóng" border="0" /></a></td>
+	
+		
+		<td style="margin-bottom:2px; margin-right:20px" valign="top">
+			<!-- Search Google -->
+			<center>
+			<form method="get" action="http://www.google.com/custom" target="google_window">
+			<table bgcolor="#ffffff">
+			<tr><td nowrap="nowrap" valign="top" align="left" height="32">
+			<a href="http://www.google.com/">
+			<img src="http://www.google.com/logos/Logo_25wht.gif" border="0" alt="Google" align="middle"></img></a>
+			<label for="sbi" style="display: none">Enter your search terms</label>
+			<input type="text" name="q" size="31" maxlength="255" value="" id="sbi"></input>
+			<label for="sbb" style="display: none">Submit search form</label>
+			<input type="submit" name="sa" value="Search" id="sbb"></input>
+			<input type="hidden" name="client" value="pub-2525409910423371"></input>
+			<input type="hidden" name="forid" value="1"></input>
+			<input type="hidden" name="channel" value="6718270609"></input>
+			<input type="hidden" name="ie" value="UTF-8"></input>
+			<input type="hidden" name="oe" value="UTF-8"></input>
+			<input type="hidden" name="safe" value="active"></input>
+			<input type="hidden" name="cof" value="GALT:#008000;GL:1;DIV:#336699;VLC:663399;AH:center;BGC:F6F8FA;LBGC:F6F8FA;ALC:0000FF;LC:0000FF;T:000000;GFNT:0000FF;GIMP:0000FF;LH:50;LW:108;L:http://congdongcviet.com/logos/Logo.gif;S:http://congdongcviet.com/logos;FORID:1"></input>
+			<input type="hidden" name="hl" value="en"></input>
+			</td></tr></table>
+			</form>
+			</center>
+			<!-- Search Google -->
+		</td>
+		<td class="smallfont" width="300" align="right">&nbsp;</td>
+	
+	
+		<td align="right"><div class="pagenav" align="right">
+<table class="tborder" cellpadding="3" cellspacing="1" border="0">
+<tr>
+	<td class="vbmenu_control" style="font-weight:normal">Trang 2 trên tổng số 3</td>
+	
+	<td class="alt1"><a rel="prev" class="smallfont" href="showthread.php?t=1093" title="Trang liền trước - Từ 1 tới 10 trên tổng số 30 kết quả">&lt;</a></td>
+	<td class="alt1"><a class="smallfont" href="showthread.php?t=1093" title="Hiện từ 1 tới 10 trên tổng số 30 kết quả">1</a></td>	<td class="alt2"><span class="smallfont" title="Đang hiện từ 11 tới 20 trên tổng 30 kết quả"><strong>2</strong></span></td>
+ <td class="alt1"><a class="smallfont" href="showthread.php?t=1093&amp;page=3" title="Hiện từ 21 tới 30 trên tổng số 30 kết quả">3</a></td>
+	<td class="alt1"><a rel="next" class="smallfont" href="showthread.php?t=1093&amp;page=3" title="Trang liền sau - Từ 21 tới 30 trên tổng số 30 kết quả">&gt;</a></td>
+	
+	<td class="vbmenu_control" title="showthread.php?t=1093"><a name="PageNav"></a></td>
+</tr>
+</table>
+</div>
+		
+		</td>
+	
+</tr>
+</table>
+<!-- / controls below postbits -->
+
+
+
+
+<!-- social bookmarking links -->
+	<br />
+	<table cellpadding="6" cellspacing="1" border="0" width="100%" class="tborder" align="center">
+	<tr>
+		<td class="thead">Bookmarks</td>
+	</tr>
+	<tr>
+		<td class="alt2" style="padding-top:0px"><div style="clear:both"></div><ul style="list-style-type:none; margin:0px; padding:0px"><li class="smallfont" style="width:25%; min-width:160px; float:left; margin-top:6px">
+	
+		<a href="http://digg.com/submit?phrase=2&amp;url=http%3A%2F%2Fforums.congdongcviet.com%2Fshowthread.php%3Ft%3D1093&amp;title=L%E1%BA%ADp+tr%C3%ACnh+C%2B%2B+%7C+T%C3%A0i+li%E1%BB%87u+l%E1%BA%ADp+tr%C3%ACnh+C%2B%2B+c%E1%BB%A7a+Ph%E1%BA%A1m+V%C4%83n+%E1%BA%A4t" target="socialbookmark"><img src="images/misc/bookmarksite_digg.gif" border="0" alt="Gửi đề tài tới Digg" class="inlineimg" /></a>
+	
+	<a href="http://digg.com/submit?phrase=2&amp;url=http%3A%2F%2Fforums.congdongcviet.com%2Fshowthread.php%3Ft%3D1093&amp;title=L%E1%BA%ADp+tr%C3%ACnh+C%2B%2B+%7C+T%C3%A0i+li%E1%BB%87u+l%E1%BA%ADp+tr%C3%ACnh+C%2B%2B+c%E1%BB%A7a+Ph%E1%BA%A1m+V%C4%83n+%E1%BA%A4t" target="socialbookmark" style="text-decoration:none">Digg</a>
+</li><li class="smallfont" style="width:25%; min-width:160px; float:left; margin-top:6px">
+	
+		<a href="http://del.icio.us/post?url=http%3A%2F%2Fforums.congdongcviet.com%2Fshowthread.php%3Ft%3D1093&amp;title=L%E1%BA%ADp+tr%C3%ACnh+C%2B%2B+%7C+T%C3%A0i+li%E1%BB%87u+l%E1%BA%ADp+tr%C3%ACnh+C%2B%2B+c%E1%BB%A7a+Ph%E1%BA%A1m+V%C4%83n+%E1%BA%A4t" target="socialbookmark"><img src="images/misc/bookmarksite_delicious.gif" border="0" alt="Gửi đề tài tới del.icio.us" class="inlineimg" /></a>
+	
+	<a href="http://del.icio.us/post?url=http%3A%2F%2Fforums.congdongcviet.com%2Fshowthread.php%3Ft%3D1093&amp;title=L%E1%BA%ADp+tr%C3%ACnh+C%2B%2B+%7C+T%C3%A0i+li%E1%BB%87u+l%E1%BA%ADp+tr%C3%ACnh+C%2B%2B+c%E1%BB%A7a+Ph%E1%BA%A1m+V%C4%83n+%E1%BA%A4t" target="socialbookmark" style="text-decoration:none">del.icio.us</a>
+</li><li class="smallfont" style="width:25%; min-width:160px; float:left; margin-top:6px">
+	
+		<a href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Fforums.congdongcviet.com%2Fshowthread.php%3Ft%3D1093&amp;title=L%E1%BA%ADp+tr%C3%ACnh+C%2B%2B+%7C+T%C3%A0i+li%E1%BB%87u+l%E1%BA%ADp+tr%C3%ACnh+C%2B%2B+c%E1%BB%A7a+Ph%E1%BA%A1m+V%C4%83n+%E1%BA%A4t" target="socialbookmark"><img src="images/misc/bookmarksite_stumbleupon.gif" border="0" alt="Gửi đề tài tới StumbleUpon" class="inlineimg" /></a>
+	
+	<a href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Fforums.congdongcviet.com%2Fshowthread.php%3Ft%3D1093&amp;title=L%E1%BA%ADp+tr%C3%ACnh+C%2B%2B+%7C+T%C3%A0i+li%E1%BB%87u+l%E1%BA%ADp+tr%C3%ACnh+C%2B%2B+c%E1%BB%A7a+Ph%E1%BA%A1m+V%C4%83n+%E1%BA%A4t" target="socialbookmark" style="text-decoration:none">StumbleUpon</a>
+</li><li class="smallfont" style="width:25%; min-width:160px; float:left; margin-top:6px">
+	
+		<a href="http://www.google.com/bookmarks/mark?op=edit&amp;output=popup&amp;bkmk=http%3A%2F%2Fforums.congdongcviet.com%2Fshowthread.php%3Ft%3D1093&amp;title=L%E1%BA%ADp+tr%C3%ACnh+C%2B%2B+%7C+T%C3%A0i+li%E1%BB%87u+l%E1%BA%ADp+tr%C3%ACnh+C%2B%2B+c%E1%BB%A7a+Ph%E1%BA%A1m+V%C4%83n+%E1%BA%A4t" target="socialbookmark"><img src="images/misc/bookmarksite_google.gif" border="0" alt="Gửi đề tài tới Google" class="inlineimg" /></a>
+	
+	<a href="http://www.google.com/bookmarks/mark?op=edit&amp;output=popup&amp;bkmk=http%3A%2F%2Fforums.congdongcviet.com%2Fshowthread.php%3Ft%3D1093&amp;title=L%E1%BA%ADp+tr%C3%ACnh+C%2B%2B+%7C+T%C3%A0i+li%E1%BB%87u+l%E1%BA%ADp+tr%C3%ACnh+C%2B%2B+c%E1%BB%A7a+Ph%E1%BA%A1m+V%C4%83n+%E1%BA%A4t" target="socialbookmark" style="text-decoration:none">Google</a>
+</li></ul><div style="clear:both"></div></td>
+	</tr>
+	</table>
+<!-- / social bookmarking links -->
+
+
+
+
+
+
+
+<!-- lightbox scripts -->
+	<script type="text/javascript" src="clientscript/vbulletin_lightbox.js?v=384"></script>
+	<script type="text/javascript">
+	<!--
+	vBulletin.register_control("vB_Lightbox_Container", "posts", 1);
+	//-->
+	</script>
+<!-- / lightbox scripts -->
+
+
+
+
+
+
+
+
+
+
+<!-- next / previous links -->
+	<br />
+	<div class="smallfont" align="center">
+		<strong>&laquo;</strong>
+			<a href="showthread.php?t=1093&amp;goto=nextoldest" rel="nofollow">Đề tài liền trước</a>
+			|
+			<a href="showthread.php?t=1093&amp;goto=nextnewest" rel="nofollow">Đề tài liền sau</a>
+		<strong>&raquo;</strong>
+	</div>
+<!-- / next / previous links -->
+
+
+
+
+
+
+
+<!-- popup menu contents -->
+<br />
+
+<!-- thread tools menu -->
+<div class="vbmenu_popup" id="threadtools_menu" style="display:none">
+<form action="postings.php?t=1093&amp;pollid=" method="post" name="threadadminform">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">Các công cụ đề tài<a name="goto_threadtools"></a></td>
+	</tr>
+	<tr>
+		<td class="vbmenu_option"><img class="inlineimg" src="images/buttons/printer.gif" alt="Show Printable Version" /> <a href="printthread.php?t=1093" accesskey="3" rel="nofollow">Show Printable Version</a></td>
+	</tr>
+	
+	<tr>
+		<td class="vbmenu_option"><img class="inlineimg" src="images/buttons/sendtofriend.gif" alt="Email trang này" /> <a href="sendmessage.php?do=sendtofriend&amp;t=1093" rel="nofollow">Email trang này</a></td>
+	</tr>
+	
+	
+	
+	
+	</table>
+</form>
+</div>
+<!-- / thread tools menu -->
+
+<!-- **************************************************** -->
+
+<!-- thread display mode menu -->
+<div class="vbmenu_popup" id="displaymodes_menu" style="display:none">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">Các chế độ hiển thị<a name="goto_displaymodes"></a></td>
+	</tr>
+	<tr>
+	
+		<td class="vbmenu_option" title="nohilite"><img class="inlineimg" src="images/buttons/mode_linear.gif" alt="Chế độ tuyến tính" /> <strong>Chế độ tuyến tính</strong></td>
+	
+	</tr>
+	<tr>
+	
+		<td class="vbmenu_option"><img class="inlineimg" src="images/buttons/mode_hybrid.gif" alt="Chế độ kết hợp" /> <a href="showthread.php?mode=hybrid&amp;t=1093">Chuyển sang chế độ kết hợp</a></td>
+	
+	</tr>
+	<tr>
+	
+		<td class="vbmenu_option"><img class="inlineimg" src="images/buttons/mode_threaded.gif" alt="Chế độ tuyến tính" /> <a href="showthread.php?p=6060&amp;mode=threaded#post6060">Chuyển sang chế độ phân luồng</a></td>
+	
+	</tr>
+	</table>
+</div>
+<!-- / thread display mode menu -->
+
+<!-- **************************************************** -->
+
+
+
+<!-- **************************************************** -->
+
+
+
+<!-- / popup menu contents -->
+
+
+<!-- forum rules and admin links -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+<tr valign="bottom">
+	<td width="100%" valign="top">
+		<table class="tborder" cellpadding="6" cellspacing="1" border="0" width="210">
+<thead>
+<tr>
+	<td class="thead">
+		<a style="float:right" href="#top" onclick="return toggle_collapse('forumrules')"><img id="collapseimg_forumrules" src="images/buttons/collapse_thead.gif" alt="" border="0" /></a>
+		Các nguyên tắc gửi bài
+	</td>
+</tr>
+</thead>
+<tbody id="collapseobj_forumrules" style="">
+<tr>
+	<td class="alt1" nowrap="nowrap"><div class="smallfont">
+		
+		<div>Bạn <strong>không thể</strong> gửi đề tài mới</div>
+		<div>Bạn <strong>không thể</strong> gửi bài trả lời</div>
+		<div>Bạn <strong>không thể</strong> gửi các đính kèm</div>
+		<div>Bạn <strong>không thể</strong> chỉnh sửa bài viết của bạn</div>
+		<hr />
+		
+		<div><a href="misc.php?do=bbcode" target="_blank">BB code</a>: <strong>On</strong></div>
+		<div><a href="misc.php?do=showsmilies" target="_blank">Mặt cười</a>: <strong>On</strong></div>
+		<div><a href="misc.php?do=bbcode#imgcode" target="_blank">[IMG]</a> code: <strong>On</strong></div>
+		<div>HTML code: <strong>Off</strong></div>
+		<hr />
+		<div><a href="misc.php?do=showrules" target="_blank">Nội quy diễn đàn</a></div>
+	</div></td>
+</tr>
+</tbody>
+</table>
+	</td>
+	<td class="smallfont" align="right">
+		<table cellpadding="0" cellspacing="0" border="0">
+		
+		<tr>
+			<td>
+			<div class="smallfont" style="text-align:left; white-space:nowrap">
+	<form action="forumdisplay.php" method="get">
+	<input type="hidden" name="s" value="" />
+	<input type="hidden" name="daysprune" value="" />
+	<strong>Nhảy tới diễn đàn</strong><br />
+	<select name="f" onchange="this.form.submit();">
+		<optgroup label="Các khu vực của site">
+			<option value="cp" >User Control Panel</option>
+			<option value="pm" >Tin nhắn</option>
+			<option value="subs" >Các thuê bao</option>
+			<option value="wol" >Ai online</option>
+			<option value="search" >Tìm kiếm các diễn đàn</option>
+			<option value="home" >Forums Home</option>
+		</optgroup>
+		
+		<optgroup label="Forums">
+		<option value="1" class="fjdpth0" > CỘNG ĐỒNG C VIỆT</option>
+<option value="2" class="fjdpth1" >&nbsp; &nbsp;  Thông báo chung</option>
+<option value="3" class="fjdpth1" >&nbsp; &nbsp;  Ý kiến, đề xuất và khiếu nại</option>
+<option value="15" class="fjdpth0" > SOFTWARE ENGINEERING</option>
+<option value="53" class="fjdpth1" >&nbsp; &nbsp;  Rắc rối với Software Engineering</option>
+<option value="65" class="fjdpth1" >&nbsp; &nbsp;  Tutorials và Thủ thuật</option>
+<option value="27" class="fjdpth1" >&nbsp; &nbsp;  Tài liệu và công cụ cho Software Engineering</option>
+<option value="32" class="fjdpth0" > ĐỊNH HƯỚNG &amp; ĐÀO TẠO</option>
+<option value="55" class="fjdpth1" >&nbsp; &nbsp;  Đào tạo</option>
+<option value="19" class="fjdpth1" >&nbsp; &nbsp;  Kinh nghiệm ngành IT</option>
+<option value="49" class="fjdpth1" >&nbsp; &nbsp;  Công việc ngành IT</option>
+<option value="9" class="fjdpth0" > LẬP TRÌNH VISUAL C#</option>
+<option value="17" class="fjdpth1" >&nbsp; &nbsp;  Thắc mắc về lập trình C#</option>
+<option value="31" class="fjdpth1" >&nbsp; &nbsp;  Tutorials và Thủ thuật lập trình C#</option>
+<option value="57" class="fjdpth1" >&nbsp; &nbsp;  Dự án &amp; Source code về C#</option>
+<option value="58" class="fjdpth1" >&nbsp; &nbsp;  Công cụ, ebooks C#</option>
+<option value="5" class="fjdpth0" > LẬP TRÌNH VISUAL C++ | LẬP TRÌNH VISUAL C++.NET</option>
+<option value="14" class="fjdpth1" >&nbsp; &nbsp;  Thắc mắc về lập trình Visual C++</option>
+<option value="61" class="fjdpth1" >&nbsp; &nbsp;  Windows API, Hooking, xử lý Windows Message</option>
+<option value="30" class="fjdpth1" >&nbsp; &nbsp;  Tutorials và Thủ thuật Visual C++</option>
+<option value="64" class="fjdpth1" >&nbsp; &nbsp;  Dự án &amp; Source code về VC++</option>
+<option value="66" class="fjdpth1" >&nbsp; &nbsp;  Công cụ, ebooks VC++</option>
+<option value="7" class="fjdpth0" > LẬP TRÌNH C++ | LẬP TRÌNH C | LẬP TRÌNH C++0X</option>
+<option value="10" class="fjdpth1" >&nbsp; &nbsp;  Sinh viên thắc mắc về lập trình C/C++</option>
+<option value="59" class="fjdpth1" >&nbsp; &nbsp;  Thắc mắc về Lập trình C/C++/C++0x</option>
+<option value="54" class="fjdpth1" >&nbsp; &nbsp;  Hướng đối tượng với C++/C++0x</option>
+<option value="21" class="fjsel" selected="selected">&nbsp; &nbsp;  Thủ thuật, Tutorials và Mã nguồn C/C++/C++0x</option>
+<option value="63" class="fjdpth1" >&nbsp; &nbsp;  Công cụ, ebooks C/C++/C++0x</option>
+<option value="11" class="fjdpth0" > CẤU TRÚC DỮ LIỆU VÀ GIẢI THUẬT</option>
+<option value="36" class="fjdpth1" >&nbsp; &nbsp;  Thắc mắc về cấu trúc dữ liệu và giải thuật</option>
+<option value="56" class="fjdpth1" >&nbsp; &nbsp;  Thủ thuật, Tutorials và Mã nguồn</option>
+<option value="38" class="fjdpth1" >&nbsp; &nbsp;  Tài liệu, ebooks</option>
+<option value="12" class="fjdpth0" > DATABASE &amp; REPORTING | CÁC HỆ QUẢN TRỊ DATABASE</option>
+<option value="6" class="fjdpth1" >&nbsp; &nbsp;  Thắc mắc về đại cương của Database &amp; Reporting</option>
+<option value="35" class="fjdpth1" >&nbsp; &nbsp;  Thắc mắc về Oracle</option>
+<option value="60" class="fjdpth1" >&nbsp; &nbsp;  Thắc mắc về Microsoft SQL Server &amp; Microsoft Access</option>
+<option value="34" class="fjdpth1" >&nbsp; &nbsp;  Thắc mắc về MySQL và SQL Lite</option>
+<option value="67" class="fjdpth1" >&nbsp; &nbsp;  Thủ thuật Tutorials về Database</option>
+<option value="39" class="fjdpth1" >&nbsp; &nbsp;  Tài liệu, ebooks DB</option>
+<option value="8" class="fjdpth0" > THẢO LUẬN CHUNG</option>
+<option value="41" class="fjdpth1" >&nbsp; &nbsp;  Hệ điều hành</option>
+<option value="50" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Tài liệu về HĐH</option>
+<option value="25" class="fjdpth1" >&nbsp; &nbsp;  English</option>
+<option value="13" class="fjdpth1" >&nbsp; &nbsp;  Các Hỏi/Đáp khác</option>
+<option value="22" class="fjdpth0" > THÀNH VIÊN CỘNG ĐỒNG C VIỆT</option>
+<option value="51" class="fjdpth1" >&nbsp; &nbsp;  Hình tượng thành viên</option>
+<option value="28" class="fjdpth1" >&nbsp; &nbsp;  Ý tưởng của bạn là gì?</option>
+<option value="29" class="fjdpth1" >&nbsp; &nbsp;  Sản phẩm của bạn là gì?</option>
+<option value="42" class="fjdpth0" > KHU GIẢI TRÍ</option>
+<option value="33" class="fjdpth1" >&nbsp; &nbsp;  Giải trí - Thư giãn</option>
+<option value="43" class="fjdpth1" >&nbsp; &nbsp;  Giao lưu</option>
+<option value="45" class="fjdpth1" >&nbsp; &nbsp;  Giới thiệu website của bạn.</option>
+
+		</optgroup>
+		
+	</select><input type="submit" class="button" value="Go" />
+	</form>
+</div>
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+<!-- /forum rules and admin links -->
+
+<br />
+
+<table class="tborder" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<thead>
+	<tr>
+		<td class="tcat" width="100%" colspan="5">
+			<a style="float:right" href="#top" onclick="return toggle_collapse('similarthreads')"><img id="collapseimg_similarthreads" src="images/buttons/collapse_tcat.gif" alt="" border="0" /></a>
+			Các đề tài tương tự<a name="similarthreads"></a>
+		</td>
+	</tr>
+</thead>
+<tbody id="collapseobj_similarthreads" style="">
+<tr class="thead" align="center">
+	<td class="thead" width="40%">Đề tài</td>
+	<td class="thead" width="15%" nowrap="nowrap">Người bắt đầu đề tài</td>
+	<td class="thead" width="20%">Diễn đàn</td>
+	<td class="thead" width="5%">Các trả lời</td>
+	<td class="thead" width="20%">Bài viết cuối</td>
+</tr>
+<tr>
+	<td class="alt1" align="left">
+		
+		<span class="smallfont"> <a href="showthread.php?t=1430" title="Bài viết này do bạn trannam136 (hổng biết có phải bro ntnam không nữa) trích ra từ tạp chí &quot;học lập trình&quot;, đây có lẽ là bài viết khá hay trên mạng, mình xin mạn phép...">Về việc học lập trình...</a></span>
+	</td>
+	<td class="alt2" nowrap="nowrap"><span class="smallfont">neverland87</span></td>
+	<td class="alt1" nowrap="nowrap"><span class="smallfont">Kinh nghiệm ngành IT</span></td>
+	<td class="alt2" align="center"><span class="smallfont">20</span></td>
+	<td class="alt1" align="right"><span class="smallfont">06-10-2009 <span class="time">01:20 AM</span></span></td>
+</tr>
+<tr>
+	<td class="alt1" align="left">
+		
+		<span class="smallfont"> <a href="showthread.php?t=1824" title="I. Thảo luận 
+ Lập trình là một lĩnh vực quan trọng trong thế giới Công nghệ thông tin. Mặc dù lĩnh vực này chỉ thuộc về một số ít người trên thế giới - theo nghĩa nào...">Công cụ lập trình | Các bộ công cụ lập trình thời đại</a></span>
+	</td>
+	<td class="alt2" nowrap="nowrap"><span class="smallfont">neverland87</span></td>
+	<td class="alt1" nowrap="nowrap"><span class="smallfont">Các Hỏi/Đáp khác</span></td>
+	<td class="alt2" align="center"><span class="smallfont">9</span></td>
+	<td class="alt1" align="right"><span class="smallfont">01-10-2009 <span class="time">10:11 AM</span></span></td>
+</tr>
+<tr>
+	<td class="alt1" align="left">
+		
+		<span class="smallfont"> <a href="showthread.php?t=14324" title="Vài thế kỷ trước tại Hà thành có chàng trai trẻ tên gọi Tích Gia Văn, là sinh viên năm cuối khoa Công nghệ thông tin Đại học Bách khoa Hà Nội. Văn bình sinh thích viết...">Lập trình sư</a></span>
+	</td>
+	<td class="alt2" nowrap="nowrap"><span class="smallfont">dieucay555</span></td>
+	<td class="alt1" nowrap="nowrap"><span class="smallfont">Giải trí - Thư giãn</span></td>
+	<td class="alt2" align="center"><span class="smallfont">8</span></td>
+	<td class="alt1" align="right"><span class="smallfont">22-05-2009 <span class="time">11:37 PM</span></span></td>
+</tr>
+<tr>
+	<td class="alt1" align="left">
+		
+		<span class="smallfont"> <a href="showthread.php?t=10168" title="Lập trình viên (người lập trình hay thảo chương viên điện toán), là người viết ra các chương trình máy tính. Thảo chương viên điện toán là một từ cũ, được dùng trước...">Lập Trình Viên là ai?</a></span>
+	</td>
+	<td class="alt2" nowrap="nowrap"><span class="smallfont">chucphuc</span></td>
+	<td class="alt1" nowrap="nowrap"><span class="smallfont">Đào tạo</span></td>
+	<td class="alt2" align="center"><span class="smallfont">3</span></td>
+	<td class="alt1" align="right"><span class="smallfont">20-05-2009 <span class="time">09:08 PM</span></span></td>
+</tr>
+<tr>
+	<td class="alt1" align="left">
+		
+		<span class="smallfont"> <a href="showthread.php?t=2707" title="Nguồn: GameDev.vn 
+  
+Chương 1: Kiểu, Biến, Chuẩn I/O và viết thử game căn bản: Lost Fortune 
+Bài 1.1     Giới thiệu C++: 
+C++ là một ngôn ngữ lập trình tiến tiến,...">Beginning C++ Game Programming, Dành cho những ai chưa học C++</a></span>
+	</td>
+	<td class="alt2" nowrap="nowrap"><span class="smallfont">huynguyen</span></td>
+	<td class="alt1" nowrap="nowrap"><span class="smallfont">Thủ thuật, Tutorials và Mã nguồn C/C++/C++0x</span></td>
+	<td class="alt2" align="center"><span class="smallfont">14</span></td>
+	<td class="alt1" align="right"><span class="smallfont">29-06-2007 <span class="time">08:44 AM</span></span></td>
+</tr>
+
+</tbody>
+</table>
+
+<br />
+
+
+
+<br />
+<div class="smallfont" align="center">Toàn bộ thời gian tính theo múi GMT +7. Bây giờ là <span class="time">11:04 PM</span>.</div>
+<br />
+
+
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+<!-- /content area table -->
+
+<div id="page-ref">
+<form action="index.php" method="get" style="clear:left">
+
+<table cellpadding="6" cellspacing="0" border="0" width="100%" class="page" align="center">
+<tr>
+	
+	
+	<td class="tfoot" align="right" width="100%">
+		<div class="smallfont">
+			<strong>
+				<a href="sendmessage.php" rel="nofollow" accesskey="9">Liên hệ chúng tôi</a> -
+				<a href="http://congdongcviet.com">Cộng đồng C Việt</a> -
+				
+				
+				<a href="archive/index.php">Archive</a> -
+				
+				
+				
+				<a href="#top" onclick="self.scrollTo(0, 0); return false;">Top</a>
+			</strong>
+		</div>
+	</td>
+</tr>
+</table>
+
+<!-- Add by Kevin -->
+<div id="script_extent">
+	<script language="javascript" type="text/javascript" src="clientscript/js/avim.js"></script>
+	<script language="javascript" type="text/javascript" src="clientscript/js/adv_code_tools.js"></script>
+</div>
+<div id="foot_info" class="clearfix">
+	<div class="copyright_sign smallfont"">
+		<div class="src_coyright">
+			<!-- Do not remove this copyright notice -->
+			- Nguồn đã được cung cấp bởi vBulletin&reg; version 3.8.4<br />- Bản quyền nguồn &copy;2000 - 2010, Jelsoft Enterprises Ltd.
+			<!-- Do not remove this copyright notice -->
+		</div>
+
+		<div class="usage_copyright">
+			<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+			<div>- Sử dụng và phát triển bởi <a href="http://www.congdongcviet.com" alt="Cộng đồng C Việt">Cộng đồng C Việt&reg;</a>: 2006 - 2009</div>
+			
+			<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+			
+		</div>
+	</div>
+	<div class="tracking_code">
+		<!-- Google Analysis, Google tracking code -->
+		<div class="google_analysis">
+			<script type="text/javascript">
+				var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+				document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+			</script>
+			<script type="text/javascript">
+				try {
+					var pageTracker = _gat._getTracker("UA-6069265-2");
+					pageTracker._setDomainName(".congdongcviet.com");
+					pageTracker._trackPageview();
+				} 
+				catch (err) {
+				}
+			</script>
+		</div>
+		<!-- End of Google Analysis, Google tracking code -->
+		
+		<!-- Alexa button -->
+		<div style="margin-right: 18px">
+			<script type='text/javascript' language='JavaScript' src='http://xslt.alexa.com/site_stats/js/t/c?url=congdongcviet.com'></script>
+		</div>
+	</div>
+</div>
+
+</form>
+
+
+
+</div>
+
+
+<script type="text/javascript">
+<!--
+	// Main vBulletin Javascript Initialization
+	vBulletin_init();
+//-->
+</script>
+
+<!-- temp -->
+<div style="display:none">
+	<!-- thread rate -->
+	
+		
+	
+	<!-- / thread rate -->
+</div>
+
+</body>
+</html>

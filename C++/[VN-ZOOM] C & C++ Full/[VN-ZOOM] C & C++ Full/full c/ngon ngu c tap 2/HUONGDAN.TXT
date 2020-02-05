@@ -1,0 +1,18 @@
+   Tap tin TC.ZIP la tap tin nen toan bo thu muc Turbo C version 2.0.bang 
+Norton Commander.
+   Ban cung dung Norton Commander version 5.0 de bung tap tin nay, hoan
+nguyn lai cac tap tin cua phan mem Tubo C. 
+   Ban lan luot thuc hien nhu sau:
+   1-Tao thu muc TC tren dia C: hoac D:
+	-Bang DOS go lenh MD \TC bam <Enter>
+   	-Bang Norton 
+	   +Bam phim <F7>
+	   +Go ten thu muc TC
+	   +Bam phim <Enter>
+   2-Mo 2 khung panels: Mot ben la o dia A:, mot ben la thu muc TC vua 
+tao trn dia cung.
+   3-Di vet sang (Hilight) den tap tin TC.ZIP tren dia A:,bam phim <Insert>
+de chon
+   4-Bam dong thoi 2 phim <Alt + F6>. Di con tro den muc Include 
+subdirectories, bam phim <Enter> 2 lan. 
+   Norton Commander se hoan nguyen lai cac tap tin	

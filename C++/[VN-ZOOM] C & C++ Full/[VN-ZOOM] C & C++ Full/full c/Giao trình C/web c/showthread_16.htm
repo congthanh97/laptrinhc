@@ -1,0 +1,3762 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="vi">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="vBulletin 3.8.4" />
+
+	<meta name="keywords" content=" Bài tập giải thuật | Bài tập C | Bài tập thuật toán cơ bản, Lap trinh C,lap trinh C++,lap trinh C#,Ma nguon,Thuat toan,cau truc du lieu,giai thuat,computer programming,Software Engineering,cong nghe phan mem,ANSI C,ISO C++,Visual C++,VC++,C++.NET,C++Builder,DEV-CPP,C#,C-Sharp,Thuật toán trên C/C++,Database,Linux,Unix Kernel,php,ASP.NET" />
+	<meta name="description" content="Trang 4- Bài tập giải thuật | Bài tập C | Bài tập thuật toán cơ bản Thắc mắc về cấu trúc dữ liệu và giải thuật. Lập trình C, Lập trình C++, Lập trình C#, Thuật toán, cấu trúc dữ liệu, giải thuật, mã nguồn, đồ họa" />
+
+
+	<!-- ICON -->
+	<link rel="icon" type="image/x-icon" href="images/icons/logo.ico" />
+	<!-- SHORTCUT ICON -->
+	<link rel="shortcut icon" type="image/x-icon" href="images/icons/logo.ico" />
+	
+<!-- CSS Stylesheet -->
+<style type="text/css" id="vbulletin_css">
+/**
+* vBulletin 3.8.4 CSS
+* Style: 'Master Skin'; Style ID: 1
+*/
+body
+{
+	background: #F5F7F9;
+	color: #000000;
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	margin: 0px 0px 0px 0px;padding: 0px;
+}
+a:link, body_alink
+{
+	color: #0049AA;
+	text-decoration: none;
+}
+a:visited, body_avisited
+{
+	color: #23488C;
+	text-decoration: none;
+}
+a:hover, a:active, body_ahover
+{
+	color: #0067F0;
+	text-decoration: underline;
+}
+.page
+{
+	background: #F5F7F9;
+	color: #000000;
+}
+td, th, p, li
+{
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.tborder
+{
+	background: #A1D2F1;
+	color: #000000;
+	border: 1px solid #6D9806;
+}
+.tcat
+{
+	background: #A7C4E3 url(images/gradients/gradient_tcat.jpg) repeat-x top left;
+	color: #000000;
+	font: bold 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.tcat a:link, .tcat_alink
+{
+	color: #0049AA;
+	text-decoration: none;
+}
+.tcat a:visited, .tcat_avisited
+{
+	color: #23488C;
+	text-decoration: none;
+}
+.tcat a:hover, .tcat a:active, .tcat_ahover
+{
+	color: #0067F0;
+	text-decoration: underline;
+}
+.thead
+{
+	background: #A7C4E3 url(images/gradients/gradient_thead.jpg) repeat-x top left;
+	color: #000000;
+	font: bold 11px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.thead a:link, .thead_alink
+{
+	color: #0049AA;
+	text-decoration: none;
+}
+.thead a:visited, .thead_avisited
+{
+	color: #23488C;
+	text-decoration: none;
+}
+.thead a:hover, .thead a:active, .thead_ahover
+{
+	color: #0067F0;
+	text-decoration: underline;
+}
+.tfoot
+{
+	background: #319B02 url(images/gradients/nav_bar.jpg) repeat-x top left;
+	color: #000000;
+}
+.tfoot a:link, .tfoot_alink
+{
+	color: #000000;
+	text-decoration: none;
+}
+.tfoot a:visited, .tfoot_avisited
+{
+	color: #443f3f;
+	text-decoration: none;
+}
+.tfoot a:hover, .tfoot a:active, .tfoot_ahover
+{
+	color: #E05806;
+	text-decoration: underline;
+}
+.alt1, .alt1Active
+{
+	background: #F5F7F9;
+	color: #000000;
+}
+.alt2, .alt2Active
+{
+	background: #E3EBF2;
+	color: #000000;
+}
+.inlinemod
+{
+	background: #FFFFCC;
+	color: #000000;
+}
+.wysiwyg
+{
+	background: #F5F7F9;
+	color: #000000;
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+textarea, .bginput
+{
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.bginput option, .bginput optgroup
+{
+	font-size: 10pt;
+	font-family: verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.button
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+select
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+option, optgroup
+{
+	font-size: 11px;
+	font-family: verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.smallfont
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.time
+{
+	color: #606060;
+}
+.navbar
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.highlight
+{
+	color: #FF0000;
+	font-weight: bold;
+}
+.fjsel
+{
+	background: #3E5C92;
+	color: #E0E0F6;
+}
+.fjdpth0
+{
+	background: #F7F7F7;
+	color: #000000;
+}
+.panel
+{
+	background: #F5F7F9;
+	color: #000000;
+	padding: 10px; border: 2px outset;
+}
+.panelsurround
+{
+	background: #E3EBF2;
+	color: #000000;
+}
+legend
+{
+	color: #22229C;
+	font: 11px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.vbmenu_control
+{
+	background: #319B02 url(images/gradients/nav_bar.jpg) repeat-x top left;
+	color: #000000;
+	font: bold 11px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	padding: 3px 6px 3px 6px;white-space: nowrap;
+}
+.vbmenu_control a:link, .vbmenu_control_alink
+{
+	color: #000000;
+	text-decoration: none;
+}
+.vbmenu_control a:visited, .vbmenu_control_avisited
+{
+	color: #443F3F;
+	text-decoration: none;
+}
+.vbmenu_control a:hover, .vbmenu_control a:active, .vbmenu_control_ahover
+{
+	color: #E05806;
+	text-decoration: underline;
+}
+.vbmenu_popup
+{
+	background: #F5F7F9;
+	color: #000000;
+	border: 1px solid #0B198C;
+}
+.vbmenu_option
+{
+	background: #F5F7F9;
+	color: #000000;
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	white-space: nowrap;cursor: pointer;
+}
+.vbmenu_option a:link, .vbmenu_option_alink
+{
+	color: #0049AA;
+	text-decoration: none;
+}
+.vbmenu_option a:visited, .vbmenu_option_avisited
+{
+	color: #23488C;
+	text-decoration: none;
+}
+.vbmenu_option a:hover, .vbmenu_option a:active, .vbmenu_option_ahover
+{
+	color: #0067F0;
+	text-decoration: underline;
+}
+.vbmenu_hilite
+{
+	background: #E3EBF2;
+	color: #000000;
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	white-space: nowrap;cursor: pointer;
+}
+.vbmenu_hilite a:link, .vbmenu_hilite_alink
+{
+	color: #0049AA;
+	text-decoration: none;
+}
+.vbmenu_hilite a:visited, .vbmenu_hilite_avisited
+{
+	color: #23488C;
+	text-decoration: none;
+}
+.vbmenu_hilite a:hover, .vbmenu_hilite a:active, .vbmenu_hilite_ahover
+{
+	color: #0067F0;
+	text-decoration: underline;
+}
+/* ***** styling for 'big' usernames on postbit etc. ***** */
+.bigusername { font-size: 14pt; }
+
+/* ***** small padding on 'thead' elements ***** */
+td.thead, th.thead, div.thead { padding: 4px; }
+
+/* ***** basic styles for multi-page nav elements */
+.pagenav a { text-decoration: none; }
+.pagenav td { padding: 2px 4px 2px 4px; }
+
+/* ***** de-emphasized text */
+.shade, a.shade:link, a.shade:visited { color: #777777; text-decoration: none; }
+a.shade:active, a.shade:hover { color: #FF4400; text-decoration: underline; }
+.tcat .shade, .thead .shade, .tfoot .shade { color: #DDDDDD; }
+
+/* ***** define margin and font-size for elements inside panels ***** */
+.fieldset { margin-bottom: 6px; }
+.fieldset, .fieldset td, .fieldset p, .fieldset li { font-size: 11px; }
+/******Addition CSS******/
+#open_content_container,
+#header_wrapper,
+#page-ref {
+    min-width: 991px;
+    margin: 0 auto;
+}
+
+#header_wrapper,
+#page-ref {
+    position: relative;
+}
+
+#first_header {
+    padding: 0 25px;
+    position: inherit;
+}
+
+#second_ad_left,
+#header_left_cell {
+    width: 22%;
+    float: left;
+    text-align: left;
+}
+
+#second_ad_right,
+#header_right_cell {
+    width: 78%;
+    float: right;
+    text-align:right;
+}
+
+#second_ad_header {
+    padding: 11px 0 0;
+}
+
+.cviet_notices {
+    padding: 11px;
+}
+
+* html #open_content_container,
+* html #header_wrapper,
+* html #page-ref {
+    width: 991px;
+    margin: 0 auto;
+}
+
+#select_daysprune option,
+#sel_daysprune option {
+    text-align: right;
+}
+
+/* Search button */
+.searchgo input {
+    border: 1px solid #525B73;
+}
+
+.searchgo input:hover,
+.searchgo input:active {
+    border: 1px solid #FF6600;
+}
+
+.quote {
+    background: #FFFFC1;
+    color: #000000;
+    border:1px inset;
+}
+
+#foot_info {
+    padding: 6px;
+}
+
+.copyright_sign {
+    width: 49%;
+    float: left;
+}
+
+.tracking_code {
+    width: 49%;
+    float: right;
+    text-align: right;
+}
+
+.google_analysis {
+    height: 0;
+}
+
+/**
+ * Float clearing hacks
+ */
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    font-size: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+/**
+ * Backslash hack hides from IE mac
+ */
+.clearfix {
+    height: 1%;
+    display: block; /* Resets display for IE Win */
+}
+</style>
+<link rel="stylesheet" type="text/css" href="clientscript/vbulletin_important.css?v=384" />
+
+
+<!-- / CSS Stylesheet -->
+
+<script type="text/javascript" src="clientscript/yui/yahoo-dom-event/yahoo-dom-event.js?v=384"></script>
+<script type="text/javascript" src="clientscript/yui/connection/connection-min.js?v=384"></script>
+<script type="text/javascript">
+<!--
+var SESSIONURL = "";
+var SECURITYTOKEN = "guest";
+var IMGDIR_MISC = "images/misc";
+var vb_disable_ajax = parseInt("0", 10);
+// -->
+</script>
+<script type="text/javascript" src="clientscript/vbulletin_global.js?v=384"></script>
+<script type="text/javascript" src="clientscript/vbulletin_menu.js?v=384"></script>
+
+
+	<link rel="alternate" type="application/rss+xml" title="Cộng đồng C Việt RSS Feed" href="external.php?type=RSS2" />
+	
+		<link rel="alternate" type="application/rss+xml" title="Cộng đồng C Việt - Thắc mắc về cấu trúc dữ liệu và giải thuật - RSS Feed" href="external.php?type=RSS2&amp;forumids=36" />
+	
+
+	<title> Bài tập giải thuật | Bài tập C | Bài tập thuật toán cơ bản - Trang 4 - Cộng đồng C Việt</title>
+	<script type="text/javascript" src="clientscript/vbulletin_post_loader.js?v=384"></script>
+	<style type="text/css" id="vbulletin_showthread_css">
+	<!--
+	
+	#links div { white-space: nowrap; }
+	#links img { vertical-align: middle; }
+	-->
+	</style>
+</head>
+<body onload="">
+<!-- logo -->
+<a name="top"></a>
+<div id="header_wrapper" align="center" class="clearfix">
+	<div id="first_header">
+		<div id="header_left_cell" class="logo"><a href="index.php"><img src="images/logos/Logo.gif" border="0" alt="Cộng đồng C Việt" /></a></div>
+		<div id="header_right_cell"><!-- Adcode B1-->
+<a href="http://quacau.com" title="Xây dựng phần mềm, thiết kế website, cung cấp giải pháp" target="_blank" rel="external" onclick="javascript: pageTracker._trackPageview('/outgoing/forums/quacau.com');"><img src="http://congdongcviet.com/images/quacau-christmas-2009.jpg" style="border: 1px solid black;" alt="Xây dựng phần mềm, thiết kế website, cung cấp giải pháp" title="Xây dựng phần mềm, thiết kế website, cung cấp giải pháp" /></a></div>
+	</div>
+</div>
+<!-- /logo -->
+
+<!-- content table -->
+<!-- open content container -->
+
+<div id="open_content_container">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+
+
+
+<div id="second_ad_header" class="clearfix">
+<!-- Adcode B2-->
+    <div id="second_ad_left"></div>
+<!-- Adcode B3-->
+    <div id="second_ad_right">
+        <a href="http://www.aptech-news.com/missionIT/" title="Học lập trình viên tại Aptech" target="_blank" rel="external" onclick="javascript: pageTracker._trackPageview('/outgoing/forums/Aprotrain-Aptech');"><img src="http://congdongcviet.com/images/aprotrain-aptech-december-2009.gif" style="border: 1px solid black;" alt="Học lập trình viên tại Aptech" title="Học lập trình viên tại Aptech" /></a>
+    </div>
+</div>
+<br />
+
+<!-- breadcrumb, login, pm info -->
+<table class="tborder" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+	<td class="alt1" width="100%">
+		
+			<table cellpadding="0" cellspacing="0" border="0">
+			<tr valign="bottom">
+				<td><a href="#" onclick="history.back(1); return false;"><img src="images/misc/navbits_start.gif" alt="Quay lại" border="0" /></a></td>
+				<td>&nbsp;</td>
+				<td width="100%"><span class="navbar"><a href="index.php" accesskey="1">Cộng đồng C Việt</a></span> 
+	<span class="navbar">&gt; <a href="forumdisplay.php?f=11">CẤU TRÚC DỮ LIỆU VÀ GIẢI THUẬT</a></span>
+
+
+	<span class="navbar">&gt; <a href="forumdisplay.php?f=36">Thắc mắc về cấu trúc dữ liệu và giải thuật</a></span>
+
+</td>
+			</tr>
+			<tr>
+				<td class="navbar" style="font-size:10pt; padding-top:1px" colspan="3"><a href="/showthread.php?t=180&amp;page=4"><img class="inlineimg" src="images/misc/navbits_finallink_ltr.gif" alt="Tải lại trang này" border="0" /></a> <strong>
+	 Bài tập giải thuật | Bài tập C | Bài tập thuật toán cơ bản
+
+</strong></td>
+			</tr>
+			</table>
+		
+	</td>
+
+	<td class="alt2" nowrap="nowrap" style="padding:0px">
+		<!-- login form -->
+		<form action="login.php?do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+		<script type="text/javascript" src="clientscript/vbulletin_md5.js?v=384"></script>
+		<table cellpadding="0" cellspacing="3" border="0">
+		<tr>
+			<td class="smallfont" style="white-space: nowrap;"><label for="navbar_username">Tên đăng nhập</label></td>
+			<td><input type="text" class="bginput" style="font-size: 11px" name="vb_login_username" id="navbar_username" size="10" accesskey="u" tabindex="101" value="Tên đăng nhập" onfocus="if (this.value == 'Tên đăng nhập') this.value = '';" /></td>
+			<td class="smallfont" nowrap="nowrap"><label for="cb_cookieuser_navbar"><input type="checkbox" name="cookieuser" value="1" tabindex="103" id="cb_cookieuser_navbar" accesskey="c" />Nhớ tôi vào?</label></td>
+		</tr>
+		<tr>
+			<td class="smallfont"><label for="navbar_password">Mật khẩu</label></td>
+			<td><input type="password" class="bginput" style="font-size: 11px" name="vb_login_password" id="navbar_password" size="10" tabindex="102" /></td>
+			<td><input type="submit" class="button" value="Log in" tabindex="104" title="Nhập vào Tên đăng nhập và Mật khẩu của bạn trong các hộp đã cung cấp để đăng nhập, hoặc click vào 'register' button để tạo một Hồ sơ cho bạn." accesskey="s" /></td>
+		</tr>
+		</table>
+		<input type="hidden" name="s" value="" />
+		<input type="hidden" name="securitytoken" value="guest" />
+		<input type="hidden" name="do" value="login" />
+		<input type="hidden" name="vb_login_md5password" />
+		<input type="hidden" name="vb_login_md5password_utf" />
+		</form>
+		<!-- / login form -->
+	</td>
+
+</tr>
+</table>
+<!-- / breadcrumb, login, pm info -->
+
+<!-- nav buttons bar -->
+<div class="tborder" style="padding:1px; border-top-width:0px">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+	<tr align="center">
+		
+		
+			<td class="vbmenu_control"><a href="register.php" rel="nofollow">Đăng ký</a></td>
+		
+		
+		<td class="vbmenu_control"><a rel="help" href="faq.php" accesskey="5">FAQ</a></td>
+		
+			
+			
+		
+		<td class="vbmenu_control"><a href="calendar.php">Lịch</a></td>
+		
+			
+				
+				<td class="vbmenu_control"><a href="search.php?do=getdaily" accesskey="2">Các bài viết ngày hôm nay</a></td>
+				
+				<td class="vbmenu_control"><a id="navbar_search" href="search.php" accesskey="4" rel="nofollow">Search</a> </td>
+			
+			
+		
+		
+		
+		</tr>
+	</table>
+</div>
+<!-- / nav buttons bar -->
+
+<br />
+
+
+
+
+
+
+<!-- NAVBAR POPUP MENUS -->
+
+	
+	
+	
+	<!-- header quick search form -->
+	<div class="vbmenu_popup" id="navbar_search_menu" style="display:none;margin-top:3px" align="left">
+		<table cellpadding="4" cellspacing="1" border="0">
+		<tr>
+			<td class="thead">Tìm kiếm các diễn đàn</td>
+		</tr>
+		<tr>
+			<td class="vbmenu_option" title="nohilite">
+				<form action="search.php?do=process" method="post">
+
+					<input type="hidden" name="do" value="process" />
+					<input type="hidden" name="quicksearch" value="1" />
+					<input type="hidden" name="childforums" value="1" />
+					<input type="hidden" name="exactname" value="1" />
+					<input type="hidden" name="s" value="" />
+					<input type="hidden" name="securitytoken" value="guest" />
+					<div><table><td><input type="text" class="bginput" name="query" size="25" tabindex="1001" /></td><td class="searchgo"><input type="image" src="images/buttons/search.gif" title="Search" tabindex="1004" /></td></table></div>
+					<div style="margin-top:6px">
+						<label for="rb_nb_sp0"><input type="radio" name="showposts" value="0" id="rb_nb_sp0" tabindex="1002" checked="checked" />Hiện các đề tài</label>
+						&nbsp;
+						<label for="rb_nb_sp1"><input type="radio" name="showposts" value="1" id="rb_nb_sp1" tabindex="1003" />Hiện các bài viết</label>
+					</div>
+				</form>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="vbmenu_option"><a href="tags.php" rel="nofollow">Tag Search</a></td>
+		</tr>
+		
+		<tr>
+			<td class="vbmenu_option"><a href="search.php" accesskey="4" rel="nofollow">Tìm kiếm cao cấp</a></td>
+		</tr>
+		
+		</table>
+	</div>
+	<!-- / header quick search form -->
+	
+	
+	
+<!-- / NAVBAR POPUP MENUS -->
+
+<!-- PAGENAV POPUP -->
+	<div class="vbmenu_popup" id="pagenav_menu" style="display:none">
+		<table cellpadding="4" cellspacing="1" border="0">
+		<tr>
+			<td class="thead" nowrap="nowrap">Đi tới trang...</td>
+		</tr>
+		<tr>
+			<td class="vbmenu_option" title="nohilite">
+			<form action="index.php" method="get" onsubmit="return this.gotopage()" id="pagenav_form">
+				<input type="text" class="bginput" id="pagenav_itxt" style="font-size:11px" size="4" />
+				<input type="button" class="button" id="pagenav_ibtn" value="Go" />
+			</form>
+			</td>
+		</tr>
+		</table>
+	</div>
+<!-- / PAGENAV POPUP -->
+
+
+
+
+<!-- Adcode B4-->
+<div style="width: 825px; height: 90px; padding: 8px 0">
+	<a href="http://www.gameloftjobs.kiemviec.com" title="Cộng đồng C Việt, Lập trình, tuyển lập trình, tuyển lập trình game" target="_blank" rel="external" onclick="javascript: pageTracker._trackPageview('/outgoing/forums/gameloftjobs.kiemviec.com');"><img src="http://congdongcviet.com/images/gameloft-dec-12-2009-2.gif" style="border: 1px solid black;" alt="Cộng đồng C Việt, Lập trình, tuyển lập trình, tuyển lập trình game" title="Cộng đồng C Việt, Lập trình, tuyển lập trình, tuyển lập trình game" /></a>
+</div>
+
+<div class="cviet_notices">
+	<a style="font-weight: 700; color: #f00;" href="http://forums.congdongcviet.com/showthread.php?t=23306">Danh sách thành viên ủng hộ Quỹ phát triển cộng đồng C Việt</a><br />
+	<a style="font-weight: 700; color: #f00;" href="http://forums.congdongcviet.com/member.php?u=1">Người sáng lập diễn đàn Dreaminess quyết định đổi tên đăng nhập thành Kevin Hoang</a>
+</div>
+
+
+
+
+
+<a name="poststop" id="poststop"></a>
+
+<!-- controls above postbits -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-bottom:3px">
+<tr valign="bottom">
+	
+		<td class="smallfont"><a href="newreply.php?do=newreply&amp;noquote=1&amp;p=2138" rel="nofollow"><img src="images/buttons/threadclosed.gif" alt="Đề tài đã đóng" border="0" /></a></td>
+	
+	<td align="right"><div class="pagenav" align="right">
+<table class="tborder" cellpadding="3" cellspacing="1" border="0">
+<tr>
+	<td class="vbmenu_control" style="font-weight:normal">Trang 4 trên tổng số 6</td>
+	<td class="alt1" nowrap="nowrap"><a rel="start" class="smallfont" href="showthread.php?t=180" title="Trang đầu - Từ 1 tới 10 trên tổng số 60 kết quả"><strong>&laquo;</strong> Đầu tiên</a></td>
+	<td class="alt1"><a rel="prev" class="smallfont" href="showthread.php?t=180&amp;page=3" title="Trang liền trước - Từ 21 tới 30 trên tổng số 60 kết quả">&lt;</a></td>
+	<td class="alt1"><a class="smallfont" href="showthread.php?t=180&amp;page=2" title="Hiện từ 11 tới 20 trên tổng số 60 kết quả">2</a></td><td class="alt1"><a class="smallfont" href="showthread.php?t=180&amp;page=3" title="Hiện từ 21 tới 30 trên tổng số 60 kết quả">3</a></td>	<td class="alt2"><span class="smallfont" title="Đang hiện từ 31 tới 40 trên tổng 60 kết quả"><strong>4</strong></span></td>
+ <td class="alt1"><a class="smallfont" href="showthread.php?t=180&amp;page=5" title="Hiện từ 41 tới 50 trên tổng số 60 kết quả">5</a></td><td class="alt1"><a class="smallfont" href="showthread.php?t=180&amp;page=6" title="Hiện từ 51 tới 60 trên tổng số 60 kết quả">6</a></td>
+	<td class="alt1"><a rel="next" class="smallfont" href="showthread.php?t=180&amp;page=5" title="Trang liền sau - Từ 41 tới 50 trên tổng số 60 kết quả">&gt;</a></td>
+	
+	<td class="vbmenu_control" title="showthread.php?t=180"><a name="PageNav"></a></td>
+</tr>
+</table>
+</div></td>
+</tr>
+</table>
+<!-- / controls above postbits -->
+
+<!-- toolbar -->
+<table class="tborder" cellpadding="6" cellspacing="1" border="0" width="100%" align="center" style="border-bottom-width:0px">
+<tr>
+	<td class="tcat" width="100%">
+		<div class="smallfont">
+		
+		&nbsp;
+		</div>
+	</td>
+	<td class="vbmenu_control" id="threadtools" nowrap="nowrap">
+		<a href="/showthread.php?t=180&amp;page=4&amp;nojs=1#goto_threadtools">Các công cụ đề tài</a>
+		<script type="text/javascript"> vbmenu_register("threadtools"); </script>
+	</td>
+	
+	
+	
+	<td class="vbmenu_control" id="displaymodes" nowrap="nowrap">
+		<a href="/showthread.php?t=180&amp;page=4&amp;nojs=1#goto_displaymodes">Các chế độ hiển thị</a>
+		<script type="text/javascript"> vbmenu_register("displaymodes"); </script>
+	</td>
+	
+
+	
+
+</tr>
+</table>
+<!-- / toolbar -->
+
+
+
+<!-- end content table -->
+
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+<!-- / end content table -->
+
+
+
+
+
+<div id="posts"><!-- post #2138 -->
+
+	<!-- open content container -->
+
+<div id="open_content_container">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit2138" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post2138" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+	<td class="thead" >
+		<div class="normal" style="float:right">
+			&nbsp;
+			#<a href="showpost.php?p=2138&amp;postcount=31" target="new" rel="nofollow" id="postcount2138" name="31"><strong>31</strong></a> &nbsp;
+			
+			
+			
+			
+			
+		</div>
+
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post2138"><img class="inlineimg" src="images/statusicon/post_old.gif" alt="Cũ" border="0" /></a>
+			
+				06-10-2006, 09:52 PM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding:0px">
+		<!-- user info -->
+		<table cellpadding="0" cellspacing="6" border="0" width="100%">
+		<tr>
+			<td class="alt2"><a href="member.php?u=61"><img src="images/avatars/noavatar.gif"   alt="Avatar củahailoc12" border="0" /></a></td>
+			<td nowrap="nowrap">
+
+				<div id="postmenu_2138">
+					
+					<a class="bigusername" href="member.php?u=61"><span style="color: #3f02a3;">hailoc12</span></a>
+					<img class="inlineimg" src="images/statusicon/user_offline.gif" alt="hailoc12 là offline" border="0" />
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_2138", true); </script>
+					
+				</div>
+
+				<div class="smallfont">XCoworker Member</div>
+				<div class="smallfont"><img src="images/ranks/rank_xcoworker.gif" alt="" border="" /></div>
+				
+
+			</td>
+			<td width="100%">&nbsp;</td>
+			<td valign="top" nowrap="nowrap">
+
+				<div class="smallfont">
+					<div>Ngày gia nhập: 08 2006</div>
+					<div>Nơi ở: Hải Phòng</div>
+					
+					<div>
+						Bài viết: 283
+					</div>
+					
+					
+					
+					
+					<div>    </div>
+				</div>
+
+			</td>
+		</tr>
+		</table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	
+	<td class="alt1" id="td_post_2138">
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		
+			<!-- icon and title -->
+			<div class="smallfont clearfix">
+				
+					<div style="float: left; width: 36px;"><img class="inlineimg" src="images/icons/icon1.gif" alt="Mặc định" border="0" /></div>
+				
+				<h3 style="margin:0; passing: 0;">Bài tập cơ bản 25:</h3>
+			</div>
+			<hr size="1" style="color:#A1D2F1; background-color:#A1D2F1" />
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_2138">
+			
+			BÀI 25<br />
+<br />
+1.	Ý TƯỞNG THUẬT TOÁN :<br />
+a.	Ta phải xác định ma trận tích thu được là có số dòng là số dòng của ma trận 1 và số cột là số cột của ma trận 2 .<br />
+b.	Từ đó xác định được giá trị giới hạn của vòng lặp rồi nhân theo phương pháp nhân 2 ma trận .<br />
+c.	Lưu ý Phải có cả hai điều kiện sau mới tính tích được<br />
+i.	số cột của ma trận 1  bằng số dòng của ma trận 2  <br />
+2.	Ý NGHĨA MỘT SỐ BIẾN TRONG BÀI :<br />
+a.	Trong bài có hàm :<br />
+i.	Void xuatmatran3(int kq[10][10] ,int a[10][10] , int b[10][10] ,int n ,int m , int c) : làm nhiệm vụ nhân và xuất ma trận kết quả .<br />
+ii.	Trong hàm có 3 dòng for :<br />
+1.	Vòng for thứ nhất : Chạy trên từng dòng của ma trận 1<br />
+2.	Vòng for thứ hai : Chạy trên từng cột của ma trận 2<br />
+3.	Vòng for thứ ba : ứng với từng giá trị của Vòng for thứ nhất và vòng for thứ hai nó quét trên từng phần tử .<br />
+4.	sau khi tính in ra phần tử đó luôn .<br />
+b.	Ở hàm main() gồm :<br />
+i.	a[10][10] : ma trận tối đa 10 hàng 10 cột<br />
+ii.	n, m : là số dòng và số cột của ma trận a<br />
+iii.	b[10][10] : ma trận tối đa 10 hàng 10 cột<br />
+iv.	d, c : là số dòng và số cột của ma trận b<br />
+v.	kq[10][10] : là ma trận kết quả có tối đa là  10 dòng và 10 cột<br />
+<br />
+3.	BÀI GIẢI :<br />
+<br />
+#include&lt;stdio.h&gt;<br />
+#include&lt;conio.h&gt;<br />
+<br />
+void nhapmatran1(int a[10][10],int n,int m)<br />
+{<br />
+	int i,j;<br />
+	for(i=1;i&lt;=n;i++)<br />
+		for(j=1;j&lt;=m;j++)<br />
+		{<br />
+			printf(&quot;a[%d][%d] &quot;,i,j);<br />
+			scanf(&quot; %d&quot;,&amp;a[i][j]);<br />
+		 }<br />
+}<br />
+<br />
+void nhapmatran2(int b[10][10] ,int d,int c)<br />
+{<br />
+	int i,j;<br />
+	for(i=1;i&lt;=d;i++)<br />
+	{<br />
+		for(j=1;j&lt;=c;j++)<br />
+		{<br />
+			printf(&quot;b[%d][%d]&quot;,i,j);<br />
+			scanf(&quot;%d&quot;,&amp;b[i][j]);<br />
+		}<br />
+	}<br />
+   printf(&quot;\n\n\n&quot;);<br />
+}<br />
+void xuatmatran3(int kq[10][10],int a[10][10],int b[10][10],int n,int m,int c)<br />
+{<br />
+	int i,j,k;<br />
+	printf(&quot; Ma tran ket qua la \n\n\n&quot;);<br />
+	for(i=1;i&lt;=n;i++)<br />
+	{<br />
+		for(j=1;j&lt;=c;j++)<br />
+		{<br />
+			kq[i][j]=0;<br />
+			for(k=1;k&lt;=m;k++)<br />
+			{<br />
+				kq[i][j]+=a[i][k]*b[k][j];<br />
+			}<br />
+		//textcolor(i-9);<br />
+		printf(&quot;%5d&quot;,kq[i][j]);<br />
+		}<br />
+		printf(&quot;\n&quot;);<br />
+	}<br />
+}<br />
+<br />
+void main()<br />
+{<br />
+	clrscr();<br />
+	int n,m,d,c,a[10][10],b[10][10],kq[10][10];<br />
+	printf(&quot;Nhap vao so Dong Va Cot cua ma tran 1  &quot;);<br />
+	scanf(&quot;%d%d&quot;,&amp;n,&amp;m);<br />
+	nhapmatran1(a,n,m);<br />
+	printf(&quot;Nhap vao so Dong Va Cot cua ma tran 2  &quot;);<br />
+	scanf(&quot;%d%d&quot;,&amp;d,&amp;c);<br />
+	nhapmatran2(b,d,c);<br />
+	if((n==c)&amp;&amp;(m==d))<br />
+		xuatmatran3(kq,a,b,n,m,c);<br />
+	else<br />
+		printf(&quot;Hai ma tran nay khong nhan voi nhau duoc &quot;);<br />
+	getch();<br />
+}<br />
+<br />
+HẾT
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+
+		
+
+		
+
+		<div style="margin-top: 10px" align="right">
+			<!-- controls -->
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				
+			
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</table>
+
+
+<!-- post 2138 popup menu -->
+<div class="vbmenu_popup" id="postmenu_2138_menu" style="display:none;">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">hailoc12</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="member.php?u=61">Xem Hồ sơ công khai</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="private.php?do=newpm&amp;u=61" rel="nofollow">Gửi một tin nhắn tới hailoc12</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="search.php?do=finduser&amp;u=61" rel="nofollow">Tìm toàn bộ bài viết bởi hailoc12</a></td></tr>
+	
+	
+	
+	</table>
+</div>
+<!-- / post 2138 popup menu -->
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #2138 --><!-- post #2139 -->
+
+	<!-- open content container -->
+
+<div id="open_content_container">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit2139" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post2139" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+	<td class="thead" >
+		<div class="normal" style="float:right">
+			&nbsp;
+			#<a href="showpost.php?p=2139&amp;postcount=32" target="new" rel="nofollow" id="postcount2139" name="32"><strong>32</strong></a> &nbsp;
+			
+			
+			
+			
+			
+		</div>
+
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post2139"><img class="inlineimg" src="images/statusicon/post_old.gif" alt="Cũ" border="0" /></a>
+			
+				06-10-2006, 09:52 PM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding:0px">
+		<!-- user info -->
+		<table cellpadding="0" cellspacing="6" border="0" width="100%">
+		<tr>
+			<td class="alt2"><a href="member.php?u=61"><img src="images/avatars/noavatar.gif"   alt="Avatar củahailoc12" border="0" /></a></td>
+			<td nowrap="nowrap">
+
+				<div id="postmenu_2139">
+					
+					<a class="bigusername" href="member.php?u=61"><span style="color: #3f02a3;">hailoc12</span></a>
+					<img class="inlineimg" src="images/statusicon/user_offline.gif" alt="hailoc12 là offline" border="0" />
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_2139", true); </script>
+					
+				</div>
+
+				<div class="smallfont">XCoworker Member</div>
+				<div class="smallfont"><img src="images/ranks/rank_xcoworker.gif" alt="" border="" /></div>
+				
+
+			</td>
+			<td width="100%">&nbsp;</td>
+			<td valign="top" nowrap="nowrap">
+
+				<div class="smallfont">
+					<div>Ngày gia nhập: 08 2006</div>
+					<div>Nơi ở: Hải Phòng</div>
+					
+					<div>
+						Bài viết: 283
+					</div>
+					
+					
+					
+					
+					<div>    </div>
+				</div>
+
+			</td>
+		</tr>
+		</table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	
+	<td class="alt1" id="td_post_2139">
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		
+			<!-- icon and title -->
+			<div class="smallfont clearfix">
+				
+					<div style="float: left; width: 36px;"><img class="inlineimg" src="images/icons/icon1.gif" alt="Mặc định" border="0" /></div>
+				
+				<h3 style="margin:0; passing: 0;">Bài tập cơ bản 26</h3>
+			</div>
+			<hr size="1" style="color:#A1D2F1; background-color:#A1D2F1" />
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_2139">
+			
+			BÀI 26<br />
+<br />
+1.	Ý TƯỞNG THUẬT TOÁN :<br />
+Tương tự bài só nguyên tố lớn nhất ở bài 23 . Nhưng ở bài này ta cần tìm ra số âm đầu tiên sau đó từ vị trí số ăm đó quét cho đến hết mảng và tìm ra số âm lớn nhất  .<br />
+2.	Ý NGHĨA MỘT SỐ BIÉN TRONG BÀI :<br />
+a.	Trong bài có hàm void search_am(int a[100] ,int n ) : làm nhiệm vụ tìm và in ra số âm lớn nhất trong mảng . Trong đó có các biến :<br />
+i.	max : là chứa số âm lớn nhất biến max thay đổi theo giá trị của số âm trên mảng .<br />
+ii.	vt : là biến chứa vị trí của phần tử hiện đang là số âm lớn nhất<br />
+b.	Hàm main() có :<br />
+i.	a[100] : mảng 1 chiều tối đa 100 phần tử .<br />
+ii.	n : số phần tử trong mảng .<br />
+3.	BÀI GIẢI :<br />
+<br />
+#include&lt;stdio.h&gt;<br />
+#include&lt;conio.h&gt;<br />
+<br />
+void nhapmang(int a[100],int n)<br />
+{<br />
+	for(int i=0;i&lt;n;i++)<br />
+	{<br />
+		printf(&quot;a[%d]&quot;,i);<br />
+		scanf(&quot;%d&quot;,&amp;a[i]);<br />
+	}<br />
+}<br />
+<br />
+void xuatmang(int a[100],int n)<br />
+{<br />
+	for(int i=0;i&lt;n;i++)<br />
+		printf(&quot;%3d&quot;,a[i]);<br />
+}<br />
+<br />
+<br />
+void search_am(int a[100],int n)<br />
+{<br />
+	int max=0,vt;<br />
+	for(int i=0;i&lt;n;i++)<br />
+	{<br />
+		if(a[i]&lt;0)<br />
+		{<br />
+			max=a[i];<br />
+			break;<br />
+		}<br />
+	}<br />
+	if(max==0)<br />
+		printf(&quot; Trong mang khong co so am &quot;);<br />
+	else<br />
+	{<br />
+		for(int j=vt+1;j&lt;n;j++)       //tim so Am lon nhat va vi tri<br />
+		{<br />
+			if(a[j]&lt;0)<br />
+				if(a[j]&gt;max)<br />
+				{<br />
+					max=a[j];<br />
+					vt=j+1;<br />
+				}<br />
+<br />
+		}<br />
+	printf(&quot; \n So Am lon nhat trong mang la %d  tai phan tu so %d&quot; , max,vt);<br />
+	}<br />
+}<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+void main()<br />
+{<br />
+	clrscr();<br />
+	int a[100],n;<br />
+	printf(&quot; Nhap so phan tu cua mang &quot;);<br />
+	scanf(&quot;%d&quot;,&amp;n);<br />
+	nhapmang(a,n);<br />
+	xuatmang(a,n);<br />
+	search_am(a,n);<br />
+	getch();<br />
+}<br />
+<br />
+HẾT
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+
+		
+
+		
+
+		<div style="margin-top: 10px" align="right">
+			<!-- controls -->
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				
+			
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</table>
+
+
+<!-- post 2139 popup menu -->
+<div class="vbmenu_popup" id="postmenu_2139_menu" style="display:none;">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">hailoc12</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="member.php?u=61">Xem Hồ sơ công khai</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="private.php?do=newpm&amp;u=61" rel="nofollow">Gửi một tin nhắn tới hailoc12</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="search.php?do=finduser&amp;u=61" rel="nofollow">Tìm toàn bộ bài viết bởi hailoc12</a></td></tr>
+	
+	
+	
+	</table>
+</div>
+<!-- / post 2139 popup menu -->
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #2139 --><!-- post #2140 -->
+
+	<!-- open content container -->
+
+<div id="open_content_container">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit2140" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post2140" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+	<td class="thead" >
+		<div class="normal" style="float:right">
+			&nbsp;
+			#<a href="showpost.php?p=2140&amp;postcount=33" target="new" rel="nofollow" id="postcount2140" name="33"><strong>33</strong></a> &nbsp;
+			
+			
+			
+			
+			
+		</div>
+
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post2140"><img class="inlineimg" src="images/statusicon/post_old.gif" alt="Cũ" border="0" /></a>
+			
+				06-10-2006, 09:53 PM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding:0px">
+		<!-- user info -->
+		<table cellpadding="0" cellspacing="6" border="0" width="100%">
+		<tr>
+			<td class="alt2"><a href="member.php?u=61"><img src="images/avatars/noavatar.gif"   alt="Avatar củahailoc12" border="0" /></a></td>
+			<td nowrap="nowrap">
+
+				<div id="postmenu_2140">
+					
+					<a class="bigusername" href="member.php?u=61"><span style="color: #3f02a3;">hailoc12</span></a>
+					<img class="inlineimg" src="images/statusicon/user_offline.gif" alt="hailoc12 là offline" border="0" />
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_2140", true); </script>
+					
+				</div>
+
+				<div class="smallfont">XCoworker Member</div>
+				<div class="smallfont"><img src="images/ranks/rank_xcoworker.gif" alt="" border="" /></div>
+				
+
+			</td>
+			<td width="100%">&nbsp;</td>
+			<td valign="top" nowrap="nowrap">
+
+				<div class="smallfont">
+					<div>Ngày gia nhập: 08 2006</div>
+					<div>Nơi ở: Hải Phòng</div>
+					
+					<div>
+						Bài viết: 283
+					</div>
+					
+					
+					
+					
+					<div>    </div>
+				</div>
+
+			</td>
+		</tr>
+		</table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	
+	<td class="alt1" id="td_post_2140">
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		
+			<!-- icon and title -->
+			<div class="smallfont clearfix">
+				
+					<div style="float: left; width: 36px;"><img class="inlineimg" src="images/icons/icon1.gif" alt="Mặc định" border="0" /></div>
+				
+				<h3 style="margin:0; passing: 0;">Bài tập cơ bản 27:</h3>
+			</div>
+			<hr size="1" style="color:#A1D2F1; background-color:#A1D2F1" />
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_2140">
+			
+			BÀI 27<br />
+<br />
+1.	Ý TƯỞNG THUẬT TOÁN :<br />
+Ở bài này ta cần đếm số phần tử của một mảng con tăng bằng cách vừa xét vừa đếm sau đó lưu lại vị trí của phần tử bắt đầu xét và lưu lại vị trí của phần tử kết thúc mảng con tăng . Để thực hiện được như vậy ta cần có một biến lưu lại số phần tử của mảng con tăng sau đó nếu có mảng con tăng nào dài hơn nữa thì lưu lại những thông tin của mảng như đã nói ở trên .<br />
+<br />
+2.	Ý NGHĨA MỘT SỐ BIẾN TRONG BÀI :<br />
+a.	Trong hàm void xuatmang_tang(int a[100] , int n ) gồm có :<br />
+i.	Biến vitri_1 : là biến để lưu lại vị trí của phần tử đầu tiên trong  mảng con tăng dài nhất .<br />
+ii.	Biến vitri_2 : là biến để lưu lại vị trí cuối cùng của mảng con tăng dài nhất .<br />
+iii.	Biến s : là biến để lưu lại vị trí được tính từ phần tử đầu tiên a[0] đến phần tử kết thúc của mảng con tăng dài nhất<br />
+iv.	Biến t : là biến đếm số phần tử trong mảng con tăng .<br />
+b.	Trong hàm main() có :<br />
+i.	a[100] : mảng tối đa là 100 phần tử<br />
+ii.	n : là số phần tử trong mảng<br />
+3.	BÀI GIẢI :<br />
+<br />
+#include&lt;stdio.h&gt;<br />
+#include&lt;conio.h&gt;<br />
+/*-----------------------HAM NHAP MANG  --------------------------*/<br />
+<br />
+void nhapmang(int a[100],int n)<br />
+{<br />
+     int i;<br />
+	 printf(&quot;Ban hay Nhap Mang vao :\n&quot;);<br />
+	 for(i=0;i&lt;n;i++)<br />
+	 {<br />
+		printf(&quot;a[%d] =&quot;,i);<br />
+		scanf(&quot;%d&quot;,&amp;a[i]);<br />
+	 }<br />
+<br />
+}<br />
+<br />
+void xuatmang(int a[100],int n)<br />
+{<br />
+	int i;<br />
+	for(i=0;i&lt;n;i++)<br />
+		printf(&quot;%4d&quot;,a[i]);<br />
+	printf(&quot;\n\n&quot;);<br />
+}<br />
+<br />
+void xuatmang_tang(int a[100],int n)<br />
+{<br />
+	int vitri_1,vitri_2=0,t,s;<br />
+	for(int i=0;i&lt;n;i+=t+1)//Ham for xet nhay<br />
+	{<br />
+		t=0; //bat dau luon bang 0<br />
+		for(int j=i;j&lt;n-1;j++)<br />
+		{<br />
+			if(a[j]&lt;=a[j+1])<br />
+				t+=1; //dem mang con tang co bao nhieu pt<br />
+			else<br />
+				break; // Thoat khi khong tang nua<br />
+		}<br />
+		if(t&gt;vitri_2)<br />
+		{<br />
+			vitri_1=i;//Tu pt bat dau xet<br />
+			vitri_2=t; //pt ket thuc mang con tang<br />
+			s=vitri_1+vitri_2;// s la bien tinh tu pt a[0] cho<br />
+		}                         // den pt ket thuc mang con tang<br />
+<br />
+	}<br />
+<br />
+	printf(&quot;Mang con tang dai nhat la :&quot;);<br />
+	for(int k=vitri_1;k&lt;=s;k++)<br />
+		   printf(&quot;%4d&quot;,a[k]);<br />
+<br />
+}<br />
+<br />
+void main()<br />
+{<br />
+	clrscr();<br />
+	int a[100],n;<br />
+	printf(&quot;Ban hay nhap so phan tu cua mang :&quot;);<br />
+	scanf(&quot;%d&quot;,&amp;n);<br />
+<br />
+		nhapmang(a,n);<br />
+		xuatmang(a,n);<br />
+		xuatmang_tang(a,n);<br />
+<br />
+	getch();<br />
+}<br />
+<br />
+<br />
+<br />
+<br />
+HẾT
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+
+		
+
+		
+
+		<div style="margin-top: 10px" align="right">
+			<!-- controls -->
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				
+			
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</table>
+
+
+<!-- post 2140 popup menu -->
+<div class="vbmenu_popup" id="postmenu_2140_menu" style="display:none;">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">hailoc12</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="member.php?u=61">Xem Hồ sơ công khai</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="private.php?do=newpm&amp;u=61" rel="nofollow">Gửi một tin nhắn tới hailoc12</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="search.php?do=finduser&amp;u=61" rel="nofollow">Tìm toàn bộ bài viết bởi hailoc12</a></td></tr>
+	
+	
+	
+	</table>
+</div>
+<!-- / post 2140 popup menu -->
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #2140 --><!-- post #2142 -->
+
+	<!-- open content container -->
+
+<div id="open_content_container">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit2142" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post2142" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+	<td class="thead" >
+		<div class="normal" style="float:right">
+			&nbsp;
+			#<a href="showpost.php?p=2142&amp;postcount=34" target="new" rel="nofollow" id="postcount2142" name="34"><strong>34</strong></a> &nbsp;
+			
+			
+			
+			
+			
+		</div>
+
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post2142"><img class="inlineimg" src="images/statusicon/post_old.gif" alt="Cũ" border="0" /></a>
+			
+				06-10-2006, 09:55 PM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding:0px">
+		<!-- user info -->
+		<table cellpadding="0" cellspacing="6" border="0" width="100%">
+		<tr>
+			<td class="alt2"><a href="member.php?u=61"><img src="images/avatars/noavatar.gif"   alt="Avatar củahailoc12" border="0" /></a></td>
+			<td nowrap="nowrap">
+
+				<div id="postmenu_2142">
+					
+					<a class="bigusername" href="member.php?u=61"><span style="color: #3f02a3;">hailoc12</span></a>
+					<img class="inlineimg" src="images/statusicon/user_offline.gif" alt="hailoc12 là offline" border="0" />
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_2142", true); </script>
+					
+				</div>
+
+				<div class="smallfont">XCoworker Member</div>
+				<div class="smallfont"><img src="images/ranks/rank_xcoworker.gif" alt="" border="" /></div>
+				
+
+			</td>
+			<td width="100%">&nbsp;</td>
+			<td valign="top" nowrap="nowrap">
+
+				<div class="smallfont">
+					<div>Ngày gia nhập: 08 2006</div>
+					<div>Nơi ở: Hải Phòng</div>
+					
+					<div>
+						Bài viết: 283
+					</div>
+					
+					
+					
+					
+					<div>    </div>
+				</div>
+
+			</td>
+		</tr>
+		</table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	
+	<td class="alt1" id="td_post_2142">
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		
+			<!-- icon and title -->
+			<div class="smallfont clearfix">
+				
+					<div style="float: left; width: 36px;"><img class="inlineimg" src="images/icons/icon1.gif" alt="Mặc định" border="0" /></div>
+				
+				<h3 style="margin:0; passing: 0;">Bài tập cơ bản 28</h3>
+			</div>
+			<hr size="1" style="color:#A1D2F1; background-color:#A1D2F1" />
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_2142">
+			
+			BÀI 28  <br />
+<br />
+1.	Ý TƯỞNG THUẬT TOÁN :<br />
+a.	Ta cũng cần có một hàm kiểm tra nguyên tố tương tự như các bài trước để xét từng phần tử . Nếu tại đó là số nguyên tố thì ta phải thực hiện hàm dời mảng đi một kí tự .<br />
+b.	Sau khi dời ta gán tại vị trí ở phía sau phần tử đó là 5<br />
+c.	Lưu ý cho vòng lặp cộng thêm 2 hi đã gán<br />
+2.	Ý NGHĨA MỘT SỐ BIẾN TRONG BÀI  :<br />
+a.	Trong bài có hàm  void insert(int a[100] , int &amp;n )  dùng để chèn thêm phần tử là 5 vào sau phần tử là số nguyên tố .<br />
+b.	Trong hàm main() có :<br />
+i.	a[100] : là mảng tối đa có 100 phần tử<br />
+ii.	n : số phần tử của mảng<br />
+3.	BÀI GIẢI :<br />
+<br />
+#include&lt;stdio.h&gt;<br />
+#include&lt;conio.h&gt;<br />
+<br />
+void nhapmang(int a[100],int n)<br />
+{<br />
+	for(int i=0;i&lt;n;i++)<br />
+	{<br />
+		printf(&quot;a[%d]&quot;,i);<br />
+		scanf(&quot;%d&quot;,&amp;a[i]);<br />
+	}<br />
+}<br />
+<br />
+int ktnt(int x)<br />
+{<br />
+	int dem=0;<br />
+	for(int i=1;i&lt;=x;i++)<br />
+	{<br />
+		if(x%i==0)<br />
+			dem++;<br />
+	}<br />
+	if(dem==2)<br />
+		return 1;<br />
+	else<br />
+		return 0;<br />
+}<br />
+<br />
+<br />
+<br />
+void xuatmang(int a[100],int n)<br />
+{<br />
+	for(int i=0;i&lt;n;i++)<br />
+		printf(&quot;%3d&quot;,a[i]);<br />
+}<br />
+<br />
+<br />
+<br />
+void insert(int a[100],int &amp;n)<br />
+{<br />
+   int i=0;<br />
+   while(i&lt;n)<br />
+   {<br />
+		if(ktnt(a[i]))<br />
+		{<br />
+			for(int j=n;j&gt;i+1;j--)<br />
+				a[j]=a[j-1];<br />
+			a[i+1]=5;<br />
+			n+=1;<br />
+        		    i+=2;<br />
+		}<br />
+		else<br />
+			i++;<br />
+   }<br />
+<br />
+}<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+void main()<br />
+{<br />
+	clrscr();<br />
+	int a[100],n;<br />
+	printf(&quot; Nhap so phan tu cua mang &quot;);<br />
+	scanf(&quot;%d&quot;,&amp;n);<br />
+	nhapmang(a,n);<br />
+	xuatmang(a,n);<br />
+	insert(a,n);<br />
+    	printf(&quot;\n Mang sau khi chen voi dieu kien de bai la \n&quot;);<br />
+	xuatmang(a,n);<br />
+	getch();<br />
+}<br />
+<br />
+HẾT
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+
+		
+
+		
+
+		<div style="margin-top: 10px" align="right">
+			<!-- controls -->
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				
+			
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</table>
+
+
+<!-- post 2142 popup menu -->
+<div class="vbmenu_popup" id="postmenu_2142_menu" style="display:none;">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">hailoc12</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="member.php?u=61">Xem Hồ sơ công khai</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="private.php?do=newpm&amp;u=61" rel="nofollow">Gửi một tin nhắn tới hailoc12</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="search.php?do=finduser&amp;u=61" rel="nofollow">Tìm toàn bộ bài viết bởi hailoc12</a></td></tr>
+	
+	
+	
+	</table>
+</div>
+<!-- / post 2142 popup menu -->
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #2142 --><!-- post #2143 -->
+
+	<!-- open content container -->
+
+<div id="open_content_container">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit2143" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post2143" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+	<td class="thead" >
+		<div class="normal" style="float:right">
+			&nbsp;
+			#<a href="showpost.php?p=2143&amp;postcount=35" target="new" rel="nofollow" id="postcount2143" name="35"><strong>35</strong></a> &nbsp;
+			
+			
+			
+			
+			
+		</div>
+
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post2143"><img class="inlineimg" src="images/statusicon/post_old.gif" alt="Cũ" border="0" /></a>
+			
+				06-10-2006, 09:55 PM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding:0px">
+		<!-- user info -->
+		<table cellpadding="0" cellspacing="6" border="0" width="100%">
+		<tr>
+			<td class="alt2"><a href="member.php?u=61"><img src="images/avatars/noavatar.gif"   alt="Avatar củahailoc12" border="0" /></a></td>
+			<td nowrap="nowrap">
+
+				<div id="postmenu_2143">
+					
+					<a class="bigusername" href="member.php?u=61"><span style="color: #3f02a3;">hailoc12</span></a>
+					<img class="inlineimg" src="images/statusicon/user_offline.gif" alt="hailoc12 là offline" border="0" />
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_2143", true); </script>
+					
+				</div>
+
+				<div class="smallfont">XCoworker Member</div>
+				<div class="smallfont"><img src="images/ranks/rank_xcoworker.gif" alt="" border="" /></div>
+				
+
+			</td>
+			<td width="100%">&nbsp;</td>
+			<td valign="top" nowrap="nowrap">
+
+				<div class="smallfont">
+					<div>Ngày gia nhập: 08 2006</div>
+					<div>Nơi ở: Hải Phòng</div>
+					
+					<div>
+						Bài viết: 283
+					</div>
+					
+					
+					
+					
+					<div>    </div>
+				</div>
+
+			</td>
+		</tr>
+		</table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	
+	<td class="alt1" id="td_post_2143">
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		
+			<!-- icon and title -->
+			<div class="smallfont clearfix">
+				
+					<div style="float: left; width: 36px;"><img class="inlineimg" src="images/icons/icon1.gif" alt="Mặc định" border="0" /></div>
+				
+				<h3 style="margin:0; passing: 0;">Bài tập cơ bản 29</h3>
+			</div>
+			<hr size="1" style="color:#A1D2F1; background-color:#A1D2F1" />
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_2143">
+			
+			BÀI 29<br />
+<br />
+1.	Ý TƯỞNG THUẬT TOÁN :<br />
+a.	Ở bài này ta chỉ cần đếm số làn xuất hiện của số đầu tiên là bao nhiêu lần sau đó gán giả sử cho nó là lớn nhất ,rồi quét trên mảng nếu gặp phần tử nào xuất hiện nhiều hơn thì ta gán cho nó là lớn nhất .<br />
+b.	Trước hết ta cần có một hàm đếm phần tử , sau đó là viết một hàm đếm kiểm soát , nếu gặp phần tử giống phần tử đã đếm rồi thì không đếm nữa ngược lại thì đếm và gán giả sử là lớn nhất như đã nói ở trên<br />
+2.	Ý NGHĨA MỘT SỐ BIẾN TRONG BÀI :<br />
+a.	Trong bài có hàm int dempt( int x , int a[100] , int n ,int i ) : làm nhiệm vụ là đếm số lần  xuất hiện của phần tử đó từ nó trở đi . vì các số trước nó đã xét và đếm nên không cần đếm lại  .<br />
+b.	Hàm  void max_xuat( int a[100] , int n ) : làm nhiệm vụ xét và tìm ra phần tử xuất hiện nhiều nhất , trong hàm có các biến  :<br />
+i.	max : để chứa số lần xuất hiện của phần tử<br />
+ii.	pt : là để lưu lại giá trị của phần tử xuất hiện nhiều nhất  .<br />
+iii.	Vòng lặp for thứ nhất : quét tất cả các phần tử từ phần tử đầu tiên cho đến phần tử cuối cùng .<br />
+iv.	Vòng for thứ hai : ứng mỗi giá trị của phần tử tại vị trí i thì ta xét phần tử đó có giống một phần tử nào phía trúớc đó hay không nếu giống thì không đếm nữa thoát khỏi vòng lặp tăng giá trị i lên ngược lại thì  đếm .<br />
+c.	Hàm main() gồm các biến  :<br />
+i.	a[100] : mảng phần tử tối đa 100 kí tự<br />
+ii.	n: số phần tử trong mảng .<br />
+3.	BÀI GIẢI<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+#include&lt;stdio.h&gt;<br />
+#include&lt;conio.h&gt;<br />
+<br />
+void nhapmang(int a[100],int n)<br />
+{<br />
+	for(int i=0;i&lt;n;i++)<br />
+	{<br />
+		printf(&quot;a[%d]&quot;,i);<br />
+		scanf(&quot;%d&quot;,&amp;a[i]);<br />
+	}<br />
+}<br />
+<br />
+int ktnt(int x)      // Kiem tra co phai la so ngto khong<br />
+{<br />
+	int dem=0;<br />
+	for(int i=1;i&lt;=x;i++)<br />
+	{<br />
+		if(x%i==0)<br />
+			dem++;<br />
+	}<br />
+	if(dem==2)<br />
+		return 1; // dung tra ve 1<br />
+	else<br />
+		return 0; // sai tra ve 0<br />
+}<br />
+<br />
+<br />
+<br />
+void xuatmang(int a[100],int n)<br />
+{<br />
+	for(int i=0;i&lt;n;i++)<br />
+		printf(&quot;%3d&quot;,a[i]);<br />
+}<br />
+<br />
+/* ----------------- Tim so nguyen to va xoa di --------------*/<br />
+<br />
+void xoa_ngto(int a[100],int &amp;n)<br />
+{<br />
+   int i=0;<br />
+   while(i&lt;n)<br />
+   {<br />
+		if(ktnt(a[i]))<br />
+		{<br />
+			for(int j=i;j&lt;n-1;j++)<br />
+				a[j]=a[j+1];<br />
+			n-=1; // Giam so pt sau khi xoa di<br />
+		}<br />
+		else<br />
+			i++;<br />
+   }<br />
+<br />
+}<br />
+<br />
+<br />
+<br />
+<br />
+void main()<br />
+{<br />
+	clrscr();<br />
+	int a[100],n;<br />
+	printf(&quot; Nhap so phan tu cua mang &quot;);<br />
+	scanf(&quot;%d&quot;,&amp;n);<br />
+	nhapmang(a,n);<br />
+	xuatmang(a,n);<br />
+	xoa_ngto(a,n);<br />
+	printf(&quot;\n Mang sau khi xoa voi dieu kien de bai la \n&quot;);<br />
+	xuatmang(a,n);<br />
+	getch();<br />
+}<br />
+HẾT
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+
+		
+
+		
+
+		<div style="margin-top: 10px" align="right">
+			<!-- controls -->
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				
+			
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</table>
+
+
+<!-- post 2143 popup menu -->
+<div class="vbmenu_popup" id="postmenu_2143_menu" style="display:none;">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">hailoc12</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="member.php?u=61">Xem Hồ sơ công khai</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="private.php?do=newpm&amp;u=61" rel="nofollow">Gửi một tin nhắn tới hailoc12</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="search.php?do=finduser&amp;u=61" rel="nofollow">Tìm toàn bộ bài viết bởi hailoc12</a></td></tr>
+	
+	
+	
+	</table>
+</div>
+<!-- / post 2143 popup menu -->
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #2143 --><!-- post #2144 -->
+
+	<!-- open content container -->
+
+<div id="open_content_container">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit2144" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post2144" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+	<td class="thead" >
+		<div class="normal" style="float:right">
+			&nbsp;
+			#<a href="showpost.php?p=2144&amp;postcount=36" target="new" rel="nofollow" id="postcount2144" name="36"><strong>36</strong></a> &nbsp;
+			
+			
+			
+			
+			
+		</div>
+
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post2144"><img class="inlineimg" src="images/statusicon/post_old.gif" alt="Cũ" border="0" /></a>
+			
+				06-10-2006, 09:56 PM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding:0px">
+		<!-- user info -->
+		<table cellpadding="0" cellspacing="6" border="0" width="100%">
+		<tr>
+			<td class="alt2"><a href="member.php?u=61"><img src="images/avatars/noavatar.gif"   alt="Avatar củahailoc12" border="0" /></a></td>
+			<td nowrap="nowrap">
+
+				<div id="postmenu_2144">
+					
+					<a class="bigusername" href="member.php?u=61"><span style="color: #3f02a3;">hailoc12</span></a>
+					<img class="inlineimg" src="images/statusicon/user_offline.gif" alt="hailoc12 là offline" border="0" />
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_2144", true); </script>
+					
+				</div>
+
+				<div class="smallfont">XCoworker Member</div>
+				<div class="smallfont"><img src="images/ranks/rank_xcoworker.gif" alt="" border="" /></div>
+				
+
+			</td>
+			<td width="100%">&nbsp;</td>
+			<td valign="top" nowrap="nowrap">
+
+				<div class="smallfont">
+					<div>Ngày gia nhập: 08 2006</div>
+					<div>Nơi ở: Hải Phòng</div>
+					
+					<div>
+						Bài viết: 283
+					</div>
+					
+					
+					
+					
+					<div>    </div>
+				</div>
+
+			</td>
+		</tr>
+		</table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	
+	<td class="alt1" id="td_post_2144">
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		
+			<!-- icon and title -->
+			<div class="smallfont clearfix">
+				
+					<div style="float: left; width: 36px;"><img class="inlineimg" src="images/icons/icon1.gif" alt="Mặc định" border="0" /></div>
+				
+				<h3 style="margin:0; passing: 0;">Bài tập cơ bản 30</h3>
+			</div>
+			<hr size="1" style="color:#A1D2F1; background-color:#A1D2F1" />
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_2144">
+			
+			BÀI 30<br />
+<br />
+1.	Ý TƯỞNG THUẬT TOÁN :<br />
+a.	Ở bài này cũng tương tự như những bài trên ta cũng cần có một hàm kiểm tra số đó có phải là số nguyên tố hay không  .<br />
+b.	Nếu phải thì tại vị trí đó dời mảng trở về một phần tử .<br />
+2.	Ý NGHĨA MỘT SỐ BIẾN TRONG BÀI :<br />
+a.	Hàm kiểm tra số nguyên tố tương tự như lời giải thích của những bài trên<br />
+b.	Hàm void xoa_ngto( int a[100] , int &amp;n ) : làm nhiệm vụ xóa các số nguyên tố có trong mảng<br />
+c.	Hàm main()  gồm các biến :<br />
+i.	a[100]: mảng tối đa có 100 phần tử<br />
+ii.	n : số phần tử của mảng<br />
+3.	BÀI GIẢI :<br />
+<br />
+#include&lt;stdio.h&gt;<br />
+#include&lt;conio.h&gt;<br />
+<br />
+void nhapmang(int a[100],int n)<br />
+{<br />
+	for(int i=0;i&lt;n;i++)<br />
+	{<br />
+		printf(&quot;a[%d]&quot;,i);<br />
+		scanf(&quot;%d&quot;,&amp;a[i]);<br />
+	}<br />
+}<br />
+<br />
+int ktnt(int x)      // Kiem tra co phai la so ngto khong<br />
+{<br />
+	int dem=0;<br />
+	for(int i=1;i&lt;=x;i++)<br />
+	{<br />
+		if(x%i==0)<br />
+			dem++;<br />
+	}<br />
+	if(dem==2)<br />
+		return 1; // dung tra ve 1<br />
+	else<br />
+		return 0; // sai tra ve 0<br />
+}<br />
+<br />
+<br />
+<br />
+void xuatmang(int a[100],int n)<br />
+{<br />
+	for(int i=0;i&lt;n;i++)<br />
+		printf(&quot;%3d&quot;,a[i]);<br />
+}<br />
+<br />
+/* ----------------- Tim so nguyen to va xoa di --------------*/<br />
+<br />
+void xoa_ngto(int a[100],int &amp;n)<br />
+{<br />
+   int i=0;<br />
+   while(i&lt;n)<br />
+   {<br />
+		if(ktnt(a[i]))<br />
+		{<br />
+			for(int j=i;j&lt;n-1;j++)<br />
+				a[j]=a[j+1];<br />
+			n-=1; // Giam so pt sau khi xoa di<br />
+		}<br />
+		else<br />
+			i++;<br />
+   }<br />
+<br />
+}<br />
+<br />
+<br />
+<br />
+<br />
+void main()<br />
+{<br />
+	clrscr();<br />
+	int a[100],n;<br />
+	printf(&quot; Nhap so phan tu cua mang &quot;);<br />
+	scanf(&quot;%d&quot;,&amp;n);<br />
+	nhapmang(a,n);<br />
+	xuatmang(a,n);<br />
+	xoa_ngto(a,n);<br />
+	printf(&quot;\n Mang sau khi xoa voi dieu kien de bai la \n&quot;);<br />
+	xuatmang(a,n);<br />
+	getch();<br />
+}<br />
+HẾT
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+
+		
+
+		
+
+		<div style="margin-top: 10px" align="right">
+			<!-- controls -->
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				
+			
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</table>
+
+
+<!-- post 2144 popup menu -->
+<div class="vbmenu_popup" id="postmenu_2144_menu" style="display:none;">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">hailoc12</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="member.php?u=61">Xem Hồ sơ công khai</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="private.php?do=newpm&amp;u=61" rel="nofollow">Gửi một tin nhắn tới hailoc12</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="search.php?do=finduser&amp;u=61" rel="nofollow">Tìm toàn bộ bài viết bởi hailoc12</a></td></tr>
+	
+	
+	
+	</table>
+</div>
+<!-- / post 2144 popup menu -->
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #2144 --><!-- post #2145 -->
+
+	<!-- open content container -->
+
+<div id="open_content_container">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit2145" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post2145" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+	<td class="thead" >
+		<div class="normal" style="float:right">
+			&nbsp;
+			#<a href="showpost.php?p=2145&amp;postcount=37" target="new" rel="nofollow" id="postcount2145" name="37"><strong>37</strong></a> &nbsp;
+			
+			
+			
+			
+			
+		</div>
+
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post2145"><img class="inlineimg" src="images/statusicon/post_old.gif" alt="Cũ" border="0" /></a>
+			
+				06-10-2006, 09:56 PM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding:0px">
+		<!-- user info -->
+		<table cellpadding="0" cellspacing="6" border="0" width="100%">
+		<tr>
+			<td class="alt2"><a href="member.php?u=61"><img src="images/avatars/noavatar.gif"   alt="Avatar củahailoc12" border="0" /></a></td>
+			<td nowrap="nowrap">
+
+				<div id="postmenu_2145">
+					
+					<a class="bigusername" href="member.php?u=61"><span style="color: #3f02a3;">hailoc12</span></a>
+					<img class="inlineimg" src="images/statusicon/user_offline.gif" alt="hailoc12 là offline" border="0" />
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_2145", true); </script>
+					
+				</div>
+
+				<div class="smallfont">XCoworker Member</div>
+				<div class="smallfont"><img src="images/ranks/rank_xcoworker.gif" alt="" border="" /></div>
+				
+
+			</td>
+			<td width="100%">&nbsp;</td>
+			<td valign="top" nowrap="nowrap">
+
+				<div class="smallfont">
+					<div>Ngày gia nhập: 08 2006</div>
+					<div>Nơi ở: Hải Phòng</div>
+					
+					<div>
+						Bài viết: 283
+					</div>
+					
+					
+					
+					
+					<div>    </div>
+				</div>
+
+			</td>
+		</tr>
+		</table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	
+	<td class="alt1" id="td_post_2145">
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		
+			<!-- icon and title -->
+			<div class="smallfont clearfix">
+				
+					<div style="float: left; width: 36px;"><img class="inlineimg" src="images/icons/icon1.gif" alt="Mặc định" border="0" /></div>
+				
+				<h3 style="margin:0; passing: 0;">Bài tập cơ bản 31</h3>
+			</div>
+			<hr size="1" style="color:#A1D2F1; background-color:#A1D2F1" />
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_2145">
+			
+			BÀI 31<br />
+<br />
+1.	Ý TƯỞNG THUẬT TOÁN  :<br />
+Ở bài này ta chỉ cần viết hàm sắp xếp các số dương bằng cách có hai vòng lặp<br />
+i.	Vòng lặp thứ nhất : làm nhiệm vụ quét các phần tử từ phần tử đầu tiên cho đến phần tử kế cuối<br />
+ii.	Vòng lặp thứ hai : ứng với các giá trị phần tử của vòng lặp thứ nhất vòng lặp thứ hai quét đến hết mảng sau đó làm nhiệm vụ hoán đổi nếu thỏa điều kiện .<br />
+2.	Ý NGHÍA MỘT SỐ BIẾN TRONG BÀI :<br />
+a.	Trong bài có :<br />
+i.	a[100] : mảng tối đa 100 phần tử<br />
+ii.	n : số phần tử trong mảng<br />
+3.	BÀI GIẢI :<br />
+<br />
+#include&lt;stdio.h&gt;<br />
+#include&lt;conio.h&gt;<br />
+<br />
+void nhapmang(int a[100],int n)<br />
+{<br />
+	for(int i=0;i&lt;n;i++)<br />
+	{<br />
+		printf(&quot;a[%d]&quot;,i);<br />
+		scanf(&quot;%d&quot;,&amp;a[i]);<br />
+	}<br />
+}<br />
+<br />
+<br />
+void sapxep(int a[100],int n)<br />
+{<br />
+	int tmp;<br />
+	for(int i=0;i&lt;n-1;i++)<br />
+	{<br />
+		for(int j=i+1;j&lt;n;j++)<br />
+		{<br />
+			if(a[i]&gt;=0)<br />
+			{<br />
+				if((a[i]&gt;a[j])&amp;&amp;(a[j]&gt;=0))<br />
+				{<br />
+					tmp=a[i];<br />
+					a[i]=a[j];<br />
+					a[j]=tmp;<br />
+				}<br />
+			}<br />
+			else<br />
+				break;<br />
+		}<br />
+	}<br />
+}<br />
+<br />
+void xuatmang(int a[100],int n)<br />
+{<br />
+	for(int i=0;i&lt;n;i++)<br />
+		printf(&quot;%3d&quot;,a[i]);<br />
+}<br />
+<br />
+void main()<br />
+{<br />
+	clrscr();<br />
+	int a[100],n;<br />
+	printf(&quot; Nhap so phan tu cua mang &quot;);<br />
+	scanf(&quot;%d&quot;,&amp;n);<br />
+	nhapmang(a,n);<br />
+	xuatmang(a,n);<br />
+	sapxep(a,n);<br />
+	printf(&quot;\n Mang sau khi sap xep tang dan cac so duong la \n\n&quot;);<br />
+	xuatmang(a,n);<br />
+	getch();<br />
+}<br />
+<br />
+<br />
+HẾT
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+
+		
+
+		
+
+		<div style="margin-top: 10px" align="right">
+			<!-- controls -->
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				
+			
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</table>
+
+
+<!-- post 2145 popup menu -->
+<div class="vbmenu_popup" id="postmenu_2145_menu" style="display:none;">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">hailoc12</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="member.php?u=61">Xem Hồ sơ công khai</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="private.php?do=newpm&amp;u=61" rel="nofollow">Gửi một tin nhắn tới hailoc12</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="search.php?do=finduser&amp;u=61" rel="nofollow">Tìm toàn bộ bài viết bởi hailoc12</a></td></tr>
+	
+	
+	
+	</table>
+</div>
+<!-- / post 2145 popup menu -->
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #2145 --><!-- post #2146 -->
+
+	<!-- open content container -->
+
+<div id="open_content_container">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit2146" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post2146" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+	<td class="thead" >
+		<div class="normal" style="float:right">
+			&nbsp;
+			#<a href="showpost.php?p=2146&amp;postcount=38" target="new" rel="nofollow" id="postcount2146" name="38"><strong>38</strong></a> &nbsp;
+			
+			
+			
+			
+			
+		</div>
+
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post2146"><img class="inlineimg" src="images/statusicon/post_old.gif" alt="Cũ" border="0" /></a>
+			
+				06-10-2006, 09:57 PM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding:0px">
+		<!-- user info -->
+		<table cellpadding="0" cellspacing="6" border="0" width="100%">
+		<tr>
+			<td class="alt2"><a href="member.php?u=61"><img src="images/avatars/noavatar.gif"   alt="Avatar củahailoc12" border="0" /></a></td>
+			<td nowrap="nowrap">
+
+				<div id="postmenu_2146">
+					
+					<a class="bigusername" href="member.php?u=61"><span style="color: #3f02a3;">hailoc12</span></a>
+					<img class="inlineimg" src="images/statusicon/user_offline.gif" alt="hailoc12 là offline" border="0" />
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_2146", true); </script>
+					
+				</div>
+
+				<div class="smallfont">XCoworker Member</div>
+				<div class="smallfont"><img src="images/ranks/rank_xcoworker.gif" alt="" border="" /></div>
+				
+
+			</td>
+			<td width="100%">&nbsp;</td>
+			<td valign="top" nowrap="nowrap">
+
+				<div class="smallfont">
+					<div>Ngày gia nhập: 08 2006</div>
+					<div>Nơi ở: Hải Phòng</div>
+					
+					<div>
+						Bài viết: 283
+					</div>
+					
+					
+					
+					
+					<div>    </div>
+				</div>
+
+			</td>
+		</tr>
+		</table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	
+	<td class="alt1" id="td_post_2146">
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		
+			<!-- icon and title -->
+			<div class="smallfont clearfix">
+				
+					<div style="float: left; width: 36px;"><img class="inlineimg" src="images/icons/icon1.gif" alt="Mặc định" border="0" /></div>
+				
+				<h3 style="margin:0; passing: 0;">Bài tập cơ bản 32:</h3>
+			</div>
+			<hr size="1" style="color:#A1D2F1; background-color:#A1D2F1" />
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_2146">
+			
+			BÀI 32<br />
+<br />
+1.	Ý TƯỞNG THUẬT TOÁN  :<br />
+a.	Ở bài này ta nên ưu tiên lấy phần tử gần với x mà đứng trước x<br />
+b.	Ta phải có một hàm làm nhiệm vụ tìm phần tử gần với x nhất .<br />
+2.	Ý NGHĨA MỘT SỐ BIẾN TRONG BÀI :<br />
+a.	Ở hàm void search_pt(int a[50][50] , int n ,int m , int  x ) gồm có :<br />
+i.	min : là biến chứa hiệu của số x và phần tử a[0][0] .<br />
+ii.	y : là biến chứa hiệu giữa x và a[i][j] .<br />
+iii.	pt : là biến chứa giá trị của phần tử gần với x nhất .<br />
+b.	Ở hàm main() :<br />
+i.	a[50][50] : mảng có tối đa 50 dòng 50 cột<br />
+ii.	n , m : là số dòng và số cột<br />
+iii.	x  : là biến được input .<br />
+3.	BÀI GIẢI :<br />
+<br />
+#include&lt;stdio.h&gt;<br />
+#include&lt;conio.h&gt;<br />
+#include&lt;math.h&gt;<br />
+<br />
+/*----------------Nhap Mang &amp; Xuat Mang -----------------*/<br />
+<br />
+void nhapmang(int a[50][50],int n,int m)<br />
+{<br />
+	for(int i=0;i&lt;n;i++)<br />
+	  for(int j=0;j&lt;m;j++)<br />
+		{<br />
+			printf(&quot;a[%d][%d]&quot;,i,j);<br />
+			scanf(&quot;%d&quot;,&amp;a[i][j]);<br />
+		}<br />
+}<br />
+<br />
+void xuatmang(int a[50][50],int n,int m)<br />
+{<br />
+	for(int i=0;i&lt;n;i++)<br />
+	{<br />
+		for(int j=0;j&lt;m;j++)<br />
+		{<br />
+			printf(&quot;%3d&quot;,a[i][j]);<br />
+		}<br />
+		printf(&quot;\n&quot;);<br />
+	}<br />
+<br />
+}<br />
+<br />
+void search_pt(int a[50][50],int n,int m,int x)//x la so nguoi dung nhap vao<br />
+{<br />
+	int min,pt,y;<br />
+	min=abs(x-a[0][0]); // gan hieu voi pt dau tien la nho nhat<br />
+	for(int i=0;i&lt;n;i++)<br />
+		for(int j=0;j&lt;m;j++)<br />
+		{<br />
+			y=abs(x-a[i][j]);<br />
+			if(y&lt;min)<br />
+			{<br />
+				min=y;<br />
+				pt=a[i][j];<br />
+			}<br />
+			if((y==min)&amp;&amp;(a[i][j]&lt;pt))// Lay so nho hon ma gan voi x<br />
+			{<br />
+				min=y;<br />
+				pt=a[i][j];<br />
+			}<br />
+<br />
+		}<br />
+	printf(&quot;Phan Tu gan voi X nhat la %d &quot;,pt);<br />
+}<br />
+<br />
+<br />
+<br />
+<br />
+void main()<br />
+{<br />
+	clrscr();<br />
+	int a[50][50],n,m,x;<br />
+	printf(&quot;Nhap vao so dong  &quot;);<br />
+	scanf(&quot;%d&quot;,&amp;n);<br />
+	printf(&quot;Nhap vao so cot  &quot;);<br />
+	scanf(&quot;%d&quot;,&amp;m);<br />
+	printf(&quot;Nhap vao pt x &quot;);<br />
+	scanf(&quot;%d&quot;,&amp;x);<br />
+	nhapmang(a,n,m);<br />
+	xuatmang(a,n,m);<br />
+	search_pt(a,n,m,x);<br />
+	getch();<br />
+}<br />
+HẾT
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+
+		
+
+		
+
+		<div style="margin-top: 10px" align="right">
+			<!-- controls -->
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				
+			
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</table>
+
+
+<!-- post 2146 popup menu -->
+<div class="vbmenu_popup" id="postmenu_2146_menu" style="display:none;">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">hailoc12</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="member.php?u=61">Xem Hồ sơ công khai</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="private.php?do=newpm&amp;u=61" rel="nofollow">Gửi một tin nhắn tới hailoc12</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="search.php?do=finduser&amp;u=61" rel="nofollow">Tìm toàn bộ bài viết bởi hailoc12</a></td></tr>
+	
+	
+	
+	</table>
+</div>
+<!-- / post 2146 popup menu -->
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #2146 --><!-- post #2147 -->
+
+	<!-- open content container -->
+
+<div id="open_content_container">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit2147" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post2147" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+	<td class="thead" >
+		<div class="normal" style="float:right">
+			&nbsp;
+			#<a href="showpost.php?p=2147&amp;postcount=39" target="new" rel="nofollow" id="postcount2147" name="39"><strong>39</strong></a> &nbsp;
+			
+			
+			
+			
+			
+		</div>
+
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post2147"><img class="inlineimg" src="images/statusicon/post_old.gif" alt="Cũ" border="0" /></a>
+			
+				06-10-2006, 09:58 PM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding:0px">
+		<!-- user info -->
+		<table cellpadding="0" cellspacing="6" border="0" width="100%">
+		<tr>
+			<td class="alt2"><a href="member.php?u=61"><img src="images/avatars/noavatar.gif"   alt="Avatar củahailoc12" border="0" /></a></td>
+			<td nowrap="nowrap">
+
+				<div id="postmenu_2147">
+					
+					<a class="bigusername" href="member.php?u=61"><span style="color: #3f02a3;">hailoc12</span></a>
+					<img class="inlineimg" src="images/statusicon/user_offline.gif" alt="hailoc12 là offline" border="0" />
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_2147", true); </script>
+					
+				</div>
+
+				<div class="smallfont">XCoworker Member</div>
+				<div class="smallfont"><img src="images/ranks/rank_xcoworker.gif" alt="" border="" /></div>
+				
+
+			</td>
+			<td width="100%">&nbsp;</td>
+			<td valign="top" nowrap="nowrap">
+
+				<div class="smallfont">
+					<div>Ngày gia nhập: 08 2006</div>
+					<div>Nơi ở: Hải Phòng</div>
+					
+					<div>
+						Bài viết: 283
+					</div>
+					
+					
+					
+					
+					<div>    </div>
+				</div>
+
+			</td>
+		</tr>
+		</table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	
+	<td class="alt1" id="td_post_2147">
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		
+			<!-- icon and title -->
+			<div class="smallfont clearfix">
+				
+					<div style="float: left; width: 36px;"><img class="inlineimg" src="images/icons/icon1.gif" alt="Mặc định" border="0" /></div>
+				
+				<h3 style="margin:0; passing: 0;">Bài tập cơ bản 33:</h3>
+			</div>
+			<hr size="1" style="color:#A1D2F1; background-color:#A1D2F1" />
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_2147">
+			
+			BÀI 33 :<br />
+<br />
+1.	Ý TƯỞNG THUẬT TOÁN :<br />
+a.	Ở bài này ta chỉ cần vẽ một ma trận vuông cấp 4 chẳng hạn sau đó quan sát các biến chạy thay đổi rồi tìm ra quy luật của nó .<br />
+b.	Ví dụ muốn tính tổng các phần tử trên đường chéo chính chẳng hạn trong ma trận cấp 4 thì các phần tử ở các vị trí như sau ( 00 ,11 , 22 , 33  ) thì ta cho vòng lặp chạy từ  0 cho đến n-1 sau đó khai báo một biến cộng dồn lại các phần tử a[i][i]  khi vòng lặp chạy .<br />
+2.	Ý NGHĨA MỘT SỐ BIẾN TRONG BÀI :<br />
+Trong bài chỉ có mảng a[50][50] : tối đa 50 dòng 50 cột , n : là cấp ma trận<br />
+3.	BÀI GIẢI :<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">PHP Code:</div>
+	<div class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 1874px;
+		text-align: left;
+		overflow: auto">
+		<code style="white-space:nowrap">
+			<!-- php buffer start --><code><span style="color: #000000">
+<span style="color: #0000BB"></span><span style="color: #FF8000">#include&lt;stdio.h&gt;<br />#include&lt;conio.h&gt;<br /><br />/*----------------Nhap&nbsp;Mang&nbsp;&amp;&nbsp;Xuat&nbsp;Mang&nbsp;-----------------*/<br /><br /></span><span style="color: #0000BB">void&nbsp;nhapmang</span><span style="color: #007700">(</span><span style="color: #0000BB">int&nbsp;a</span><span style="color: #007700">&#91;</span><span style="color: #0000BB">50</span><span style="color: #007700">&#93;&#91;</span><span style="color: #0000BB">50</span><span style="color: #007700">&#93;,</span><span style="color: #0000BB">int&nbsp;n</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;for(</span><span style="color: #0000BB">int&nbsp;i</span><span style="color: #007700">=</span><span style="color: #0000BB">0</span><span style="color: #007700">;</span><span style="color: #0000BB">i</span><span style="color: #007700">&lt;</span><span style="color: #0000BB">n</span><span style="color: #007700">;</span><span style="color: #0000BB">i</span><span style="color: #007700">++)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(</span><span style="color: #0000BB">int&nbsp;j</span><span style="color: #007700">=</span><span style="color: #0000BB">0</span><span style="color: #007700">;</span><span style="color: #0000BB">j</span><span style="color: #007700">&lt;</span><span style="color: #0000BB">n</span><span style="color: #007700">;</span><span style="color: #0000BB">j</span><span style="color: #007700">++)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">printf</span><span style="color: #007700">(</span><span style="color: #DD0000">"a&#91;%d&#93;&#91;%d&#93;"</span><span style="color: #007700">,</span><span style="color: #0000BB">i</span><span style="color: #007700">,</span><span style="color: #0000BB">j</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">scanf</span><span style="color: #007700">(</span><span style="color: #DD0000">"%d"</span><span style="color: #007700">,&amp;</span><span style="color: #0000BB">a</span><span style="color: #007700">&#91;</span><span style="color: #0000BB">i</span><span style="color: #007700">&#93;&#91;</span><span style="color: #0000BB">j</span><span style="color: #007700">&#93;);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />}<br /><br /></span><span style="color: #0000BB">void&nbsp;xuatmang</span><span style="color: #007700">(</span><span style="color: #0000BB">int&nbsp;a</span><span style="color: #007700">&#91;</span><span style="color: #0000BB">50</span><span style="color: #007700">&#93;&#91;</span><span style="color: #0000BB">50</span><span style="color: #007700">&#93;,</span><span style="color: #0000BB">int&nbsp;n</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;for(</span><span style="color: #0000BB">int&nbsp;i</span><span style="color: #007700">=</span><span style="color: #0000BB">0</span><span style="color: #007700">;</span><span style="color: #0000BB">i</span><span style="color: #007700">&lt;</span><span style="color: #0000BB">n</span><span style="color: #007700">;</span><span style="color: #0000BB">i</span><span style="color: #007700">++)<br />&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(</span><span style="color: #0000BB">int&nbsp;j</span><span style="color: #007700">=</span><span style="color: #0000BB">0</span><span style="color: #007700">;</span><span style="color: #0000BB">j</span><span style="color: #007700">&lt;</span><span style="color: #0000BB">n</span><span style="color: #007700">;</span><span style="color: #0000BB">j</span><span style="color: #007700">++)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">printf</span><span style="color: #007700">(</span><span style="color: #DD0000">"%3d"</span><span style="color: #007700">,</span><span style="color: #0000BB">a</span><span style="color: #007700">&#91;</span><span style="color: #0000BB">i</span><span style="color: #007700">&#93;&#91;</span><span style="color: #0000BB">j</span><span style="color: #007700">&#93;);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">printf</span><span style="color: #007700">(</span><span style="color: #DD0000">"\n"</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />}<br /><br /><br /><br /><br /><br /><br /></span><span style="color: #FF8000">/*--Sau&nbsp;Day&nbsp;la&nbsp;cac&nbsp;ham&nbsp;tinh&nbsp;tong&nbsp;tren&nbsp;duoi&nbsp;duong&nbsp;cheo&nbsp;chinh&nbsp;(ca&nbsp;duong&nbsp;cheo)--*/<br /><br /></span><span style="color: #0000BB">void&nbsp;tongtg_tren0</span><span style="color: #007700">(</span><span style="color: #0000BB">int&nbsp;a</span><span style="color: #007700">&#91;</span><span style="color: #0000BB">50</span><span style="color: #007700">&#93;&#91;</span><span style="color: #0000BB">50</span><span style="color: #007700">&#93;,</span><span style="color: #0000BB">int&nbsp;n</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">int&nbsp;sum</span><span style="color: #007700">=</span><span style="color: #0000BB">0</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;for(</span><span style="color: #0000BB">int&nbsp;i</span><span style="color: #007700">=</span><span style="color: #0000BB">0</span><span style="color: #007700">;</span><span style="color: #0000BB">i</span><span style="color: #007700">&lt;</span><span style="color: #0000BB">n</span><span style="color: #007700">-</span><span style="color: #0000BB">1</span><span style="color: #007700">;</span><span style="color: #0000BB">i</span><span style="color: #007700">++)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(</span><span style="color: #0000BB">int&nbsp;j</span><span style="color: #007700">=</span><span style="color: #0000BB">i</span><span style="color: #007700">+</span><span style="color: #0000BB">1</span><span style="color: #007700">;</span><span style="color: #0000BB">j</span><span style="color: #007700">&lt;</span><span style="color: #0000BB">n</span><span style="color: #007700">;</span><span style="color: #0000BB">j</span><span style="color: #007700">++)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">sum</span><span style="color: #007700">+=</span><span style="color: #0000BB">a</span><span style="color: #007700">&#91;</span><span style="color: #0000BB">i</span><span style="color: #007700">&#93;&#91;</span><span style="color: #0000BB">j</span><span style="color: #007700">&#93;;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br /></span><span style="color: #0000BB">printf</span><span style="color: #007700">(</span><span style="color: #DD0000">"Tong&nbsp;Tam&nbsp;Giac&nbsp;tren&nbsp;duong&nbsp;cheo&nbsp;chinh&nbsp;khong&nbsp;ke&nbsp;dcheo&nbsp;la&nbsp;%d&nbsp;\n"</span><span style="color: #007700">,</span><span style="color: #0000BB">sum</span><span style="color: #007700">);<br /><br />}<br /><br /></span><span style="color: #0000BB">void&nbsp;tongtg_tren1</span><span style="color: #007700">(</span><span style="color: #0000BB">int&nbsp;a</span><span style="color: #007700">&#91;</span><span style="color: #0000BB">50</span><span style="color: #007700">&#93;&#91;</span><span style="color: #0000BB">50</span><span style="color: #007700">&#93;,</span><span style="color: #0000BB">int&nbsp;n</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">int&nbsp;sum</span><span style="color: #007700">=</span><span style="color: #0000BB">0</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;for(</span><span style="color: #0000BB">int&nbsp;i</span><span style="color: #007700">=</span><span style="color: #0000BB">0</span><span style="color: #007700">;</span><span style="color: #0000BB">i</span><span style="color: #007700">&lt;</span><span style="color: #0000BB">n</span><span style="color: #007700">;</span><span style="color: #0000BB">i</span><span style="color: #007700">++)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(</span><span style="color: #0000BB">int&nbsp;j</span><span style="color: #007700">=</span><span style="color: #0000BB">i</span><span style="color: #007700">;</span><span style="color: #0000BB">j</span><span style="color: #007700">&lt;</span><span style="color: #0000BB">n</span><span style="color: #007700">;</span><span style="color: #0000BB">j</span><span style="color: #007700">++)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">sum</span><span style="color: #007700">+=</span><span style="color: #0000BB">a</span><span style="color: #007700">&#91;</span><span style="color: #0000BB">i</span><span style="color: #007700">&#93;&#91;</span><span style="color: #0000BB">j</span><span style="color: #007700">&#93;;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">printf</span><span style="color: #007700">(</span><span style="color: #DD0000">"Tong&nbsp;Tam&nbsp;Giac&nbsp;tren&nbsp;duong&nbsp;cheo&nbsp;chinh&nbsp;ke&nbsp;ca&nbsp;dcheo&nbsp;la&nbsp;%d\n"</span><span style="color: #007700">,</span><span style="color: #0000BB">sum</span><span style="color: #007700">);<br /><br />}<br /><br /></span><span style="color: #0000BB">void&nbsp;tongtg_duoi0</span><span style="color: #007700">(</span><span style="color: #0000BB">int&nbsp;a</span><span style="color: #007700">&#91;</span><span style="color: #0000BB">50</span><span style="color: #007700">&#93;&#91;</span><span style="color: #0000BB">50</span><span style="color: #007700">&#93;,</span><span style="color: #0000BB">int&nbsp;n</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">int&nbsp;sum</span><span style="color: #007700">=</span><span style="color: #0000BB">0</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;for(</span><span style="color: #0000BB">int&nbsp;i</span><span style="color: #007700">=</span><span style="color: #0000BB">1</span><span style="color: #007700">;</span><span style="color: #0000BB">i</span><span style="color: #007700">&lt;</span><span style="color: #0000BB">n</span><span style="color: #007700">;</span><span style="color: #0000BB">i</span><span style="color: #007700">++)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(</span><span style="color: #0000BB">int&nbsp;j</span><span style="color: #007700">=</span><span style="color: #0000BB">0</span><span style="color: #007700">;</span><span style="color: #0000BB">j</span><span style="color: #007700">&lt;</span><span style="color: #0000BB">i</span><span style="color: #007700">;</span><span style="color: #0000BB">j</span><span style="color: #007700">++)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">sum</span><span style="color: #007700">+=</span><span style="color: #0000BB">a</span><span style="color: #007700">&#91;</span><span style="color: #0000BB">i</span><span style="color: #007700">&#93;&#91;</span><span style="color: #0000BB">j</span><span style="color: #007700">&#93;;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br /></span><span style="color: #0000BB">printf</span><span style="color: #007700">(</span><span style="color: #DD0000">"Tong&nbsp;Tam&nbsp;Giac&nbsp;duoi&nbsp;duong&nbsp;cheo&nbsp;chinh&nbsp;khong&nbsp;ke&nbsp;dcheo&nbsp;la&nbsp;%d\n"</span><span style="color: #007700">,</span><span style="color: #0000BB">sum</span><span style="color: #007700">);<br /><br />}<br /><br /></span><span style="color: #0000BB">void&nbsp;tongtg_duoi1</span><span style="color: #007700">(</span><span style="color: #0000BB">int&nbsp;a</span><span style="color: #007700">&#91;</span><span style="color: #0000BB">50</span><span style="color: #007700">&#93;&#91;</span><span style="color: #0000BB">50</span><span style="color: #007700">&#93;,</span><span style="color: #0000BB">int&nbsp;n</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">int&nbsp;sum</span><span style="color: #007700">=</span><span style="color: #0000BB">0</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;for(</span><span style="color: #0000BB">int&nbsp;i</span><span style="color: #007700">=</span><span style="color: #0000BB">0</span><span style="color: #007700">;</span><span style="color: #0000BB">i</span><span style="color: #007700">&lt;</span><span style="color: #0000BB">n</span><span style="color: #007700">;</span><span style="color: #0000BB">i</span><span style="color: #007700">++)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(</span><span style="color: #0000BB">int&nbsp;j</span><span style="color: #007700">=</span><span style="color: #0000BB">0</span><span style="color: #007700">;</span><span style="color: #0000BB">j</span><span style="color: #007700">&lt;=</span><span style="color: #0000BB">i</span><span style="color: #007700">;</span><span style="color: #0000BB">j</span><span style="color: #007700">++)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">sum</span><span style="color: #007700">+=</span><span style="color: #0000BB">a</span><span style="color: #007700">&#91;</span><span style="color: #0000BB">i</span><span style="color: #007700">&#93;&#91;</span><span style="color: #0000BB">j</span><span style="color: #007700">&#93;;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">printf</span><span style="color: #007700">(</span><span style="color: #DD0000">"Tong&nbsp;Tam&nbsp;Giac&nbsp;duoi&nbsp;duong&nbsp;cheo&nbsp;chinh&nbsp;ke&nbsp;ca&nbsp;dcheo&nbsp;la&nbsp;%d\n"</span><span style="color: #007700">,</span><span style="color: #0000BB">sum</span><span style="color: #007700">);<br /><br />}<br /><br /><br /><br /><br /></span><span style="color: #FF8000">/*-----------------Thao&nbsp;tac&nbsp;tuong&nbsp;tu&nbsp;tren&nbsp;duong&nbsp;cheo&nbsp;phu&nbsp;-----------------*/<br /><br /></span><span style="color: #0000BB">void&nbsp;tongtg_trenp0</span><span style="color: #007700">(</span><span style="color: #0000BB">int&nbsp;a</span><span style="color: #007700">&#91;</span><span style="color: #0000BB">50</span><span style="color: #007700">&#93;&#91;</span><span style="color: #0000BB">50</span><span style="color: #007700">&#93;,</span><span style="color: #0000BB">int&nbsp;n</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">int&nbsp;sum</span><span style="color: #007700">=</span><span style="color: #0000BB">0</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;for(</span><span style="color: #0000BB">int&nbsp;i</span><span style="color: #007700">=</span><span style="color: #0000BB">0</span><span style="color: #007700">;</span><span style="color: #0000BB">i</span><span style="color: #007700">&lt;</span><span style="color: #0000BB">n</span><span style="color: #007700">-</span><span style="color: #0000BB">1</span><span style="color: #007700">;</span><span style="color: #0000BB">i</span><span style="color: #007700">++)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(</span><span style="color: #0000BB">int&nbsp;j</span><span style="color: #007700">=</span><span style="color: #0000BB">0</span><span style="color: #007700">;</span><span style="color: #0000BB">j</span><span style="color: #007700">&lt;=</span><span style="color: #0000BB">n</span><span style="color: #007700">-</span><span style="color: #0000BB">i</span><span style="color: #007700">-</span><span style="color: #0000BB">2</span><span style="color: #007700">;</span><span style="color: #0000BB">j</span><span style="color: #007700">++)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">sum</span><span style="color: #007700">+=</span><span style="color: #0000BB">a</span><span style="color: #007700">&#91;</span><span style="color: #0000BB">i</span><span style="color: #007700">&#93;&#91;</span><span style="color: #0000BB">j</span><span style="color: #007700">&#93;;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br /></span><span style="color: #0000BB">printf</span><span style="color: #007700">(</span><span style="color: #DD0000">"Tong&nbsp;Tam&nbsp;Giac&nbsp;tren&nbsp;duong&nbsp;cheo&nbsp;phu&nbsp;khong&nbsp;ke&nbsp;ca&nbsp;dcheo&nbsp;la&nbsp;%d\n"</span><span style="color: #007700">,</span><span style="color: #0000BB">sum</span><span style="color: #007700">);<br /><br />}<br /><br /></span><span style="color: #0000BB">void&nbsp;tongtg_trenp1</span><span style="color: #007700">(</span><span style="color: #0000BB">int&nbsp;a</span><span style="color: #007700">&#91;</span><span style="color: #0000BB">50</span><span style="color: #007700">&#93;&#91;</span><span style="color: #0000BB">50</span><span style="color: #007700">&#93;,</span><span style="color: #0000BB">int&nbsp;n</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">int&nbsp;sum</span><span style="color: #007700">=</span><span style="color: #0000BB">0</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;for(</span><span style="color: #0000BB">int&nbsp;i</span><span style="color: #007700">=</span><span style="color: #0000BB">0</span><span style="color: #007700">;</span><span style="color: #0000BB">i</span><span style="color: #007700">&lt;</span><span style="color: #0000BB">n</span><span style="color: #007700">;</span><span style="color: #0000BB">i</span><span style="color: #007700">++)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(</span><span style="color: #0000BB">int&nbsp;j</span><span style="color: #007700">=</span><span style="color: #0000BB">0</span><span style="color: #007700">;</span><span style="color: #0000BB">j</span><span style="color: #007700">&lt;=</span><span style="color: #0000BB">n</span><span style="color: #007700">-</span><span style="color: #0000BB">i</span><span style="color: #007700">-</span><span style="color: #0000BB">1</span><span style="color: #007700">;</span><span style="color: #0000BB">j</span><span style="color: #007700">++)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">sum</span><span style="color: #007700">+=</span><span style="color: #0000BB">a</span><span style="color: #007700">&#91;</span><span style="color: #0000BB">i</span><span style="color: #007700">&#93;&#91;</span><span style="color: #0000BB">j</span><span style="color: #007700">&#93;;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">printf</span><span style="color: #007700">(</span><span style="color: #DD0000">"Tong&nbsp;Tam&nbsp;Giac&nbsp;tren&nbsp;duong&nbsp;cheo&nbsp;phu&nbsp;ke&nbsp;ca&nbsp;dcheo&nbsp;la&nbsp;%d\n"</span><span style="color: #007700">,</span><span style="color: #0000BB">sum</span><span style="color: #007700">);<br /><br />}<br /><br /><br /></span><span style="color: #0000BB">void&nbsp;tongtg_duoip0</span><span style="color: #007700">(</span><span style="color: #0000BB">int&nbsp;a</span><span style="color: #007700">&#91;</span><span style="color: #0000BB">50</span><span style="color: #007700">&#93;&#91;</span><span style="color: #0000BB">50</span><span style="color: #007700">&#93;,</span><span style="color: #0000BB">int&nbsp;n</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">int&nbsp;sum</span><span style="color: #007700">=</span><span style="color: #0000BB">0</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;for(</span><span style="color: #0000BB">int&nbsp;i</span><span style="color: #007700">=</span><span style="color: #0000BB">1</span><span style="color: #007700">;</span><span style="color: #0000BB">i</span><span style="color: #007700">&lt;</span><span style="color: #0000BB">n</span><span style="color: #007700">;</span><span style="color: #0000BB">i</span><span style="color: #007700">++)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(</span><span style="color: #0000BB">int&nbsp;j</span><span style="color: #007700">=</span><span style="color: #0000BB">n</span><span style="color: #007700">-</span><span style="color: #0000BB">i</span><span style="color: #007700">;</span><span style="color: #0000BB">j</span><span style="color: #007700">&lt;</span><span style="color: #0000BB">n</span><span style="color: #007700">;</span><span style="color: #0000BB">j</span><span style="color: #007700">++)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">sum</span><span style="color: #007700">+=</span><span style="color: #0000BB">a</span><span style="color: #007700">&#91;</span><span style="color: #0000BB">i</span><span style="color: #007700">&#93;&#91;</span><span style="color: #0000BB">j</span><span style="color: #007700">&#93;;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br /></span><span style="color: #0000BB">printf</span><span style="color: #007700">(</span><span style="color: #DD0000">"Tong&nbsp;Tam&nbsp;Giac&nbsp;duoi&nbsp;duong&nbsp;cheo&nbsp;phu&nbsp;khong&nbsp;ke&nbsp;ca&nbsp;dcheo&nbsp;la&nbsp;%d\n"</span><span style="color: #007700">,</span><span style="color: #0000BB">sum</span><span style="color: #007700">);<br /><br />}<br /><br /><br /></span><span style="color: #0000BB">void&nbsp;tongtg_duoip1</span><span style="color: #007700">(</span><span style="color: #0000BB">int&nbsp;a</span><span style="color: #007700">&#91;</span><span style="color: #0000BB">50</span><span style="color: #007700">&#93;&#91;</span><span style="color: #0000BB">50</span><span style="color: #007700">&#93;,</span><span style="color: #0000BB">int&nbsp;n</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">int&nbsp;sum</span><span style="color: #007700">=</span><span style="color: #0000BB">0</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;for(</span><span style="color: #0000BB">int&nbsp;i</span><span style="color: #007700">=</span><span style="color: #0000BB">0</span><span style="color: #007700">;</span><span style="color: #0000BB">i</span><span style="color: #007700">&lt;</span><span style="color: #0000BB">n</span><span style="color: #007700">;</span><span style="color: #0000BB">i</span><span style="color: #007700">++)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(</span><span style="color: #0000BB">int&nbsp;j</span><span style="color: #007700">=</span><span style="color: #0000BB">n</span><span style="color: #007700">-</span><span style="color: #0000BB">i</span><span style="color: #007700">-</span><span style="color: #0000BB">1</span><span style="color: #007700">;</span><span style="color: #0000BB">j</span><span style="color: #007700">&lt;</span><span style="color: #0000BB">n</span><span style="color: #007700">;</span><span style="color: #0000BB">j</span><span style="color: #007700">++)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">sum</span><span style="color: #007700">+=</span><span style="color: #0000BB">a</span><span style="color: #007700">&#91;</span><span style="color: #0000BB">i</span><span style="color: #007700">&#93;&#91;</span><span style="color: #0000BB">j</span><span style="color: #007700">&#93;;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">printf</span><span style="color: #007700">(</span><span style="color: #DD0000">"Tong&nbsp;Tam&nbsp;Giac&nbsp;duoi&nbsp;duong&nbsp;cheo&nbsp;phu&nbsp;ke&nbsp;ca&nbsp;dcheo&nbsp;la&nbsp;%d\n"</span><span style="color: #007700">,</span><span style="color: #0000BB">sum</span><span style="color: #007700">);<br /><br />}<br /><br /><br /></span><span style="color: #0000BB">void&nbsp;main</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">clrscr</span><span style="color: #007700">();<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">int&nbsp;a</span><span style="color: #007700">&#91;</span><span style="color: #0000BB">50</span><span style="color: #007700">&#93;&#91;</span><span style="color: #0000BB">50</span><span style="color: #007700">&#93;,</span><span style="color: #0000BB">n</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">printf</span><span style="color: #007700">(</span><span style="color: #DD0000">"Nhap&nbsp;Vao&nbsp;cap&nbsp;cua&nbsp;ma&nbsp;tran&nbsp;vuong"</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">scanf</span><span style="color: #007700">(</span><span style="color: #DD0000">"%d"</span><span style="color: #007700">,&amp;</span><span style="color: #0000BB">n</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">nhapmang</span><span style="color: #007700">(</span><span style="color: #0000BB">a</span><span style="color: #007700">,</span><span style="color: #0000BB">n</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">xuatmang</span><span style="color: #007700">(</span><span style="color: #0000BB">a</span><span style="color: #007700">,</span><span style="color: #0000BB">n</span><span style="color: #007700">);</span><span style="color: #FF8000">//&nbsp;Xuat&nbsp;Mang&nbsp;Luc&nbsp;Dau<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">printf</span><span style="color: #007700">(</span><span style="color: #DD0000">"Cac&nbsp;Thao&nbsp;Tac&nbsp;Tren&nbsp;Duong&nbsp;Cheo&nbsp;Chinh&nbsp;\n\n\n"</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">tongtg_tren0</span><span style="color: #007700">(</span><span style="color: #0000BB">a</span><span style="color: #007700">,</span><span style="color: #0000BB">n</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">tongtg_tren1</span><span style="color: #007700">(</span><span style="color: #0000BB">a</span><span style="color: #007700">,</span><span style="color: #0000BB">n</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">tongtg_duoi0</span><span style="color: #007700">(</span><span style="color: #0000BB">a</span><span style="color: #007700">,</span><span style="color: #0000BB">n</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">tongtg_duoi1</span><span style="color: #007700">(</span><span style="color: #0000BB">a</span><span style="color: #007700">,</span><span style="color: #0000BB">n</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">printf</span><span style="color: #007700">(</span><span style="color: #DD0000">"\n\n"</span><span style="color: #007700">);<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">printf</span><span style="color: #007700">(</span><span style="color: #DD0000">"&nbsp;Cac&nbsp;Thao&nbsp;Tac&nbsp;Tren&nbsp;Duong&nbsp;Cheo&nbsp;Phu&nbsp;\n\n\n"</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">tongtg_trenp0</span><span style="color: #007700">(</span><span style="color: #0000BB">a</span><span style="color: #007700">,</span><span style="color: #0000BB">n</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">tongtg_trenp1</span><span style="color: #007700">(</span><span style="color: #0000BB">a</span><span style="color: #007700">,</span><span style="color: #0000BB">n</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">tongtg_duoip0</span><span style="color: #007700">(</span><span style="color: #0000BB">a</span><span style="color: #007700">,</span><span style="color: #0000BB">n</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">tongtg_duoip1</span><span style="color: #007700">(</span><span style="color: #0000BB">a</span><span style="color: #007700">,</span><span style="color: #0000BB">n</span><span style="color: #007700">);<br /><br /></span><span style="color: #0000BB">getch</span><span style="color: #007700">();<br />}&nbsp;<br /></span><span style="color: #0000BB"></span>
+</span>
+</code><!-- php buffer end -->
+		</code>
+	</div>
+</div>HẾT
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+
+		
+
+		
+		<!-- edit note -->
+			<div class="smallfont">
+				<hr size="1" style="color:#A1D2F1; background-color:#A1D2F1" />
+				<em>
+					
+						Đã được chỉnh sửa lần cuối bởi hailoc12 : 14-06-2007 lúc <span class="time">02:09 PM</span>.
+					
+					
+				</em>
+			</div>
+		<!-- / edit note -->
+		
+
+		<div style="margin-top: 10px" align="right">
+			<!-- controls -->
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				
+			
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</table>
+
+
+<!-- post 2147 popup menu -->
+<div class="vbmenu_popup" id="postmenu_2147_menu" style="display:none;">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">hailoc12</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="member.php?u=61">Xem Hồ sơ công khai</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="private.php?do=newpm&amp;u=61" rel="nofollow">Gửi một tin nhắn tới hailoc12</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="search.php?do=finduser&amp;u=61" rel="nofollow">Tìm toàn bộ bài viết bởi hailoc12</a></td></tr>
+	
+	
+	
+	</table>
+</div>
+<!-- / post 2147 popup menu -->
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #2147 --><!-- post #2148 -->
+
+	<!-- open content container -->
+
+<div id="open_content_container">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit2148" style="padding:0px 0px 6px 0px">
+	
+
+
+
+<table class="tborder" id="post2148" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+	<td class="thead" >
+		<div class="normal" style="float:right">
+			&nbsp;
+			#<a href="showpost.php?p=2148&amp;postcount=40" target="new" rel="nofollow" id="postcount2148" name="40"><strong>40</strong></a> &nbsp;
+			
+			
+			
+			
+			
+		</div>
+
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post2148"><img class="inlineimg" src="images/statusicon/post_old.gif" alt="Cũ" border="0" /></a>
+			
+				06-10-2006, 09:58 PM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding:0px">
+		<!-- user info -->
+		<table cellpadding="0" cellspacing="6" border="0" width="100%">
+		<tr>
+			<td class="alt2"><a href="member.php?u=61"><img src="images/avatars/noavatar.gif"   alt="Avatar củahailoc12" border="0" /></a></td>
+			<td nowrap="nowrap">
+
+				<div id="postmenu_2148">
+					
+					<a class="bigusername" href="member.php?u=61"><span style="color: #3f02a3;">hailoc12</span></a>
+					<img class="inlineimg" src="images/statusicon/user_offline.gif" alt="hailoc12 là offline" border="0" />
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_2148", true); </script>
+					
+				</div>
+
+				<div class="smallfont">XCoworker Member</div>
+				<div class="smallfont"><img src="images/ranks/rank_xcoworker.gif" alt="" border="" /></div>
+				
+
+			</td>
+			<td width="100%">&nbsp;</td>
+			<td valign="top" nowrap="nowrap">
+
+				<div class="smallfont">
+					<div>Ngày gia nhập: 08 2006</div>
+					<div>Nơi ở: Hải Phòng</div>
+					
+					<div>
+						Bài viết: 283
+					</div>
+					
+					
+					
+					
+					<div>    </div>
+				</div>
+
+			</td>
+		</tr>
+		</table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	
+	<td class="alt1" id="td_post_2148">
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		
+			<!-- icon and title -->
+			<div class="smallfont clearfix">
+				
+					<div style="float: left; width: 36px;"><img class="inlineimg" src="images/icons/icon1.gif" alt="Mặc định" border="0" /></div>
+				
+				<h3 style="margin:0; passing: 0;">Bài tập cơ bản 34:</h3>
+			</div>
+			<hr size="1" style="color:#A1D2F1; background-color:#A1D2F1" />
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_2148">
+			
+			BÀI 34<br />
+<br />
+1.	Ý TƯỞNG THUẬT TOÁN :<br />
+a.	Trước hết ta phải xác định chuyển mảng sang mấy dòng mấy cột .<br />
+b.	Sau đó mới gán tử mảng 1 chiều sang mảng 2 chiều .<br />
+2.	Ý NGHĨA MỘT SỐ BIẾN TRONG BÀI :<br />
+Trong bài chỉ có các biến :<br />
+i.	a[100] : mảng 1 chiều có 100 phần tử<br />
+ii.	c[100][100] : mảng 2 chiều có tối đa là 100 dòng và 100 cột<br />
+iii.	x: là số phần tử trên mảng 1 chiều<br />
+iv.	n , m : là các biến input chính là số dòng và số cột của ma trận<br />
+3.	BÀI GIẢI :<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">PHP Code:</div>
+	<div class="code_entry" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 716px;
+		height: 850px;
+		text-align: left;
+		overflow: auto">
+		<code style="white-space:nowrap">
+			<!-- php buffer start --><code><span style="color: #000000">
+<span style="color: #0000BB"></span><span style="color: #FF8000">#include&lt;conio.h&gt;<br />#include&lt;stdio.h&gt;<br /></span><span style="color: #0000BB">void&nbsp;nhap</span><span style="color: #007700">(</span><span style="color: #0000BB">int&nbsp;a</span><span style="color: #007700">&#91;</span><span style="color: #0000BB">100</span><span style="color: #007700">&#93;,</span><span style="color: #0000BB">int&nbsp;n</span><span style="color: #007700">)<br />{&nbsp;&nbsp;&nbsp;&nbsp;for(</span><span style="color: #0000BB">int&nbsp;i</span><span style="color: #007700">=</span><span style="color: #0000BB">0</span><span style="color: #007700">;</span><span style="color: #0000BB">i</span><span style="color: #007700">&lt;</span><span style="color: #0000BB">n</span><span style="color: #007700">;</span><span style="color: #0000BB">i</span><span style="color: #007700">++)<br />&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">printf</span><span style="color: #007700">(</span><span style="color: #DD0000">"a&#91;%d&#93;="</span><span style="color: #007700">,</span><span style="color: #0000BB">i</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">scanf</span><span style="color: #007700">(</span><span style="color: #DD0000">"%d"</span><span style="color: #007700">,&amp;</span><span style="color: #0000BB">a</span><span style="color: #007700">&#91;</span><span style="color: #0000BB">i</span><span style="color: #007700">&#93;);<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />}<br /><br /></span><span style="color: #0000BB">void&nbsp;&nbsp;xuat</span><span style="color: #007700">(</span><span style="color: #0000BB">int&nbsp;a</span><span style="color: #007700">&#91;</span><span style="color: #0000BB">100</span><span style="color: #007700">&#93;,</span><span style="color: #0000BB">int&nbsp;n</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">printf</span><span style="color: #007700">(</span><span style="color: #DD0000">"ta&nbsp;co&nbsp;mang:\n"</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;for(</span><span style="color: #0000BB">int&nbsp;i</span><span style="color: #007700">=</span><span style="color: #0000BB">0</span><span style="color: #007700">;</span><span style="color: #0000BB">i</span><span style="color: #007700">&lt;</span><span style="color: #0000BB">n</span><span style="color: #007700">;</span><span style="color: #0000BB">i</span><span style="color: #007700">++)<br />&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">printf</span><span style="color: #007700">(</span><span style="color: #DD0000">"%5d"</span><span style="color: #007700">,</span><span style="color: #0000BB">a</span><span style="color: #007700">&#91;</span><span style="color: #0000BB">i</span><span style="color: #007700">&#93;);<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">printf</span><span style="color: #007700">(</span><span style="color: #DD0000">"\n\n"</span><span style="color: #007700">);<br />}<br /><br /><br /></span><span style="color: #0000BB">void&nbsp;doimang2</span><span style="color: #007700">(</span><span style="color: #0000BB">int&nbsp;c</span><span style="color: #007700">&#91;</span><span style="color: #0000BB">100</span><span style="color: #007700">&#93;&#91;</span><span style="color: #0000BB">100</span><span style="color: #007700">&#93;,</span><span style="color: #0000BB">int&nbsp;a</span><span style="color: #007700">&#91;</span><span style="color: #0000BB">100</span><span style="color: #007700">&#93;,</span><span style="color: #0000BB">int&nbsp;n</span><span style="color: #007700">,</span><span style="color: #0000BB">int&nbsp;m</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">int&nbsp;k</span><span style="color: #007700">=</span><span style="color: #0000BB">0</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;for(</span><span style="color: #0000BB">int&nbsp;i</span><span style="color: #007700">=</span><span style="color: #0000BB">0</span><span style="color: #007700">;</span><span style="color: #0000BB">i</span><span style="color: #007700">&lt;</span><span style="color: #0000BB">n</span><span style="color: #007700">;</span><span style="color: #0000BB">i</span><span style="color: #007700">++)<br />&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(</span><span style="color: #0000BB">int&nbsp;j</span><span style="color: #007700">=</span><span style="color: #0000BB">0</span><span style="color: #007700">;</span><span style="color: #0000BB">j</span><span style="color: #007700">&lt;</span><span style="color: #0000BB">m</span><span style="color: #007700">;</span><span style="color: #0000BB">j</span><span style="color: #007700">++)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">c</span><span style="color: #007700">&#91;</span><span style="color: #0000BB">i</span><span style="color: #007700">&#93;&#91;</span><span style="color: #0000BB">j</span><span style="color: #007700">&#93;=</span><span style="color: #0000BB">a</span><span style="color: #007700">&#91;</span><span style="color: #0000BB">k</span><span style="color: #007700">&#93;;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">k</span><span style="color: #007700">++;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">printf</span><span style="color: #007700">(</span><span style="color: #DD0000">"%4d"</span><span style="color: #007700">,</span><span style="color: #0000BB">c</span><span style="color: #007700">&#91;</span><span style="color: #0000BB">i</span><span style="color: #007700">&#93;&#91;</span><span style="color: #0000BB">j</span><span style="color: #007700">&#93;);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">printf</span><span style="color: #007700">(</span><span style="color: #DD0000">"\n"</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />}<br /><br /><br /></span><span style="color: #0000BB">void&nbsp;main</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">clrscr</span><span style="color: #007700">();<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">int&nbsp;n</span><span style="color: #007700">,</span><span style="color: #0000BB">a</span><span style="color: #007700">&#91;</span><span style="color: #0000BB">100</span><span style="color: #007700">&#93;,</span><span style="color: #0000BB">b</span><span style="color: #007700">&#91;</span><span style="color: #0000BB">100</span><span style="color: #007700">&#93;&#91;</span><span style="color: #0000BB">100</span><span style="color: #007700">&#93;,</span><span style="color: #0000BB">c</span><span style="color: #007700">&#91;</span><span style="color: #0000BB">100</span><span style="color: #007700">&#93;&#91;</span><span style="color: #0000BB">100</span><span style="color: #007700">&#93;,</span><span style="color: #0000BB">x</span><span style="color: #007700">,</span><span style="color: #0000BB">m</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">printf</span><span style="color: #007700">(</span><span style="color: #DD0000">"nhap&nbsp;x&nbsp;la&nbsp;so&nbsp;phan&nbsp;tu&nbsp;cua&nbsp;mang&nbsp;1&nbsp;chieu:"</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">scanf</span><span style="color: #007700">(</span><span style="color: #DD0000">"%d"</span><span style="color: #007700">,&amp;</span><span style="color: #0000BB">x</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">printf</span><span style="color: #007700">(</span><span style="color: #DD0000">"nhap&nbsp;dong:"</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">scanf</span><span style="color: #007700">(</span><span style="color: #DD0000">"%d"</span><span style="color: #007700">,&amp;</span><span style="color: #0000BB">n</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">printf</span><span style="color: #007700">(</span><span style="color: #DD0000">"nhap&nbsp;cot:"</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">scanf</span><span style="color: #007700">(</span><span style="color: #DD0000">"%d"</span><span style="color: #007700">,&amp;</span><span style="color: #0000BB">m</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">nhap</span><span style="color: #007700">(</span><span style="color: #0000BB">a</span><span style="color: #007700">,</span><span style="color: #0000BB">x</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">xuat</span><span style="color: #007700">(</span><span style="color: #0000BB">a</span><span style="color: #007700">,</span><span style="color: #0000BB">x</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">doimang2</span><span style="color: #007700">(</span><span style="color: #0000BB">c</span><span style="color: #007700">,</span><span style="color: #0000BB">a</span><span style="color: #007700">,</span><span style="color: #0000BB">n</span><span style="color: #007700">,</span><span style="color: #0000BB">m</span><span style="color: #007700">);<br /></span><span style="color: #0000BB">getch</span><span style="color: #007700">();<br />}&nbsp;<br /></span><span style="color: #0000BB"></span>
+</span>
+</code><!-- php buffer end -->
+		</code>
+	</div>
+</div>HẾT
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+
+		
+
+		
+		<!-- edit note -->
+			<div class="smallfont">
+				<hr size="1" style="color:#A1D2F1; background-color:#A1D2F1" />
+				<em>
+					
+						Đã được chỉnh sửa lần cuối bởi hailoc12 : 14-06-2007 lúc <span class="time">02:09 PM</span>.
+					
+					
+				</em>
+			</div>
+		<!-- / edit note -->
+		
+
+		<div style="margin-top: 10px" align="right">
+			<!-- controls -->
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				
+			
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</table>
+
+
+<!-- post 2148 popup menu -->
+<div class="vbmenu_popup" id="postmenu_2148_menu" style="display:none;">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">hailoc12</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="member.php?u=61">Xem Hồ sơ công khai</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="private.php?do=newpm&amp;u=61" rel="nofollow">Gửi một tin nhắn tới hailoc12</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="search.php?do=finduser&amp;u=61" rel="nofollow">Tìm toàn bộ bài viết bởi hailoc12</a></td></tr>
+	
+	
+	
+	</table>
+</div>
+<!-- / post 2148 popup menu -->
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #2148 --><div id="lastpost"></div></div>
+
+<!-- start content table -->
+<!-- open content container -->
+
+<div id="open_content_container">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+<!-- / start content table -->
+
+<!-- controls below postbits -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-top:-3px">
+<tr valign="top">
+	
+		<td class="smallfont"><a href="newreply.php?do=newreply&amp;noquote=1&amp;p=2148" rel="nofollow"><img src="images/buttons/threadclosed.gif" alt="Đề tài đã đóng" border="0" /></a></td>
+	
+		
+		<td style="margin-bottom:2px; margin-right:20px" valign="top">
+			<!-- Search Google -->
+			<center>
+			<form method="get" action="http://www.google.com/custom" target="google_window">
+			<table bgcolor="#ffffff">
+			<tr><td nowrap="nowrap" valign="top" align="left" height="32">
+			<a href="http://www.google.com/">
+			<img src="http://www.google.com/logos/Logo_25wht.gif" border="0" alt="Google" align="middle"></img></a>
+			<label for="sbi" style="display: none">Enter your search terms</label>
+			<input type="text" name="q" size="31" maxlength="255" value="" id="sbi"></input>
+			<label for="sbb" style="display: none">Submit search form</label>
+			<input type="submit" name="sa" value="Search" id="sbb"></input>
+			<input type="hidden" name="client" value="pub-2525409910423371"></input>
+			<input type="hidden" name="forid" value="1"></input>
+			<input type="hidden" name="channel" value="6718270609"></input>
+			<input type="hidden" name="ie" value="UTF-8"></input>
+			<input type="hidden" name="oe" value="UTF-8"></input>
+			<input type="hidden" name="safe" value="active"></input>
+			<input type="hidden" name="cof" value="GALT:#008000;GL:1;DIV:#336699;VLC:663399;AH:center;BGC:F6F8FA;LBGC:F6F8FA;ALC:0000FF;LC:0000FF;T:000000;GFNT:0000FF;GIMP:0000FF;LH:50;LW:108;L:http://congdongcviet.com/logos/Logo.gif;S:http://congdongcviet.com/logos;FORID:1"></input>
+			<input type="hidden" name="hl" value="en"></input>
+			</td></tr></table>
+			</form>
+			</center>
+			<!-- Search Google -->
+		</td>
+		<td class="smallfont" width="300" align="right">&nbsp;</td>
+	
+	
+		<td align="right"><div class="pagenav" align="right">
+<table class="tborder" cellpadding="3" cellspacing="1" border="0">
+<tr>
+	<td class="vbmenu_control" style="font-weight:normal">Trang 4 trên tổng số 6</td>
+	<td class="alt1" nowrap="nowrap"><a rel="start" class="smallfont" href="showthread.php?t=180" title="Trang đầu - Từ 1 tới 10 trên tổng số 60 kết quả"><strong>&laquo;</strong> Đầu tiên</a></td>
+	<td class="alt1"><a rel="prev" class="smallfont" href="showthread.php?t=180&amp;page=3" title="Trang liền trước - Từ 21 tới 30 trên tổng số 60 kết quả">&lt;</a></td>
+	<td class="alt1"><a class="smallfont" href="showthread.php?t=180&amp;page=2" title="Hiện từ 11 tới 20 trên tổng số 60 kết quả">2</a></td><td class="alt1"><a class="smallfont" href="showthread.php?t=180&amp;page=3" title="Hiện từ 21 tới 30 trên tổng số 60 kết quả">3</a></td>	<td class="alt2"><span class="smallfont" title="Đang hiện từ 31 tới 40 trên tổng 60 kết quả"><strong>4</strong></span></td>
+ <td class="alt1"><a class="smallfont" href="showthread.php?t=180&amp;page=5" title="Hiện từ 41 tới 50 trên tổng số 60 kết quả">5</a></td><td class="alt1"><a class="smallfont" href="showthread.php?t=180&amp;page=6" title="Hiện từ 51 tới 60 trên tổng số 60 kết quả">6</a></td>
+	<td class="alt1"><a rel="next" class="smallfont" href="showthread.php?t=180&amp;page=5" title="Trang liền sau - Từ 41 tới 50 trên tổng số 60 kết quả">&gt;</a></td>
+	
+	<td class="vbmenu_control" title="showthread.php?t=180"><a name="PageNav"></a></td>
+</tr>
+</table>
+</div>
+		
+		</td>
+	
+</tr>
+</table>
+<!-- / controls below postbits -->
+
+
+
+
+<!-- social bookmarking links -->
+	<br />
+	<table cellpadding="6" cellspacing="1" border="0" width="100%" class="tborder" align="center">
+	<tr>
+		<td class="thead">Bookmarks</td>
+	</tr>
+	<tr>
+		<td class="alt2" style="padding-top:0px"><div style="clear:both"></div><ul style="list-style-type:none; margin:0px; padding:0px"><li class="smallfont" style="width:25%; min-width:160px; float:left; margin-top:6px">
+	
+		<a href="http://digg.com/submit?phrase=2&amp;url=http%3A%2F%2Fforums.congdongcviet.com%2Fshowthread.php%3Ft%3D180&amp;title=B%C3%A0i+t%E1%BA%ADp+gi%E1%BA%A3i+thu%E1%BA%ADt+%7C+B%C3%A0i+t%E1%BA%ADp+C+%7C+B%C3%A0i+t%E1%BA%ADp+thu%E1%BA%ADt+to%C3%A1n+c%C6%A1+b%E1%BA%A3n" target="socialbookmark"><img src="images/misc/bookmarksite_digg.gif" border="0" alt="Gửi đề tài tới Digg" class="inlineimg" /></a>
+	
+	<a href="http://digg.com/submit?phrase=2&amp;url=http%3A%2F%2Fforums.congdongcviet.com%2Fshowthread.php%3Ft%3D180&amp;title=B%C3%A0i+t%E1%BA%ADp+gi%E1%BA%A3i+thu%E1%BA%ADt+%7C+B%C3%A0i+t%E1%BA%ADp+C+%7C+B%C3%A0i+t%E1%BA%ADp+thu%E1%BA%ADt+to%C3%A1n+c%C6%A1+b%E1%BA%A3n" target="socialbookmark" style="text-decoration:none">Digg</a>
+</li><li class="smallfont" style="width:25%; min-width:160px; float:left; margin-top:6px">
+	
+		<a href="http://del.icio.us/post?url=http%3A%2F%2Fforums.congdongcviet.com%2Fshowthread.php%3Ft%3D180&amp;title=B%C3%A0i+t%E1%BA%ADp+gi%E1%BA%A3i+thu%E1%BA%ADt+%7C+B%C3%A0i+t%E1%BA%ADp+C+%7C+B%C3%A0i+t%E1%BA%ADp+thu%E1%BA%ADt+to%C3%A1n+c%C6%A1+b%E1%BA%A3n" target="socialbookmark"><img src="images/misc/bookmarksite_delicious.gif" border="0" alt="Gửi đề tài tới del.icio.us" class="inlineimg" /></a>
+	
+	<a href="http://del.icio.us/post?url=http%3A%2F%2Fforums.congdongcviet.com%2Fshowthread.php%3Ft%3D180&amp;title=B%C3%A0i+t%E1%BA%ADp+gi%E1%BA%A3i+thu%E1%BA%ADt+%7C+B%C3%A0i+t%E1%BA%ADp+C+%7C+B%C3%A0i+t%E1%BA%ADp+thu%E1%BA%ADt+to%C3%A1n+c%C6%A1+b%E1%BA%A3n" target="socialbookmark" style="text-decoration:none">del.icio.us</a>
+</li><li class="smallfont" style="width:25%; min-width:160px; float:left; margin-top:6px">
+	
+		<a href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Fforums.congdongcviet.com%2Fshowthread.php%3Ft%3D180&amp;title=B%C3%A0i+t%E1%BA%ADp+gi%E1%BA%A3i+thu%E1%BA%ADt+%7C+B%C3%A0i+t%E1%BA%ADp+C+%7C+B%C3%A0i+t%E1%BA%ADp+thu%E1%BA%ADt+to%C3%A1n+c%C6%A1+b%E1%BA%A3n" target="socialbookmark"><img src="images/misc/bookmarksite_stumbleupon.gif" border="0" alt="Gửi đề tài tới StumbleUpon" class="inlineimg" /></a>
+	
+	<a href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Fforums.congdongcviet.com%2Fshowthread.php%3Ft%3D180&amp;title=B%C3%A0i+t%E1%BA%ADp+gi%E1%BA%A3i+thu%E1%BA%ADt+%7C+B%C3%A0i+t%E1%BA%ADp+C+%7C+B%C3%A0i+t%E1%BA%ADp+thu%E1%BA%ADt+to%C3%A1n+c%C6%A1+b%E1%BA%A3n" target="socialbookmark" style="text-decoration:none">StumbleUpon</a>
+</li><li class="smallfont" style="width:25%; min-width:160px; float:left; margin-top:6px">
+	
+		<a href="http://www.google.com/bookmarks/mark?op=edit&amp;output=popup&amp;bkmk=http%3A%2F%2Fforums.congdongcviet.com%2Fshowthread.php%3Ft%3D180&amp;title=B%C3%A0i+t%E1%BA%ADp+gi%E1%BA%A3i+thu%E1%BA%ADt+%7C+B%C3%A0i+t%E1%BA%ADp+C+%7C+B%C3%A0i+t%E1%BA%ADp+thu%E1%BA%ADt+to%C3%A1n+c%C6%A1+b%E1%BA%A3n" target="socialbookmark"><img src="images/misc/bookmarksite_google.gif" border="0" alt="Gửi đề tài tới Google" class="inlineimg" /></a>
+	
+	<a href="http://www.google.com/bookmarks/mark?op=edit&amp;output=popup&amp;bkmk=http%3A%2F%2Fforums.congdongcviet.com%2Fshowthread.php%3Ft%3D180&amp;title=B%C3%A0i+t%E1%BA%ADp+gi%E1%BA%A3i+thu%E1%BA%ADt+%7C+B%C3%A0i+t%E1%BA%ADp+C+%7C+B%C3%A0i+t%E1%BA%ADp+thu%E1%BA%ADt+to%C3%A1n+c%C6%A1+b%E1%BA%A3n" target="socialbookmark" style="text-decoration:none">Google</a>
+</li></ul><div style="clear:both"></div></td>
+	</tr>
+	</table>
+<!-- / social bookmarking links -->
+
+
+
+
+
+
+
+<!-- lightbox scripts -->
+	<script type="text/javascript" src="clientscript/vbulletin_lightbox.js?v=384"></script>
+	<script type="text/javascript">
+	<!--
+	vBulletin.register_control("vB_Lightbox_Container", "posts", 1);
+	//-->
+	</script>
+<!-- / lightbox scripts -->
+
+
+
+
+
+
+
+
+
+
+<!-- next / previous links -->
+	<br />
+	<div class="smallfont" align="center">
+		<strong>&laquo;</strong>
+			<a href="showthread.php?t=180&amp;goto=nextoldest" rel="nofollow">Đề tài liền trước</a>
+			|
+			<a href="showthread.php?t=180&amp;goto=nextnewest" rel="nofollow">Đề tài liền sau</a>
+		<strong>&raquo;</strong>
+	</div>
+<!-- / next / previous links -->
+
+
+
+
+
+
+
+<!-- popup menu contents -->
+<br />
+
+<!-- thread tools menu -->
+<div class="vbmenu_popup" id="threadtools_menu" style="display:none">
+<form action="postings.php?t=180&amp;pollid=" method="post" name="threadadminform">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">Các công cụ đề tài<a name="goto_threadtools"></a></td>
+	</tr>
+	<tr>
+		<td class="vbmenu_option"><img class="inlineimg" src="images/buttons/printer.gif" alt="Show Printable Version" /> <a href="printthread.php?t=180" accesskey="3" rel="nofollow">Show Printable Version</a></td>
+	</tr>
+	
+	<tr>
+		<td class="vbmenu_option"><img class="inlineimg" src="images/buttons/sendtofriend.gif" alt="Email trang này" /> <a href="sendmessage.php?do=sendtofriend&amp;t=180" rel="nofollow">Email trang này</a></td>
+	</tr>
+	
+	
+	
+	
+	</table>
+</form>
+</div>
+<!-- / thread tools menu -->
+
+<!-- **************************************************** -->
+
+<!-- thread display mode menu -->
+<div class="vbmenu_popup" id="displaymodes_menu" style="display:none">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">Các chế độ hiển thị<a name="goto_displaymodes"></a></td>
+	</tr>
+	<tr>
+	
+		<td class="vbmenu_option" title="nohilite"><img class="inlineimg" src="images/buttons/mode_linear.gif" alt="Chế độ tuyến tính" /> <strong>Chế độ tuyến tính</strong></td>
+	
+	</tr>
+	<tr>
+	
+		<td class="vbmenu_option"><img class="inlineimg" src="images/buttons/mode_hybrid.gif" alt="Chế độ kết hợp" /> <a href="showthread.php?mode=hybrid&amp;t=180">Chuyển sang chế độ kết hợp</a></td>
+	
+	</tr>
+	<tr>
+	
+		<td class="vbmenu_option"><img class="inlineimg" src="images/buttons/mode_threaded.gif" alt="Chế độ tuyến tính" /> <a href="showthread.php?p=2138&amp;mode=threaded#post2138">Chuyển sang chế độ phân luồng</a></td>
+	
+	</tr>
+	</table>
+</div>
+<!-- / thread display mode menu -->
+
+<!-- **************************************************** -->
+
+
+
+<!-- **************************************************** -->
+
+
+
+<!-- / popup menu contents -->
+
+
+<!-- forum rules and admin links -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+<tr valign="bottom">
+	<td width="100%" valign="top">
+		<table class="tborder" cellpadding="6" cellspacing="1" border="0" width="210">
+<thead>
+<tr>
+	<td class="thead">
+		<a style="float:right" href="#top" onclick="return toggle_collapse('forumrules')"><img id="collapseimg_forumrules" src="images/buttons/collapse_thead.gif" alt="" border="0" /></a>
+		Các nguyên tắc gửi bài
+	</td>
+</tr>
+</thead>
+<tbody id="collapseobj_forumrules" style="">
+<tr>
+	<td class="alt1" nowrap="nowrap"><div class="smallfont">
+		
+		<div>Bạn <strong>không thể</strong> gửi đề tài mới</div>
+		<div>Bạn <strong>không thể</strong> gửi bài trả lời</div>
+		<div>Bạn <strong>không thể</strong> gửi các đính kèm</div>
+		<div>Bạn <strong>không thể</strong> chỉnh sửa bài viết của bạn</div>
+		<hr />
+		
+		<div><a href="misc.php?do=bbcode" target="_blank">BB code</a>: <strong>On</strong></div>
+		<div><a href="misc.php?do=showsmilies" target="_blank">Mặt cười</a>: <strong>On</strong></div>
+		<div><a href="misc.php?do=bbcode#imgcode" target="_blank">[IMG]</a> code: <strong>On</strong></div>
+		<div>HTML code: <strong>Off</strong></div>
+		<hr />
+		<div><a href="misc.php?do=showrules" target="_blank">Nội quy diễn đàn</a></div>
+	</div></td>
+</tr>
+</tbody>
+</table>
+	</td>
+	<td class="smallfont" align="right">
+		<table cellpadding="0" cellspacing="0" border="0">
+		
+		<tr>
+			<td>
+			<div class="smallfont" style="text-align:left; white-space:nowrap">
+	<form action="forumdisplay.php" method="get">
+	<input type="hidden" name="s" value="" />
+	<input type="hidden" name="daysprune" value="" />
+	<strong>Nhảy tới diễn đàn</strong><br />
+	<select name="f" onchange="this.form.submit();">
+		<optgroup label="Các khu vực của site">
+			<option value="cp" >User Control Panel</option>
+			<option value="pm" >Tin nhắn</option>
+			<option value="subs" >Các thuê bao</option>
+			<option value="wol" >Ai online</option>
+			<option value="search" >Tìm kiếm các diễn đàn</option>
+			<option value="home" >Forums Home</option>
+		</optgroup>
+		
+		<optgroup label="Forums">
+		<option value="1" class="fjdpth0" > CỘNG ĐỒNG C VIỆT</option>
+<option value="2" class="fjdpth1" >&nbsp; &nbsp;  Thông báo chung</option>
+<option value="3" class="fjdpth1" >&nbsp; &nbsp;  Ý kiến, đề xuất và khiếu nại</option>
+<option value="15" class="fjdpth0" > SOFTWARE ENGINEERING</option>
+<option value="53" class="fjdpth1" >&nbsp; &nbsp;  Rắc rối với Software Engineering</option>
+<option value="65" class="fjdpth1" >&nbsp; &nbsp;  Tutorials và Thủ thuật</option>
+<option value="27" class="fjdpth1" >&nbsp; &nbsp;  Tài liệu và công cụ cho Software Engineering</option>
+<option value="32" class="fjdpth0" > ĐỊNH HƯỚNG &amp; ĐÀO TẠO</option>
+<option value="55" class="fjdpth1" >&nbsp; &nbsp;  Đào tạo</option>
+<option value="19" class="fjdpth1" >&nbsp; &nbsp;  Kinh nghiệm ngành IT</option>
+<option value="49" class="fjdpth1" >&nbsp; &nbsp;  Công việc ngành IT</option>
+<option value="9" class="fjdpth0" > LẬP TRÌNH VISUAL C#</option>
+<option value="17" class="fjdpth1" >&nbsp; &nbsp;  Thắc mắc về lập trình C#</option>
+<option value="31" class="fjdpth1" >&nbsp; &nbsp;  Tutorials và Thủ thuật lập trình C#</option>
+<option value="57" class="fjdpth1" >&nbsp; &nbsp;  Dự án &amp; Source code về C#</option>
+<option value="58" class="fjdpth1" >&nbsp; &nbsp;  Công cụ, ebooks C#</option>
+<option value="5" class="fjdpth0" > LẬP TRÌNH VISUAL C++ | LẬP TRÌNH VISUAL C++.NET</option>
+<option value="14" class="fjdpth1" >&nbsp; &nbsp;  Thắc mắc về lập trình Visual C++</option>
+<option value="61" class="fjdpth1" >&nbsp; &nbsp;  Windows API, Hooking, xử lý Windows Message</option>
+<option value="30" class="fjdpth1" >&nbsp; &nbsp;  Tutorials và Thủ thuật Visual C++</option>
+<option value="64" class="fjdpth1" >&nbsp; &nbsp;  Dự án &amp; Source code về VC++</option>
+<option value="66" class="fjdpth1" >&nbsp; &nbsp;  Công cụ, ebooks VC++</option>
+<option value="7" class="fjdpth0" > LẬP TRÌNH C++ | LẬP TRÌNH C | LẬP TRÌNH C++0X</option>
+<option value="10" class="fjdpth1" >&nbsp; &nbsp;  Sinh viên thắc mắc về lập trình C/C++</option>
+<option value="59" class="fjdpth1" >&nbsp; &nbsp;  Thắc mắc về Lập trình C/C++/C++0x</option>
+<option value="54" class="fjdpth1" >&nbsp; &nbsp;  Hướng đối tượng với C++/C++0x</option>
+<option value="21" class="fjdpth1" >&nbsp; &nbsp;  Thủ thuật, Tutorials và Mã nguồn C/C++/C++0x</option>
+<option value="63" class="fjdpth1" >&nbsp; &nbsp;  Công cụ, ebooks C/C++/C++0x</option>
+<option value="11" class="fjdpth0" > CẤU TRÚC DỮ LIỆU VÀ GIẢI THUẬT</option>
+<option value="36" class="fjsel" selected="selected">&nbsp; &nbsp;  Thắc mắc về cấu trúc dữ liệu và giải thuật</option>
+<option value="56" class="fjdpth1" >&nbsp; &nbsp;  Thủ thuật, Tutorials và Mã nguồn</option>
+<option value="38" class="fjdpth1" >&nbsp; &nbsp;  Tài liệu, ebooks</option>
+<option value="12" class="fjdpth0" > DATABASE &amp; REPORTING | CÁC HỆ QUẢN TRỊ DATABASE</option>
+<option value="6" class="fjdpth1" >&nbsp; &nbsp;  Thắc mắc về đại cương của Database &amp; Reporting</option>
+<option value="35" class="fjdpth1" >&nbsp; &nbsp;  Thắc mắc về Oracle</option>
+<option value="60" class="fjdpth1" >&nbsp; &nbsp;  Thắc mắc về Microsoft SQL Server &amp; Microsoft Access</option>
+<option value="34" class="fjdpth1" >&nbsp; &nbsp;  Thắc mắc về MySQL và SQL Lite</option>
+<option value="67" class="fjdpth1" >&nbsp; &nbsp;  Thủ thuật Tutorials về Database</option>
+<option value="39" class="fjdpth1" >&nbsp; &nbsp;  Tài liệu, ebooks DB</option>
+<option value="8" class="fjdpth0" > THẢO LUẬN CHUNG</option>
+<option value="41" class="fjdpth1" >&nbsp; &nbsp;  Hệ điều hành</option>
+<option value="50" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Tài liệu về HĐH</option>
+<option value="25" class="fjdpth1" >&nbsp; &nbsp;  English</option>
+<option value="13" class="fjdpth1" >&nbsp; &nbsp;  Các Hỏi/Đáp khác</option>
+<option value="22" class="fjdpth0" > THÀNH VIÊN CỘNG ĐỒNG C VIỆT</option>
+<option value="51" class="fjdpth1" >&nbsp; &nbsp;  Hình tượng thành viên</option>
+<option value="28" class="fjdpth1" >&nbsp; &nbsp;  Ý tưởng của bạn là gì?</option>
+<option value="29" class="fjdpth1" >&nbsp; &nbsp;  Sản phẩm của bạn là gì?</option>
+<option value="42" class="fjdpth0" > KHU GIẢI TRÍ</option>
+<option value="33" class="fjdpth1" >&nbsp; &nbsp;  Giải trí - Thư giãn</option>
+<option value="43" class="fjdpth1" >&nbsp; &nbsp;  Giao lưu</option>
+<option value="45" class="fjdpth1" >&nbsp; &nbsp;  Giới thiệu website của bạn.</option>
+
+		</optgroup>
+		
+	</select><input type="submit" class="button" value="Go" />
+	</form>
+</div>
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+<!-- /forum rules and admin links -->
+
+<br />
+
+<table class="tborder" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<thead>
+	<tr>
+		<td class="tcat" width="100%" colspan="5">
+			<a style="float:right" href="#top" onclick="return toggle_collapse('similarthreads')"><img id="collapseimg_similarthreads" src="images/buttons/collapse_tcat.gif" alt="" border="0" /></a>
+			Các đề tài tương tự<a name="similarthreads"></a>
+		</td>
+	</tr>
+</thead>
+<tbody id="collapseobj_similarthreads" style="">
+<tr class="thead" align="center">
+	<td class="thead" width="40%">Đề tài</td>
+	<td class="thead" width="15%" nowrap="nowrap">Người bắt đầu đề tài</td>
+	<td class="thead" width="20%">Diễn đàn</td>
+	<td class="thead" width="5%">Các trả lời</td>
+	<td class="thead" width="20%">Bài viết cuối</td>
+</tr>
+<tr>
+	<td class="alt1" align="left">
+		
+		<span class="smallfont"> <a href="showthread.php?t=1420" title="Bài này do neverland đọc bên diễn đàn của trường ĐH Bách Khoa, nay mạo muội xin phép tác giả linhnam post bài này lên cho mọi người trong cộng đồng C xem thử:...">Dành cho sinh viên khoa CNTT</a></span>
+	</td>
+	<td class="alt2" nowrap="nowrap"><span class="smallfont">neverland87</span></td>
+	<td class="alt1" nowrap="nowrap"><span class="smallfont">Kinh nghiệm ngành IT</span></td>
+	<td class="alt2" align="center"><span class="smallfont">61</span></td>
+	<td class="alt1" align="right"><span class="smallfont">30-01-2010 <span class="time">09:13 AM</span></span></td>
+</tr>
+<tr>
+	<td class="alt1" align="left">
+		
+		<span class="smallfont"> <a href="showthread.php?t=2431" title="Tham khảo ý kiến thành viên về việc cải tổ lại box  Giải thuật 
+Trước hết mình xin cảm ơn sự đóng góp của các thành viên đối với sự phát triển của Cviet nói chung và...">[Khác]Tham khảo ý kiến thành viên về việc cải tổ lại box  Giải th</a></span>
+	</td>
+	<td class="alt2" nowrap="nowrap"><span class="smallfont">hailoc12</span></td>
+	<td class="alt1" nowrap="nowrap"><span class="smallfont">Thắc mắc về cấu trúc dữ liệu và giải thuật</span></td>
+	<td class="alt2" align="center"><span class="smallfont">8</span></td>
+	<td class="alt1" align="right"><span class="smallfont">24-12-2007 <span class="time">08:28 PM</span></span></td>
+</tr>
+<tr>
+	<td class="alt1" align="left">
+		
+		<span class="smallfont"> <a href="showthread.php?t=1920" title="Bài này mình sưu tầm trên tạp chí PC World Vietnam 
+http://www.pcworld.com.vn/pcworld/magazine.asp?t=mzdetail&amp;atcl_id=5f5e5c56565656 
+ 
+Trước tiên, ta nói về thực...">[VC++] Sử dụng tiếng Việt Unicode</a></span>
+	</td>
+	<td class="alt2" nowrap="nowrap"><span class="smallfont">hieubm</span></td>
+	<td class="alt1" nowrap="nowrap"><span class="smallfont">Tutorials và Thủ thuật Visual C++</span></td>
+	<td class="alt2" align="center"><span class="smallfont">3</span></td>
+	<td class="alt1" align="right"><span class="smallfont">20-10-2007 <span class="time">12:11 AM</span></span></td>
+</tr>
+<tr>
+	<td class="alt1" align="left">
+		
+		<span class="smallfont"> <a href="showthread.php?t=3035" title="Rất nhiều người dùng Internet ở VN cũng như trên thế giới đã quen gõ các từ khoá mình cần vào hộp thoại tìm kiếm của Google để nhận những đường dẫn (link) đến thông...">Khám phá Google</a></span>
+	</td>
+	<td class="alt2" nowrap="nowrap"><span class="smallfont">soda_chanhmuoi</span></td>
+	<td class="alt1" nowrap="nowrap"><span class="smallfont">Giải trí - Thư giãn</span></td>
+	<td class="alt2" align="center"><span class="smallfont">10</span></td>
+	<td class="alt1" align="right"><span class="smallfont">21-07-2007 <span class="time">04:52 PM</span></span></td>
+</tr>
+<tr>
+	<td class="alt1" align="left">
+		
+		<span class="smallfont"> <a href="showthread.php?t=1441" title="Học cách học 
+Để tìm được cách học hiệu quả nhất, bạn cần hiểu rõ về: 
+ 
+Bản thân  
+Khả năng học của bạn  
+Cách học hiệu quả mà bạn đã từng dùng  
+Đam mê, kiến thức và...">Về vấn đề học tập...</a></span>
+	</td>
+	<td class="alt2" nowrap="nowrap"><span class="smallfont">neverland87</span></td>
+	<td class="alt1" nowrap="nowrap"><span class="smallfont">Kinh nghiệm ngành IT</span></td>
+	<td class="alt2" align="center"><span class="smallfont">2</span></td>
+	<td class="alt1" align="right"><span class="smallfont">12-02-2007 <span class="time">09:36 AM</span></span></td>
+</tr>
+
+</tbody>
+</table>
+
+<br />
+
+
+
+<br />
+<div class="smallfont" align="center">Toàn bộ thời gian tính theo múi GMT +7. Bây giờ là <span class="time">11:11 PM</span>.</div>
+<br />
+
+
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+<!-- /content area table -->
+
+<div id="page-ref">
+<form action="index.php" method="get" style="clear:left">
+
+<table cellpadding="6" cellspacing="0" border="0" width="100%" class="page" align="center">
+<tr>
+	
+	
+	<td class="tfoot" align="right" width="100%">
+		<div class="smallfont">
+			<strong>
+				<a href="sendmessage.php" rel="nofollow" accesskey="9">Liên hệ chúng tôi</a> -
+				<a href="http://congdongcviet.com">Cộng đồng C Việt</a> -
+				
+				
+				<a href="archive/index.php">Archive</a> -
+				
+				
+				
+				<a href="#top" onclick="self.scrollTo(0, 0); return false;">Top</a>
+			</strong>
+		</div>
+	</td>
+</tr>
+</table>
+
+<!-- Add by Kevin -->
+<div id="script_extent">
+	<script language="javascript" type="text/javascript" src="clientscript/js/avim.js"></script>
+	<script language="javascript" type="text/javascript" src="clientscript/js/adv_code_tools.js"></script>
+</div>
+<div id="foot_info" class="clearfix">
+	<div class="copyright_sign smallfont"">
+		<div class="src_coyright">
+			<!-- Do not remove this copyright notice -->
+			- Nguồn đã được cung cấp bởi vBulletin&reg; version 3.8.4<br />- Bản quyền nguồn &copy;2000 - 2010, Jelsoft Enterprises Ltd.
+			<!-- Do not remove this copyright notice -->
+		</div>
+
+		<div class="usage_copyright">
+			<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+			<div>- Sử dụng và phát triển bởi <a href="http://www.congdongcviet.com" alt="Cộng đồng C Việt">Cộng đồng C Việt&reg;</a>: 2006 - 2009</div>
+			
+			<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+			
+		</div>
+	</div>
+	<div class="tracking_code">
+		<!-- Google Analysis, Google tracking code -->
+		<div class="google_analysis">
+			<script type="text/javascript">
+				var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+				document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+			</script>
+			<script type="text/javascript">
+				try {
+					var pageTracker = _gat._getTracker("UA-6069265-2");
+					pageTracker._setDomainName(".congdongcviet.com");
+					pageTracker._trackPageview();
+				} 
+				catch (err) {
+				}
+			</script>
+		</div>
+		<!-- End of Google Analysis, Google tracking code -->
+		
+		<!-- Alexa button -->
+		<div style="margin-right: 18px">
+			<script type='text/javascript' language='JavaScript' src='http://xslt.alexa.com/site_stats/js/t/c?url=congdongcviet.com'></script>
+		</div>
+	</div>
+</div>
+
+</form>
+
+
+
+</div>
+
+
+<script type="text/javascript">
+<!--
+	// Main vBulletin Javascript Initialization
+	vBulletin_init();
+//-->
+</script>
+
+<!-- temp -->
+<div style="display:none">
+	<!-- thread rate -->
+	
+		
+	
+	<!-- / thread rate -->
+</div>
+
+</body>
+</html>
